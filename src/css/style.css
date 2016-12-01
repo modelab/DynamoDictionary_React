@@ -14,6 +14,64 @@
 #lightbox img{ border: none; }
 #overlay img{ border: none; }
 
+
+/*This section is a hack to get the text editor customized*/
+.RichTextEditor__root___2QXK-, .Button__root___1gz0c{
+	background:rgb(34,34,34) !important;
+	background-color:rgb(34,34,34) !important;
+	color:lightgray;
+	border:none !important;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+
+}
+.EditorToolbar__root___3_Aqz{
+	transform:scale(0.9);
+	/*background-color:rgb(64,64,64) !important;*/
+	/*z-index:-1 !important;*/
+	position:absolute !important;
+	/*top:0 !important;*/
+	text-align:center;
+	left:0 !important;
+	right:0 !important;
+	margin-top:-35px !important;
+	border:none !important;
+
+
+}
+.public-DraftEditor-content{
+	padding-left:0 !important;
+	padding-right:0 !important;
+	color:gray;
+	/*border: 1px solid white !important;*/
+}
+.RichTextEditor__editor___1QqIU{
+	line-height:25px !important;
+	font-size:15px !important;
+	padding-top:10px !important;
+}
+.IconButton__icon-underline___2EmZJ,
+.IconButton__icon-bold___2zl9t,
+.IconButton__icon-italic___2hHzc,
+.IconButton__icon-unordered-list-item___Pvkrr,
+.IconButton__icon-ordered-list-item___2rzD0,
+.IconButton__icon-link___2umEl,
+.IconButton__icon-remove-link___j61pw,
+.IconButton__icon-undo___EQSRP,
+.IconButton__icon-redo___30MVz
+{
+	filter: invert(100%) !important;
+}
+/*This section is a hack to get the text editor customized*/
+
+option{
+	background:rgb(34,34,34) !important;
+	background-color:rgb(34,34,34) !important;
+	margin-left:20px !important;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+
 ::selection {
     color: black;
     background: white;
@@ -98,6 +156,7 @@ pre {
     white-space: -o-pre-wrap;
     /* Opera 7 */
     word-wrap: break-word;
+		word-break:keep-all;
     /* Internet Explorer 5.5+ */
     margin: 0px;
     padding: 0px;
@@ -109,6 +168,8 @@ pre {
     font-weight: 100;
     outline: white;
     line-height: 25px;
+		background:rgb(34,34,34);
+		border:none;
 }
 
 textarea {

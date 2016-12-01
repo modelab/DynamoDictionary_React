@@ -9,10 +9,17 @@
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "d3": "^4.4.0",
+    "draft-js": "^0.9.1",
+    "draft-js-plugins-editor": "^2.0.0-beta1",
+    "draft-js-single-line-plugin": "0.0.1",
     "jquery": "^3.1.1",
     "path": "^0.12.7",
     "react": "^15.4.0",
+    "react-click-outside": "^2.2.0",
     "react-dom": "^15.4.0",
+    "react-download-link": "^1.0.0",
+    "react-native-file-download": "0.0.10",
+    "react-rte": "^0.11.0",
     "underscore": "^1.8.3"
   },
   "scripts": {

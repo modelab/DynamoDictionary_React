@@ -4,7 +4,7 @@ import {flatten, flattenHierarchy} from './utils/array';
 import classNames from 'classnames';
 
 import NodeIcon from './nodeicon';
-import ExampleFile from './examplefile';
+import ExampleSection from './ExampleSection';
 
 function Branch(props) {
     let actives = props.actives;
@@ -12,12 +12,11 @@ function Branch(props) {
     let hierarchy = props.actives.length;
 
     function nodeDetail(ob) {
-      console.log(ob)
         return [
             detailList('nodeDesc', 'Description', ob.Description, 0),
             detailList('nodeIn', 'Inputs', ob.Inputs, 1),
             detailList('nodeDesc', 'Outputs', ob.Outputs, 2),
-            <ExampleFile node={ob} key={3}/>
+            <ExampleSection node={ob} key={3} editInDepthClick = {props.editInDepthClick} editInDepth = {props.editInDepth} key={3}/>
         ]
     }
 
@@ -90,7 +89,7 @@ function Branch(props) {
                                 ? <span style={{
                                         'color': 'gray'
                                     }}>{lastLeaf.Name}</span>
-                                : null
+                                    : null
                             }
                             <br/>
                         </div>
