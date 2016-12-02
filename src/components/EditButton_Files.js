@@ -4,7 +4,7 @@ function EditButton(props) {
     let node = props.node;
 
     function editExampleFile(node){
-      props.turnOnModal();
+      props.turnOnModal(props.index);
     }
 
 

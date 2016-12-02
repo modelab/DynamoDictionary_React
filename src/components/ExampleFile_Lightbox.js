@@ -26,8 +26,11 @@ class ExampleFile_Lightbox extends Component {
                     props.isOpen ?
                         <Lightbox
                             mainSrc={images[photoIndex]}
-                            nextSrc={images[(photoIndex + 1) % images.length]}
-                            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+
+                              nextSrc={images.length>1?images[(photoIndex + 1) % images.length]:null}
+                              prevSrc={images.length>1?images[(photoIndex + images.length - 1) % images.length]:null}
+
+
 
                             onCloseRequest={this.closeLightbox}
                             onMovePrevRequest={() => this.setState({
@@ -37,7 +40,7 @@ class ExampleFile_Lightbox extends Component {
                                 photoIndex: (photoIndex + 1) % images.length,
                             })}
                         />
-                        ?
+                      :
                         null
                         </div>
         )

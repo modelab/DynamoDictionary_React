@@ -65,7 +65,8 @@
 /*This section is a hack to get the text editor customized*/
 
 .modal-content{
-	color:black;
+	color:white;
+	background:rgba(34,34,34,1);
 }
 
 option{
