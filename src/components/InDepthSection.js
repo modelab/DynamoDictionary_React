@@ -2,6 +2,7 @@ import React from 'react';
 import InDepthDescription from './InDepthDescription';
 import TextEditor from './TextEditor';
 
+
 function InDepthSection(props) {
   let node = props.node;
   return (
@@ -16,6 +17,7 @@ function InDepthSection(props) {
           {/*}<InDepthDescription editInDepth = {props.editInDepth} editInDepthClick = {props.editInDepthClick} node = {node}/>*/}
 
         <hr/>
+
       </div>
   )
 }

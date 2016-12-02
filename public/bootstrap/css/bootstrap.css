@@ -5839,14 +5839,14 @@ button.list-group-item-danger.active:focus {
   border-radius: 3px;
 }
 .close {
-  float: right;
+  /*float: right;
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
-  opacity: .2;
+  opacity: .2;*/
 }
 .close:hover,
 .close:focus {
@@ -5857,11 +5857,11 @@ button.list-group-item-danger.active:focus {
   opacity: .5;
 }
 button.close {
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;
   padding: 0;
   cursor: pointer;
   background: transparent;
-  border: 0;
+  border: 0;*/
 }
 .modal-open {
   overflow: hidden;

@@ -64,6 +64,10 @@
 }
 /*This section is a hack to get the text editor customized*/
 
+.modal-content{
+	color:black;
+}
+
 option{
 	background:rgb(34,34,34) !important;
 	background-color:rgb(34,34,34) !important;

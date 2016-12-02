@@ -26,14 +26,14 @@ function Branch(props) {
                 <br/>
                 <b>{title}:</b>
                 <br/> {key === 1
-                    ? body.map((b) => (
+                    ? body.map((b,i) => (
                         <text style={{
                             'color': 'gray'
-                        }}>{b.Name}: {b.Type}<br/></text>
+                        }} key={i}>{b.Name}: {b.Type}<br/></text>
                     ))
                     : key === 2
-                        ? body.map((b) => (
-                            <text style={{
+                        ? body.map((b,i) => (
+                            <text key={i} style={{
                                 'color': 'gray'
                             }}>Type: {b.Name}<br/><hr/></text>
                         ))

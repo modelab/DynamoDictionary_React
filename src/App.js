@@ -87,12 +87,13 @@ class App extends Component {
         } < /div>
 
         </div > {
-            this.state.mainObjects.length > 0
-                ? (
-                    <p>greater than 0</p>
-                )
-                : <p>Please wait while the Dynamo Dictionary Loads...</p>
-        } < /div>
+            // this.state.mainObjects.length > 0
+            //     ? (
+            //         <p>greater than 0</p>
+            //     )
+            //     : <p>Please wait while the Dynamo Dictionary Loads...</p>
+        }
+        < /div>
     )
   }
 }
