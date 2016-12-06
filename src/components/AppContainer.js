@@ -64,8 +64,11 @@ class AppContainer extends Component {
             // }
 
           })
+            console.log(mainObjects)
           this.setState({mainObjects})
+
         }).catch(console.error.bind(console))
+
     }
 
     render() {

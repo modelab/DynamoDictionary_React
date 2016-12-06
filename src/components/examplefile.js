@@ -22,7 +22,8 @@ function ExampleFile(props) {
                         'opacity': '0.45',
                         'paddingRight': '20px'
                     }}>
-                        {node.dynFile[index].og || node.dynFile[index]}
+                        {node.dynFile[index].og ? node.dynFile[index].og.split('/').pop() : node.dynFile[index]}
+                        {node.dynFile.length  > 1  ? ` - Ex ${index+1}` : null}
                     </text>
                     <DownloadButton node={node} dynPath={props.dynPaths[index]}/>
                     <EditButton_Files node={node} turnOnModal = {props.turnOnModal} index={index}/>

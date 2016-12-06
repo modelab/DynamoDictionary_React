@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-
+import $ from 'jquery';
+// var Scroll  = require('react-scroll');
 // import './App.css';
 
 import './css/font.css';
@@ -8,7 +9,6 @@ import './css/style.css';
 import baseData from './components/entry';
 import interop from './components/utils/interop';
 
-import Home from './components/home';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
 import Branch from './components/branch';
@@ -27,11 +27,16 @@ class App extends Component {
         super();
         this.state = {
             mainObjects: [],
+            searchArray:[],
             actives: [],
-            editInDepth: false
+            editInDepth: false,
+            searching:false,
+            searchResults:[],
+            searchVal:''
         }
         this._sideBarClick = this._sideBarClick.bind(this);
         this._editInDepth = this._editInDepth.bind(this);
+        this._searchBar = this._searchBar.bind(this);
     }
 
     _editInDepth() {
@@ -39,12 +44,22 @@ class App extends Component {
         this.setState({editInDepth})
     }
 
-    _sideBarClick(ob) {
-        let actives = _hierarchyIterator(ob).filter((el) => el).reverse().concat(ob);
-        this.setState({actives});
+    _searchBar(arr,searchVal){
+      this.setState({searching:true, searchResults:arr, searchVal})
     }
 
+    _sideBarClick(ob) {
+        let actives = _hierarchyIterator(ob).filter((el) => el).reverse().concat(ob);
+        this.setState({actives, searching:false});
+
+    }
+    componentDidUpdate(){
+      // $('#rightbar').animate({scrollTop:0})
+      document.getElementById('rightbar').scrollTop = 0;
+
+    }
     componentDidMount() {
+      // document.getElementById('rightbar').scrollTop = 0;
         baseData.then((res, rej) => {
 
             //convert xml element to javascript object
@@ -69,21 +84,27 @@ class App extends Component {
                 // }
 
             })
-            this.setState({mainObjects})
+            let searchArray = nodeArray
+
+            this.setState({mainObjects, searchArray})
+
         }).catch(console.error.bind(console))
     }
 
     render() {
-        return ( < div className = "App" > <Header/> < div className = 'container' > <div className='col-md-3' style={{
+
+        return ( < div className = "App" > <Header searching = {this._searchBar} searchArray = {this.state.searchArray}/> < div className = 'container' > <div className='col-md-3 col-sm-2 hidden-xs' style={{
             'height': window.innerHeight - 150,
             'overflow': 'auto',
             'borderRight': '1px solid rgb(84, 84, 84)'
         }}>
             <Sidebar dictionary={this.state.mainObjects} actives={this.state.actives} handleClick={this._sideBarClick} iteration={0}/>
-        </div> < div className = 'col-md-9' style = {{'height':window.innerHeight-150, 'overflow':'auto'}} > {
-            this.state.actives[0]
-                ? <Branch actives={this.state.actives} handleClick={this._sideBarClick} editInDepth={this.state.editInDepth} editInDepthClick={this._editInDepth}/>
-                : <Home/>
+        </div> < div id='rightbar' className = 'col-md-9 col-sm-10' style = {{'height':window.innerHeight-150, 'overflow':'auto'}} > {
+             <Branch actives={this.state.actives} handleClick={this._sideBarClick} editInDepth={this.state.editInDepth} editInDepthClick={this._editInDepth}
+                searching={this.state.searching}
+                searches={this.state.searchResults}
+                searchVal={this.state.searchVal}
+                />
         } < /div>
 
         </div > {

@@ -5,10 +5,13 @@ class ExampleFile_Lightbox extends Component {
   constructor(props) {
         super(props);
         this.state = {
-            photoIndex: 0,
+            photoIndex:0,
             isOpen: true
         };
         this.closeLightbox = this.closeLightbox.bind(this);
+    }
+    componentDidMount(props){
+      this.setState({photoIndex:this.props.index})
     }
     closeLightbox(){
       this.setState({ isOpen: false })
@@ -17,13 +20,13 @@ class ExampleFile_Lightbox extends Component {
     render(){
       const images = this.props.imgPaths;
       const {
-            photoIndex,
-            isOpen,
+          photoIndex,
+            isOpen
         } = this.state;
 
           return (
               <div>
-                    props.isOpen ?
+                    {isOpen ?
                         <Lightbox
                             mainSrc={images[photoIndex]}
 
@@ -41,7 +44,7 @@ class ExampleFile_Lightbox extends Component {
                             })}
                         />
                       :
-                        null
+                        null}
                         </div>
         )
     }

@@ -209,7 +209,16 @@ a:hover{
 	cursor:pointer;
 	text-decoration:none;
 }
+.name {
+    color: gray;
+    text-decoration: none;
 
+}
+.name:hover{
+	color:white;
+	cursor:pointer;
+	text-decoration:none;
+}
 .iconSpread{
 /*
     text-align:center;
@@ -499,7 +508,7 @@ span {
     line-height: 25px;
     font-size: 15px;
     font-weight: 100;
-    padding-right: 4%;
+    /*padding-right: 4%;*/
 		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /*        padding-right: 4%;*/
 }

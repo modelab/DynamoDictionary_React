@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home(props){
   return(
-    <div className = 'col-md-8'>
+    <div className = 'col-md-12'>
         <p className="graytextlg">Welcome to the Dynamo Dictionary, a searchable database for Dynamo functionality. Here you can find explanations for nodes, sample files, and links to more information on associated workflows. This site is constantly evolving as the community continues to add more information. Like the <a href="http://dynamoprimer.com/" target="_blank">Dynamo Primer</a>, this dictionary is open-source - check it out on our <a href="https://github.com/DynamoDS/DynamoDictionary" target="_blank">Github page</a> and contribute!</p>
         <hr />
         <br/>
