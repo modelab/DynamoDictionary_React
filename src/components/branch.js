@@ -89,7 +89,7 @@ function Branch(props) {
     return (
       !props.searching && !props.actives[0] ? <Home/>
       :
-        (<div>
+        (<div   >
             <div style={{
                 'paddingLeft': '30px',
                 'paddingRight': '30px'

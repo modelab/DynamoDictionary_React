@@ -117,8 +117,9 @@ option{
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 5px;
     background-color: rgb(84, 84, 84);
+
 }
 
 ::-webkit-scrollbar-track {
@@ -321,7 +322,7 @@ a:hover{
 }
 
 body {
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 0px;
     padding: 0px;
     background-color: #f9f9f9;
@@ -338,6 +339,7 @@ body {
 
 
 }
+
 
 #submitPR {
     vertical-align: middle;
@@ -384,28 +386,25 @@ b {
 }
 
 .left-element {
+	overflow: hidden;
     /*        resize:horizontal;*/
-    white-space: nowrap;
+    /*white-space: nowrap;
     margin-top: 0%;
-    /*        padding-top: 24px;*/
     display: inline-block;
     position: absolute;
-    overflow: hidden;
-    left: 0;
-    /*width: 22%;*/
 
-    /*        background: rgb(34, 34, 34);*/
+    left: 0;*/
     border-right: 1px solid rgb(84, 84, 84);
 }
 
 .right-element {
-    left: 24%;
+    /*left: 24%;
     padding-top: 24px;
     display: inline-block;
-    position: absolute;
-    overflow: hidden;
-    width: 76%;
-    margin-left: 1%;
+    position: absolute;*/
+    /*overflow: hidden;*/
+    /*width: 76%;
+    margin-left: 1%;*/
     /*        background: red;*/
     /*        display: inline-block;*/
     /*        position: fixed;*/
@@ -427,13 +426,15 @@ div.left-element:hover {
 }
 
 div.right-element {
-    width: 75%;
+    /*width: 75%;*/
     /*        margin-right:55%;*/
-    height: 92%;
-    overflow: scroll;
+    /*height: 92%;*/
+    overflow: hidden;
 }
 
 div.right-element:hover {
+	overflow: auto;
+	overflow-x: hidden;
     /*        overflow: s;*/
 }
 

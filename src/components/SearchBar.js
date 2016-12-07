@@ -35,7 +35,7 @@ class SearchBar extends React.Component{
     search.addDocuments(this.props.searchArray);
 
     let arr = (search.search(val));    // [theGreatGatsby, theDaVinciCode]
-    console.log(arr)
+    // console.log(arr)
     this.props.searching(arr,val);
     // console.log(arr)
   }

@@ -27,12 +27,12 @@ class App extends Component {
         super();
         this.state = {
             mainObjects: [],
-            searchArray:[],
+            searchArray: [],
             actives: [],
             editInDepth: false,
-            searching:false,
-            searchResults:[],
-            searchVal:''
+            searching: false,
+            searchResults: [],
+            searchVal: ''
         }
         this._sideBarClick = this._sideBarClick.bind(this);
         this._editInDepth = this._editInDepth.bind(this);
@@ -44,22 +44,23 @@ class App extends Component {
         this.setState({editInDepth})
     }
 
-    _searchBar(arr,searchVal){
-      this.setState({searching:true, searchResults:arr, searchVal})
+    _searchBar(arr, searchVal) {
+        this.setState({searching: true, searchResults: arr, searchVal})
     }
 
     _sideBarClick(ob) {
         let actives = _hierarchyIterator(ob).filter((el) => el).reverse().concat(ob);
-        this.setState({actives, searching:false});
+        this.setState({actives, searching: false});
 
     }
-    componentDidUpdate(){
-      // $('#rightbar').animate({scrollTop:0})
-      document.getElementById('rightbar').scrollTop = 0;
+    componentDidUpdate() {
+        // $('#rightbar').animate({scrollTop:0})
+        // console.log(document.getElementById('page-content-wrapper').scrollTop)
+        document.body.scrollTop = 0;
 
     }
     componentDidMount() {
-      // document.getElementById('rightbar').scrollTop = 0;
+        // document.getElementById('rightbar').scrollTop = 0;
         baseData.then((res, rej) => {
 
             //convert xml element to javascript object
@@ -93,30 +94,25 @@ class App extends Component {
 
     render() {
 
-        return ( < div className = "App" > <Header searching = {this._searchBar} searchArray = {this.state.searchArray}/> < div className = 'container' > <div className='col-md-3 col-sm-2 hidden-xs' style={{
-            'height': window.innerHeight - 150,
-            'overflow': 'auto',
-            'borderRight': '1px solid rgb(84, 84, 84)'
+        return ( < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray}/> < div id = "wrapper" style = {{'marginTop':'101px'}} > < div id = 'sidebar-wrapper' className = 'left-element' > <ul className="sidebar-nav" style={{
+            'paddingTop': '15px'
         }}>
             <Sidebar dictionary={this.state.mainObjects} actives={this.state.actives} handleClick={this._sideBarClick} iteration={0}/>
-        </div> < div id='rightbar' className = 'col-md-9 col-sm-10' style = {{'height':window.innerHeight-150, 'overflow':'auto'}} > {
-             <Branch actives={this.state.actives} handleClick={this._sideBarClick} editInDepth={this.state.editInDepth} editInDepthClick={this._editInDepth}
-                searching={this.state.searching}
-                searches={this.state.searchResults}
-                searchVal={this.state.searchVal}
-                />
-        } < /div>
-
-        </div > {
-            // this.state.mainObjects.length > 0
-            //     ? (
-            //         <p>greater than 0</p>
-            //     )
-            //     : <p>Please wait while the Dynamo Dictionary Loads...</p>
-        }
-        < /div>
-    )
-  }
+        </ul> < /div>
+        <div id="page-content-wrapper" className='right-element'>
+          <div className='container-fluid'>
+            <div className='row'>
+              <div className = 'col-lg-12'>
+                {
+               <Branch actives={this.state.actives} handleClick={this._sideBarClick} editInDepth={this.state.editInDepth} editInDepthClick={this._editInDepth}
+                  searching={this.state.searching}
+                  searches={this.state.searchResults}
+                  searchVal={this.state.searchVal}
+                  / >
+    } < /div>
+             </div > </div> < /div>
+       </div > </div >)
+}
 }
 
 export default App;
