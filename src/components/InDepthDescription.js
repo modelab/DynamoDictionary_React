@@ -23,6 +23,8 @@ class InDepthDescription extends React.Component{
   render(){
     let props = this.props;
     let node  = props.node;
+
+    console.log(node.inDepth)
     return (
       props.editInDepth ?
       (<textarea id="inDepthDescription" style={{"color": "gray"}} defaultValue = {node.inDepth} />)

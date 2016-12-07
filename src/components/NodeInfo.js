@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+import lineageToRoute from './utils/lineageRouter'
 
 import {flatten, flattenHierarchy} from './utils/array';
 import classNames from 'classnames';
@@ -13,12 +15,12 @@ function NodeInfo(props) {
       <div id="spanDivs">
           <NodeIcon node={node} width="30px" handleClick={props.handleClick}/>
 
-          <div className="addedText name" style ={{
+          <Link to={`${lineageToRoute(node)}`}><div className="addedText name" style ={{
               "position": "relative",
               "top": "4px",
               "color": "white",
               "marginLeft": "15px"
-          }} onClick={() => props.handleClick(props.node)}>{node.Name}</div>
+          }} onClick={() => props.handleClick(props.node)}>{node.Name}</div></Link>
 
           <div style ={{
               "position": "relative",

@@ -37,6 +37,8 @@ class App extends Component {
         this._sideBarClick = this._sideBarClick.bind(this);
         this._editInDepth = this._editInDepth.bind(this);
         this._searchBar = this._searchBar.bind(this);
+        this._routeSelect = this._routeSelect.bind(this);
+        this._hashCheck = this._hashCheck.bind(this);
     }
 
     _editInDepth() {
@@ -47,19 +49,32 @@ class App extends Component {
     _searchBar(arr, searchVal) {
         this.setState({searching: true, searchResults: arr, searchVal})
     }
+    _routeSelect(route){
+      console.log(route)
+    }
 
     _sideBarClick(ob) {
         let actives = _hierarchyIterator(ob).filter((el) => el).reverse().concat(ob);
         this.setState({actives, searching: false});
-
     }
     componentDidUpdate() {
         // $('#rightbar').animate({scrollTop:0})
         // console.log(document.getElementById('page-content-wrapper').scrollTop)
         document.body.scrollTop = 0;
+        console.log(this.props.params)
 
     }
+
+    _hashCheck(){
+
+    }
+
+
+
     componentDidMount() {
+      // componentDidMount(){
+
+      // }
         // document.getElementById('rightbar').scrollTop = 0;
         baseData.then((res, rej) => {
 
@@ -104,11 +119,15 @@ class App extends Component {
             <div className='row'>
               <div className = 'col-lg-12'>
                 {
-               <Branch actives={this.state.actives} handleClick={this._sideBarClick} editInDepth={this.state.editInDepth} editInDepthClick={this._editInDepth}
-                  searching={this.state.searching}
-                  searches={this.state.searchResults}
-                  searchVal={this.state.searchVal}
-                  / >
+               <Branch actives={this.state.actives}
+                 handleClick={this._sideBarClick}
+                 editInDepth={this.state.editInDepth}
+                 editInDepthClick={this._editInDepth}
+                 searching={this.state.searching}
+                 searches={this.state.searchResults}
+                 searchVal={this.state.searchVal}
+                 routeSelect = {this._routeSelect}
+               />
     } < /div>
              </div > </div> < /div>
        </div > </div >)

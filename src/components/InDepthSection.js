@@ -5,6 +5,7 @@ import TextEditor from './TextEditor';
 
 function InDepthSection(props) {
   let node = props.node;
+  node.inDepth = node.inDepth || `Add in-depth information about ${node.Name}...`; //this is a hack
   return (
       <div className = 'inDepth'>
 

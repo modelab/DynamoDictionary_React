@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router';
+import lineageToRoute from './utils/lineageRouter'
 
 function DynamoHierarchy(props) {
     let lastLeaf = props.lastLeaf;

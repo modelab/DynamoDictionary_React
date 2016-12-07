@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 import path from 'path';
 
+import lineageToRoute from './utils/lineageRouter'
+
 function NodeIcon(props) {
-    return ( <
+    return ( <Link to={`${lineageToRoute(props.node)}`}><
         img className = "im"
         height = {props.width}
         style = {
@@ -15,7 +18,7 @@ function NodeIcon(props) {
             path.join('images', props.node.SmallIcon)
         }
         onClick={() => props.handleClick(props.node)}
-        />
+        /></Link>
     )
 }
 
