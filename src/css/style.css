@@ -304,6 +304,11 @@ a:hover{
 .graytext {
     color: gray;
     font-size: 14px;
+		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		/*margin-left: 1em;*/
+		list-style-position: inside;
+		/*text-indent:-2em;*/
+		/*list-style: none;*/
 }
 
 .graytextlg {
@@ -311,6 +316,7 @@ a:hover{
     font-size: 14px;
     font-weight: 100;
     font-style: condensed;
+		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .sb {
