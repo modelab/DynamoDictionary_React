@@ -17,6 +17,7 @@ function Sidebar(props){
 
   return(
     <div className = ''>
+
       {props.dictionary.map((ob,i)=>
         <div key={i}>
         <SidebarButton handleClick = {props.handleClick} ob = {ob} classes = {getClasses(ob)}/>
@@ -27,6 +28,7 @@ function Sidebar(props){
            : null}
         </div>
       )}
+
     </div>
   )
 }

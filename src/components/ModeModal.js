@@ -26,6 +26,7 @@ class ModeModal extends Component {
 
 
     _hideModal = () => {
+      console.log('hidnig')
       if((!this.props.modeDyn || !this.props.modeImg) && this.props.forceBoth){
         this.props.node.dynFile.pop();
         this.props.node.imageFile.pop();
@@ -66,30 +67,32 @@ class ModeModal extends Component {
 
     render() {
         return (
-          <Modal isOpen={this.state.isOpen} onRequestHide={this._hideModal}>
-            <ModalHeader>
+          <div>
+            <Modal isOpen={this.state.isOpen} onRequestHide={this._hideModal}>
+              <ModalHeader>
 
-              <ModalTitle><NodeIcon node={this.props.node} width = {"40px"}/>{this.props.node.Name}</ModalTitle>
-            </ModalHeader>
-            <ModalBody>
-              <ImageLoader readFile = {this.props.readImg}/>
-              <br/>
-              <br/>
-              <br/>
-              <DynLoader readFile = {this.props.readDyn}/>
-              <br/>
-              <br/>
-              <br/>
-            </ModalBody>
-            <ModalFooter>
-              <button className='btn btn-default' onClick={this._hideModal}>
-                Cancel
-              </button>
-              <button className='btn btn-primary' onClick={this._submitModal}>
-                Save changes
-              </button>
-            </ModalFooter>
-          </Modal>
+                <ModalTitle><NodeIcon node={this.props.node} width = {"40px"}/>{this.props.node.TempName||this.props.node.Name}</ModalTitle>
+              </ModalHeader>
+              <ModalBody>
+                <ImageLoader readFile = {this.props.readImg}/>
+                <br/>
+                <br/>
+                <br/>
+                <DynLoader readFile = {this.props.readDyn}/>
+                <br/>
+                <br/>
+                <br/>
+              </ModalBody>
+              <ModalFooter>
+                <button className='btn btn-default' onClick={this._hideModal}>
+                  Cancel
+                </button>
+                <button className='btn btn-primary' onClick={this._submitModal}>
+                  Save changes
+                </button>
+              </ModalFooter>
+            </Modal>
+          </div>
         )
     }
 }

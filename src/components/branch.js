@@ -83,7 +83,7 @@ class Branch extends React.Component {
     extractHierarchy(ob) {
         return this.hierarchyIterator(ob).reverse().map((n, i) => (n.Arr
             ? (
-                <Link to={`${lineageToRoute(n)}`} key={i} onClick={() => this.props.handleClick(n)} className="addedText" >{n.Lineage
+                <Link to={`/${lineageToRoute(n)}`} key={i}  className="addedText" >{n.Lineage
                         ? n.Name
                         : null}{(n.Arr && n.Arr[0].Arr)
                         ? ','
@@ -118,7 +118,7 @@ class Branch extends React.Component {
                         {!props.searching
                             ? <NodeTitle lastLeaf={lastLeaf} handleClick={props.handleClick}/>
                             : <div className='nodeName'>Search: {props.searchVal}</div>
-}
+                        }
                         <hr/> {!props.searching
                             ? <DynamoHierarchy lastLeaf={lastLeaf} extractHierarchy={this.extractHierarchy} nodeDetail={this.nodeDetail}/>
                             : null}
@@ -133,7 +133,9 @@ class Branch extends React.Component {
 
                                     : lastLeaf.Arr
                                         ? (flatten(flattenHierarchy(lastLeaf))).map((node, i) => {
+                                          if(i<50){
                                             return (<NodeInfo handleClick={props.handleClick} node={node} i={i} key={i} extractHierarchy={this.extractHierarchy}/>)
+                                          }
                                         })
                                         : null
 }

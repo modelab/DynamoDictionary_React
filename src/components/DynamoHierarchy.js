@@ -12,6 +12,7 @@ function DynamoHierarchy(props) {
         <div className='nodeHier'>
             <b>Dynamo Hierarchy :&nbsp;
             </b>
+            <Link to ='/'>Root, </Link>
             {extractHierarchy(lastLeaf)}
             { lastLeaf.Arr
                 ? <span style={{

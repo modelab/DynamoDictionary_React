@@ -15,12 +15,12 @@ function NodeInfo(props) {
       <div id="spanDivs">
           <NodeIcon node={node} width="30px" handleClick={props.handleClick}/>
 
-          <Link to={`${lineageToRoute(node)}`}><div className="addedText name" style ={{
+          <Link to={`/${lineageToRoute(node)}`}><div className="addedText name" style ={{
               "position": "relative",
               "top": "4px",
               "color": "white",
               "marginLeft": "15px"
-          }} onClick={() => props.handleClick(props.node)}>{node.Name}</div></Link>
+          }}>{node.TempName || node.Name}</div></Link>
 
           <div style ={{
               "position": "relative",

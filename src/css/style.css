@@ -200,9 +200,9 @@ textarea {
     display: none;
 }
 
-a {
+a, a:visited {
     color: gray;
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
 a:hover{
@@ -210,6 +210,7 @@ a:hover{
 	cursor:pointer;
 	text-decoration:none;
 }
+
 .name {
     color: gray;
     text-decoration: none;
@@ -322,7 +323,7 @@ a:hover{
 }
 
 body {
-    /*overflow: hidden;*/
+    overflow: hidden;
     margin: 0px;
     padding: 0px;
     background-color: #f9f9f9;
@@ -353,19 +354,19 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100px;
+    height: 60px;
     background: rgb(34, 34, 34);
     position: fixed;
     top: 0px;
     z-index: 2;
     text-align: center;
     vertical-align: middle;
-    line-height: 100px;
+    line-height: 60px;
     border-bottom: 1px solid rgb(84, 84, 84);
 }
 
 .title {
-    font-size: 28px;
+    /*font-size: 28px;*/
     /*        font-weight: 50;*/
     margin-right: 20%;
 		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -377,7 +378,7 @@ b {
 
 .container {
     z-index: 1;
-    margin-top: 100px;
+    margin-top: 60px;
     padding-top:20px;
     width: 100%;
     height: 100%;
@@ -386,7 +387,9 @@ b {
 }
 
 .left-element {
-	overflow: hidden;
+	/*height:300%;*/
+	overflow: auto;
+	overflow-x:hidden;
     /*        resize:horizontal;*/
     /*white-space: nowrap;
     margin-top: 0%;
@@ -395,6 +398,7 @@ b {
 
     left: 0;*/
     border-right: 1px solid rgb(84, 84, 84);
+
 }
 
 .right-element {
@@ -402,7 +406,9 @@ b {
     padding-top: 24px;
     display: inline-block;
     position: absolute;*/
-    /*overflow: hidden;*/
+		/*max-height:20%;
+    overflow: auto;
+		overflow-y:scroll;*/
     /*width: 76%;
     margin-left: 1%;*/
     /*        background: red;*/
@@ -429,13 +435,11 @@ div.right-element {
     /*width: 75%;*/
     /*        margin-right:55%;*/
     /*height: 92%;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 div.right-element:hover {
-	overflow: auto;
-	overflow-x: hidden;
-    /*        overflow: s;*/
+
 }
 
 
@@ -750,12 +754,15 @@ div.panel.show {
 input#searchBox {
     margin-left: 15px;
     background: rgb(34, 34, 34);
-    border: 1px solid rgb(84, 84, 84);
+    border-bottom: 1px solid rgb(84, 84, 84);
+		border-left:none;
+		border-right:none;
+		border-top:none;
     border-radius: 0px;
     color: #fff;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     ;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 100;
     vertical-align: middle;
 }

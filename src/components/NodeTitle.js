@@ -9,7 +9,7 @@ function NodeTitle(props) {
           {((!lastLeaf.Arr)
               ? <NodeIcon node={lastLeaf} width="30px" handleClick={props.handleClick}/>
               : null)}
-          {lastLeaf.Name}
+          {lastLeaf.TempName || lastLeaf.Name}
       </div>
     )
 

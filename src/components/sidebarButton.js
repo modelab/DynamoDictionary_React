@@ -9,7 +9,7 @@ import lineageToRoute from './utils/lineageRouter'
 
 function SidebarButton(props) {
     return (
-        <Link to={`${lineageToRoute(props.ob)}`}><button className={props.classes} onClick={() => props.handleClick(props.ob)} style={{
+        <Link to={`/${lineageToRoute(props.ob)}`}><button className={props.classes} style={{
             'paddingLeft': '20px',
             'whiteSpace': 'nowrap'
         }}>

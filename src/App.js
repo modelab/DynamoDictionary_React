@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
+import JsSearch from 'js-search'
+
+import {browserHistory } from 'react-router';
 // var Scroll  = require('react-scroll');
 // import './App.css';
 
@@ -12,6 +15,7 @@ import interop from './components/utils/interop';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
 import Branch from './components/branch';
+import SearchBar from './components/SearchBar';
 
 import {flatten, flattenHierarchy, arraysEqual} from './components/utils/array';
 
@@ -32,13 +36,15 @@ class App extends Component {
             editInDepth: false,
             searching: false,
             searchResults: [],
-            searchVal: ''
+            searchVal: '',
+            route: ''
         }
         this._sideBarClick = this._sideBarClick.bind(this);
         this._editInDepth = this._editInDepth.bind(this);
         this._searchBar = this._searchBar.bind(this);
         this._routeSelect = this._routeSelect.bind(this);
         this._hashCheck = this._hashCheck.bind(this);
+        this._resetActives = this._resetActives.bind(this);
     }
 
     _editInDepth() {
@@ -46,35 +52,92 @@ class App extends Component {
         this.setState({editInDepth})
     }
 
-    _searchBar(arr, searchVal) {
-        this.setState({searching: true, searchResults: arr, searchVal})
+    _searchBar(val) {
+      console.log(val)
+      // browserHistory.push(`/search/${val}`)
+      var search = new JsSearch.Search('Name');
+      search.addIndex('Name');
+      search.addIndex('CategorySearch');
+      search.addIndex('inDepth');
+      search.addIndex('Description');
+      search.addIndex('FullCategoryName');
+      search.addDocuments(this.state.searchArray);
+
+      let arr = (search.search(val));
+      this.setState({searching: true, searchResults: arr, searchVal:val})
     }
-    _routeSelect(route){
-      console.log(route)
+    _routeSelect(route) {
+        console.log(route)
     }
 
     _sideBarClick(ob) {
         let actives = _hierarchyIterator(ob).filter((el) => el).reverse().concat(ob);
         this.setState({actives, searching: false});
     }
+    _resetActives(){
+      this.setState({actives:[]});
+    }
     componentDidUpdate() {
-        // $('#rightbar').animate({scrollTop:0})
-        // console.log(document.getElementById('page-content-wrapper').scrollTop)
-        document.body.scrollTop = 0;
-        console.log(this.props.params)
+      // console.log(this.props)
+      // console.log('props',this.props.params,this.state.route)
+      const routePath = this.props.location.pathname;
+      // console.log('path',routePath)
+        if (routePath !== this.state.route) {
 
+            this.setState({route: this.props.location.pathname, searching:false})
+            let rightdiv = document.getElementById('page-content-wrapper');
+            if(rightdiv){rightdiv.scrollTop = 0;}
+            if (true) {
+                const r = this.props.params;
+                const allkeys = Object.keys(r).sort();
+                // console.log(routePath)
+
+
+
+                const actives = recursiveActives(this.state.mainObjects, 0) || [];
+
+                function recursiveActives(arr, it) {
+                    return arr.map(d => {
+                        if (d.Name === r[allkeys[it]]) {
+                            if (d.Arr && allkeys.length > it + 1) {
+                                return ([d].concat(recursiveActives(d.Arr, it + 1)))
+                            } else {
+                                return ([d])
+                            }
+                        }
+                    }).filter(el => el)[0];
+                }
+                // if (actives.length > 0) {
+                    this.setState({actives})
+                // }
+            }
+            else{
+              console.log('searching')
+              this.setState({searching:false})
+              // this.conductSearch(this.props.params['catB']);
+            }
+        }
     }
+    _conductSearch(val){
+      var search = new JsSearch.Search('Name');
+      search.addIndex('Name');
+      search.addIndex('CategorySearch');
+      search.addIndex('inDepth');
+      search.addIndex('Description');
+      search.addIndex('FullCategoryName');
 
-    _hashCheck(){
+      search.addDocuments(this.props.searchArray);
 
+      let arr = (search.search(val));
+      this.props.searching(arr,val);
     }
-
-
+    _hashCheck() {}
 
     componentDidMount() {
-      // componentDidMount(){
 
-      // }
+        // componentDidMount(){
+
+        // }
         // document.getElementById('rightbar').scrollTop = 0;
         baseData.then((res, rej) => {
 
@@ -84,14 +147,18 @@ class App extends Component {
 
             let nodeArray = flatten(mainObjects.map((d) => flattenHierarchy(d)));
             res[1].forEach((d) => {
+
                 // if(d.dynFile.length>0){
                 nodeArray.forEach((e) => {
+
                     if (e.Name == d.Name) {
                         if (arraysEqual(e.Categories, d.categories)) {
                             //this means json equality to xml nodeArray
                             e.imageFile = d.imageFile;
                             e.dynFile = d.dynFile;
+
                             e.inDepth = d.inDepth;
+
                         }
 
                     }
@@ -101,6 +168,15 @@ class App extends Component {
 
             })
             let searchArray = nodeArray
+            searchArray.forEach((d,i)=>{
+              d.inDepth = d.inDepth || `Add in-depth information about ${d.Name}...`;
+              if(i>0 && d.Name==searchArray[i-1].Name){
+                d.TempName = d.Name+' ('+(d.Inputs?d.Inputs.map(e=>(e.Name+' ' +e.Type)).join(', '):'()') +')';
+                if(!searchArray[i-1].TempName){
+                  searchArray[i-1].TempName = searchArray[i-1].Name+' ('+(searchArray[i-1].Inputs?searchArray[i-1].Inputs.map(e=>e.Name).join(', '):'()') +')';
+                }
+              }
+            })
 
             this.setState({mainObjects, searchArray})
 
@@ -108,13 +184,22 @@ class App extends Component {
     }
 
     render() {
+        return (this.state.route!==''?(
 
-        return ( < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray}/> < div id = "wrapper" style = {{'marginTop':'101px'}} > < div id = 'sidebar-wrapper' className = 'left-element' > <ul className="sidebar-nav" style={{
-            'paddingTop': '15px'
+          < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray}/> < div id = "wrapper" style = {{'marginTop':'60px'}} > < div id = 'sidebar-wrapper' className = 'left-element' style={{"maxHeight":window.innerHeight-60+'px'}} >
+        <div className = 'col-md-12'><SearchBar searchArray = {this.state.searchArray} searching = {this._searchBar} resetActives = {this._resetActives}/></div>
+        <br/>
+        <ul className="sidebar-nav" style={{
+            'marginTop': '65px'
+
         }}>
+
             <Sidebar dictionary={this.state.mainObjects} actives={this.state.actives} handleClick={this._sideBarClick} iteration={0}/>
-        </ul> < /div>
-        <div id="page-content-wrapper" className='right-element'>
+        </ul>
+        <br/>
+        <br/>
+        < /div>
+        <div id="page-content-wrapper" className='right-element' style={{"overflow":"auto", "maxHeight":window.innerHeight-60+'px'}}>
           <div className='container-fluid'>
             <div className='row'>
               <div className = 'col-lg-12'>
@@ -127,10 +212,11 @@ class App extends Component {
                  searches={this.state.searchResults}
                  searchVal={this.state.searchVal}
                  routeSelect = {this._routeSelect}
-               />
-    } < /div>
+               / >
+} < /div>
              </div > </div> < /div>
-       </div > </div >)
+       </div > </div >):null)
+
 }
 }
 

@@ -4,7 +4,6 @@ import path from 'path';
 import DownloadButton from './DownloadButton';
 import EditButton_Files from './EditButton_Files';
 import ExampleImage from './ExampleImage';
-import ModeModal from './ModeModal';
 import ExampleFile_Lightbox from './ExampleFile_Lightbox';
 
 
@@ -13,7 +12,7 @@ import ExampleFile_Lightbox from './ExampleFile_Lightbox';
 function ExampleFile(props) {
       let node = props.node;
       let index = props.index;
-      
+
       return (
             <div className='exSample' style={{
                 'display': 'inline-block'

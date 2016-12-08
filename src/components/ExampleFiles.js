@@ -26,7 +26,7 @@ class ExampleFiles extends React.Component {
             modeDyn: false
         }
         this._turnOnModal = this._turnOnModal.bind(this);
-        this._turnOnExModal = this._turnOnExModal.bind(this);
+        // this._turnOnExModal = this._turnOnExModal.bind(this);
         this._turnOffModal = this._turnOffModal.bind(this);
         this._openLightbox = this._openLightbox.bind(this);
         this._closeLightbox = this._closeLightbox.bind(this);
@@ -44,11 +44,12 @@ class ExampleFiles extends React.Component {
     }
 
     _turnOnModal(index,forceBoth=false){
+      // console.log(index,forceBoth)
       this.setState({modalOpen:true, index, forceBoth})
     }
-    _turnOnExModal(index){
-      this.setState({modalExOpen:true, index})
-    }
+    // _turnOnExModal(index){
+    //   this.setState({modalExOpen:true, index})
+    // }
     _turnOffModal(index){
       this.setState({modalOpen:false, modeImg:false, modeDyn:false, forceBoth:false});
       this._getExamplePaths();
@@ -144,10 +145,11 @@ class ExampleFiles extends React.Component {
 
     render(){
         let node = this.props.node;
+        // console.log(this.state)
           return (
               (node.dynFile && node.dynFile.length > 0)
                   ? (
-                      <div>
+                      <div >
                           Example File{node.dynFile.length > 1
                               ? 's'
                               : null}:
@@ -155,14 +157,17 @@ class ExampleFiles extends React.Component {
                           <br/>
                         {
                           node.dynFile.map((f, i) =>
-                          <ExampleFile node={node} key = {i} index = {i} turnOnModal = {this._turnOnModal} openLightbox = {()=>this._openLightbox(i)} dynPaths={this.state.dynPaths} imgPaths = {this.state.imgPaths}/>
+                          <ExampleFile node={node} key = {i} index = {i} turnOnModal = {this._turnOnModal} turnOffModal = {this._turnOffModal} openLightbox = {()=>this._openLightbox(i)} dynPaths={this.state.dynPaths} imgPaths = {this.state.imgPaths}/>
                         )
                       }
-                      {this.state.modalOpen ? <ModeModal readImg = {this._readImg} modeImg = {this.state.modeImg} modeDyn = {this.state.modeDyn} forceBoth = {this.state.forceBoth} readDyn = {this._readDyn} turnOffModal={this._turnOffModal} node = {node} index={this.state.index}/> : null}
-                      {this.state.modalExOpen ? <ModalExample readImg = {this._readImg} readDyn = {this._readDyn} turnOffModal={this._turnOffModal} node = {node} index={this.state.index}/> : null}
+
+                      {//this.state.modalExOpen ? <ModalExample readImg = {this._readImg} readDyn = {this._readDyn} turnOffModal={this._turnOffModal} node = {node} index={this.state.index}/> : null
+                    }
                       {this.state.lightboxOpen ? <ExampleFile_Lightbox imgPaths = {this.state.imgPaths} isOpen = {true} closeHandle = {this._closeLightbox} index = {this.state.index}/> : null}
                       <ExampleAdd node={node} exAdd={this._exAdd}/>
-                      </div>
+
+                      {this.state.modalOpen ? <ModeModal readImg = {this._readImg} modeImg = {this.state.modeImg} modeDyn = {this.state.modeDyn} forceBoth = {this.state.forceBoth} readDyn = {this._readDyn} turnOffModal={this._turnOffModal} node = {node} index={this.state.index}/> : null}
+                  </div>
                   )
                   :
                   (
