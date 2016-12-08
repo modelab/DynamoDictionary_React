@@ -53,7 +53,6 @@ class App extends Component {
     }
 
     _searchBar(val) {
-      console.log(val)
       // browserHistory.push(`/search/${val}`)
       var search = new JsSearch.Search('Name');
       search.addIndex('Name');
@@ -169,15 +168,27 @@ class App extends Component {
             })
             let searchArray = nodeArray
             searchArray.forEach((d,i)=>{
+              d.ogName = d.Name;
               d.inDepth = d.inDepth || `Add in-depth information about ${d.Name}...`;
               if(i>0 && d.Name==searchArray[i-1].Name){
                 d.TempName = d.Name+' ('+(d.Inputs?d.Inputs.map(e=>(e.Name+' ' +e.Type)).join(', '):'()') +')';
                 if(!searchArray[i-1].TempName){
-                  searchArray[i-1].TempName = searchArray[i-1].Name+' ('+(searchArray[i-1].Inputs?searchArray[i-1].Inputs.map(e=>e.Name).join(', '):'()') +')';
+                  searchArray[i-1].TempName = searchArray[i-1].Name+' ('+(searchArray[i-1].Inputs?searchArray[i-1].Inputs.map(e=>(e.Name+' ' +e.Type)).join(', '):'()') +')';
                 }
               }
             })
-
+            searchArray.forEach((d,i)=>{
+              if(d.TempName){d.Name=d.TempName}
+            })
+            // searchArray.forEach((d,i)=>{
+            //   d.inDepth = d.inDepth || `Add in-depth information about ${d.Name}...`;
+            //   if(i>0 && d.Name==searchArray[i-1].Name){
+            //     d.TempName = d.Name+' ('+(d.Inputs?d.Inputs.map(e=>(e.Name+' ' +e.Type)).join(', '):'()') +')';
+            //     if(!searchArray[i-1].TempName){
+            //       searchArray[i-1].TempName = searchArray[i-1].Name+' ('+(searchArray[i-1].Inputs?searchArray[i-1].Inputs.map(e=>e.Name).join(', '):'()') +')';
+            //     }
+            //   }
+            // })
             this.setState({mainObjects, searchArray})
 
         }).catch(console.error.bind(console))
@@ -186,11 +197,17 @@ class App extends Component {
     render() {
         return (this.state.route!==''?(
 
-          < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray}/> < div id = "wrapper" style = {{'marginTop':'60px'}} > < div id = 'sidebar-wrapper' className = 'left-element' style={{"maxHeight":window.innerHeight-60+'px'}} >
-        <div className = 'col-md-12'><SearchBar searchArray = {this.state.searchArray} searching = {this._searchBar} resetActives = {this._resetActives}/></div>
+          < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray}/>
+        <div className = 'col-md-3 col-sm-12 col-xs-12 clearfix' style={{"zIndex":"5000", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}><SearchBar searchArray = {this.state.searchArray} searching = {this._searchBar} resetActives = {this._resetActives}/></div>
+
+
+  < div id = "wrapper" style = {{'marginTop':'60px'}} >
+
+           < div id = 'sidebar-wrapper' className = 'left-element' style={{"maxHeight":window.innerHeight-60+'px'}} >
+
         <br/>
         <ul className="sidebar-nav" style={{
-            'marginTop': '65px'
+            'marginTop': '45px'
 
         }}>
 
@@ -202,7 +219,7 @@ class App extends Component {
         <div id="page-content-wrapper" className='right-element' style={{"overflow":"auto", "maxHeight":window.innerHeight-60+'px'}}>
           <div className='container-fluid'>
             <div className='row'>
-              <div className = 'col-lg-12'>
+              <div className = 'col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                 {
                <Branch actives={this.state.actives}
                  handleClick={this._sideBarClick}

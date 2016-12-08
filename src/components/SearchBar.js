@@ -25,7 +25,7 @@ class SearchBar extends React.Component{
 
 render(){
     return(
-        <input type="text" id="searchBox" style={{"display":"table-cell","textAlign":"center","height":"60px", "width":"102%", "marginTop":"-2px","marginLeft":"0px","zIndex":"5"}} placeholder="search..." onKeyDown = {this.handleChange}/>
+        <input type="text" id="searchBox" style={{"display":"table-cell","textAlign":"center","height":"40px", "width":"100%", "marginTop":"-2px","marginLeft":"0px"}} placeholder="search..." onKeyDown = {this.handleChange}/>
 
     )
   }
