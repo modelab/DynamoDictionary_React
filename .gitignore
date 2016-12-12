@@ -15,3 +15,6 @@ build
 npm-debug.log
 
 node_modules
+
+configuration/*.json
+src/configuration/*.json
