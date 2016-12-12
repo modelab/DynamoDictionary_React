@@ -1,6 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-**/src/configuration
+**/public/configuration
 
 # dependencies
 node_modules

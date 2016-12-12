@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 import JsSearch from 'js-search'
+import axios from 'axios';
 
 import {browserHistory } from 'react-router';
 // var Scroll  = require('react-scroll');
@@ -55,7 +56,24 @@ class App extends Component {
     }
 
     _gitHubSubmit(){
-      GH(this.state.searchArray);
+      console.log('logging')
+      // console.log(this.state.searchArray)
+
+      let saveJson = this.state.searchArray.map((d)=>{
+        let {
+          Name,imageFile,dynFile,Categories,Outputs,Inputs,inDepth
+        } = d;
+        return{
+          Name,imageFile,dynFile,Categories,Outputs,Inputs,inDepth
+        }
+      })
+      console.log(saveJson)
+
+      axios.get('./configuration/config.json')
+      .then((resolve,reject)=>{
+        console.log(resolve.data.GitHub_Token)
+      })
+      // GH(this.state.searchArray);
     }
 
     _searchBar(val) {
@@ -72,7 +90,7 @@ class App extends Component {
       this.setState({searching: true, searchResults: arr, searchVal:val})
     }
     _routeSelect(route) {
-        console.log(route)
+        // console.log(route)
     }
 
     _sideBarClick(ob) {
@@ -152,7 +170,7 @@ class App extends Component {
 
             let nodeArray = flatten(mainObjects.map((d) => flattenHierarchy(d)));
             nodeArray.forEach((e) => {
-if(e.Name.includes('N')){console.log(e.Name)}
+// if(e.Name.includes('N')){console.log(e.Name)}
             })
             let searchArray = nodeArray
             searchArray.forEach((d,i)=>{
@@ -170,7 +188,7 @@ if(e.Name.includes('N')){console.log(e.Name)}
               if(d.TempName){d.Name=d.TempName}
               if(d.Name=='NormalizeDepth (list, rank)'){console.log(d)}
             })
-            
+
             res[1].forEach((d) => {
 
                 // if(d.dynFile.length>0){
@@ -178,7 +196,7 @@ if(e.Name.includes('N')){console.log(e.Name)}
 
                     if (e.Name == d.Name) {
 
-                      if(d.Name.indexOf('NormalizeDepth')!=-1){console.log('hit',d,e,d.imageFile,d.imageFile.slice())}
+                      // if(d.Name.indexOf('NormalizeDepth')!=-1){console.log('hit',d,e,d.imageFile,d.imageFile.slice())}
                         if (arraysEqual(e.Categories, d.categories)) {
 
                             //this means json equality to xml nodeArray
@@ -214,7 +232,8 @@ if(e.Name.includes('N')){console.log(e.Name)}
 
     render() {
         return (this.state.route!==''?(
-          < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit = {this._gitHubSubmit}/>
+          < div className = "App" >
+          <Header searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit = {this._gitHubSubmit}/>
         <div className = 'col-md-3 col-sm-12 col-xs-12 clearfix' style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}><SearchBar searchArray = {this.state.searchArray} searching = {this._searchBar} resetActives = {this._resetActives}/></div>
 
 
