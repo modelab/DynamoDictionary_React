@@ -58,7 +58,7 @@ class App extends Component {
 
     _gitHubSubmit() {
         console.log('logging')
-        // console.log(this.state.searchArray)
+        console.log(this.state.searchArray)
 
         let saveJson = this.state.searchArray.map((d) => {
             let {
@@ -79,36 +79,36 @@ class App extends Component {
         })
         console.log(saveJson)
 
-        axios.get('./configuration/config.json').then((resolve, reject) => {
-            const token = resolve.data.GitHub_Token;
-            // This is a personal access token, not using oAuth.
-            // Currently this is under ramramps.  We have  to create
-            // a generic user id and add to Github collobrator.
-            // Add the token to a config file and put it in S3. Do not share the token
-            const github = new Github({token});
-            //step 1: Create the branch
-            //TO DO : Generate unique name for the branch
-            const repo = github.getRepo("ekatzenstein", "DynamoDictionary_React");
-            var pull;
-
-            const branchName = 'testing_do_not_merge'+Math.random();
-
-            let branch_create = new Promise((resolve,reject)=>{
-              repo.createBranch("master", branchName,function(){
-                resolve();
-              })
-            })
-            //
-            //
-            //
-            //
-            branch_create.then((res)=>{
-              repo.writeFile(branchName,'public/data/Dynamo_Nodes_Documentation.json',JSON.stringify(saveJson,null,4),'',{},()=>{console.log('test')})
-            })
-
-
-
-        })
+        // axios.get('./configuration/config.json').then((resolve, reject) => {
+        //     const token = resolve.data.GitHub_Token;
+        //     // This is a personal access token, not using oAuth.
+        //     // Currently this is under ramramps.  We have  to create
+        //     // a generic user id and add to Github collobrator.
+        //     // Add the token to a config file and put it in S3. Do not share the token
+        //     const github = new Github({token});
+        //     //step 1: Create the branch
+        //     //TO DO : Generate unique name for the branch
+        //     const repo = github.getRepo("ekatzenstein", "DynamoDictionary_React");
+        //     var pull;
+        //
+        //     const branchName = 'testing_do_not_merge'+Math.random();
+        //
+        //     let branch_create = new Promise((resolve,reject)=>{
+        //       repo.createBranch("master", branchName,function(){
+        //         resolve();
+        //       })
+        //     })
+        //     //
+        //     //
+        //     //
+        //     //
+        //     branch_create.then((res)=>{
+        //       repo.writeFile(branchName,'public/data/Dynamo_Nodes_Documentation.json',JSON.stringify(saveJson,null,4),'',{},()=>{console.log('test')})
+        //     })
+        //
+        //
+        //
+        // })
     }
 
     _searchBar(val) {
