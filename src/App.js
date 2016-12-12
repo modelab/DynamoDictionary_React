@@ -11,6 +11,7 @@ import './css/font.css';
 import './css/style.css';
 import baseData from './components/entry';
 import interop from './components/utils/interop';
+import GH from './components/utils/GitHubApi';
 
 import Header from './components/header';
 import Sidebar from './components/sidebar';
@@ -45,11 +46,16 @@ class App extends Component {
         this._routeSelect = this._routeSelect.bind(this);
         this._hashCheck = this._hashCheck.bind(this);
         this._resetActives = this._resetActives.bind(this);
+        this._gitHubSubmit = this._gitHubSubmit.bind(this);
     }
 
     _editInDepth() {
         let editInDepth = !this.state.editInDepth;
         this.setState({editInDepth})
+    }
+
+    _gitHubSubmit(){
+      GH(this.state.searchArray);
     }
 
     _searchBar(val) {
@@ -139,22 +145,47 @@ class App extends Component {
         // }
         // document.getElementById('rightbar').scrollTop = 0;
         baseData.then((res, rej) => {
-
+          // console.log(res1)
             //convert xml element to javascript object
             let dynLib = interop.xmlToJson(res[0]);
             let mainObjects = interop.createObject(dynLib);
 
             let nodeArray = flatten(mainObjects.map((d) => flattenHierarchy(d)));
+            nodeArray.forEach((e) => {
+if(e.Name.includes('N')){console.log(e.Name)}
+            })
+            let searchArray = nodeArray
+            searchArray.forEach((d,i)=>{
+
+              d.ogName = d.Name;
+              d.inDepth = d.inDepth || `Add in-depth information about ${d.Name}...`;
+              if(i>0 && d.Name==searchArray[i-1].Name){
+                d.TempName = d.Name+' ('+(d.Inputs?d.Inputs.map(e=>e.Name).join(', '):'()') +')';
+                if(!searchArray[i-1].TempName){
+                  searchArray[i-1].TempName = searchArray[i-1].Name+' ('+(searchArray[i-1].Inputs?searchArray[i-1].Inputs.map(e=>e.Name).join(', '):'()') +')';
+                }
+              }
+            })
+            searchArray.forEach((d,i)=>{
+              if(d.TempName){d.Name=d.TempName}
+              if(d.Name=='NormalizeDepth (list, rank)'){console.log(d)}
+            })
+            
             res[1].forEach((d) => {
 
                 // if(d.dynFile.length>0){
                 nodeArray.forEach((e) => {
 
                     if (e.Name == d.Name) {
+
+                      if(d.Name.indexOf('NormalizeDepth')!=-1){console.log('hit',d,e,d.imageFile,d.imageFile.slice())}
                         if (arraysEqual(e.Categories, d.categories)) {
+
                             //this means json equality to xml nodeArray
-                            e.imageFile = d.imageFile;
-                            e.dynFile = d.dynFile;
+
+                            e.imageFile = d.imageFile.slice();
+                            // if(d.Name=='IsAlmostEqualTo'){console.log(d,e, d.imageFile,e.imageFile)}
+                            e.dynFile = d.dynFile.slice();
 
                             e.inDepth = d.inDepth;
 
@@ -166,20 +197,7 @@ class App extends Component {
                 // }
 
             })
-            let searchArray = nodeArray
-            searchArray.forEach((d,i)=>{
-              d.ogName = d.Name;
-              d.inDepth = d.inDepth || `Add in-depth information about ${d.Name}...`;
-              if(i>0 && d.Name==searchArray[i-1].Name){
-                d.TempName = d.Name+' ('+(d.Inputs?d.Inputs.map(e=>(e.Name+' ' +e.Type)).join(', '):'()') +')';
-                if(!searchArray[i-1].TempName){
-                  searchArray[i-1].TempName = searchArray[i-1].Name+' ('+(searchArray[i-1].Inputs?searchArray[i-1].Inputs.map(e=>(e.Name+' ' +e.Type)).join(', '):'()') +')';
-                }
-              }
-            })
-            searchArray.forEach((d,i)=>{
-              if(d.TempName){d.Name=d.TempName}
-            })
+
             // searchArray.forEach((d,i)=>{
             //   d.inDepth = d.inDepth || `Add in-depth information about ${d.Name}...`;
             //   if(i>0 && d.Name==searchArray[i-1].Name){
@@ -196,9 +214,8 @@ class App extends Component {
 
     render() {
         return (this.state.route!==''?(
-
-          < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray}/>
-        <div className = 'col-md-3 col-sm-12 col-xs-12 clearfix' style={{"zIndex":"5000", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}><SearchBar searchArray = {this.state.searchArray} searching = {this._searchBar} resetActives = {this._resetActives}/></div>
+          < div className = "App" > <Header searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit = {this._gitHubSubmit}/>
+        <div className = 'col-md-3 col-sm-12 col-xs-12 clearfix' style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}><SearchBar searchArray = {this.state.searchArray} searching = {this._searchBar} resetActives = {this._resetActives}/></div>
 
 
   < div id = "wrapper" style = {{'marginTop':'60px'}} >

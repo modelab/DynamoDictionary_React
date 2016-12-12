@@ -7,14 +7,14 @@ function Header(props){
   return(
     <div className="titleDiv">
 
-        <div className = 'col-lg-12' style={{'display':'table', 'textAlign':'center', 'padding':'0px'}}>
+        <div className = 'col-lg-12' style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px'}}>
             <span className="title" style={{'fontSize':'18px', 'marginLeft':'15px'}}>
             <a href="http://dynamobim.org/" target="_blank" style={{'display':'table-cell', 'width':'35px'}}>
             <img src="images/src/icon.png" width="100%" id='dynamologo' alt="dynamoIcon" target="_blank" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
             </a>
             <Link to='/' style={{'color':'white'}}>&nbsp; Dynamo Dictionary</Link>
                </span>
-
+               <img src="images/icons/pr_invert.png" id='prLogo' className = 'pull-right' height="100%" alt="prIcon" style={{'padding':'5px'}} onClick={props.gitHubSubmit}/>
 
 
 
@@ -28,7 +28,11 @@ function Header(props){
 
         </div>
         {
-        // <div id='submitPR' className = 'col-md-2 col-sm-2 col-xs-2' style={{"float":"right","marginRight":"25px","marginTop":"20px",'display':'table'}}><span style={{'top':'-15px','display':'table-cell','width':'100%'}} className='hidden-xs hidden-sm'>submit pull request &nbsp;&nbsp;&nbsp;</span><img src="images/icons/pr_invert.png" id='prLogo' width="35" alt="prIcon" style={{'marginBottom':'30px'}}/></div>
+      //   <div id='submitPR' className = 'col-md-2 col-sm-2 col-xs-2' style={{"float":"right","marginRight":"25px","marginTop":"20px",'display':'table'}}><span style={{'top':'-15px','display':'table-cell','width':'100%'}} className='hidden-xs hidden-sm'>
+      //     submit pull request &nbsp;&nbsp;&nbsp;
+      //   </span>
+      //   <img src="images/icons/pr_invert.png" id='prLogo' width="35" alt="prIcon" style={{'marginBottom':'30px'}} onClick={props.gitHubSubmit}/>
+      // </div>
 }
   </div>
 

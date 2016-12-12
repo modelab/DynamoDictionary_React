@@ -145,6 +145,7 @@ class ExampleFiles extends React.Component {
 
     render(){
         let node = this.props.node;
+        // console.log(node)
         // console.log(this.state)
           return (
               (node.dynFile && node.dynFile.length > 0)
@@ -155,7 +156,9 @@ class ExampleFiles extends React.Component {
                               : null}:
                           <br/>
                           <br/>
+
                         {
+
                           node.dynFile.map((f, i) =>
                           <ExampleFile node={node} key = {i} index = {i} turnOnModal = {this._turnOnModal} turnOffModal = {this._turnOffModal} openLightbox = {()=>this._openLightbox(i)} dynPaths={this.state.dynPaths} imgPaths = {this.state.imgPaths}/>
                         )
