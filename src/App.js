@@ -238,14 +238,13 @@ class App extends Component {
 
                     if (e.Name == d.Name) {
 
-                        if(d.Name.indexOf('&&')!=-1){console.log('hit',d,e,d.imageFile,d.imageFile.slice())}
+                        // if(d.Name.indexOf('&&')!=-1){console.log('hit',d,e,d.imageFile,d.imageFile.slice())}
                         if (e.Categories.concat(e.Group).join('/')===d.folderPath) {
 
                             //this means json equality to xml nodeArray
-
-                            e.imageFile = d.imageFile.slice();
+                            e.imageFile =d.imageFile?  d.imageFile.slice(): [];
                             // if(d.Name=='IsAlmostEqualTo'){console.log(d,e, d.imageFile,e.imageFile)}
-                            e.dynFile = d.dynFile.slice();
+                            e.dynFile = d.dynFile? d.dynFile.slice(): [];
 
                             e.inDepth = d.inDepth;
 
