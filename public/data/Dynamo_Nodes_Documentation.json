@@ -19,6 +19,8 @@
     },
     {
         "Name": "AllFalse",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about AllFalse..."
     },
@@ -1229,31 +1231,43 @@
     },
     {
         "Name": "Boolean",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Boolean..."
     },
     {
         "Name": "Code Block (())",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Code Block..."
     },
     {
         "Name": "Code Block ()",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Code Block..."
     },
     {
         "Name": "Date Time",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Date Time..."
     },
     {
         "Name": "Directory Path",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Directory Path..."
     },
     {
         "Name": "File Path",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about File Path..."
     },
@@ -1270,16 +1284,22 @@
     },
     {
         "Name": "Integer Slider",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Integer Slider..."
     },
     {
         "Name": "Number",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Number..."
     },
     {
         "Name": "Number Slider",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about Number Slider..."
     },
@@ -1296,6 +1316,8 @@
     },
     {
         "Name": "String",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Input/Action",
         "inDepth": "Add in-depth information about String..."
     },
@@ -1939,16 +1961,22 @@
     },
     {
         "Name": "And",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about And..."
     },
     {
         "Name": "If",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about If..."
     },
     {
         "Name": "Or",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about Or..."
     },
@@ -1965,201 +1993,281 @@
     },
     {
         "Name": "Xor",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about Xor..."
     },
     {
         "Name": "Abs (number)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Abs..."
     },
     {
         "Name": "Abs (integer)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Abs..."
     },
     {
         "Name": "Acos",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Acos..."
     },
     {
         "Name": "Asin",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Asin..."
     },
     {
         "Name": "Atan",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Atan..."
     },
     {
         "Name": "Atan2",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Atan2..."
     },
     {
         "Name": "Average",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Average..."
     },
     {
         "Name": "Ceiling",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Ceiling..."
     },
     {
         "Name": "Cos",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Cos..."
     },
     {
         "Name": "Cosh",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Cosh..."
     },
     {
         "Name": "DegreesToRadians",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about DegreesToRadians..."
     },
     {
         "Name": "DivRem",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about DivRem..."
     },
     {
         "Name": "Exp",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Exp..."
     },
     {
         "Name": "Factorial",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Factorial..."
     },
     {
         "Name": "Floor",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Floor..."
     },
     {
         "Name": "Log (number, logBase)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Log..."
     },
     {
         "Name": "Log (number)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Log..."
     },
     {
         "Name": "Log10",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Log10..."
     },
     {
         "Name": "Max (int1, int2)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Max..."
     },
     {
         "Name": "Max (value1, value2)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Max..."
     },
     {
         "Name": "Min (int1, int2)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Min..."
     },
     {
         "Name": "Min (value1, value2)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Min..."
     },
     {
         "Name": "Pow",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Pow..."
     },
     {
         "Name": "RadiansToDegrees",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about RadiansToDegrees..."
     },
     {
         "Name": "Rand",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Rand..."
     },
     {
         "Name": "Random (seed)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Random..."
     },
     {
         "Name": "Random (value1, value2)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Random..."
     },
     {
         "Name": "RandomList",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about RandomList..."
     },
     {
         "Name": "RemapRange",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about RemapRange..."
     },
     {
         "Name": "Round (number)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Round..."
     },
     {
         "Name": "Round (number, digits)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Round..."
     },
     {
         "Name": "Sign (integer)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Sign..."
     },
     {
         "Name": "Sign (number)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Sign..."
     },
     {
         "Name": "Sin",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Sin..."
     },
     {
         "Name": "Sinh",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Sinh..."
     },
     {
         "Name": "Sqrt",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Sqrt..."
     },
     {
         "Name": "Sum",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Sum..."
     },
     {
         "Name": "Tan",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Tan..."
     },
     {
         "Name": "Tanh",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Math/Action",
         "inDepth": "Add in-depth information about Tanh..."
     },
@@ -2242,6 +2350,8 @@
     },
     {
         "Name": "Formula (IN[0])",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/Scripting/Action",
         "inDepth": "Add in-depth information about Formula..."
     },
@@ -2280,86 +2390,120 @@
     },
     {
         "Name": "Center",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Center..."
     },
     {
         "Name": "ChangeCase",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about ChangeCase..."
     },
     {
         "Name": "Concat",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Concat..."
     },
     {
         "Name": "Contains",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Contains..."
     },
     {
         "Name": "CountOccurrences",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about CountOccurrences..."
     },
     {
         "Name": "EndsWith",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about EndsWith..."
     },
     {
         "Name": "IndexOf",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about IndexOf..."
     },
     {
         "Name": "Insert",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Insert..."
     },
     {
         "Name": "Join",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Join..."
     },
     {
         "Name": "LastIndexOf",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about LastIndexOf..."
     },
     {
         "Name": "Length",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Length..."
     },
     {
         "Name": "PadLeft",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about PadLeft..."
     },
     {
         "Name": "PadRight",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about PadRight..."
     },
     {
         "Name": "Remove",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Remove..."
     },
     {
         "Name": "Replace",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Replace..."
     },
     {
         "Name": "Split",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Split..."
     },
     {
         "Name": "StartsWith",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about StartsWith..."
     },
@@ -2379,36 +2523,50 @@
     },
     {
         "Name": "Substring",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about Substring..."
     },
     {
         "Name": "ToLower",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about ToLower..."
     },
     {
         "Name": "ToNumber",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about ToNumber..."
     },
     {
         "Name": "ToUpper",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about ToUpper..."
     },
     {
         "Name": "TrimLeadingWhitespace",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about TrimLeadingWhitespace..."
     },
     {
         "Name": "TrimTrailingWhitespace",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about TrimTrailingWhitespace..."
     },
     {
         "Name": "TrimWhitespace",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about TrimWhitespace..."
     },
@@ -3315,6 +3473,8 @@
     },
     {
         "Name": "Rotate (coordinateSystem, origin, degrees)",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Rotate..."
     },
@@ -5847,16 +6007,22 @@
     },
     {
         "Name": "ByJoinedCurves",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Geometry/PolyCurve/Create",
         "inDepth": "Add in-depth information about ByJoinedCurves..."
     },
     {
         "Name": "ByPoints",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Geometry/PolyCurve/Create",
         "inDepth": "Add in-depth information about ByPoints..."
     },
     {
         "Name": "ByThickeningCurve",
+        "imageFile": [],
+        "dynFile": [],
         "folderPath": "Geometry/PolyCurve/Create",
         "inDepth": "Add in-depth information about ByThickeningCurve..."
     },
