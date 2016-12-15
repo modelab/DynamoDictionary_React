@@ -5,7 +5,7 @@ import path from 'path';
 import lineageToRoute from './utils/lineageRouter'
 
 function NodeIcon(props) {
-    return ( <Link to={`/${lineageToRoute(props.node)}`}><
+    return (<Link to={`/${lineageToRoute(props.node)}`}> <
         img className = "im"
         height = {props.width}
         style = {

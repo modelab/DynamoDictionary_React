@@ -49,7 +49,9 @@ class Branch extends React.Component {
             }
             key = {
                 3
-            } />
+            }
+            updateExample = {this.props.updateExample}
+            />
         ]
     }
 

@@ -26,7 +26,6 @@ class ModeModal extends Component {
 
 
     _hideModal = () => {
-      console.log('hidnig')
       if((!this.props.modeDyn || !this.props.modeImg) && this.props.forceBoth){
         this.props.node.dynFile.pop();
         this.props.node.imageFile.pop();

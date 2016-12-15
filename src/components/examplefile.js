@@ -12,6 +12,7 @@ import ExampleFile_Lightbox from './ExampleFile_Lightbox';
 function ExampleFile(props) {
       let node = props.node;
       let index = props.index;
+      let dyn = typeof node.dynFile[index] === 'object' ? node.dynFile[index].original : node.dynFile[index]
 
       return (
             <div className='exSample' style={{
@@ -22,10 +23,11 @@ function ExampleFile(props) {
                         'opacity': '0.45',
                         'paddingRight': '20px'
                     }}>
-                        {node.dynFile[index].og ? node.dynFile[index].og.split('/').pop() : node.dynFile[index]}
-                        {node.dynFile.length  > 1  ? ` - Ex ${index+1}` : null}
+                        {dyn}
+                        {//node.dynFile.length  > 1  ? ` - Ex ${index+1}` : null
+                      }
                     </text>
-                    <DownloadButton node={node} dynPath={props.dynPaths[index]}/>
+                    <DownloadButton node={node} dynPath={dyn}/>
                     <EditButton_Files node={node} turnOnModal = {props.turnOnModal} index={index}/>
                 </div>
                 <ExampleImage imageSrc = {props.imgPaths[index]} index={index} handleClick = {props.openLightbox}/>

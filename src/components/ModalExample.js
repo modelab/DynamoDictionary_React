@@ -23,15 +23,12 @@ class ModalExample extends Component {
         this._hideModal = this._hideModal.bind(this);
     }
 
-
     _hideModal = () => {
       this.setState({
         isOpen: false
       });
       this.props.turnOffModal();
     };
-
-
 
     render() {
         return (

@@ -67,12 +67,15 @@ class ExampleFiles extends React.Component {
 
             let im = this.state.imgPaths[this.state.index];
 
-            im={'name':file.name, 'data':reader.result, 'og':im.og || im };
+            let imProp = this.props.node.imageFile[this.state.index];
+
+            im={'name':file.name, 'data':reader.result, 'og':im.og || im , 'type':'image','original':imProp.original||imProp};
+            const node = this.props.node;
+            im.og =  `./${path.join('data', 'Examples', node.Categories.join('/'), node.Group, 'img', `${im.original}.jpg`)}`
             this.props.node.imageFile[this.state.index]=im;
             this.props.node.overrides = true;
-
             this.setState({modeImg: true})
-            // this.componentDidUpdate();
+            this.props.updateExample(im);
         }.bind(this)
 
     }
@@ -89,17 +92,22 @@ class ExampleFiles extends React.Component {
         }
         reader.onloadend = function () {
             let dyn = this.state.dynPaths[this.state.index];
-            dyn={'name':file.name, 'data':reader.result, 'og':dyn.og || dyn };
+            let dynProp = this.props.node.dynFile[this.state.index];
+            dyn={'name':file.name, 'data':reader.result, 'og':dyn.og || dyn, 'type':'xml','original': dynProp.original || dynProp };
+
             this.props.node.dynFile[this.state.index] = dyn;
             this.props.node.overrides = true;
             this.setState({dynPaths : this.props.node.dynFile, modeDyn:true})
+            this.props.updateExample(dyn);
         }.bind(this)
 
     }
 
     _exAdd(node){
-      node.dynFile.push(node.dynFile[0]);
-      node.imageFile.push({data:'./images/examples/example.jpg'});
+      const first_file_dyn = typeof(node.dynFile[0]) === 'object' ? node.dynFile[0].original :node.dynFile[0];
+      node.dynFile.push({original: first_file_dyn + ' - Ex ' + (node.dynFile.length+1)});
+      const first_file_im = typeof(node.imageFile[0]) === 'object' ? node.imageFile[0].original :node.imageFile[0];
+      node.imageFile.push({data:'./images/examples/example.jpg', original:(first_file_im + ' - Ex ' + (node.imageFile.length+1))});
       // node.dynFile.push('');
       // node.imageFile.push({data:'./images/examples/example.jpg'});
       node.overrides=true;
@@ -119,13 +127,14 @@ class ExampleFiles extends React.Component {
       this.setState({imgPaths:images, dynPaths:dyns, nodeName:node.Name})
 
       function _img(subnode,i) {
-
-        let imagePath = subnode.imageFile[i].data || `./${path.join('data', 'Examples', subnode.Categories.join('/'), subnode.Group, 'img', `${subnode.imageFile[i]}.jpg`)}`
+        const file_name = typeof(subnode.imageFile[i]) === 'object' ? subnode.imageFile[i].original :subnode.imageFile[i];
+        let imagePath = subnode.imageFile[i].data || `./${path.join('data', 'Examples', subnode.Categories.join('/'), subnode.Group, 'img', `${file_name}.jpg`)}`
         return imagePath;
       }
 
       function _dyn(subnode, i) {
-        let dynPath = subnode.dynFile[i].og || `./${path.join('data', 'Examples', subnode.Categories.join('/'), subnode.Group, 'dyn', `${subnode.dynFile[i]}.dyn`)}`
+        const file_name = typeof(subnode.dynFile[i]) === 'object' ? subnode.dynFile[i].original : subnode.dynFile[i];
+        let dynPath = subnode.dynFile[i].og || `./${path.join('data', 'Examples', subnode.Categories.join('/'), subnode.Group, 'dyn', `${file_name}.dyn`)}`
         return dynPath.toString();
       }
     }
@@ -139,6 +148,7 @@ class ExampleFiles extends React.Component {
         node.overrides=null;
         this._getExamplePaths();
       }
+      // console.log(this.props)
 
     }
 
