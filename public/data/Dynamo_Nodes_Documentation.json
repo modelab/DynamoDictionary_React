@@ -2920,7 +2920,7 @@
             "ByFilletTangentToCurve"
         ],
         "folderPath": "Geometry/Arc/Create",
-        "inDepth": "Arc ByFilletTangentToCurve draws the best fit arc that is tangent to three input curves. In this example, we are using two input lines as reference curves and a circle for the arc to be tangent to."
+        "inDepth": "<p>Arc ByFilletTangentToCurve draws the best fit arc that is tangent to three input curves. In this example, we are using two input lines as reference curves and a circle for the arc to be tangent to.test</p>"
     },
     {
         "Name": "ByStartPointEndPointStartTangent",
