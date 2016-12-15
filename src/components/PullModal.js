@@ -77,7 +77,7 @@ class ModeModal extends Component {
                 <br/>
                 <br/>
                 <div style={{'textAlign':'center', 'verticalAlign':'middle'}}>
-                <span className = "graytext">You have updated {this.props.fileCount} files. </span>
+                <span className = "graytext">You have updated {this.props.fileCount} file{this.props.fileCount > 1 ? 's':null}. </span>
                 <br/>
                 <span className = "graytext">Create or select a <a href='https://guides.github.com/introduction/flow/' target="_blank">branch</a> by typing in the name below. </span>
                 <br/>

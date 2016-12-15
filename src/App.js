@@ -47,7 +47,7 @@ class App extends Component {
             updatedFiles: [],
             prModalOpen: false,
             prState:'init',
-            branchName:'session:'+ Date.now().toString()
+            branchName:'user-'+ Date.now().toString()
         }
         this._sideBarClick = this._sideBarClick.bind(this);
         this._editInDepth = this._editInDepth.bind(this);
@@ -70,8 +70,9 @@ class App extends Component {
     }
     _writeBranchName(event){
       event.preventDefault();
-      let bn = event.target.value.replace(/[^a-zA-Z ]/g, "").replace(/\s/g, "-")
+      let bn = bn.replace(/[^a-zA-Z ]/g, "").replace(/\s/g, "-")
       bn = bn ==='master' ? 'user-'+bn : bn;
+
       this.setState({branchName:bn});
     }
 
@@ -119,6 +120,7 @@ class App extends Component {
         // console.log(saveJson)
 
         axios.get('./configuration/config.json').then((resolve, reject) => {
+          console.log(this.state.branchName,'alsnfjdk')
             const token = resolve.data.GitHub_Token;
             window.runTest(token, [...this.state.updatedFiles], saveJson,this.state.branchName)
             this.setState({updatedFiles: []});
