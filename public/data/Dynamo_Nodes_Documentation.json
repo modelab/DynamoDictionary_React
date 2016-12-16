@@ -3021,7 +3021,7 @@
             "ByBestFitThroughPoints"
         ],
         "folderPath": "Geometry/Arc/Create",
-        "inDepth": "<p>Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.</p>"
+        "inDepth": "<p>Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions. Test</p>"
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -3070,12 +3070,10 @@
     {
         "Name": "ByFilletTangentToCurve",
         "imageFile": [
-            "ByFilletTangentToCurve",
-            "ByFilletTangentToCurve - Ex 2"
+            "ByFilletTangentToCurve"
         ],
         "dynFile": [
-            "ByFilletTangentToCurve",
-            "ByFilletTangentToCurve - Ex 2"
+            "ByFilletTangentToCurve"
         ],
         "folderPath": "Geometry/Arc/Create",
         "inDepth": "Arc ByFilletTangentToCurve draws the best fit arc that is tangent to three input curves. In this example, we are using two input lines as reference curves and a circle for the arc to be tangent to."
