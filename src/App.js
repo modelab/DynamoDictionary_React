@@ -79,9 +79,9 @@ class App extends Component {
 
     _retrieve(url){
       if(url){
-        this.setState({prState:'created', prLink:url})
+        this.setState({prState:'created', prLink:url, updatedFiles:[]})
       }else{
-        this.setState({prState:'created'})
+        this.setState({prState:'created',updatedFiles:[]})
       }
 
 
@@ -160,121 +160,8 @@ class App extends Component {
         })
         // console.log(saveJson)
 
-        axios.get('./configuration/config.json').then((resolve, reject) => {
-          console.log(this.state.branchName,'alsnfjdk')
-            const token = resolve.data.GitHub_Token;
-            window.runTest(token, [...this.state.updatedFiles], saveJson,this.state.branchName,this.state.commitMessage,this._retrieve)
-            this.setState({updatedFiles: []});
-            // console.log(token)
-            // var gh = Octokit.new({token: token});
-            // var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
-            // console.log(repo)
-            // repo.getInfo()
-            //   .then(function(repo) {console.log(repo)})
-            // repo.getBranches()
-            //   .then(function(branches) {console.log(branches)});
-            // // This is a personal access token, not using oAuth.
-            // // Currently this is under ramramps.  We have  to create
-            // // a generic user id and add to Github collobrator.
-            // // Add the token to a config file and put it in S3. Do not share the token
-            // const github = new Github({token});
-            // //step 1: Create the branch
-            // //TO DO : Generate unique name for the branch
-            // const repo = github.getRepo("ekatzenstein", "DynamoDictionary_React");
-            // var pull;
-            //
-            //
-            //
-            // const branchName = 'testing_do_not_merge20';
-            //
-            // const list_branches = repo.listBranches(); //returns a promise
-            //
-            // const test_if_branch_exists = list_branches.then(function(res) {
-            //     const branchArray = res.data.map(d => d.name);
-            //     return new Promise((resolve, reject) => resolve(branchArray.indexOf(branchName) == -1))
-            // })
-            //
-            // const branch_create = test_if_branch_exists.then(res => {
-            //     if (res) {
-            //         return repo.createBranch("master", branchName)
-            //     } else {
-            //         return () => {
-            //             console.log('branch exists')
-            //         };
-            //     }
-            // })
-            //
-            // const write_sample_json_file = branch_create.then((res) => {
-            //   console.log('lasdnhjf')
-            //       return repo.writeFile(branchName, 'public/data/Dynamo_Nodes_Documentation.json', JSON.stringify(saveJson, null, 4), '', {encode: true})
-            //
-            // })
-            // // const pause = write_sample_json_file.then((res) => {
-            // //   return window.setTimeout(function () {
-            // //     console.log('pause')
-            // //   }, 1000);
-            // // })
-            // const write_img_file = write_sample_json_file.then((res) => {
-            //   console.log('hello',this.state.updateFiles)
-            //     if (this.state.updatedFiles && this.state.updatedFiles.length > 0) {
-            //       // let fs = this.state.updatedFiles;
-            //       // let f = fs[0];
-            //       // const file_path = path.join('public',f.og.slice(2)).replace("Examples","EXAMPLES");
-            //       // console.log(file_path)
-            //       //
-            //       // repo.getSha('master',file_path,(test)=>{console.log(test)})
-            //
-            //       const promises = this.state.updatedFiles.map((f,i)=>{
-            //           if (f.type === 'image') {
-            //               const file_path = path.join('public',f.og.slice(2)).replace("Examples","EXAMPLES");
-            //               return repo.writeFile(branchName, file_path, window.btoa(window.atob((f.data.replace(/^(.+,)/, '')))), '', {encode: false}).delay(1000)
-            //           }
-            //         })
-            //
-            //         // promises.forEach((f,i)=>{
-            //         //   f.next = f[i+1];
-            //         // })
-            //         // console.log(promises)
-            //         return Promise.all(promises)
-            //         // return resolvePromise(promises)
-            //
-            //         // return promises.reduce((p,i)=>{
-            //         //   return p.then(()=> ()=>{console.log('ran')});
-            //         // },new Promise((res,rej)=>{res()}))
-            //
-            //
-            //
-            //         // function resolvePromise(p){
-            //         //   console.log(p.next)
-            //         //   p.then(res=>{p.next ? resolvePromise(p.next):console.log('hooray');})
-            //         //     .catch(res=>{p.next ? resolvePromise(p.next):console.log('hooray');})
-            //         // }
-            //
-            //     } else {
-            //         return () => {
-            //             console.log('inserted')
-            //         }
-            //     }
-            // })
-            // //
-            // const pr_submit = write_img_file.then((res) => {
-            //     // res();
-            //     const pull = {
-            //         title: branchName,
-            //         body: "This pull request has been automatically generated by DynamoDictionaryUser.",
-            //         base: "master",
-            //         head: branchName
-            //     };
-            //     // return repo.createPullRequest(pull);
-            //     return () => {
-            //         console.log('branch exists')
-            //     };
-            // })
-            // const pr_complete = pr_submit.then((res) => {
-            //     console.log('saved')
-            // })
+        window.githubSubmitter([...this.state.updatedFiles], saveJson,this.state.branchName,this.state.commitMessage,this._retrieve)
 
-        })
     }
 
     _searchBar(val) {

@@ -1,131 +1,19 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="bootstrap/css/sidebar.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="bower_components/octokit/octokit.js"></script>
-    <script>
-        function runTest(token, files, mainExampleFile,branchName,message,terminate) {
-            var branchExists = false;
-            files.push(mainExampleFile)
-            var gh = new Octokit({
-                token: token
-            });
-            var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
-
-            repo.getBranches()
-                .then(function(branches) {
-                    if (branches.filter(function(b) {
-                            return b[2] === branchName;
-                        }).length > 0) {
-                        console.log('branchExists')
-                        branchExists = true;
-                        commitFiles(repo.getBranch(branchName));
-                    } else {
-                        console.log('branch does not exist')
-                        var branch = repo.getBranch();
-                        branch.createBranch(branchName)
-                            .then(function(b) {
-                                commitFiles(repo.getBranch(branchName))
-                            })
-                    }
-                })
-
-            function commitFiles(branch) {
-                if (files.length > 0) {
-                    var contents = {};
-                    files.forEach(function(f) {
-                        switch (f.type) {
-                            case 'image':
-                                var ob = imageContents(f);
-                                contents[ob[0]] = ob[1];
-                                break;
-                            case 'xml':
-                                var ob = dynContents(f);
-                                contents[ob[0]] = ob[1];
-                                break;
-                            default:
-                                contents['public/data/Dynamo_Nodes_Documentation.json']=JSON.stringify(f, null, 4);
-                                return undefined;
-                        }
-                    })
-                    branch.writeMany(contents, message)
-                        .then(function() {
-                            if(!branchExists){
-                              return repo.createPullRequest({
-                              "title": branchName,
-                              "body": "files updated by user",
-                              "head": branchName,
-                              "base": "master"
-                            })
-                          }
-                          else{
-                            return function(){console.log('no pr created')}
-                          }
-
-                        })
-                        .then(function(result) {
-                            terminate(result.html_url);
-                        })
-
-                        ;
-                }
-            }
-        }
-
-        function dynContents(f) {
-            console.log('dyn run',f)
-            var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
-            var fileOb = {
-                content: f.data,
-                isBase64: false
-            };
-            return [file_path, fileOb];
-        }
-
-        function imageContents(f) {
-            console.log('img run',f)
-            var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
-            var file_contents = window.atob((f.data.replace(/^(.+,)/, '')));
-            var fileOb = {
-                content: file_contents,
-                isBase64: true
-            };
-            return [file_path, fileOb];
-        }
-    </script>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Dynamo Dictionary</title>
-</head>
-
-<body>
-    <!-- <body style='overflow:auto;'> -->
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
-</body>
-
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+      <link href="bootstrap/css/sidebar.css" rel="stylesheet">
+      <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src="bower_components/octokit/octokit.js"></script>
+      <script src="js/models/Githubapi.js"></script>
+      <title>Dynamo Dictionary</title>
+  </head>
+  <body>
+      <div id="root"></div>
+  </body>
 </html>
