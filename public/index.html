@@ -12,7 +12,8 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="bower_components/octokit/octokit.js"></script>
     <script>
-        function runTest(token, files, mainExampleFile,branchName) {
+        function runTest(token, files, mainExampleFile,branchName,message,terminate) {
+            var branchExists = false;
             files.push(mainExampleFile)
             var gh = new Octokit({
                 token: token
@@ -25,6 +26,7 @@
                             return b[2] === branchName;
                         }).length > 0) {
                         console.log('branchExists')
+                        branchExists = true;
                         commitFiles(repo.getBranch(branchName));
                     } else {
                         console.log('branch does not exist')
@@ -54,10 +56,26 @@
                                 return undefined;
                         }
                     })
-                    branch.writeMany(contents, 'test')
+                    branch.writeMany(contents, message)
                         .then(function() {
-                            console.log('files saved')
-                        });
+                            if(!branchExists){
+                              return repo.createPullRequest({
+                              "title": branchName,
+                              "body": "files updated by user",
+                              "head": branchName,
+                              "base": "master"
+                            })
+                          }
+                          else{
+                            return function(){console.log('no pr created')}
+                          }
+
+                        })
+                        .then(function(result) {
+                            terminate(result.html_url);
+                        })
+
+                        ;
                 }
             }
         }

@@ -3,6 +3,9 @@ import NodeIcon from './nodeicon';
 import ImageLoader from './ImageLoader';
 import DynLoader from './DynLoader';
 
+import CircularProgress from 'material-ui/CircularProgress';
+
+
 
 import {
   Modal,
@@ -70,36 +73,49 @@ class ModeModal extends Component {
           <div>
             <Modal isOpen={this.state.isOpen} onRequestHide={this.props.hideModal}>
               <ModalHeader>
-
-                <ModalTitle>{this.props.phase ==='init' ? 'Pull Request':'Add New Commit'}</ModalTitle>
+                <ModalTitle>{this.props.phase !='committing' ? 'Pull Request':'Add Commit'}</ModalTitle>
               </ModalHeader>
               <ModalBody>
                 <br/>
                 <br/>
                 <div style={{'textAlign':'center', 'verticalAlign':'middle'}}>
-                <span className = "graytext">You have updated {this.props.fileCount} file{this.props.fileCount > 1 ? 's':null}. </span>
+
+                {this.props.phase != 'logging' && this.props.phase != 'created'  ? <span className = "graytext">You have updated {this.props.fileCount} file{this.props.fileCount != 1 ? 's':null}. </span> : this.props.phase == 'created' ? <span className='graytext'>Linked to Repo! Click on the link in the top right to access on Github</span>:null}
+                </div>
+                {this.props.phase=='init'?  <div style={{'textAlign':'center', 'verticalAlign':'middle'}}>
                 <br/>
                 <span className = "graytext">Create or select a <a href='https://guides.github.com/introduction/flow/' target="_blank">branch</a> by typing in the name below. </span>
                 <br/>
                 <br/>
-                <span className='graytext' style={{'color':'white'}}>Branch Name &nbsp;&nbsp;</span>
-                <input type="text" style={{'backgroundColor':'rgb(34,34,34)', 'borderWidth':'1px','borderRadius':'4px', 'padding':'5px','textAlign':'center','width':'60%'}} onChange = {this.props.branchInput}/>
-                </div>
+            <input type="text" style={{'backgroundColor':'rgb(34,34,34)', 'borderWidth':'1px','borderRadius':'4px', 'padding':'5px','textAlign':'center','width':'60%'}} onChange = {this.props.branchInput}/>
+            <br/>
+            <br/>
+            <br/>
+            <span className = "graytext">Add a git <a href='https://www.atlassian.com/git/tutorials/saving-changes/git-commit' target="_blank">commit</a> message by typing in the name below. </span>
+            <br/>
+            <br/>
+            <input type="text" style={{'backgroundColor':'rgb(34,34,34)', 'borderWidth':'1px','borderRadius':'4px', 'padding':'5px','textAlign':'center','width':'60%'}} onChange = {this.props.commitInput}/>
+
+            </div>: this.props.phase=='logging' ? <div style={{'textAlign':'center'}}><CircularProgress size={110} thickness={10} color = {'white'}/></div> : null}
                 <br/>
                 <br/>
               </ModalBody>
+              {this.props.phase!='created' && this.props.phase != 'logging'?
               <ModalFooter>
                 <button className='btn btn-default' onClick={this.props.hideModal}>
                   Cancel
                 </button>
                 <button className='btn btn-primary' onClick={this.props.submit}>
-                  {this.props.phase ==='init' ? 'Submit PR':'Submit Commit'}
+                  {this.props.phase !='committing' ? 'Submit PR':'Add Commit'}
                 </button>
               </ModalFooter>
+              : null}
             </Modal>
           </div>
         )
     }
 }
+
+
 
 export default ModeModal;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-
-
+import IconButton from 'material-ui/IconButton';
 
 function Header(props){
   return(
@@ -34,7 +33,17 @@ function Header(props){
         //   <img src="images/icons/pr_invert.png" id='prLogo' width="35" alt="prIcon" style={{'marginBottom':'30px'}} onClick={props.gitHubSubmit}/>
         // </div>
         }
-        <div  className='graytext' onClick={props.openModal} style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}> submit pull request<img src="images/icons/pr_invert.png" id='prLogo' width= '40px' alt="prIcon" style={{'padding':'10px', 'paddingTop':'5px', 'opacity':'0.5'}}/></div>
+        <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
+          <IconButton tooltip={props.phase=='init'?'Submit Pull Request':'Add Commit'} touch={true} tooltipPosition="bottom-left" style={{"top":"-5"}} tooltipStyles={{'background-opacity':0}} onClick={props.openModal}>
+            <img src="images/icons/pr_invert.png" id='prLogo' width= '22px' alt="prIcon"/>
+          </IconButton>
+          {props.phase == 'committing' ? <a href={props.link} target="_blank"><IconButton tooltip='View PR on Github' touch={true} tooltipPosition="bottom-left" style={{"top":"-5"}} tooltipStyles={{'background-opacity':0}}>
+            <img src="images/icons/octocat.png" id='prLogo' width= '30px' alt="prIcon"/>
+          </IconButton></a>
+          :null
+         }
+
+    </div>
   </div>
 
   )

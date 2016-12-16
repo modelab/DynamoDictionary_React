@@ -25,6 +25,11 @@ import PullModal from './components/PullModal';
 
 import {flatten, flattenHierarchy, arraysEqual} from './components/utils/array';
 
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+
+
 function _hierarchyIterator(ob) {
     if (ob && ob.Parent != 'Home') {
         return [ob.Parent].concat(_hierarchyIterator(ob.Parent)).filter((el) => el)
@@ -47,7 +52,10 @@ class App extends Component {
             updatedFiles: [],
             prModalOpen: false,
             prState:'init',
-            branchName:'user-'+ Date.now().toString()
+            branchName:'user-'+ Date.now().toString(),
+            mainEdit:false,
+            prLink:'https://github.com/ekatzenstein/DynamoDictionary_React',
+            commitMessage:'no commit message'
         }
         this._sideBarClick = this._sideBarClick.bind(this);
         this._editInDepth = this._editInDepth.bind(this);
@@ -60,7 +68,29 @@ class App extends Component {
         this._showPrModal = this._showPrModal.bind(this);
         this._hidePrModal = this._hidePrModal.bind(this);
         this._writeBranchName = this._writeBranchName.bind(this);
+        this._writeCommitMessage = this._writeCommitMessage.bind(this);
         this._submitPR = this._submitPR.bind(this);
+        this._retrieve = this._retrieve.bind(this);
+        this._toCommitting = this._toCommitting.bind(this);
+    }
+    getChildContext() {
+        return { muiTheme: getMuiTheme(baseTheme) };
+    }
+
+    _retrieve(url){
+      if(url){
+        this.setState({prState:'created', prLink:url})
+      }else{
+        this.setState({prState:'created'})
+      }
+
+
+
+      window.setTimeout(this._toCommitting,3000);
+    }
+    _toCommitting(){
+      this.setState({prState:'committing'})
+      this._hidePrModal()
     }
     _showPrModal() {
         this.setState({prModalOpen: true})
@@ -70,20 +100,23 @@ class App extends Component {
     }
     _writeBranchName(event){
       event.preventDefault();
-      let bn = bn.replace(/[^a-zA-Z ]/g, "").replace(/\s/g, "-")
+      let bn = event.target.value.replace(/[^a-zA-Z ]/g, "").replace(/\s/g, "-")
       bn = bn ==='master' ? 'user-'+bn : bn;
 
       this.setState({branchName:bn});
     }
-
+    _writeCommitMessage(event){
+      event.preventDefault();
+      this.setState({commitMessage:event.target.value != '' ? event.target.value :'no commit message'});
+    }
     _submitPR(){
+      this.setState({prState:'logging'})
       this._gitHubSubmit();
-      this._hidePrModal();
     }
 
     _editInDepth() {
         let editInDepth = !this.state.editInDepth;
-        this.setState({editInDepth})
+        this.setState({editInDepth, mainEdit:true})
     }
 
     _updateExample(file) {
@@ -122,7 +155,7 @@ class App extends Component {
         axios.get('./configuration/config.json').then((resolve, reject) => {
           console.log(this.state.branchName,'alsnfjdk')
             const token = resolve.data.GitHub_Token;
-            window.runTest(token, [...this.state.updatedFiles], saveJson,this.state.branchName)
+            window.runTest(token, [...this.state.updatedFiles], saveJson,this.state.branchName,this.state.commitMessage,this._retrieve)
             this.setState({updatedFiles: []});
             // console.log(token)
             // var gh = Octokit.new({token: token});
@@ -403,7 +436,7 @@ class App extends Component {
     render() {
         return (this.state.route !== ''
             ? (
-              <div className = "App"> <Header openModal={this._showPrModal} searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit={this._gitHubSubmit}/>
+              <div className = "App"> <Header openModal={this._showPrModal} searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit={this._gitHubSubmit} phase = {this.state.prState} link={this.state.prLink}/>
                 <div className = 'col-md-3 col-sm-12 col-xs-12 clearfix' style = {{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}>
                   <SearchBar searchArray={this.state.searchArray} searching={this._searchBar} resetActives={this._resetActives}/>
                 </div>
@@ -435,11 +468,13 @@ class App extends Component {
                      </div>
                  </div>
                </div>
-               {this.state.prModalOpen ? <PullModal fileCount ={this.state.updatedFiles.length} hideModal = {this._hidePrModal} phase = {this.state.prState} branchInput = {this._writeBranchName} submit = {this._submitPR}/> : null}
+               {this.state.prModalOpen ? <PullModal fileCount ={this.state.updatedFiles.length+this.state.mainEdit?1:0} hideModal = {this._hidePrModal} phase = {this.state.prState} branchInput = {this._writeBranchName} commitInput = {this._writeCommitMessage}  submit = {this._submitPR}/> : null}
            </div>
  ) : null)
 
 }
 }
-
+App.childContextTypes = {
+            muiTheme: React.PropTypes.object.isRequired,
+        };
 export default App;
