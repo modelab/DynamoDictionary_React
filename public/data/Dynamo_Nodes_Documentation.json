@@ -3015,12 +3015,10 @@
     {
         "Name": "ByBestFitThroughPoints",
         "imageFile": [
-            "ByBestFitThroughPoints",
-            "ByBestFitThroughPoints - Ex 2"
+            "ByBestFitThroughPoints"
         ],
         "dynFile": [
-            "ByBestFitThroughPoints",
-            "ByBestFitThroughPoints - Ex 2"
+            "ByBestFitThroughPoints"
         ],
         "folderPath": "Geometry/Arc/Create",
         "inDepth": "<p>Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.</p>"
