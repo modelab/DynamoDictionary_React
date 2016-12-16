@@ -5,7 +5,7 @@ import IconButton from 'material-ui/IconButton';
 function Header(props){
   return(
     <div className="titleDiv">
-
+        
         <div className = 'col-lg-12' style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px'}}>
             <span className="title" style={{'fontSize':'18px', 'marginLeft':'15px'}}>
             <a href="http://dynamobim.org/" target="_blank" style={{'display':'table-cell', 'width':'35px'}}>
@@ -13,31 +13,15 @@ function Header(props){
             </a>
             <Link to='/' className = 'raleway' style={{'color':'white'}}>&nbsp; Dynamo Dictionary</Link>
             </span>
-
-
-
-
-            {/*
-            <nav style={{"opacity":1,"display":"inline","marginLeft":"10px","fontSize":"13px","color":"white"}} className="list">list</nav>
-            <span style={{"opacity":.25}}> | </span>
-            <nav className="matrix" style={{"opacity":.25,"display":"inline"," fontSize":"13px","color":"white"}}>matrix</nav>
-            */}
         </div>
         <div id="title" className = 'col-md-6 col-sm-6 col-xs-6' >
 
         </div>
-        {
-        //   <div id='submitPR' className = 'col-md-2 col-sm-2 col-xs-2' style={{"float":"right","marginRight":"25px","marginTop":"20px",'display':'table'}}><span style={{'top':'-15px','display':'table-cell','width':'100%'}} className='hidden-xs hidden-sm'>
-        //     submit pull request &nbsp;&nbsp;&nbsp;
-        //   </span>
-        //   <img src="images/icons/pr_invert.png" id='prLogo' width="35" alt="prIcon" style={{'marginBottom':'30px'}} onClick={props.gitHubSubmit}/>
-        // </div>
-        }
         <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
-          <IconButton tooltip={props.phase=='init'?'Submit Pull Request':'Add Commit'} touch={true} tooltipPosition="bottom-left" style={{"top":"-5"}} tooltipStyles={{'background-opacity':0}} onClick={props.openModal}>
+          <IconButton tooltip={props.phase=='init'?'Submit Pull Request':'Add Commit'} touch={true} tooltipPosition="bottom-left" style={{"top":"-5px"}} onClick = {props.openModal}>
             <img src="images/icons/pr_invert.png" id='prLogo' width= '22px' alt="prIcon"/>
           </IconButton>
-          {props.phase == 'committing' ? <a href={props.link} target="_blank"><IconButton tooltip='View PR on Github' touch={true} tooltipPosition="bottom-left" style={{"top":"-5"}} tooltipStyles={{'background-opacity':0}}>
+          {props.phase == 'committing' ? <a href={props.link} target="_blank"><IconButton tooltip='View PR on Github' touch={true} tooltipPosition="bottom-left" style={{"top":"-5"}}>
             <img src="images/icons/octocat.png" id='prLogo' width= '30px' alt="prIcon"/>
           </IconButton></a>
           :null

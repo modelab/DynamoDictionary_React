@@ -18,7 +18,9 @@ class ModeModal extends Component {
     constructor() {
         super();
         this.state = {
-            isOpen: true
+            isOpen: true,
+            imageLoaded:false,
+            dynLoaded:true
         }
         this._hideModal = this._hideModal.bind(this);
         this._submitModal = this._submitModal.bind(this);
@@ -50,7 +52,7 @@ class ModeModal extends Component {
     _submitModal = (e) => {
       let ims = this.props.node.imageFile;
       if((!this.props.modeDyn || !this.props.modeImg) && this.props.forceBoth){
-        alert('Error: please submit image file and dynamo file to create a new example file!')
+        alert('Error: Please submit image file and dynamo file to create a new example file!')
       }
       else{
         // let isImage = (ims[ims.length-1].data && ims[ims.length-1].data.indexOf('data:image')===-1);
@@ -66,18 +68,20 @@ class ModeModal extends Component {
 
     render() {
         return (
-          <div>
+          <div style={{'textAlign':'center'}}>
             <Modal isOpen={this.state.isOpen} onRequestHide={this._hideModal}>
               <ModalHeader>
 
                 <ModalTitle><NodeIcon node={this.props.node} width = {"40px"}/>{this.props.node.TempName||this.props.node.Name}</ModalTitle>
               </ModalHeader>
               <ModalBody>
-                <ImageLoader readFile = {this.props.readImg}/>
+                <br/>
+                <br/>
+                <ImageLoader readFile = {this.props.readImg} force={this.props.forceBoth} loaded = {this.props.modeImg}/>
                 <br/>
                 <br/>
                 <br/>
-                <DynLoader readFile = {this.props.readDyn}/>
+                <DynLoader readFile = {this.props.readDyn} force={this.props.forceBoth} loaded = {this.props.modeDyn}/>
                 <br/>
                 <br/>
                 <br/>

@@ -111,7 +111,7 @@ class Branch extends React.Component {
         return (!props.searching && !props.actives[0]
             ? <Home/>
             : (
-                <div >
+                <div  style={{'padding':'10%', 'paddingTop':'30px'}}>
                     <div style={{
                         'paddingLeft': '30px',
                         'paddingRight': '30px'

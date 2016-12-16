@@ -395,7 +395,9 @@ b {
     /*        background: red;*/
     /*        position: fixed;*/
 }
-
+label:hover{
+	cursor:pointer;
+}
 .left-element {
 	/*height:300%;*/
 	overflow: auto;
@@ -412,6 +414,7 @@ b {
 }
 
 .right-element {
+	overflow-x:hidden !important;
     /*left: 24%;
     padding-top: 24px;
     display: inline-block;

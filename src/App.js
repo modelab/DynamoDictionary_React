@@ -127,6 +127,14 @@ class App extends Component {
             ]
         })
     }
+    shouldComponentUpdate(nextProps,nextState){
+      if ((this.state.commitMessage != nextState.commitMessage) || (this.state.branchName != nextState.branchName)){
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
 
     _gitHubSubmit() {
 
@@ -468,7 +476,7 @@ class App extends Component {
                      </div>
                  </div>
                </div>
-               {this.state.prModalOpen ? <PullModal fileCount ={this.state.updatedFiles.length+this.state.mainEdit?1:0} hideModal = {this._hidePrModal} phase = {this.state.prState} branchInput = {this._writeBranchName} commitInput = {this._writeCommitMessage}  submit = {this._submitPR}/> : null}
+               {this.state.prModalOpen ? <PullModal fileCount ={this.state.updatedFiles.length+(this.state.mainEdit?1:0)} hideModal = {this._hidePrModal} phase = {this.state.prState} branchInput = {this._writeBranchName} commitInput = {this._writeCommitMessage}  submit = {this._submitPR} link={this.state.prLink}/> : null}
            </div>
  ) : null)
 

@@ -9,7 +9,7 @@ import Branch from './components/branch';
 import './index.css';
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={hashHistory} >
     <Route path="/" component={App}>
       <Route path="/:catA" component={ App } />
       <Route path="/:catA/:catB" component={ App } />

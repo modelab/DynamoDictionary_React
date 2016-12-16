@@ -1,16 +1,13 @@
 import React from 'react';
 import ModalExample from './ModalExample';
-
+import IconButton from 'material-ui/IconButton';
 
 
 
 export default function ExampleAdd(props){
     return(
-      <div style={{"paddingBottom": "25px", "color":"gray"}}
-      onClick = {()=>{props.exAdd(props.node)}}
-      >
-      <img width="50px" height="40px" src="images/icons/add.svg" style={{"opacity": "0.25"}}/>
-      Add Example File
-      </div>
+      <IconButton width="40px" tooltip='Add Example File' touch={true} tooltipPosition="top-center" style={{"padding": "0", 'margin':'0', "color":"gray"}}  onClick = {()=>{props.exAdd(props.node)}}>
+      <img  src="images/icons/add.svg"/>
+      </IconButton>
     )
 }

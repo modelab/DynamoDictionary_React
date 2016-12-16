@@ -104,9 +104,10 @@ class ExampleFiles extends React.Component {
     }
 
     _exAdd(node){
-      const first_file_dyn = typeof(node.dynFile[0]) === 'object' ? node.dynFile[0].original :node.dynFile[0];
+      console.log(node)
+      const first_file_dyn = typeof(node.dynFile[0]) === 'object' ? node.dynFile[0].original :node.dynFile[0] || node.Name;
       node.dynFile.push({original: first_file_dyn + ' - Ex ' + (node.dynFile.length+1)});
-      const first_file_im = typeof(node.imageFile[0]) === 'object' ? node.imageFile[0].original :node.imageFile[0];
+      const first_file_im = typeof(node.imageFile[0]) === 'object' ? node.imageFile[0].original :node.imageFile[0]  || node.Name;
       node.imageFile.push({data:'./images/examples/example.jpg', original:(first_file_im + ' - Ex ' + (node.imageFile.length+1))});
       // node.dynFile.push('');
       // node.imageFile.push({data:'./images/examples/example.jpg'});

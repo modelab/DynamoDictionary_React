@@ -7,7 +7,7 @@ import ActionGrade from 'material-ui/svg-icons/action/grade';
 const IconButtonExampleTouch = () => (
   <div>
     <IconButton tooltip="bottom-right" touch={true} tooltipPosition="bottom-right">
-      <img src="images/icons/pr_invert.png" id='prLogo' width= '40px' alt="prIcon" style={{'padding':'10px', 'paddingTop':'5px', 'opacity':'0.5'}}/>
+      <img src="images/icons/pr_invert.png" id='prLogo' width= '40px' alt="prIcon" style={{'padding':'10px', 'paddingTop':'5px'}}/>
     </IconButton>
     <IconButton tooltip="bottom-center" touch={true} tooltipPosition="bottom-center">
       <ActionGrade />
