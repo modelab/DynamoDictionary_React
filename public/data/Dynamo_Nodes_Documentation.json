@@ -3472,7 +3472,7 @@
             "ByCylindricalCoordinates"
         ],
         "folderPath": "Geometry/CoordinateSystem/Create",
-        "inDepth": "ByCylindricalCoordinates will return a CoordinateSystem at a cylindrical coordinate location. Instead of X, Y, and Z describing the coordinate location, we use radius, theta, and height. This allows us to create CoordinateSystems around a circle or spiral. In the example below, a set of CoordinateSystems at cylindrical coordinate locations are used for a finer degree of control in a boolean difference operation. The CoordinateSystem allows us to move Spheres into or out of the cylinder, producing indents of variable size."
+        "inDepth": "<p>ByCylindricalCoordinates will return a CoordinateSystem at a cylindrical coordinate location. Instead of X, Y, and Z describing the coordinate location, we use radius, theta, and height. This allows us to create CoordinateSystems around a circle or spiral. In the example below, a set of CoordinateSystems at cylindrical coordinate locations are used for a finer degree of control in a boolean difference operation. The CoordinateSystem allows us to move Spheres into or out of the cylinder, producing indents of variable size. asdf</p>"
     },
     {
         "Name": "ByMatrix",
