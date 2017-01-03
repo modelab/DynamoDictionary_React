@@ -5,7 +5,6 @@ import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 
 
 import App from './App';
-import Branch from './components/branch';
 import './index.css';
 
 ReactDOM.render(

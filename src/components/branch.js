@@ -11,7 +11,7 @@ import ExampleSection from './ExampleSection';
 import NodeInfo from './NodeInfo';
 import NodeTitle from './NodeTitle';
 import DynamoHierarchy from './DynamoHierarchy';
-import Home from './home';
+import Home from './Home';
 
 
 

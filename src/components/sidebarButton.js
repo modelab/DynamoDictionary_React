@@ -11,6 +11,7 @@ function SidebarButton(props) {
     return (
         <Link to={`/${lineageToRoute(props.ob)}`}><button className={props.classes} style={{
             'paddingLeft': '20px',
+            'paddingRight': '20px',
             'whiteSpace': 'nowrap'
         }}>
             {(!props.ob.Arr)

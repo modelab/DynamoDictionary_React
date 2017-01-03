@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import nodeEquality from './utils/array';
-import SidebarButton from './sidebarButton.js'
+import SidebarButton from './SidebarButton.js'
 
 
 

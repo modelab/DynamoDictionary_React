@@ -13,13 +13,13 @@ import {browserHistory} from 'react-router';
 import './css/font.css';
 // import './css/modal.css';
 import './css/style.css';
-import baseData from './components/entry';
+import baseData from './components/Entry';
 import interop from './components/utils/interop';
 import GH from './components/utils/GitHubApi';
 
-import Header from './components/header';
-import Sidebar from './components/sidebar';
-import Branch from './components/branch';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Branch from './components/Branch';
 import SearchBar from './components/SearchBar';
 import PullModal from './components/PullModal';
 
