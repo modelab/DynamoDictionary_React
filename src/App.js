@@ -197,7 +197,7 @@ class App extends Component {
 
                 function recursiveActives(arr, it) {
                     return arr.map(d => {
-                        if (d.Name === r[allkeys[it]] || d.RouteName === r[allkeys[it]]) {
+                        if (d.Name === r[allkeys[it]] || (d.RouteName && d.RouteName === r[allkeys[it]])) {
                             if (d.Arr && allkeys.length > it + 1) {
                                 return ([d].concat(recursiveActives(d.Arr, it + 1)))
                             } else {
