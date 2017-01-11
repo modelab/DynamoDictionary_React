@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import NodeIcon from './nodeicon';
+import NodeIcon from './NodeIcon';
 import ImageLoader from './ImageLoader';
 import DynLoader from './DynLoader';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import NodeIcon from './nodeicon';
+import NodeIcon from './NodeIcon';
 
 function NodeTitle(props) {
     let lastLeaf = props.lastLeaf;

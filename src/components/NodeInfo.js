@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import lineageToRoute from './utils/lineageRouter';
 import classNames from 'classnames';
 
-import NodeIcon from './nodeicon';
+import NodeIcon from './NodeIcon';
 
 function NodeInfo(props) {
     let node = props.node;
