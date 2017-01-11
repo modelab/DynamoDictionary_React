@@ -99,6 +99,7 @@ class Branch extends React.Component {
         let props=this.props;
         let actives=props.actives;
         let lastLeaf=actives[actives.length - 1];
+  
 
         return (!props.searching && !props.actives[0]
             ? <Home/>

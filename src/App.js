@@ -159,6 +159,7 @@ class App extends Component {
         search.addIndex('inDepth');
         search.addIndex('Description');
         search.addIndex('FullCategoryName');
+        search.addIndex('RouteName');
         search.addDocuments(this.state.searchArray);
 
         let arr=(search.search(val));
@@ -196,7 +197,7 @@ class App extends Component {
 
                 function recursiveActives(arr, it) {
                     return arr.map(d => {
-                        if (d.Name === r[allkeys[it]]) {
+                        if (d.Name === r[allkeys[it]] || d.RouteName === r[allkeys[it]]) {
                             if (d.Arr && allkeys.length > it + 1) {
                                 return ([d].concat(recursiveActives(d.Arr, it + 1)))
                             } else {
@@ -210,7 +211,7 @@ class App extends Component {
                 this.setState({actives})
                 // }
             } else {
-                console.log('searching')
+
                 this.setState({searching: false})
                 // this.conductSearch(this.props.params['catB']);
             }
@@ -223,6 +224,7 @@ class App extends Component {
         search.addIndex('inDepth');
         search.addIndex('Description');
         search.addIndex('FullCategoryName');
+        search.addIndex('RouteName');
 
         search.addDocuments(this.props.searchArray);
 

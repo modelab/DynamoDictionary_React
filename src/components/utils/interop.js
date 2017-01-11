@@ -27,7 +27,8 @@ interop.xmlToJson = function(data) {
             nd["Categories"] = nd["FullCategoryName"].split(".")
             nd["TopCategory"] = nd["Categories"][0];
             nd["activated"] = true;
-            nd["Name"] = cn.querySelector("Name").textContent;
+            nd["Name"] = cn.querySelector("Name").textContent
+            nd["RouteName"]=nameConvert(cn.querySelector("Name").textContent);
             nd["CategorySearch"] = [nd["FullCategoryName"], nd["Name"]].join('.')
             nd["Group"] = cn.querySelector("Group").textContent;
             nd["Description"] = cn.querySelector("Description").textContent;
@@ -40,6 +41,23 @@ interop.xmlToJson = function(data) {
         }
     });
     return dataArr;
+}
+
+function nameConvert(name){
+  if(name==='%'){name='Modulo';}
+  if(name==='!='){name='NotEqualTo';}
+  if(name==='&&'){name='And';}
+  if(name==='*'){name='Multiplication';}
+  if(name==='+'){name='Addition';}
+  if(name==='-'){name='Subtraction';}
+  if(name==='/'){name='Division';}
+  if(name==='<'){name='LessThan';}
+  if(name==='<='){name='LessThanEqualTo';}
+  if(name==='=='){name='IsEqual';}
+  if(name==='>'){name='GreaterThan';}
+  if(name==='>='){name='GreaterThanEqualTo';}
+  if(name==='||'){name='Or';}
+  return name;
 }
 
 function getParam(cn,val1, val2) {
