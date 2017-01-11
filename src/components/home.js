@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home(props){
   return(
-    <div className = 'col-md-12' style={{'padding':'20%', 'paddingTop':'20px'}}>
+    <div className='col-md-12' style={{'padding':'20%', 'paddingTop':'20px'}}>
         <h1 className='raleway'>The Dynamo Dictionary</h1>
         <hr/>
         <p className="graytextlg" style={{"color":"lightgray"}}>Welcome to the Dynamo Dictionary, a searchable database for Dynamo functionality. Here you can find explanations for nodes, sample files, and links to more information on associated workflows. This site is constantly evolving as the community continues to add more information. Like the <a href="http://dynamoprimer.com/" target="_blank" style={{'color':'orangered'}}>Dynamo Primer</a>, this dictionary is open-source - check it out on our <a href="https://github.com/DynamoDS/DynamoDictionary" target="_blank"  style={{'color':'orangered'}} >Github page</a> and contribute!</p>
@@ -22,25 +22,25 @@ function Home(props){
         <div className='iconSpread'>
             <div className='imgHL'>
                 <div className='imgbutton'>
-                    <a href='http://dynamobim.org/' target='_blank'><img src='images/home/dynamobim.jpg' width='100%' /> </a>
+                    <a href='http://dynamobim.org/' target='_blank'><img alt='dynamo bim' src='images/home/dynamobim.jpg' width='100%' /> </a>
                 </div>
                 <div className='text_over_imageL'><a href='http://dynamobim.org/' target='_blank'>Community</a></div>
             </div>
             <div className='imgHL'>
                 <div className='imgbutton'>
-                    <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img src='images/home/dynamostudio.jpg' width='100%' className='imgbutton' /> </a>
+                    <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img alt='dynamo studio' src='images/home/dynamostudio.jpg' width='100%' className='imgbutton' /> </a>
                 </div>
                 <div className='text_over_imageR'><a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'>Product</a></div>
             </div>
             <div className='imgHL'>
                 <div className='imgbutton'>
-                    <a href='http://dynamoprimer.com/' target='_blank'><img src='images/home/dynamoprimer.jpg' width='100%' /></a>
+                    <a href='http://dynamoprimer.com/' target='_blank'><img alt='dynamo primer' src='images/home/dynamoprimer.jpg' width='100%' /></a>
                 </div>
                 <div className='text_over_imageL'> <a href='http://dynamoprimer.com/' target='_blank'>Learning</a></div>
             </div>
             <div className='imgHL'>
                 <div className='imgbutton'>
-                    <a href='https://github.com/DynamoDS/Dynamo' target='_blank'><img src='images/home/dynamogithub.jpg' width='100%' /></a>
+                    <a href='https://github.com/DynamoDS/Dynamo' target='_blank'><img alt='dynamo github' src='images/home/dynamogithub.jpg' width='100%' /></a>
                 </div>
                 <div className='text_over_imageR'><a href='https://github.com/DynamoDS/Dynamo' target='_blank'>Development</a></div>
             </div>

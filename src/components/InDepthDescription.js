@@ -12,21 +12,21 @@ class InDepthDescription extends React.Component{
 
   handleClickOutside(event) {
     if(this.props.editInDepth){
-      const domNode = ReactDOM.findDOMNode(this);
+      const domNode=ReactDOM.findDOMNode(this);
       if ((!domNode || !domNode.contains(event.target))) {
-          this.props.node.inDepth = domNode.value; //this is a mutation, could be improved
+          this.props.node.inDepth=domNode.value; //this is a mutation, could be improved
           this.props.editInDepthClick();
       }
     }
   }
 
   render(){
-    let props = this.props;
-    let node  = props.node;
+    let props=this.props;
+    let node=props.node;
 
     return (
       props.editInDepth ?
-      (<textarea id="inDepthDescription" style={{"color": "gray"}} defaultValue = {node.inDepth} />)
+      (<textarea id="inDepthDescription" style={{"color": "gray"}} defaultValue={node.inDepth} />)
       :
       (<pre id="inDepthDescription" style={{"color": "gray"}}>{node.inDepth}</pre>)
     )

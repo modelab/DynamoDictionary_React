@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import lineageToRoute from './utils/lineageRouter'
 
 function DynamoHierarchy(props) {
     let lastLeaf = props.lastLeaf;
@@ -12,7 +11,7 @@ function DynamoHierarchy(props) {
         <div className='nodeHier'>
             <b>Dynamo Hierarchy :&nbsp;
             </b>
-            <Link to ='/'>Root, </Link>
+            <Link to='/'>Root, </Link>
             {extractHierarchy(lastLeaf)}
             { lastLeaf.Arr
                 ? <span style={{

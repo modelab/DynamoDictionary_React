@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import lineageToRoute from './utils/lineageRouter'
 
-import classNames from 'classnames';
-
 import {flatten, flattenHierarchy} from './utils/array';
-
 
 import ExampleSection from './ExampleSection';
 import NodeInfo from './NodeInfo';
@@ -18,10 +15,10 @@ import Home from './Home';
 class Branch extends React.Component {
     constructor() {
         super();
-        this.nodeDetail = this.nodeDetail.bind(this);
-        this.detailList = this.detailList.bind(this);
-        this.extractHierarchy = this.extractHierarchy.bind(this);
-        this.hierarchyIterator = this.hierarchyIterator.bind(this);
+        this.nodeDetail=this.nodeDetail.bind(this);
+        this.detailList=this.detailList.bind(this);
+        this.extractHierarchy=this.extractHierarchy.bind(this);
+        this.hierarchyIterator=this.hierarchyIterator.bind(this);
     }
 
     nodeDetail(ob) {
@@ -35,22 +32,19 @@ class Branch extends React.Component {
                 : null,
             ob.Outputs
                 ? this.detailList('nodeDesc', 'Outputs', ob.Outputs, 2)
-                : null, < ExampleSection node = {
+                : null, < ExampleSection node={
                 ob
             }
-            key = {
+            key={
                 3
             }
-            editInDepthClick = {
+            editInDepthClick={
                 this.props.editInDepthClick
             }
-            editInDepth = {
+            editInDepth={
                 this.props.editInDepth
             }
-            key = {
-                3
-            }
-            updateExample = {this.props.updateExample}
+            updateExample={this.props.updateExample}
             />
         ]
     }
@@ -94,7 +88,7 @@ class Branch extends React.Component {
             : {}))
     }
     hierarchyIterator(ob) {
-        if (ob && ob.Parent != 'Home') {
+        if (ob && ob.Parent !== 'Home') {
             return [ob.Parent].concat(this.hierarchyIterator(ob.Parent)).filter((el) => el)
         } else {
             return [];
@@ -102,11 +96,9 @@ class Branch extends React.Component {
     }
     render() {
         // console.log(props.mainObjects)
-        let props = this.props;
-        let actives = props.actives;
-        let lastLeaf = actives[actives.length - 1];
-
-        let hierarchy = props.actives.length;
+        let props=this.props;
+        let actives=props.actives;
+        let lastLeaf=actives[actives.length - 1];
 
         return (!props.searching && !props.actives[0]
             ? <Home/>
@@ -138,6 +130,7 @@ class Branch extends React.Component {
                                           if(i<50){
                                             return (<NodeInfo handleClick={props.handleClick} node={node} i={i} key={i} extractHierarchy={this.extractHierarchy}/>)
                                           }
+                                          return null;
                                         })
                                         : null
 }

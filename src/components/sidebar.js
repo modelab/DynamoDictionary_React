@@ -16,14 +16,14 @@ function Sidebar(props){
   }
 
   return(
-    <div className = ''>
+    <div className=''>
 
       {props.dictionary.map((ob,i)=>
         <div key={i}>
-        <SidebarButton handleClick = {props.handleClick} ob = {ob} classes = {getClasses(ob)}/>
+        <SidebarButton handleClick={props.handleClick} ob={ob} classes={getClasses(ob)}/>
           {nodeEquality(ob,props.actives[ob.iteration]) ?
             (
-              ob.Arr ? <Sidebar dictionary={ob.Arr} actives = {props.actives} handleClick = {props.handleClick} iteration={props.iteration+1}/> : null
+              ob.Arr ? <Sidebar dictionary={ob.Arr} actives={props.actives} handleClick={props.handleClick} iteration={props.iteration+1}/> : null
             )
            : null}
         </div>

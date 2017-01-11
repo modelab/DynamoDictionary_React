@@ -6,11 +6,11 @@ import ReactDOM from 'react-dom';
 import RichTextEditor from 'react-rte';
 
 export default class TextEditor extends Component {
-    static propTypes = {
+    static propTypes={
         onChange: PropTypes.func
     };
     componentDidUpdate(e){
-      if(e.node.inDepth!=this.props.node.inDepth){
+      if(e.node.inDepth!==this.props.node.inDepth){
         this.setState({
           value: RichTextEditor.createValueFromString(this.props.node.inDepth,'html')
         })
@@ -27,20 +27,20 @@ export default class TextEditor extends Component {
 
     handleClickOutside(event) {
       if(this.props.editInDepth){
-        const domNode = ReactDOM.findDOMNode(this);
+        const domNode=ReactDOM.findDOMNode(this);
         if ((!domNode || !domNode.contains(event.target))) {
-            this.props.node.inDepth = this.state.value.toString('html'); //this is a mutation, could be improved
+            this.props.node.inDepth=this.state.value.toString('html'); //this is a mutation, could be improved
             this.props.editInDepthClick();
         }
       }
     }
 
-    state = {
+    state={
         value: RichTextEditor.createValueFromString(this.props.node.inDepth,'html'),
         readOnly:true
     }
 
-    onChange = (value) => {
+    onChange=(value) => {
         this.setState({
             value
         });
@@ -59,7 +59,7 @@ export default class TextEditor extends Component {
         // The toolbarConfig object allows you to specify custom buttons, reorder buttons and to add custom css classes.
         // Supported inline styles: https://github.com/facebook/draft-js/blob/master/docs/Advanced-Topics-Inline-Styles.md
         // Supported block types: https://github.com/facebook/draft-js/blob/master/docs/Advanced-Topics-Custom-Block-Render.md#draft-default-block-render-map
-        const toolbarConfig = {
+        const toolbarConfig={
             // Optionally specify the groups to display (displayed in the order listed).
             display: ['INLINE_STYLE_BUTTONS', 'BLOCK_TYPE_BUTTONS', 'LINK_BUTTONS', 'BLOCK_TYPE_DROPDOWN', 'HISTORY_BUTTONS'],
             INLINE_STYLE_BUTTONS: [{
@@ -91,16 +91,16 @@ export default class TextEditor extends Component {
 
         return (
           <
-            RichTextEditor toolbarConfig = {
+            RichTextEditor toolbarConfig={
                 toolbarConfig
             }
-            value = {
+            value={
                 this.state.value
             }
-            onChange = {
+            onChange={
                 this.onChange
             }
-            readOnly = {!this.props.editInDepth}
+            readOnly={!this.props.editInDepth}
             />
         );
     }

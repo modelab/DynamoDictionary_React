@@ -8,7 +8,6 @@ import {
   Modal,
   ModalHeader,
   ModalTitle,
-  ModalClose,
   ModalBody,
   ModalFooter
 } from 'react-modal-bootstrap';
@@ -17,13 +16,13 @@ import {
 class ModalExample extends Component {
     constructor() {
         super();
-        this.state = {
+        this.state={
             isOpen: true
         }
-        this._hideModal = this._hideModal.bind(this);
+        this._hideModal=this._hideModal.bind(this);
     }
 
-    _hideModal = () => {
+    _hideModal=() => {
       this.setState({
         isOpen: false
       });
@@ -35,14 +34,14 @@ class ModalExample extends Component {
           <Modal isOpen={this.state.isOpen} onRequestHide={this._hideModal}>
             <ModalHeader>
 
-              <ModalTitle><NodeIcon node={this.props.node} width = {"40px"}/>{this.props.node.Name}</ModalTitle>
+              <ModalTitle><NodeIcon node={this.props.node} width={"40px"}/>{this.props.node.Name}</ModalTitle>
             </ModalHeader>
             <ModalBody>
-              <ImageLoader readFile = {this.props.readImg}/>
+              <ImageLoader readFile={this.props.readImg}/>
               <br/>
               <br/>
               <br/>
-              <DynLoader readFile = {this.props.readDyn}/>
+              <DynLoader readFile={this.props.readDyn}/>
               <br/>
               <br/>
               <br/>

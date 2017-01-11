@@ -1,10 +1,8 @@
 import React from 'react';
-import path from 'path';
 
 import DownloadButton from './DownloadButton';
-import EditButton_Files from './EditButton_Files';
+import EditButtonFiles from './EditButton_Files';
 import ExampleImage from './ExampleImage';
-import ExampleFile_Lightbox from './ExampleFile_Lightbox';
 
 function ExampleFile(props) {
     let node = props.node;
@@ -24,7 +22,7 @@ function ExampleFile(props) {
                 }}>
                     {dynName}
                 </text>
-                <EditButton_Files node={node} turnOnModal={props.turnOnModal} index={index}/>
+                <EditButtonFiles node={node} turnOnModal={props.turnOnModal} index={index}/>
                 <DownloadButton node={node} dynPath={dyn}/>
             </div>
             <ExampleImage imageSrc={props.imgPaths[index]} index={index} handleClick={props.openLightbox}/>

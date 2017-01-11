@@ -1,28 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router';
-import lineageToRoute from './utils/lineageRouter'
-
-import {flatten, flattenHierarchy} from './utils/array';
+import lineageToRoute from './utils/lineageRouter';
 import classNames from 'classnames';
 
 import NodeIcon from './nodeicon';
 
 function NodeInfo(props) {
     let node = props.node;
-    let i = props.i;
 
     return (
       <div id="spanDivs">
           <NodeIcon node={node} width="30px" handleClick={props.handleClick}/>
 
-          <Link to={`/${lineageToRoute(node)}`}><div className="addedText name" style ={{
+          <Link to={`/${lineageToRoute(node)}`}><div className="addedText name" style={{
               "position": "relative",
               "top": "4px",
               "color": "white",
               "marginLeft": "15px"
           }}>{node.TempName || node.Name}</div></Link>
 
-          <div style ={{
+          <div style={{
               "position": "relative",
               "top": "4px",
               "color": "grey",
