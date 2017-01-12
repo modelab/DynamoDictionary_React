@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import JsSearch from 'js-search';
+import { Router, Route, hashHistory } from 'react-router';
 
 import './css/font.css';
 import './css/style.css';
@@ -62,6 +63,7 @@ class App extends Component {
         this._submitPR=this._submitPR.bind(this);
         this._retrieve=this._retrieve.bind(this);
         this._toCommitting=this._toCommitting.bind(this);
+        this._routePush=this._routePush.bind(this);
     }
     getChildContext() {
         return { muiTheme: getMuiTheme(baseTheme) };
@@ -117,7 +119,17 @@ class App extends Component {
             ]
         })
     }
+    _routePush(route,iteration){
+      if(this.state.route===route){
+        hashHistory.push(`${route.split('/').slice(0,iteration+1).join('/')}`)
+      }
+      else{
+        hashHistory.push(route)
+      }
+
+    }
     shouldComponentUpdate(nextProps,nextState){
+
       if ((this.state.commitMessage !== nextState.commitMessage) || (this.state.branchName !== nextState.branchName)){
         return false;
       }
@@ -177,10 +189,7 @@ class App extends Component {
         this.setState({actives: []});
     }
     componentDidUpdate() {
-        // console.log(this.props)
-        // console.log('props',this.props.params,this.state.route)
         const routePath=this.props.location.pathname;
-        // console.log('path',routePath)
         if (routePath !== this.state.route) {
 
             this.setState({route: this.props.location.pathname, searching: false})
@@ -191,8 +200,6 @@ class App extends Component {
             if (true) {
                 const r=this.props.params;
                 const allkeys=Object.keys(r).sort();
-                // console.log(routePath)
-
                 const actives=recursiveActives(this.state.mainObjects, 0) || [];
 
                 function recursiveActives(arr, it) {
@@ -295,9 +302,6 @@ class App extends Component {
 
                     }
                 })
-
-                // }
-
             })
 
             this.setState({mainObjects, searchArray})
@@ -316,7 +320,7 @@ class App extends Component {
                   <div id='sidebar-wrapper' className='left-element' style={{"maxHeight":window.innerHeight-60+'px'}}>
                     <br/>
                     <ul className="sidebar-nav" style={{'marginTop': '45px'}}>
-                        <Sidebar dictionary={this.state.mainObjects} actives={this.state.actives} handleClick={this._sideBarClick} iteration={0}/>
+                        <Sidebar dictionary={this.state.mainObjects} actives={this.state.actives} handleClick={this._sideBarClick} iteration={0} routePush={this._routePush}/>
                     </ul>
                     <br/>
                     <br/>

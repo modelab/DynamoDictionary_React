@@ -102,6 +102,8 @@ export default class TextEditor extends Component {
             }
             readOnly={!this.props.editInDepth}
             />
+
+
         );
     }
 }

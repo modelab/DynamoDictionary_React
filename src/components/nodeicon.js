@@ -5,8 +5,14 @@ import path from 'path';
 import lineageToRoute from './utils/lineageRouter'
 
 function NodeIcon(props) {
+    let element;
     return (<Link to={`/${lineageToRoute(props.node)}`}> <
         img className="im"
+        onError={function(){
+          element.onerror=null;
+          element.src='images/src/icon_offset.png';
+        }}
+        ref={el => element=el}
         height={props.width}
         style={
             {

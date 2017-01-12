@@ -22,8 +22,6 @@
 	color:lightgray;
 	border:none !important;
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-
-
 }
 
 .EditorToolbar__root___3_Aqz{
@@ -35,14 +33,20 @@
 	text-align:center;
 	left:0 !important;
 	right:0 !important;
-	margin-top:-35px !important;
+	margin-top:-42px !important;
 	border:none !important;
-
-
+}
+.public-DraftEditor-content[contenteditable="true"]{
+	outline: 1px dashed #fff !important;
+	background-color:rgb(55,55,55) !important;
+	padding-left:20px !important;
+	padding-right:20px !important;
+	color:white !important;
+	/*border: 1px solid white !important;*/
 }
 .public-DraftEditor-content{
-	padding-left:0 !important;
-	padding-right:0 !important;
+	padding-left:20px !important;
+	padding-right:20px !important;
 	color:gray;
 	/*border: 1px solid white !important;*/
 }
