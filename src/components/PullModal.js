@@ -68,7 +68,7 @@ class ModeModal extends Component {
                 </div>
                 {this.props.phase==='init'?  <div style={{'textAlign':'center', 'verticalAlign':'middle'}}>
                 <br/>
-                <span className="graytext">Create or select a <a href='https://guides.github.com/introduction/flow/' target="_blank">branch</a> by typing in the name below. </span>
+                <span className="graytext">Create or add to an existing <a href='https://guides.github.com/introduction/flow/' target="_blank">branch</a> by typing in the name below. </span>
                 <br/>
                 <br/>
             <input type="text" style={{'backgroundColor':'rgb(34,34,34)', 'borderWidth':'1px','borderRadius':'4px', 'padding':'5px','textAlign':'center','width':'60%'}} onChange={this.props.branchInput}/>
