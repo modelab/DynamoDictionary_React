@@ -25,7 +25,7 @@ function ExampleFile(props) {
                 <EditButtonFiles node={node} turnOnModal={props.turnOnModal} index={index}/>
                 <DownloadButton node={node} dynPath={dyn}/>
             </div>
-            <ExampleImage imageSrc={props.imgPaths[index]+'alsnkdf'} index={index} handleClick={props.openLightbox}/>
+            <ExampleImage imageSrc={props.imgPaths[index]} index={index} handleClick={props.openLightbox}/>
         </div>
     )
 }
