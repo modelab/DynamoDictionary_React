@@ -141,8 +141,6 @@ class ExampleFiles extends React.Component {
         node.overrides=null;
         this._getExamplePaths();
       }
-      // console.log(this.props)
-
     }
 
 
@@ -168,6 +166,7 @@ class ExampleFiles extends React.Component {
                       {//this.state.modalExOpen ? <ModalExample readImg={this._readImg} readDyn={this._readDyn} turnOffModal={this._turnOffModal} node={node} index={this.state.index}/> : null
                     }
                       {this.state.lightboxOpen ? <ExampleFileLightbox imgPaths={this.state.imgPaths} isOpen={true} closeHandle={this._closeLightbox} index={this.state.index}/> : null}
+                      <br/>
                       <ExampleAdd node={node} exAdd={this._exAdd}/>
 
                       {this.state.modalOpen ? <ModeModal readImg={this._readImg} modeImg={this.state.modeImg} modeDyn={this.state.modeDyn} forceBoth={this.state.forceBoth} readDyn={this._readDyn} turnOffModal={this._turnOffModal} node={node} index={this.state.index}/> : null}

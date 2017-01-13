@@ -45,7 +45,7 @@ class App extends Component {
             prState:'init',
             branchName:'user-'+ Date.now().toString(),
             mainEdit:false,
-            prLink:'https://github.com/ekatzenstein/DynamoDictionary_React',
+            prLink:'https://github.com/DynamoDS/DynamoDictionary',
             commitMessage:'no commit message'
         }
         this._sideBarClick=this._sideBarClick.bind(this);
