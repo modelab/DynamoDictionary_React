@@ -15,6 +15,8 @@ import PullModal from './components/PullModal';
 
 import {flatten, flattenHierarchy} from './components/utils/array';
 
+import Drawer from 'material-ui/Drawer';
+
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -46,7 +48,9 @@ class App extends Component {
             branchName:'user-'+ Date.now().toString(),
             mainEdit:false,
             prLink:'https://github.com/DynamoDS/DynamoDictionary',
-            commitMessage:'no commit message'
+            commitMessage:'no commit message',
+            treeOpen:true,
+            minWidth:600
         }
         this._sideBarClick=this._sideBarClick.bind(this);
         this._editInDepth=this._editInDepth.bind(this);
@@ -64,11 +68,14 @@ class App extends Component {
         this._retrieve=this._retrieve.bind(this);
         this._toCommitting=this._toCommitting.bind(this);
         this._routePush=this._routePush.bind(this);
+        this._toggleTree=this._toggleTree.bind(this);
     }
     getChildContext() {
         return { muiTheme: getMuiTheme(baseTheme) };
     }
-
+    _toggleTree(){
+      this.setState({treeOpen:!this.state.treeOpen})
+    }
     _retrieve(url){
       if(url){
         this.setState({prState:'created', prLink:url, updatedFiles:[]})
@@ -241,6 +248,10 @@ class App extends Component {
     _hashCheck() {}
 
     componentDidMount() {
+      const _this = this;
+      window.addEventListener('resize', () => {
+          _this.forceUpdate();
+      });
 
         // componentDidMount(){
 
@@ -309,26 +320,54 @@ class App extends Component {
         }).catch(console.error.bind(console))
     }
 
+
+
     render() {
+      const isLarge = window.innerWidth>this.state.minWidth;
+      const ratio=this.state.treeOpen && isLarge ? 0.3 : 0;
+
         return (this.state.route !== ''
             ? (
-              <div className="App"> <Header openModal={this._showPrModal} searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit={this._gitHubSubmit} phase={this.state.prState} link={this.state.prLink}/>
-                <div className='col-md-3 col-sm-12 col-xs-12 clearfix' style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}>
-                  <SearchBar searchArray={this.state.searchArray} searching={this._searchBar} resetActives={this._resetActives}/>
-                </div>
+              <div className="App"> <Header toggleTree={this._toggleTree} isLarge={isLarge} openModal={this._showPrModal} searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit={this._gitHubSubmit} phase={this.state.prState} link={this.state.prLink}/>
+
                 <div id="wrapper" style={{'marginTop':'60px'}}>
-                  <div id='sidebar-wrapper' className='left-element' style={{"maxHeight":window.innerHeight-60+'px'}}>
+                  {isLarge?
+                  (
+                  <Drawer
+                    id='sidebar-wrapper'
+                    docked={true}
+                    width={window.innerWidth*ratio}
+                    open={this.state.treeOpen}
+                    containerStyle={{backgroundColor:'rgb(34,34,34)', marginTop:'60px',
+                    }}
+                  >
+                  <div className='col-md-12 col-sm-12 col-xs-12 clearfix' style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}>
+                    <SearchBar searchArray={this.state.searchArray} searching={this._searchBar} resetActives={this._resetActives}/>
+                  </div>
+                  <div  className='left-element' style={{"maxHeight":window.innerHeight-60+'px'}}>
                     <br/>
-                    <ul className="sidebar-nav" style={{'marginTop': '45px'}}>
+                    <ul style={{paddingLeft:'0px'}}>
                         <Sidebar dictionary={this.state.mainObjects} actives={this.state.actives} handleClick={this._sideBarClick} iteration={0} routePush={this._routePush}/>
                     </ul>
                     <br/>
                     <br/>
                   </div>
-                    <div id="page-content-wrapper" className='right-element' style={{"overflow":"auto", "maxHeight":window.innerHeight-60+'px'}}>
-                      <div className='container-fluid'>
+
+                </Drawer>
+              ):
+              <div style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}>
+                <SearchBar searchArray={this.state.searchArray} searching={this._searchBar} resetActives={this._resetActives}/>
+              </div>
+
+            }
+                    <div id="page-content-wrapper" className='right-element' style={{"overflow":"auto", "maxHeight":window.innerHeight-60+'px', paddingTop:'20px'}}>
+                      <div style={{marginLeft:window.innerWidth*(ratio), width:window.innerWidth*(1-ratio),
+                        transitionTimingFunction:'cubic-bezier(0.23, 1, 0.32, 1)',
+                        transition: isLarge ? 'all 450ms' : 'all 0ms',
+                          }}>
                         <div className='row'>
-                          <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+
+                          <div >
                              <Branch actives={this.state.actives}
                                updateExample={this._updateExample}
                                handleClick={this._sideBarClick}
@@ -354,3 +393,5 @@ App.childContextTypes={
             muiTheme: React.PropTypes.object.isRequired,
         };
 export default App;
+
+// <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
