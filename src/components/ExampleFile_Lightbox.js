@@ -25,7 +25,7 @@ class ExampleFile_Lightbox extends Component {
         } = this.state;
 
           return (
-              <div>
+                <div>
                     {isOpen ?
                         <Lightbox
                             mainSrc={images[photoIndex]}
@@ -33,7 +33,7 @@ class ExampleFile_Lightbox extends Component {
                               nextSrc={images.length>1?images[(photoIndex + 1) % images.length]:null}
                               prevSrc={images.length>1?images[(photoIndex + images.length - 1) % images.length]:null}
 
-
+                              reactModalStyle={{overlay:{zIndex:1500}}}
 
                             onCloseRequest={this.closeLightbox}
                             onMovePrevRequest={() => this.setState({

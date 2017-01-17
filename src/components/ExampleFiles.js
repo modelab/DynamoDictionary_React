@@ -165,7 +165,8 @@ class ExampleFiles extends React.Component {
 
                       {//this.state.modalExOpen ? <ModalExample readImg={this._readImg} readDyn={this._readDyn} turnOffModal={this._turnOffModal} node={node} index={this.state.index}/> : null
                     }
-                      {this.state.lightboxOpen ? <ExampleFileLightbox imgPaths={this.state.imgPaths} isOpen={true} closeHandle={this._closeLightbox} index={this.state.index}/> : null}
+
+                      {this.state.lightboxOpen ? <ExampleFileLightbox imgPaths={this.state.imgPaths} isOpen={true} closeHandle={this._closeLightbox} index={this.state.index} /> : null}
                       <br/>
                       <ExampleAdd node={node} exAdd={this._exAdd}/>
 
