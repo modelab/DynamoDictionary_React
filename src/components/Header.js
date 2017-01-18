@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import LastPage from 'material-ui/svg-icons/navigation/last-page';
-import FirstPage from 'material-ui/svg-icons/navigation/first-page';
+import LastPage from 'material-ui/svg-icons/navigation/chevron-right';
+import FirstPage from 'material-ui/svg-icons/navigation/chevron-left';
 import FlatButton from 'material-ui/FlatButton';
 
 function Header(props){
@@ -10,7 +10,7 @@ function Header(props){
         <div className="titleDiv">
           <div className='pull-left' style={{display:'inline', position:'absolute', left:'15px', color:'white', zIndex:10}}>
             {props.isLarge ?
-                <FlatButton label={'library'} labelPosition="after"
+                <FlatButton label={'library'} labelPosition={props.treeOpen?"after":"before"}
                   labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
                   style={{color:'white'}}
                   onClick={props.toggleTree} icon={props.treeOpen?<FirstPage/>:<LastPage/>}
