@@ -17,7 +17,6 @@ function Sidebar(props){
 
   return(
     <div className='' style={{paddingBottom:props.iteration===0?'300px':null}}>
-
       {props.dictionary.map((ob,i)=>
         <div key={i}>
         <SidebarButton handleClick={props.handleClick} ob={ob} classes={getClasses(ob)} routePush={props.routePush} iteration={props.iteration}/>

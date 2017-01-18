@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 import NodeIcon from './NodeIcon';
 import lineageToRoute from './utils/lineageRouter'

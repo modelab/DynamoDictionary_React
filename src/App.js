@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import JsSearch from 'js-search';
-import { Router, Route, hashHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 
 import './css/font.css';
 import './css/style.css';
@@ -328,11 +328,12 @@ class App extends Component {
 
         return (this.state.route !== ''
             ? (
-              <div className="App"> <Header toggleTree={this._toggleTree} isLarge={isLarge} openModal={this._showPrModal} searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit={this._gitHubSubmit} phase={this.state.prState} link={this.state.prLink}/>
+              <div className="App"> <Header toggleTree={this._toggleTree} treeOpen={this.state.treeOpen} isLarge={isLarge} openModal={this._showPrModal} searching={this._searchBar} searchArray={this.state.searchArray} gitHubSubmit={this._gitHubSubmit} phase={this.state.prState} link={this.state.prLink}/>
 
                 <div id="wrapper" style={{'marginTop':'60px'}}>
                   {isLarge?
                   (
+                    <div>
                   <Drawer
                     id='sidebar-wrapper'
                     docked={true}
@@ -354,13 +355,17 @@ class App extends Component {
                   </div>
 
                 </Drawer>
+                {!this.state.treeOpen?<div className='col-md-12 col-sm-12 col-xs-12' style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}>
+                  <SearchBar searchArray={this.state.searchArray} searching={this._searchBar} resetActives={this._resetActives}/>
+                </div>:null}
+                </div>
               ):
-              <div style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px", "clear":"right"}}>
+              <div style={{"zIndex":"999", "marginTop":"2px", "paddingLeft":"0px", "paddingRight":"0px"}}>
                 <SearchBar searchArray={this.state.searchArray} searching={this._searchBar} resetActives={this._resetActives}/>
               </div>
 
             }
-                    <div id="page-content-wrapper" className='right-element' style={{"overflow":"auto", "maxHeight":window.innerHeight-60+'px', paddingTop:'20px'}}>
+                    <div id="page-content-wrapper" className='right-element' style={{"overflow":"auto", "maxHeight":window.innerHeight-60+'px', paddingTop:'20px', width:'100%'}}>
                       <div style={{marginLeft:window.innerWidth*(ratio), width:window.innerWidth*(1-ratio),
                         transitionTimingFunction:'cubic-bezier(0.23, 1, 0.32, 1)',
                         transition: isLarge ? 'all 450ms' : 'all 0ms',

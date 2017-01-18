@@ -69,7 +69,6 @@ class ModeModal extends Component {
           <div style={{'textAlign':'center'}}>
             <Modal isOpen={this.state.isOpen} onRequestHide={this._hideModal}>
               <ModalHeader>
-
                 <ModalTitle><NodeIcon node={this.props.node} width={"40px"}/>{this.props.node.TempName||this.props.node.Name}</ModalTitle>
               </ModalHeader>
               <ModalBody>

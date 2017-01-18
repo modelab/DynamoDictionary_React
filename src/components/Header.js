@@ -1,45 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router';
-import IconButton from 'material-ui/IconButton';
-import Toggle from 'material-ui/Toggle';
-
+import LastPage from 'material-ui/svg-icons/navigation/last-page';
+import FirstPage from 'material-ui/svg-icons/navigation/first-page';
+import FlatButton from 'material-ui/FlatButton';
 
 function Header(props){
 
   return(
         <div className="titleDiv">
-          <div className='pull-left' style={{display:'inline', position:'absolute', left:'15px', top:'18px', color:'white'}}>
+          <div className='pull-left' style={{display:'inline', position:'absolute', left:'15px', color:'white', zIndex:10}}>
             {props.isLarge ?
-              <Toggle
-                  defaultToggled={true}
-                  labelStyle={{color:'white', fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight:100, bottom:'3px'}}
-                  width='200px'
-                  onToggle = {props.toggleTree}
-                  trackSwitchedStyle={{backgroundColor:'lightgrey'}}
-                  thumbSwitchedStyle={{backgroundColor:'white'}}
-                  trackStyle={{backgroundColor:'rgb(70,70,70)'}}
-                  thumbStyle={{backgroundColor:'grey'}}
-              />
+                <FlatButton label={'library'} labelPosition="after"
+                  labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
+                  style={{color:'white'}}
+                  onClick={props.toggleTree} icon={props.treeOpen?<FirstPage/>:<LastPage/>}
+                    backgroundColor='rgb(34,34,34)'
+                />
               :null}
-
           </div>
-        <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12' style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px'}}>
+        <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'
+          style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px', left:'-25px'}}>
             <span className="title" style={{'fontSize':'18px', 'marginLeft':'15px'}}>
             <a href="http://dynamobim.org/" target="_blank" style={{'display':'table-cell', 'width':'35px'}}>
-            <img src="images/src/icon.png" width="100%" id='dynamologo' alt="dynamoIcon" target="_blank" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
+            <img src="images/src/icon.png" width="80%" id='dynamologo' alt="dynamoIcon" target="_blank" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
             </a>
             <Link to='/' className='raleway' style={{'color':'white'}}>&nbsp; Dynamo Dictionary</Link>
             </span>
         </div>
         <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
-          <IconButton tooltip={props.phase==='init'?'Submit Pull Request':'Add Commit'} touch={true} tooltipPosition="bottom-left" style={{"top":"-5px"}} onClick={props.openModal}>
-            <img src="images/icons/pr_invert.png" id='prLogo' width='22px' alt="prIcon"/>
-          </IconButton>
-          {props.phase==='committing' ? <a href={props.link} target="_blank"><IconButton tooltip='View PR on Github' touch={true} tooltipPosition="bottom-left" style={{"top":"-5"}}>
-            <img src="images/icons/octocat.png" id='prLogo' width='30px' alt="prIcon"/>
-          </IconButton></a>
-          :null
-         }
+          {props.phase==='committing' ? <a href={props.link} target="_blank">
+            <FlatButton label={'github'} labelPosition="after"
+              labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
+              style={{color:'white'}}
+              onClick={props.openModal} icon={<img src="images/icons/octocat.png" id='prLogo' width='18px' alt="prIcon"/>}
+              backgroundColor='rgb(34,34,34)'
+            />
+            </a>
+            :null
+           }
+          <FlatButton label={props.phase==='init'?'Submit PR':'Add Commit'} labelPosition="after"
+            labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
+            style={{color:'white'}}
+            onClick={props.openModal} icon={<img src="images/icons/pr_invert.png" id='prLogo' width='16px' alt="pr"/>}
+            backgroundColor='rgb(34,34,34)'
+          />
+
 
     </div>
   </div>
