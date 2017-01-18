@@ -23,15 +23,20 @@
 	border:none !important;
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
-
+.IconButton__root___3tqZW{
+	background-color:'white' !important;
+	background:'white' !important;
+}
 .EditorToolbar__root___3_Aqz{
+	z-index:3000 !important;
 	transform:scale(0.9);
 	/*background-color:rgb(64,64,64) !important;*/
 	/*z-index:-1 !important;*/
 	position:absolute !important;
 	/*top:0 !important;*/
 	text-align:center;
-	left:0 !important;
+	left:35% !important;
+	width:60% !important;
 	right:0 !important;
 	margin-top:-42px !important;
 	border:none !important;
