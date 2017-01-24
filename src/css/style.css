@@ -247,13 +247,13 @@ a:hover{
 .imgHL {
     /*        margin-left: 3.5%;*/
     opacity: .85;
+		padding-bottom:20px;
     /*        position: inline-block;*/
-    float: left;
-/*    overflow: hidden;*/
+    /*float: left;
     width: 17%;
-/*    height: 15%;*/
+
     margin-right:3%;
-    margin-left:3%;
+    margin-left:3%;*/
 
 /*    border-radius: 15px;*/
 

@@ -20,25 +20,25 @@ function Home(props){
         <hr />
         <br/>
         <div className='iconSpread'>
-            <div className='imgHL'>
+            <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
                     <a href='http://dynamobim.org/' target='_blank'><img alt='dynamo bim' src='images/home/dynamobim.jpg' width='100%' /> </a>
                 </div>
                 <div className='text_over_imageL'><a href='http://dynamobim.org/' target='_blank'>Community</a></div>
             </div>
-            <div className='imgHL'>
+            <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
                     <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img alt='dynamo studio' src='images/home/dynamostudio.jpg' width='100%' className='imgbutton' /> </a>
                 </div>
                 <div className='text_over_imageR'><a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'>Product</a></div>
             </div>
-            <div className='imgHL'>
+            <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
                     <a href='http://dynamoprimer.com/' target='_blank'><img alt='dynamo primer' src='images/home/dynamoprimer.jpg' width='100%' /></a>
                 </div>
                 <div className='text_over_imageL'> <a href='http://dynamoprimer.com/' target='_blank'>Learning</a></div>
             </div>
-            <div className='imgHL'>
+            <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
                     <a href='https://github.com/DynamoDS/Dynamo' target='_blank'><img alt='dynamo github' src='images/home/dynamogithub.jpg' width='100%' /></a>
                 </div>
