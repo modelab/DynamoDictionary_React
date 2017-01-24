@@ -267,12 +267,15 @@ class App extends Component {
             nodeArray.forEach((e) => {
                 // if(e.Name.includes('N')){console.log(e.Name)}
             })
+
             let searchArray=nodeArray
             searchArray.forEach((d, i) => {
-
                 d.ogName=d.Name;
                 d.inDepth=d.inDepth || `Add in-depth information about ${d.Name}...`;
                 if (i > 0 && d.Name === searchArray[i - 1].Name) {
+                    d.RouteName=d.Name + '(' + (d.Inputs
+                      ? d.Inputs.map(e => e.Name+'_'+e.Type).join('-')
+                      : '()') + ')';
                     d.TempName=d.Name + ' (' + (d.Inputs
                         ? d.Inputs.map(e => e.Name).join(', ')
                         : '()') + ')';

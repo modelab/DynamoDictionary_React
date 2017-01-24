@@ -15,6 +15,20 @@ export function arraysEqual(a, b) {
 //     }
 //   }
 // }
+export function flattenAndAddRoutes(li){
+  if(!li.Arr){
+    li.RouteName=li.Name + '(' + (li.Inputs
+      ? li.Inputs.map(e => e.Name+'_'+e.Type).join('-')
+      : '()') + ')';
+    return li}
+  let arr = li.Arr.map((l)=>{
+    if(l.Arr){return l.Arr.map(flattenHierarchy)}
+    else{
+      return l;
+    }
+  })
+  return arr;
+}
 
 export function flattenHierarchy(li){
   if(!li.Arr){return li}

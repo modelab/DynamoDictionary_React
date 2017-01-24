@@ -17,7 +17,9 @@ function NodeInfo(props) {
               "top": "4px",
               "color": "white",
               "marginLeft": "15px"
-          }}>{node.TempName || node.Name}</div></Link>
+          }}
+          onClick={()=>{console.log(node)}}
+          >{node.TempName || node.Name}</div></Link>
 
           <div style={{
               "position": "relative",
