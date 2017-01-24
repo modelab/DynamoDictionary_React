@@ -2,4 +2,4 @@
 
 Dynamo Dictionary development repo
 
-Live version here: http://dictionary.dynamobim.com/#/
+Live version here: http://dictionary.dynamobim.com
