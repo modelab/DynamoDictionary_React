@@ -258,9 +258,10 @@ class App extends Component {
         // }
         // document.getElementById('rightbar').scrollTop=0;
         baseData.then((res, rej) => {
+          console.log(res[0],res[2])
             // console.log(res1)
             //convert xml element to javascript object
-            let dynLib=interop.xmlToJson(res[0]);
+            let dynLib=interop.xmlToJson(res[2]);
             let mainObjects=interop.createObject(dynLib);
 
             let nodeArray=flatten(mainObjects.map((d) => flattenHierarchy(d)));
