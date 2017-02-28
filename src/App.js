@@ -261,29 +261,29 @@ class App extends Component {
           console.log(res[0],res[2])
             // console.log(res1)
             //convert xml element to javascript object
-            let dynLib=interop.xmlToJson(res[2]);
+            let dynLib=interop.xmlToJson(res[0]);
             let mainObjects=interop.createObject(dynLib);
 
             let nodeArray=flatten(mainObjects.map((d) => flattenHierarchy(d)));
             nodeArray.forEach((e) => {
                 // if(e.Name.includes('N')){console.log(e.Name)}
             })
-
+            const addOverride=(node)=>{
+              node.RouteName=node.Name + '(' + (node.Inputs
+                ? node.Inputs.map(e => e.Name+'_'+e.Type).join('-')
+                : '()') + ')';
+              node.TempName=node.Name + ' (' + (node.Inputs
+                  ? node.Inputs.map(e => e.Name).join(', ')
+                  : '()') + ')';
+            }
             let searchArray=nodeArray
             searchArray.forEach((d, i) => {
                 d.ogName=d.Name;
                 d.inDepth=d.inDepth || `Add in-depth information about ${d.Name}...`;
                 if (i > 0 && d.Name === searchArray[i - 1].Name) {
-                    d.RouteName=d.Name + '(' + (d.Inputs
-                      ? d.Inputs.map(e => e.Name+'_'+e.Type).join('-')
-                      : '()') + ')';
-                    d.TempName=d.Name + ' (' + (d.Inputs
-                        ? d.Inputs.map(e => e.Name).join(', ')
-                        : '()') + ')';
+                    addOverride(d)
                     if (!searchArray[i - 1].TempName) {
-                        searchArray[i - 1].TempName=searchArray[i - 1].Name + ' (' + (searchArray[i - 1].Inputs
-                            ? searchArray[i - 1].Inputs.map(e => e.Name).join(', ')
-                            : '()') + ')';
+                        addOverride(searchArray[i-1])
                     }
                 }
             })

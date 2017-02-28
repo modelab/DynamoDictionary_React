@@ -7,4 +7,4 @@ const pEdit = p.promisify(d3.json, "data/Dynamo_Nodes_Documentation.json")
 const pRevit = p.promisify(d3.xml, "data/Revit_Library.xml")
 
 //resolve promises
-export default Promise.all([pStatic, pEdit,pRevit])
+export default Promise.all([pStatic, pEdit, pRevit])
