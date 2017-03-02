@@ -22,7 +22,6 @@ class Branch extends React.Component {
     }
 
     nodeDetail(ob) {
-        // console.log(ob)
         return [
             ob.Description
                 ? this.detailList('nodeDesc', 'Description', ob.Description, 0)
@@ -95,11 +94,9 @@ class Branch extends React.Component {
         }
     }
     render() {
-        // console.log(props.mainObjects)
         let props=this.props;
         let actives=props.actives;
         let lastLeaf=actives[actives.length - 1];
-  
 
         return (!props.searching && !props.actives[0]
             ? <Home/>

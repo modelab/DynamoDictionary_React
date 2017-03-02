@@ -55,7 +55,6 @@ class App extends Component {
         this._sideBarClick=this._sideBarClick.bind(this);
         this._editInDepth=this._editInDepth.bind(this);
         this._searchBar=this._searchBar.bind(this);
-        this._routeSelect=this._routeSelect.bind(this);
         this._hashCheck=this._hashCheck.bind(this);
         this._resetActives=this._resetActives.bind(this);
         this._gitHubSubmit=this._gitHubSubmit.bind(this);
@@ -82,9 +81,6 @@ class App extends Component {
       }else{
         this.setState({prState:'created',updatedFiles:[]})
       }
-
-
-
       window.setTimeout(this._toCommitting,3000);
     }
     _toCommitting(){
@@ -184,9 +180,6 @@ class App extends Component {
         let arr=(search.search(val));
         this.setState({searching: true, searchResults: arr, searchVal: val})
     }
-    _routeSelect(route) {
-        // console.log(route)
-    }
 
     _sideBarClick(ob) {
         let actives=_hierarchyIterator(ob).filter((el) => el).reverse().concat(ob);
@@ -221,13 +214,10 @@ class App extends Component {
                         return null;
                     }).filter(el => el)[0];
                 }
-                // if (actives.length > 0) {
-                this.setState({actives})
-                // }
+                this.setState({actives:actives.filter(el=>el)})
             } else {
 
                 this.setState({searching: false})
-                // this.conductSearch(this.props.params['catB']);
             }
         }
     }
@@ -253,21 +243,11 @@ class App extends Component {
           _this.forceUpdate();
       });
 
-        // componentDidMount(){
-
-        // }
-        // document.getElementById('rightbar').scrollTop=0;
         baseData.then((res, rej) => {
-          console.log(res[0],res[2])
-            // console.log(res1)
-            //convert xml element to javascript object
             let dynLib=interop.xmlToJson(res[0]);
             let mainObjects=interop.createObject(dynLib);
 
             let nodeArray=flatten(mainObjects.map((d) => flattenHierarchy(d)));
-            nodeArray.forEach((e) => {
-                // if(e.Name.includes('N')){console.log(e.Name)}
-            })
             const addOverride=(node)=>{
               node.RouteName=node.Name + '(' + (node.Inputs
                 ? node.Inputs.map(e => e.Name+'_'+e.Type).join('-')
@@ -291,14 +271,9 @@ class App extends Component {
                 if (d.TempName) {
                     d.Name=d.TempName
                 }
-                if (d.Name === 'NormalizeDepth (list, rank)') {
-                    // console.log(d)
-                }
             })
 
             res[1].forEach((d) => {
-
-                // if(d.dynFile.length>0){
                 nodeArray.forEach((e) => {
 
                     if (e.Name === d.Name) {
@@ -318,9 +293,7 @@ class App extends Component {
                     }
                 })
             })
-
             this.setState({mainObjects, searchArray})
-
         }).catch(console.error.bind(console))
     }
 
@@ -385,7 +358,6 @@ class App extends Component {
                                searching={this.state.searching}
                                searches={this.state.searchResults}
                                searchVal={this.state.searchVal}
-                               routeSelect={this._routeSelect}
                              / >
                          </div>
                        </div>
