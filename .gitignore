@@ -3,8 +3,6 @@
 
 **/public/configuration
 
-public/data/*
-
 # dependencies
 node_modules
 
