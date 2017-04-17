@@ -244,7 +244,7 @@ class App extends Component {
       });
 
         baseData.then((res, rej) => {
-            let dynLib=interop.xmlToJson(res[0]);
+            let dynLib=interop.xmlToJson(res[2]);
             let mainObjects=interop.createObject(dynLib);
 
             let nodeArray=flatten(mainObjects.map((d) => flattenHierarchy(d)));
