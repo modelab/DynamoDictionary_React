@@ -1,4 +1,5 @@
 function commitChanges(ob) {
+    return false; //temporary for development
     require(["githubapi"], function (Github) {
         var token;
         $j.getJSON("./configuration/config.json", function (result) {
