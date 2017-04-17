@@ -1,12 +1,12 @@
 function githubSubmitter(files, mainExampleFile, branchName, message, terminate) {
     axios.get('./configuration/config.json').then((resolve, reject) => {
         const token = resolve.data.GitHub_Token;
-        runSubmit(token, files, mainExampleFile, branchName, message, terminate)
+        runSubmit(token,files, mainExampleFile, branchName, message, terminate)
     })
 }
 function dynContents(f) {
     console.log('dyn run',f)
-    var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
+    var file_path = f.og.slice(2).replace("Examples", "EXAMPLES");
     var fileOb = {
         content: f.data,
         isBase64: false
@@ -16,7 +16,7 @@ function dynContents(f) {
 
 function imageContents(f) {
     console.log('img run',f)
-    var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
+    var file_path = f.og.slice(2).replace("Examples", "EXAMPLES");
     var file_contents = window.atob((f.data.replace(/^(.+,)/, '')));
     var fileOb = {
         content: file_contents,
@@ -24,19 +24,29 @@ function imageContents(f) {
     };
     return [file_path, fileOb];
 }
-function runSubmit(token, files, mainExampleFile, branchName, message, terminate) {
+function runSubmit(token,files, mainExampleFile, branchName, message, terminate) {
     var branchExists = false;
+    var prExists=false;
     files.push(mainExampleFile)
     var gh = new Octokit({
         token: token
     });
-    var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
-    repo.getBranches()
+    var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
+    let existingPullRequests=[];
+    repo.getPulls()
+        .then(function(pulls){
+            existingPullRequests=pulls;
+            if (existingPullRequests.filter(function(pr) {
+                    return pr.head.ref === branchName;
+                }).length > 0) {
+                prExists = true;
+            }
+            return repo.getBranches()
+        })
         .then(function(branches) {
             if (branches.filter(function(b) {
                     return b[2] === branchName;
                 }).length > 0) {
-                console.log('branchExists')
                 branchExists = true;
                 commitFiles(repo.getBranch(branchName));
             } else {
@@ -62,13 +72,13 @@ function runSubmit(token, files, mainExampleFile, branchName, message, terminate
                         contents[ob[0]] = ob[1];
                         break;
                     default:
-                        contents['public/data/Dynamo_Nodes_Documentation.json'] = JSON.stringify(f, null, 4);
+                        contents['data/Dynamo_Nodes_Documentation.json'] = JSON.stringify(f, null, 4);
                         return undefined;
                 }
             })
             branch.writeMany(contents, message)
                 .then(function() {
-                    if (!branchExists) {
+                    if (!branchExists && !prExists) {
                         return repo.createPullRequest({
                             "title": branchName,
                             "body": "files updated by user",
@@ -76,13 +86,20 @@ function runSubmit(token, files, mainExampleFile, branchName, message, terminate
                             "base": "master"
                         })
                     } else {
-                        return function() {
-                            console.log('no pr created')
-                        }
+                        return repo.getPulls();
                     }
                 })
                 .then(function(result) {
+                  if(result.html_url){
                     terminate(result.html_url);
+                  }
+                  else{
+                    existingPullRequests.forEach((d,i)=>{
+                      if(d.head.ref===branchName){
+                        terminate(d.html_url)
+                      }
+                    })
+                  }
                 })
         }
     }
