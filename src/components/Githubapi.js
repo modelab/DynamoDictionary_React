@@ -45,24 +45,24 @@ function commitChanges(ob) {
                 //create a branch
                 var filelist = [];
                 filelist[0] = {
-                        i: ob
-                        , if: 'data/Dynamo_Nodes_Documentation.json'
-                        , enc: true
-                    }
-                    //eOb represents all of the nodes that have been changed.
+                    i: ob
+                    , if: 'data/Dynamo_Nodes_Documentation.json'
+                    , enc: true
+                }
+                //eOb represents all of the nodes that have been changed.
                 for (key in eOb) {
                     console.log(eOb)
                     for (keykey in eOb[key]) {
                         var mainOb = JSON.parse(ob);
                         var nodeOb = mainOb[key];
                         var subub = eOb[key][keykey]
-                        if(subub.imageFile){
-                            
-                        }
-                        
-                        console.log(subub)
+
                         if (subub.image && subub.imageFile) {
-                            var imageFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/img/" + subub.imageFile.split('.')[0] + ".jpg";
+                            if (subub.imageFile.split(".").length < 0) {
+
+                            }
+                            var imageFileName = subub.imageFile.split(".").length === 1 ? subub.imageFile.split('.')[0] + ".jpg" : subub.imageFile; //if extension keep extension, else add jpeg
+                            var imageFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/img/" + imageFileName;
                             filelist.push({
                                 i: window.btoa(window.atob((subub.image.replace(/^(.+,)/, ''))))
                                 , if: imageFile
@@ -93,7 +93,8 @@ function commitChanges(ob) {
                 SM.show({
                     "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle;"></a>&nbsp<span>Pull Request Created!</span>'
                     , "contents": "Pull Request created! Thank you for your patience while we review before updating the site. <a href='" + url + "' target=_blank style='color:black;'>Follow your PR on Github here.</a>"
-                , });
+                    ,
+                });
                 //            d3.selectAll(".close").on('click',function(){location.reload()})
                 //            d3.selectAll("#simple-modal-overlay").on('click',function(){location.reload()})
             }
@@ -107,7 +108,8 @@ function commitChanges(ob) {
                 SM.show({
                     "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle;"></a>&nbsp<span>Pull Request Error</span>'
                     , "contents": "There was an issue submitting the Pull Request to the Github repo. Visit the <a href='https://github.com/DynamoDS/DynamoDictionary' target='_blank' style='color:red;'>Dynamo Dictionary repo</a> to submit an issue or a manual pull request."
-                , });
+                    ,
+                });
             }
 
             function pr() {
