@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import lineageToRoute from './utils/lineageRouter'
 
-import {flatten, flattenHierarchy} from './utils/array';
+import { flatten, flattenHierarchy } from './utils/array';
 
 import ExampleSection from './ExampleSection';
 import NodeInfo from './NodeInfo';
@@ -15,10 +15,10 @@ import Home from './Home';
 class Branch extends React.Component {
     constructor() {
         super();
-        this.nodeDetail=this.nodeDetail.bind(this);
-        this.detailList=this.detailList.bind(this);
-        this.extractHierarchy=this.extractHierarchy.bind(this);
-        this.hierarchyIterator=this.hierarchyIterator.bind(this);
+        this.nodeDetail = this.nodeDetail.bind(this);
+        this.detailList = this.detailList.bind(this);
+        this.extractHierarchy = this.extractHierarchy.bind(this);
+        this.hierarchyIterator = this.hierarchyIterator.bind(this);
     }
 
     nodeDetail(ob) {
@@ -32,18 +32,18 @@ class Branch extends React.Component {
             ob.Outputs
                 ? this.detailList('nodeDesc', 'Outputs', ob.Outputs, 2)
                 : null, < ExampleSection node={
-                ob
-            }
-            key={
-                3
-            }
-            editInDepthClick={
-                this.props.editInDepthClick
-            }
-            editInDepth={
-                this.props.editInDepth
-            }
-            updateExample={this.props.updateExample}
+                    ob
+                }
+                key={
+                    3
+                }
+                editInDepthClick={
+                    this.props.editInDepthClick
+                }
+                editInDepth={
+                    this.props.editInDepth
+                }
+                updateExample={this.props.updateExample}
             />
         ]
     }
@@ -52,25 +52,25 @@ class Branch extends React.Component {
 
         return (
             <div className={cn} key={key}>
-                <br/>
+                <br />
                 <b>{title}:</b>
-                <br/> {key === 1
+                <br /> {key === 1
                     ? body.map((b, i) => (
                         <text style={{
                             'color': 'gray'
-                        }} key={i}>{b.Name}: {b.Type}<br/></text>
+                        }} key={i}>{b.Name}: {b.Type}<br /></text>
                     ))
                     : key === 2
                         ? body.map((b, i) => (
                             <text key={i} style={{
                                 'color': 'gray'
-                            }}>Type: {b.Name}<br/><hr/></text>
+                            }}>Type: {b.Name}<br /><hr /></text>
                         ))
 
                         : <text style={{
                             'color': 'gray'
                         }}>{body}</text>
-}
+                }
             </div>
         )
     }
@@ -78,11 +78,8 @@ class Branch extends React.Component {
     extractHierarchy(ob) {
         return this.hierarchyIterator(ob).reverse().map((n, i) => (n.Arr
             ? (
-                <Link to={`/${lineageToRoute(n)}`} key={i}  className="addedText" >{n.Lineage
-                        ? n.Name
-                        : null}{(n.Arr && n.Arr[0].Arr)
-                        ? ','
-                        : null}&nbsp;</Link>
+                <Link to={`/${lineageToRoute(n)}`} key={i} className="addedText" >
+                    {n.Lineage ? n.Name : null}{(n.Arr && n.Arr[0].Arr) ? ',' : null}&nbsp;</Link>
             )
             : {}))
     }
@@ -94,25 +91,25 @@ class Branch extends React.Component {
         }
     }
     render() {
-        let props=this.props;
-        let actives=props.actives;
-        let lastLeaf=actives[actives.length - 1];
+        let props = this.props;
+        let actives = props.actives;
+        let lastLeaf = actives[actives.length - 1];
 
         return (!props.searching && !props.actives[0]
-            ? <Home/>
+            ? <Home />
             : (
-                <div  style={{'padding':'10%', 'paddingTop':'30px'}}>
+                <div style={{ 'padding': '10%', 'paddingTop': '30px' }}>
                     <div style={{
                         'paddingLeft': '30px',
                         'paddingRight': '30px'
                     }}>
 
                         {!props.searching
-                            ? <NodeTitle lastLeaf={lastLeaf} handleClick={props.handleClick}/>
+                            ? <NodeTitle lastLeaf={lastLeaf} handleClick={props.handleClick} />
                             : <div className='nodeName'>Search: {props.searchVal}</div>
                         }
-                        <hr/> {!props.searching
-                            ? <DynamoHierarchy lastLeaf={lastLeaf} extractHierarchy={this.extractHierarchy} nodeDetail={this.nodeDetail}/>
+                        <hr /> {!props.searching
+                            ? <DynamoHierarchy lastLeaf={lastLeaf} extractHierarchy={this.extractHierarchy} nodeDetail={this.nodeDetail} />
                             : null}
 
                         <div className='outer'>
@@ -120,18 +117,18 @@ class Branch extends React.Component {
                                 {props.searching
                                     ? props.searches.map((node, i) => {
 
-                                        return (<NodeInfo handleClick={props.handleClick} node={node} i={i} key={i} extractHierarchy={this.extractHierarchy}/>)
+                                        return (<NodeInfo handleClick={props.handleClick} node={node} i={i} key={i} extractHierarchy={this.extractHierarchy} />)
                                     })
 
                                     : lastLeaf.Arr
                                         ? (flatten(flattenHierarchy(lastLeaf))).map((node, i) => {
-                                          if(i<50){
-                                            return (<NodeInfo handleClick={props.handleClick} node={node} i={i} key={i} extractHierarchy={this.extractHierarchy}/>)
-                                          }
-                                          return null;
+                                            if (i < 50) {
+                                                return (<NodeInfo handleClick={props.handleClick} node={node} i={i} key={i} extractHierarchy={this.extractHierarchy} />)
+                                            }
+                                            return null;
                                         })
                                         : null
-}
+                                }
                             </div>
                         </div>
                     </div>
