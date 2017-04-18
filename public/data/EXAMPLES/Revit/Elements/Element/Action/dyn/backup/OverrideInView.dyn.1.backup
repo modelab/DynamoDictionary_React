@@ -1,4 +1,4 @@
-<Workspace Version="1.3.0.875" X="-56.1185707206891" Y="-115.024799479081" zoom="0.937432296686003" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.2.1.3083" X="-106.36160426307" Y="-107.861295395542" zoom="1.55469255719439" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap>
     <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
@@ -28,10 +28,10 @@
       <PortInfo index="0" default="False" />
     </DSRevitNodesUI.ElementsOfCategory>
     <CoreNodeModels.Input.BoolSelector guid="b0f9a2fe-f56b-4cae-b7ed-333641f012e8" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="590.6" y="880.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>False</System.Boolean>
+      <System.Boolean>True</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
-    <CoreNodeModels.Input.DoubleSlider guid="d01549b6-6158-4b73-9705-bddc5cf903fb" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="92.278563187544" y="728.243671854055" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Double>0</System.Double>
+    <CoreNodeModels.Input.DoubleSlider guid="d01549b6-6158-4b73-9705-bddc5cf903fb" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="85.8000000000002" y="744.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>40.9</System.Double>
       <Range min="0" max="100" step="0.1" />
     </CoreNodeModels.Input.DoubleSlider>
   </Elements>
@@ -46,6 +46,6 @@
   <Annotations />
   <Presets />
   <Cameras>
-    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+    <Camera Name="Background Preview" eyeX="-6636.8056640625" eyeY="12641.052734375" eyeZ="7765.76611328125" lookX="7376.34765625" lookY="-9412.58203125" lookZ="-9757.04296875" upX="0.256770431995392" upY="0.904826998710632" upZ="-0.339642345905304" />
   </Cameras>
 </Workspace>

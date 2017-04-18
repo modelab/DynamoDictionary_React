@@ -728,12 +728,12 @@
 	{
 		"Name": "OverrideInView",
 		"imageFile": [
-			"OverrideInView"
+			"OverrideInView.gif"
 		],
 		"dynFile": [
 			"OverrideInView"
 		],
-		"inDepth": "Add in-depth information about OverrideInView...",
+		"inDepth": "OverrideInView will alter the graphics settings of input elements. The override created in Dynamo will dynamically change in Revit.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
