@@ -705,12 +705,8 @@
 	},
 	{
 		"Name": "MoveByVector",
-		"imageFile": [
-			"MoveByVector"
-		],
-		"dynFile": [
-			"MoveByVector"
-		],
+		"imageFile": [],
+		"dynFile": [],
 		"inDepth": "Add in-depth information about MoveByVector...",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
@@ -760,12 +756,8 @@
 	},
 	{
 		"Name": "ToString",
-		"imageFile": [
-			"ToString"
-		],
-		"dynFile": [
-			"ToString"
-		],
+		"imageFile": [],
+		"dynFile": [],
 		"inDepth": "Add in-depth information about ToString...",
 		"folderPath": "Revit/Elements/Element/Action"
 	},

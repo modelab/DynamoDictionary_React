@@ -1,10 +1,10 @@
 import _ from 'underscore';
 let resort = {};
 
-resort.removeDuplicates = function(data) {
-    data.forEach(function(d, i) {
+resort.removeDuplicates = function (data) {
+    data.forEach(function (d, i) {
         var c = 0;
-        data.forEach(function(e, j) {
+        data.forEach(function (e, j) {
             if (_.isEqual(d, e)) {
                 c++;
                 if (c > 1) {
@@ -16,9 +16,9 @@ resort.removeDuplicates = function(data) {
     return data;
 }
 
-resort.sortArrayOfObjectsByKey = function(arr, key) {
+resort.sortArrayOfObjectsByKey = function (arr, key) {
     if (arr[0][key] !== "Action" && arr[0][key] !== "Create" && arr[0][key] !== "Query") {
-        arr.sort(function(a, b) {
+        arr.sort(function (a, b) {
             var keyA = (a[key]),
                 keyB = (b[key]);
             if (keyA < keyB) return -1;
@@ -31,7 +31,7 @@ resort.sortArrayOfObjectsByKey = function(arr, key) {
             "Action": "b",
             "Query": "c"
         };
-        arr.sort(function(a, b) {
+        arr.sort(function (a, b) {
             var keyA = (tempob[a[key]]),
                 keyB = (tempob[b[key]]);
             if (keyA < keyB) return -1;
@@ -42,10 +42,10 @@ resort.sortArrayOfObjectsByKey = function(arr, key) {
     return arr;
 }
 
-resort.objectify = function(ad, q) {
+resort.objectify = function (ad, q) {
     if (Array.isArray(ad)) {
         var ml = [];
-        ad.forEach(function(d, i) {
+        ad.forEach(function (d, i) {
             var c = d.Categories;
             var parent = "Home";
             if (q - 1 >= 0) {
@@ -65,7 +65,7 @@ resort.objectify = function(ad, q) {
                     })
                 } else {
                     var hit = false;
-                    ml.forEach(function(f, k) {
+                    ml.forEach(function (f, k) {
                         if (f["Name"] === c[q]) {
                             hit = true;
                             f["Arr"].push(d)
@@ -90,7 +90,7 @@ resort.objectify = function(ad, q) {
                     })
                 } else {
                     hit = false;
-                    ml.forEach(function(f, k) {
+                    ml.forEach(function (f, k) {
                         if (f["Name"] === d.Group) {
                             hit = true;
                             f["Arr"].push(d)
@@ -107,7 +107,7 @@ resort.objectify = function(ad, q) {
                 }
             }
             if (i === ad.length - 1) {
-                ml.forEach(function(h, z) {
+                ml.forEach(function (h, z) {
                     resort.sortArrayOfObjectsByKey(h.Arr, "Name");
                 })
             }
@@ -118,37 +118,35 @@ resort.objectify = function(ad, q) {
     }
 }
 
-resort.objectifyChildren = function(dm) {
-    dm.forEach(function(d, i) {
+resort.objectifyChildren = function (dm) {
+    dm.forEach(function (d, i) {
         d.Parent = 'Home';
         d.iterationId = i;
         d.Arr = resort.objectify(d.Arr, 1, i)
-        d.Arr.forEach(function(e, j) {
+        d.Arr.forEach(function (e, j) {
             e.Parent = d;
             e.iterationId = j;
             if (e.Name !== "Create" && e.Name !== "Action" && e.Name !== "Query") {
                 e.Arr = resort.objectify(e.Arr, 2, i)
             }
             if (e.Arr) {
-                e.Arr.forEach(function(f, g) {
-                    f.Parent = e;
-                    f.iterationId = g;
-                    if (f.Name !== "Create" && f.Name !== "Action" && f.Name !== "Query") {
-                        f.Arr = resort.objectify(f.Arr, 3, i)
-                    }
-                    if (f.Arr) {
-                        f.Arr.forEach(function(h, k) {
-                            h.Parent = f;
-                            h.iterationId = k;
-                            if (h.Name !== "Create" && h.Name !== "Action" && h.Name !== "Query") {
-                                h.Arr = resort.objectify(h.Arr, 4, i)
-                            }
-                        })
-                    }
-                })
+                recursiveParents(e, 3, i);
             }
         })
     })
     return dm;
+}
+
+function recursiveParents(e, it, i) {
+    e.Arr.forEach(function (f, g) {
+        f.Parent = e;
+        f.iterationId = g;
+        if (f.Name !== "Create" && f.Name !== "Action" && f.Name !== "Query") {
+            f.Arr = resort.objectify(f.Arr, it, i)
+        }
+        if (f.Arr) {
+            recursiveParents(f, it + 1, i);
+        }
+    })
 }
 module.exports = resort;
