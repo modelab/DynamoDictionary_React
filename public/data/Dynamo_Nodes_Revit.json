@@ -938,7 +938,7 @@
 	{
 		"Name": "ByCoordinates",
 		"imageFile": [
-			"ByCoordinates"
+			"ByCoordinates.gif"
 		],
 		"dynFile": [
 			"ByCoordinates"
@@ -971,7 +971,7 @@
 	{
 		"Name": "ByPoint",
 		"imageFile": [
-			"ByPoint"
+			"ByPoint.gif"
 		],
 		"dynFile": [
 			"ByPoint"
@@ -982,7 +982,7 @@
 	{
 		"Name": "ByPointAndLevel",
 		"imageFile": [
-			"ByPointAndLevel"
+			"ByPointAndLevel.gif"
 		],
 		"dynFile": [
 			"ByPointAndLevel"
