@@ -1,0 +1,3845 @@
+[
+	{
+		"Name": "ByViewAndFaceAnalysisData",
+		"imageFile": [
+			"ByViewAndFaceAnalysisData"
+		],
+		"dynFile": [
+			"ByViewAndFaceAnalysisData"
+		],
+		"inDepth": "Add in-depth information about ByViewAndFaceAnalysisData...",
+		"folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create"
+	},
+	{
+		"Name": "ByViewFacePointsAndValues",
+		"imageFile": [
+			"ByViewFacePointsAndValues"
+		],
+		"dynFile": [
+			"ByViewFacePointsAndValues"
+		],
+		"inDepth": "Add in-depth information about ByViewFacePointsAndValues...",
+		"folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create"
+	},
+	{
+		"Name": "ByViewAndPointAnalysisData",
+		"imageFile": [
+			"ByViewAndPointAnalysisData"
+		],
+		"dynFile": [
+			"ByViewAndPointAnalysisData"
+		],
+		"inDepth": "Add in-depth information about ByViewAndPointAnalysisData...",
+		"folderPath": "Revit/Analysis/PointAnalysisDisplay/Create"
+	},
+	{
+		"Name": "ByViewPointsAndValues",
+		"imageFile": [
+			"ByViewPointsAndValues"
+		],
+		"dynFile": [
+			"ByViewPointsAndValues"
+		],
+		"inDepth": "Add in-depth information about ByViewPointsAndValues...",
+		"folderPath": "Revit/Analysis/PointAnalysisDisplay/Create"
+	},
+	{
+		"Name": "ByViewAndVectorAnalysisData",
+		"imageFile": [
+			"ByViewAndVectorAnalysisData"
+		],
+		"dynFile": [
+			"ByViewAndVectorAnalysisData"
+		],
+		"inDepth": "Add in-depth information about ByViewAndVectorAnalysisData...",
+		"folderPath": "Revit/Analysis/VectorAnalysisDisplay/Create"
+	},
+	{
+		"Name": "ByViewPointsAndVectorValues",
+		"imageFile": [
+			"ByViewPointsAndVectorValues"
+		],
+		"dynFile": [
+			"ByViewPointsAndVectorValues"
+		],
+		"inDepth": "Add in-depth information about ByViewPointsAndVectorValues...",
+		"folderPath": "Revit/Analysis/VectorAnalysisDisplay/Create"
+	},
+	{
+		"Name": "ActiveView (document)",
+		"imageFile": [
+			"ActiveView"
+		],
+		"dynFile": [
+			"ActiveView"
+		],
+		"inDepth": "ActiveView brings a view element into Dynamo for the active view in the current Revit document. Switching to another open view will change the active view.",
+		"folderPath": "Revit/Application/Document/Query"
+	},
+	{
+		"Name": "Current",
+		"imageFile": [
+			"Current"
+		],
+		"dynFile": [
+			"Current"
+		],
+		"inDepth": "Current returns the Revit document that you are currently working inside of. Switching to another open Revit file or family will change the current document.",
+		"folderPath": "Revit/Application/Document/Query"
+	},
+	{
+		"Name": "FilePath",
+		"imageFile": [
+			"FilePath"
+		],
+		"dynFile": [
+			"FilePath"
+		],
+		"inDepth": "FilePath returns the Revit document's location on your hard drive as a string.",
+		"folderPath": "Revit/Application/Document/Query"
+	},
+	{
+		"Name": "IsFamilyDocument",
+		"imageFile": [
+			"IsFamilyDocument"
+		],
+		"dynFile": [
+			"IsFamilyDocument"
+		],
+		"inDepth": "IsFamilyDocument returns a boolean value based on whether the input document is a family or project file.",
+		"folderPath": "Revit/Application/Document/Query"
+	},
+	{
+		"Name": "Location",
+		"imageFile": [
+			"Location"
+		],
+		"dynFile": [
+			"Location"
+		],
+		"inDepth": "Location returns the Revit document's real world location in latitude and longitude.",
+		"folderPath": "Revit/Application/Document/Query"
+	},
+	{
+		"Name": "ByParametersOnCurveReference",
+		"imageFile": [
+			"ByParametersOnCurveReference"
+		],
+		"dynFile": [
+			"ByParametersOnCurveReference"
+		],
+		"inDepth": "Add in-depth information about ByParametersOnCurveReference...",
+		"folderPath": "Revit/Elements/AdaptiveComponent/Create"
+	},
+	{
+		"Name": "ByParametersOnFace",
+		"imageFile": [
+			"ByParametersOnFace"
+		],
+		"dynFile": [
+			"ByParametersOnFace"
+		],
+		"inDepth": "Add in-depth information about ByParametersOnFace...",
+		"folderPath": "Revit/Elements/AdaptiveComponent/Create"
+	},
+	{
+		"Name": "ByPoints",
+		"imageFile": [
+			"ByPoints"
+		],
+		"dynFile": [
+			"ByPoints"
+		],
+		"inDepth": "Add in-depth information about ByPoints...",
+		"folderPath": "Revit/Elements/AdaptiveComponent/Action"
+	},
+	{
+		"Name": "Locations",
+		"imageFile": [
+			"Locations"
+		],
+		"dynFile": [
+			"Locations"
+		],
+		"inDepth": "Add in-depth information about Locations...",
+		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
+	},
+	{
+		"Name": "Type",
+		"imageFile": [
+			"Type"
+		],
+		"dynFile": [
+			"Type"
+		],
+		"inDepth": "Add in-depth information about Type...",
+		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "ByName brings Revit categories into Dynamo by entering their names as strings.",
+		"folderPath": "Revit/Elements/Category/Create"
+	},
+	{
+		"Name": "Id",
+		"imageFile": [
+			"Id"
+		],
+		"dynFile": [
+			"Id"
+		],
+		"inDepth": "Id turns an input category's id number as an integer.",
+		"folderPath": "Revit/Elements/Category/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Name turns an input category's name into a string.",
+		"folderPath": "Revit/Elements/Category/Query"
+	},
+	{
+		"Name": "BasePoint",
+		"imageFile": [
+			"BasePoint"
+		],
+		"dynFile": [
+			"BasePoint"
+		],
+		"inDepth": "BasePoint creates a point geometry in Dynamo that represents the Revit project's base point.",
+		"folderPath": "Revit/Elements/Coordinates/Action"
+	},
+	{
+		"Name": "ProjectRotation",
+		"imageFile": [
+			"ProjectRotation"
+		],
+		"dynFile": [
+			"ProjectRotation"
+		],
+		"inDepth": "ProjectRotation returns the Revit project's relative rotation in degrees between true north and project north.",
+		"folderPath": "Revit/Elements/Coordinates/Action"
+	},
+	{
+		"Name": "SurveyPoint",
+		"imageFile": [
+			"SurveyPoint"
+		],
+		"dynFile": [
+			"SurveyPoint"
+		],
+		"inDepth": "SurveyPoint creates a point geometry in Dynamo that represents the Revit project's survey point.",
+		"folderPath": "Revit/Elements/Coordinates/Action"
+	},
+	{
+		"Name": "AsFamilyInstance",
+		"imageFile": [
+			"AsFamilyInstance"
+		],
+		"dynFile": [
+			"AsFamilyInstance"
+		],
+		"inDepth": "AsFamilyInstance returns the family instance of a curtain panel element. This is useful for querying and modifying instance parameters.",
+		"folderPath": "Revit/Elements/CurtainPanel/Action"
+	},
+	{
+		"Name": "ByElement",
+		"imageFile": [
+			"ByElement"
+		],
+		"dynFile": [
+			"ByElement"
+		],
+		"inDepth": "ByElement returns all curtain panel elements created on a host element.",
+		"folderPath": "Revit/Elements/CurtainPanel/Action"
+	},
+	{
+		"Name": "SupportingMullions",
+		"imageFile": [
+			"SupportingMullions"
+		],
+		"dynFile": [
+			"SupportingMullions"
+		],
+		"inDepth": "SupportingMullions returns all mullion elements that host the input curtain panels. Using this in conjunction with CurtainPanel.ByElement enables selection of all elements in a curtain wall system.",
+		"folderPath": "Revit/Elements/CurtainPanel/Action"
+	},
+	{
+		"Name": "Boundaries",
+		"imageFile": [
+			"Boundaries"
+		],
+		"dynFile": [
+			"Boundaries"
+		],
+		"inDepth": "Boundaries returns a polycurve in Dynamo for the boundary of each input curtain panel.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "HasPlane",
+		"imageFile": [
+			"HasPlane"
+		],
+		"dynFile": [
+			"HasPlane"
+		],
+		"inDepth": "HasPlane returns a boolean value based on whether an input curtain panel is planar, or completely flat.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "Height",
+		"imageFile": [
+			"Height"
+		],
+		"dynFile": [
+			"Height"
+		],
+		"inDepth": "Height returns the vertical dimension of a rectangular curtain panel as a double.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "IsRectangular",
+		"imageFile": [
+			"IsRectangular"
+		],
+		"dynFile": [
+			"IsRectangular"
+		],
+		"inDepth": "IsRectangular returns a boolean value based on whether a curtain panel is rectangular or not. Certain CurtainPanel query nodes, such as Height and Width, require that a curtain panel is rectangular.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "Length",
+		"imageFile": [
+			"Length"
+		],
+		"dynFile": [
+			"Length"
+		],
+		"inDepth": "Length returns the length of a curtain panel's boundary as a double. This can be used even if the curtain panel is not rectangular.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "PanelPlane",
+		"imageFile": [
+			"PanelPlane"
+		],
+		"dynFile": [
+			"PanelPlane"
+		],
+		"inDepth": "PanelPlane returns a plane in Dynamo at the centroid of a curtain panel.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "Width",
+		"imageFile": [
+			"Width"
+		],
+		"dynFile": [
+			"Width"
+		],
+		"inDepth": "Width returns the horizontal dimension of a rectangular curtain panel as a double.",
+		"folderPath": "Revit/Elements/CurtainPanel/Query"
+	},
+	{
+		"Name": "ByReferencePoints",
+		"imageFile": [
+			"ByReferencePoints"
+		],
+		"dynFile": [
+			"ByReferencePoints"
+		],
+		"inDepth": "ByReferencePoints creates a CurveElement (Model Curve) in Revit from ReferencePoints. ReferencePoints are created in Revit's conceptual design environment.",
+		"folderPath": "Revit/Elements/CurveByPoints/Create"
+	},
+	{
+		"Name": "Curve",
+		"imageFile": [
+			"Curve"
+		],
+		"dynFile": [
+			"Curve"
+		],
+		"inDepth": "Curve creates a curve in Dynamo from a Model Curve (CurveElement) in Revit.",
+		"folderPath": "Revit/Elements/CurveElement/Query"
+	},
+	{
+		"Name": "ElementCurveReference",
+		"imageFile": [
+			"ElementCurveReference"
+		],
+		"dynFile": [
+			"ElementCurveReference"
+		],
+		"inDepth": "ElementCurveReference creates an ElementCurveReference from a Model Curve (CurveElement) in Revit.",
+		"folderPath": "Revit/Elements/CurveElement/Query"
+	},
+	{
+		"Name": "ByCurve",
+		"imageFile": [
+			"ByCurve"
+		],
+		"dynFile": [
+			"ByCurve"
+		],
+		"inDepth": "ByCurve creates a detail curve in Revit from a curve in dynamo. The curve input will not take polycurves, only individual curve segments.",
+		"folderPath": "Revit/Elements/DetailCurve/Create"
+	},
+	{
+		"Name": "SetCurve",
+		"imageFile": [
+			"SetCurve"
+		],
+		"dynFile": [
+			"SetCurve"
+		],
+		"inDepth": "SetCurve modifies an existing detail curve in Revit by setting it to a new curve in Dynamo. The existing detail curve will be transformed to match the input curve.",
+		"folderPath": "Revit/Elements/DetailCurve/Action"
+	},
+	{
+		"Name": "Curve",
+		"imageFile": [
+			"Curve"
+		],
+		"dynFile": [
+			"Curve"
+		],
+		"inDepth": "Curve extracts the underlying curve geometry from a Revit detail curve.",
+		"folderPath": "Revit/Elements/DetailCurve/Query"
+	},
+	{
+		"Name": "ByElements",
+		"imageFile": [
+			"ByElements"
+		],
+		"dynFile": [
+			"ByElements"
+		],
+		"inDepth": "ByElements creates a Revit dimension defined by its reference elements and inputs for other dimension parameters.",
+		"folderPath": "Revit/Elements/Dimension/Create"
+	},
+	{
+		"Name": "SetPrefix",
+		"imageFile": [
+			"SetPrefix"
+		],
+		"dynFile": [
+			"SetPrefix"
+		],
+		"inDepth": "SetPrefix will add a prefix to all dimensions in the dimension element.",
+		"folderPath": "Revit/Elements/Dimension/Action"
+	},
+	{
+		"Name": "SetSuffix",
+		"imageFile": [
+			"SetSuffix"
+		],
+		"dynFile": [
+			"SetSuffix"
+		],
+		"inDepth": "SetSuffix will add a suffix to all dimensions in the dimension element.",
+		"folderPath": "Revit/Elements/Dimension/Action"
+	},
+	{
+		"Name": "SetValueOverride",
+		"imageFile": [
+			"SetValueOverride"
+		],
+		"dynFile": [
+			"SetValueOverride"
+		],
+		"inDepth": "SetValueOverride will override the dimension values of a dimension element with a provided string.",
+		"folderPath": "Revit/Elements/Dimension/Action"
+	},
+	{
+		"Name": "Prefix",
+		"imageFile": [
+			"Prefix"
+		],
+		"dynFile": [
+			"Prefix"
+		],
+		"inDepth": "Prefix will return each dimension's prefix as a string for an entire dimension element.",
+		"folderPath": "Revit/Elements/Dimension/Query"
+	},
+	{
+		"Name": "Suffix",
+		"imageFile": [
+			"Suffix"
+		],
+		"dynFile": [
+			"Suffix"
+		],
+		"inDepth": "Suffix will return each dimension's suffix as a string for an entire dimension element.",
+		"folderPath": "Revit/Elements/Dimension/Query"
+	},
+	{
+		"Name": "Value",
+		"imageFile": [
+			"Value"
+		],
+		"dynFile": [
+			"Value"
+		],
+		"inDepth": "Value will return a double for each dimension in a dimension element.",
+		"folderPath": "Revit/Elements/Dimension/Query"
+	},
+	{
+		"Name": "ValueOverride",
+		"imageFile": [
+			"ValueOverride"
+		],
+		"dynFile": [
+			"ValueOverride"
+		],
+		"inDepth": "ValueOverride will return each dimension's value override as a string for an entire dimension element.",
+		"folderPath": "Revit/Elements/Dimension/Query"
+	},
+	{
+		"Name": "ByGeometry",
+		"imageFile": [
+			"ByGeometry"
+		],
+		"dynFile": [
+			"ByGeometry"
+		],
+		"inDepth": "Add in-depth information about ByGeometry...",
+		"folderPath": "Revit/Elements/DirectShape/Create"
+	},
+	{
+		"Name": "ByMesh",
+		"imageFile": [
+			"ByMesh"
+		],
+		"dynFile": [
+			"ByMesh"
+		],
+		"inDepth": "Add in-depth information about ByMesh...",
+		"folderPath": "Revit/Elements/DirectShape/Create"
+	},
+	{
+		"Name": "Select Direct Shape Room Bounding Option (geometry, category, material, name)",
+		"imageFile": [
+			"Select Direct Shape Room Bounding Option (geometry, category, material, name)"
+		],
+		"dynFile": [
+			"Select Direct Shape Room Bounding Option (geometry, category, material, name)"
+		],
+		"inDepth": "Add in-depth information about Select Direct Shape Room Bounding Option...",
+		"folderPath": "Revit/Elements/DirectShape/Action"
+	},
+	{
+		"Name": "Select Direct Shape Room Bounding Option (())",
+		"imageFile": [
+			"Select Direct Shape Room Bounding Option (())"
+		],
+		"dynFile": [
+			"Select Direct Shape Room Bounding Option (())"
+		],
+		"inDepth": "Add in-depth information about Select Direct Shape Room Bounding Option...",
+		"folderPath": "Revit/Elements/DirectShape/Action"
+	},
+	{
+		"Name": "ByCurveAndDivisions",
+		"imageFile": [
+			"ByCurveAndDivisions"
+		],
+		"dynFile": [
+			"ByCurveAndDivisions"
+		],
+		"inDepth": "Add in-depth information about ByCurveAndDivisions...",
+		"folderPath": "Revit/Elements/DividedPath/Create"
+	},
+	{
+		"Name": "ByCurvesAndDivisions",
+		"imageFile": [
+			"ByCurvesAndDivisions"
+		],
+		"dynFile": [
+			"ByCurvesAndDivisions"
+		],
+		"inDepth": "Add in-depth information about ByCurvesAndDivisions...",
+		"folderPath": "Revit/Elements/DividedPath/Create"
+	},
+	{
+		"Name": "Spacing Rule Layout (dividedPath)",
+		"imageFile": [
+			"Spacing Rule Layout (dividedPath)"
+		],
+		"dynFile": [
+			"Spacing Rule Layout (dividedPath)"
+		],
+		"inDepth": "Add in-depth information about Spacing Rule Layout...",
+		"folderPath": "Revit/Elements/DividedPath/Action"
+	},
+	{
+		"Name": "Spacing Rule Layout (())",
+		"imageFile": [
+			"Spacing Rule Layout (())"
+		],
+		"dynFile": [
+			"Spacing Rule Layout (())"
+		],
+		"inDepth": "Add in-depth information about Spacing Rule Layout...",
+		"folderPath": "Revit/Elements/DividedPath/Action"
+	},
+	{
+		"Name": "Points",
+		"imageFile": [
+			"Points"
+		],
+		"dynFile": [
+			"Points"
+		],
+		"inDepth": "Add in-depth information about Points...",
+		"folderPath": "Revit/Elements/DividedPath/Query"
+	},
+	{
+		"Name": "ByFaceAndUVDivisions",
+		"imageFile": [
+			"ByFaceAndUVDivisions"
+		],
+		"dynFile": [
+			"ByFaceAndUVDivisions"
+		],
+		"inDepth": "Add in-depth information about ByFaceAndUVDivisions...",
+		"folderPath": "Revit/Elements/DividedSurface/Create"
+	},
+	{
+		"Name": "ByFaceUVDivisionsAndRotation",
+		"imageFile": [
+			"ByFaceUVDivisionsAndRotation"
+		],
+		"dynFile": [
+			"ByFaceUVDivisionsAndRotation"
+		],
+		"inDepth": "Add in-depth information about ByFaceUVDivisionsAndRotation...",
+		"folderPath": "Revit/Elements/DividedSurface/Create"
+	},
+	{
+		"Name": "Rotation",
+		"imageFile": [
+			"Rotation"
+		],
+		"dynFile": [
+			"Rotation"
+		],
+		"inDepth": "Add in-depth information about Rotation...",
+		"folderPath": "Revit/Elements/DividedSurface/Query"
+	},
+	{
+		"Name": "UDivisions",
+		"imageFile": [
+			"UDivisions"
+		],
+		"dynFile": [
+			"UDivisions"
+		],
+		"inDepth": "Add in-depth information about UDivisions...",
+		"folderPath": "Revit/Elements/DividedSurface/Query"
+	},
+	{
+		"Name": "VDivisions",
+		"imageFile": [
+			"VDivisions"
+		],
+		"dynFile": [
+			"VDivisions"
+		],
+		"inDepth": "Add in-depth information about VDivisions...",
+		"folderPath": "Revit/Elements/DividedSurface/Query"
+	},
+	{
+		"Name": "Geometry",
+		"imageFile": [
+			"Geometry"
+		],
+		"dynFile": [
+			"Geometry"
+		],
+		"inDepth": "Geometry brings the underlying geometry of a Revit element into Dynamo. For example, this node will extract a solid from a column. Revit elements can have multiple base geometries and types.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "GetLocation",
+		"imageFile": [
+			"GetLocation"
+		],
+		"dynFile": [
+			"GetLocation"
+		],
+		"inDepth": "GetLocation will return a point in Dynamo that represents the location of each input Revit element. The location of an element is generally determined by its insertion point. For example, the point location of a cylindrical foundation pile is at the top center.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "GetMaterials",
+		"imageFile": [
+			"GetMaterials"
+		],
+		"dynFile": [
+			"GetMaterials"
+		],
+		"inDepth": "GetMaterials will return all materials (and their ids) that exist in a Revit element. Elements with multiple materials will return a list for each element.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "GetParameterValueByName",
+		"imageFile": [
+			"GetParameterValueByName"
+		],
+		"dynFile": [
+			"GetParameterValueByName"
+		],
+		"inDepth": "GetParameterValueByName will return the value of an element's parameter given the parameter name as a string. This can be useful for querying a list of element parameters.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "MoveByVector",
+		"imageFile": [],
+		"dynFile": [],
+		"inDepth": "Add in-depth information about MoveByVector...",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "OverrideColorInView",
+		"imageFile": [
+			"OverrideColorInView"
+		],
+		"dynFile": [
+			"OverrideColorInView"
+		],
+		"inDepth": "OverrideColorInView will change the element's color in the active view regardless of the current model display style. For example, an element with an overridden color will display the same in Wireframe, Hidden Line, and Shaded views styles.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "OverrideInView",
+		"imageFile": [
+			"OverrideInView"
+		],
+		"dynFile": [
+			"OverrideInView"
+		],
+		"inDepth": "Add in-depth information about OverrideInView...",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "SetLocation",
+		"imageFile": [
+			"SetLocation"
+		],
+		"dynFile": [
+			"SetLocation"
+		],
+		"inDepth": "SetLocation will move a Revit element to a new location defined by a point in Dynamo.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "SetParameterByName",
+		"imageFile": [
+			"SetParameterByName"
+		],
+		"dynFile": [
+			"SetParameterByName"
+		],
+		"inDepth": "SetParameterByName will modify a Revit element's parameter given its name and a value. This can be updated live from Dynamo.",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "ToString",
+		"imageFile": [],
+		"dynFile": [],
+		"inDepth": "Add in-depth information about ToString...",
+		"folderPath": "Revit/Elements/Element/Action"
+	},
+	{
+		"Name": "BoundingBox",
+		"imageFile": [
+			"BoundingBox"
+		],
+		"dynFile": [
+			"BoundingBox"
+		],
+		"inDepth": "BoundingBox will create a bounding box in Dynamo around a Revit element.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "Curves",
+		"imageFile": [
+			"Curves"
+		],
+		"dynFile": [
+			"Curves"
+		],
+		"inDepth": "Curves finds all CurveElements in a Revit element and brings them into Dynamo as curves. The node can query a list of elements for curves even if some elements do not contain any. Those elements are simply returned as empty lists.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "ElementCurveReferences",
+		"imageFile": [
+			"ElementCurveReferences"
+		],
+		"dynFile": [
+			"ElementCurveReferences"
+		],
+		"inDepth": "Curves finds all CurveElements in a Revit element and brings them into Dynamo as curves. The node can query a list of elements for curves even if some elements do not contain any. Those elements are simply returned as empty lists.",
+		"inDepth": "ElementCurveReferences finds a CurveReferences in a Revit element. ",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "ElementFaceReferences",
+		"imageFile": [
+			"ElementFaceReferences"
+		],
+		"dynFile": [
+			"ElementFaceReferences"
+		],
+		"inDepth": "ElementFaceReferences finds all FaceReferences in a Revit element. The node can query a list of elements for faces even if some elements do not contain any. Those elements are simply returned as empty lists.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "ElementType",
+		"imageFile": [
+			"ElementType"
+		],
+		"dynFile": [
+			"ElementType"
+		],
+		"inDepth": "ElementType returns the FamilyType and its id for each input element. This node is useful for querying all FamilyTypes being used, for example, within a category or on a certain level.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "Faces",
+		"imageFile": [
+			"Faces"
+		],
+		"dynFile": [
+			"Faces"
+		],
+		"inDepth": "Faces will return all the faces of a Revit element as surfaces in Dynamo.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "GetCategory",
+		"imageFile": [
+			"GetCategory"
+		],
+		"dynFile": [
+			"GetCategory"
+		],
+		"inDepth": "GetCategory will return the category of an element or list of elements. This node is useful for querying large collections of elements for certain categories.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "Id",
+		"imageFile": [
+			"Id"
+		],
+		"dynFile": [
+			"Id"
+		],
+		"inDepth": "Id will return the revit element's Id, a unique integer identifier. The Id will appear as a green box in the Watch node or node preview and is a clickable shortcut to viewing the element in the best possible view.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Name returns an element's name as a string. Converting an element's name to a string simplifies the data type, making it more flexible for data manipulation (for example, in a boolean mask).",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "Parameters",
+		"imageFile": [
+			"Parameters"
+		],
+		"dynFile": [
+			"Parameters"
+		],
+		"inDepth": "Parameters returns all parameters in an element. This is useful for checking what is being defined by element versus by family or family type. The output can be passed into Parameter.IsReadOnly to show a parameter's writability.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "Solids",
+		"imageFile": [
+			"Solids"
+		],
+		"dynFile": [
+			"Solids"
+		],
+		"inDepth": "Solids brings the underlying solids of a Revit element into Dynamo. Revit elements can contain multiple solids.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "UniqueId",
+		"imageFile": [
+			"UniqueId"
+		],
+		"dynFile": [
+			"UniqueId"
+		],
+		"inDepth": "UniqueId returns the unique string identifier of an element. A unique Id remains unique across multiple local files in a work-sharing environment. It is different from an element Id, which is only unique in a single file.",
+		"folderPath": "Revit/Elements/Element/Query"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/Family/Create"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/Family/Query"
+	},
+	{
+		"Name": "Types",
+		"imageFile": [
+			"Types"
+		],
+		"dynFile": [
+			"Types"
+		],
+		"inDepth": "Add in-depth information about Types...",
+		"folderPath": "Revit/Elements/Family/Query"
+	},
+	{
+		"Name": "ByCoordinates",
+		"imageFile": [
+			"ByCoordinates.gif"
+		],
+		"dynFile": [
+			"ByCoordinates"
+		],
+		"inDepth": "ByCoordinates uses X, Y, and Z coordinate values to place a Revit FamilyInstance. This is useful for placing large collections of families. The coordinate values and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo.",
+		"folderPath": "Revit/Elements/FamilyInstance/Create"
+	},
+	{
+		"Name": "ByFace (familyType, face, location, referenceDirection)",
+		"imageFile": [
+			"ByFace (familyType, face, location, referenceDirection)"
+		],
+		"dynFile": [
+			"ByFace (familyType, face, location, referenceDirection)"
+		],
+		"inDepth": "Add in-depth information about ByFace...",
+		"folderPath": "Revit/Elements/FamilyInstance/Create"
+	},
+	{
+		"Name": "ByFace (familyType, face, line)",
+		"imageFile": [
+			"ByFace (familyType, face, line)"
+		],
+		"dynFile": [
+			"ByFace (familyType, face, line)"
+		],
+		"inDepth": "Add in-depth information about ByFace...",
+		"folderPath": "Revit/Elements/FamilyInstance/Create"
+	},
+	{
+		"Name": "ByPoint",
+		"imageFile": [
+			"ByPoint.gif"
+		],
+		"dynFile": [
+			"ByPoint"
+		],
+		"inDepth": "ByPoint uses a point defined in Dynamo to place a Revit FamilyInstance. This is useful for placing large collections of families. The point location and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo.",
+		"folderPath": "Revit/Elements/FamilyInstance/Create"
+	},
+	{
+		"Name": "ByPointAndLevel",
+		"imageFile": [
+			"ByPointAndLevel.gif"
+		],
+		"dynFile": [
+			"ByPointAndLevel"
+		],
+		"inDepth": "ByPointAndLevel uses a point in Dynamo and Revit level to place a FamilyInstance. This is useful for placing large collections of families across multiple levels. The point location and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo.",
+		"folderPath": "Revit/Elements/FamilyInstance/Create"
+	},
+	{
+		"Name": "ByFamilyType",
+		"imageFile": [
+			"ByFamilyType"
+		],
+		"dynFile": [
+			"ByFamilyType"
+		],
+		"inDepth": "ByFamilyType returns all FamilyInstances occurring in Revit of a specified Family. FamilyInstance is the bottom level in the Family, Type, and Instance heirarchy and is an element in the Revit file that can be queried for its location, count, and other instance specific qualities.",
+		"folderPath": "Revit/Elements/FamilyInstance/Action"
+	},
+	{
+		"Name": "SetRotation",
+		"imageFile": [
+			"SetRotation.gif"
+		],
+		"dynFile": [
+			"SetRotation"
+		],
+		"inDepth": "SetRotation allows the rotation of a FamilyInstance from within Dynamo. Since FamilyInstances are individual elements in a Revit file, each can be rotated to a different angle. This can be particularly useful for placing a FamilyInstance in an arc pattern, as each instance has a unique rotation.",
+		"folderPath": "Revit/Elements/FamilyInstance/Action"
+	},
+	{
+		"Name": "FacingOrientation",
+		"imageFile": [
+			"FacingOrientation"
+		],
+		"dynFile": [
+			"FacingOrientation"
+		],
+		"inDepth": "FacingOrientation returns a vector describing the orientation of a FamilyInstance. This can be used to determine how much an instance has been rotated.",
+		"folderPath": "Revit/Elements/FamilyInstance/Query"
+	},
+	{
+		"Name": "GetFamily",
+		"imageFile": [
+			"GetFamily"
+		],
+		"dynFile": [
+			"GetFamily"
+		],
+		"inDepth": "GetFamily returns the Family of a FamilyInstance. Family is the top level in the Family, Type, and Instance heirarchy where global, functional parameters are defined.",
+		"folderPath": "Revit/Elements/FamilyInstance/Query"
+	},
+	{
+		"Name": "GetHost",
+		"imageFile": [
+			"GetHost"
+		],
+		"dynFile": [
+			"GetHost"
+		],
+		"inDepth": "GetHost returns the element(s) that hosts a specific FamilyType. Common hosted elements in Revit are doors, windows, and elements of curtain systems.",
+		"folderPath": "Revit/Elements/FamilyInstance/Query"
+	},
+	{
+		"Name": "GetType",
+		"imageFile": [
+			"GetType"
+		],
+		"dynFile": [
+			"GetType"
+		],
+		"inDepth": "GetType returns a FamilyInstance's Type. FamilyType is the second level in the Family, Type, and Instance heirarchy where, for example, dimensional and material parameters are defined.",
+		"folderPath": "Revit/Elements/FamilyInstance/Query"
+	},
+	{
+		"Name": "Location",
+		"imageFile": [
+			"Location"
+		],
+		"dynFile": [
+			"Location"
+		],
+		"inDepth": "Location returns a point in Dynamo that represents the location of a FamilyInstance in Revit.",
+		"folderPath": "Revit/Elements/FamilyInstance/Query"
+	},
+	{
+		"Name": "Type",
+		"imageFile": [
+			"Type"
+		],
+		"dynFile": [
+			"Type"
+		],
+		"inDepth": "Type returns a FamilyInstance's Type. FamilyType is the second level in the Family, Type, and Instance heirarchy where, for example, dimensional and material parameters are defined.",
+		"folderPath": "Revit/Elements/FamilyInstance/Query"
+	},
+	{
+		"Name": "ByFamilyAndName",
+		"imageFile": [
+			"ByFamilyAndName"
+		],
+		"dynFile": [
+			"ByFamilyAndName"
+		],
+		"inDepth": "Add in-depth information about ByFamilyAndName...",
+		"folderPath": "Revit/Elements/FamilyType/Create"
+	},
+	{
+		"Name": "ByFamilyNameAndTypeName",
+		"imageFile": [
+			"ByFamilyNameAndTypeName"
+		],
+		"dynFile": [
+			"ByFamilyNameAndTypeName"
+		],
+		"inDepth": "Add in-depth information about ByFamilyNameAndTypeName...",
+		"folderPath": "Revit/Elements/FamilyType/Create"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/FamilyType/Create"
+	},
+	{
+		"Name": "Family",
+		"imageFile": [
+			"Family"
+		],
+		"dynFile": [
+			"Family"
+		],
+		"inDepth": "Add in-depth information about Family...",
+		"folderPath": "Revit/Elements/FamilyType/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/FamilyType/Query"
+	},
+	{
+		"Name": "GetByName",
+		"imageFile": [
+			"GetByName"
+		],
+		"dynFile": [
+			"GetByName"
+		],
+		"inDepth": "Add in-depth information about GetByName...",
+		"folderPath": "Revit/Elements/FillPatternElement/Create"
+	},
+	{
+		"Name": "Fill Pattern Targets",
+		"imageFile": [
+			"Fill Pattern Targets"
+		],
+		"dynFile": [
+			"Fill Pattern Targets"
+		],
+		"inDepth": "Add in-depth information about Fill Pattern Targets...",
+		"folderPath": "Revit/Elements/FillPatternElement/Action"
+	},
+	{
+		"Name": "Fill Patterns (name, fillPatternTarget)",
+		"imageFile": [
+			"Fill Patterns (name, fillPatternTarget)"
+		],
+		"dynFile": [
+			"Fill Patterns (name, fillPatternTarget)"
+		],
+		"inDepth": "Add in-depth information about Fill Patterns...",
+		"folderPath": "Revit/Elements/FillPatternElement/Action"
+	},
+	{
+		"Name": "Fill Patterns (())",
+		"imageFile": [
+			"Fill Patterns (())"
+		],
+		"dynFile": [
+			"Fill Patterns (())"
+		],
+		"inDepth": "Add in-depth information about Fill Patterns...",
+		"folderPath": "Revit/Elements/FillPatternElement/Action"
+	},
+	{
+		"Name": "ByCurves",
+		"imageFile": [
+			"ByCurves"
+		],
+		"dynFile": [
+			"ByCurves"
+		],
+		"inDepth": "Add in-depth information about ByCurves...",
+		"folderPath": "Revit/Elements/FilledRegion/Create"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/FilledRegionType/Create"
+	},
+	{
+		"Name": "Select Filled Region Type (())",
+		"imageFile": [
+			"Select Filled Region Type (())"
+		],
+		"dynFile": [
+			"Select Filled Region Type (())"
+		],
+		"inDepth": "Add in-depth information about Select Filled Region Type...",
+		"folderPath": "Revit/Elements/FilledRegionType/Action"
+	},
+	{
+		"Name": "Select Filled Region Type (name)",
+		"imageFile": [
+			"Select Filled Region Type (name)"
+		],
+		"dynFile": [
+			"Select Filled Region Type (name)"
+		],
+		"inDepth": "Add in-depth information about Select Filled Region Type...",
+		"folderPath": "Revit/Elements/FilledRegionType/Action"
+	},
+	{
+		"Name": "Color",
+		"imageFile": [
+			"Color"
+		],
+		"dynFile": [
+			"Color"
+		],
+		"inDepth": "Add in-depth information about Color...",
+		"folderPath": "Revit/Elements/FilledRegionType/Query"
+	},
+	{
+		"Name": "FillPatternId",
+		"imageFile": [
+			"FillPatternId"
+		],
+		"dynFile": [
+			"FillPatternId"
+		],
+		"inDepth": "Add in-depth information about FillPatternId...",
+		"folderPath": "Revit/Elements/FilledRegionType/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/FilledRegionType/Query"
+	},
+	{
+		"Name": "ByOutlineTypeAndLevel (outline, floorType, level)",
+		"imageFile": [
+			"ByOutlineTypeAndLevel (outline, floorType, level)"
+		],
+		"dynFile": [
+			"ByOutlineTypeAndLevel (outline, floorType, level)"
+		],
+		"inDepth": "Add in-depth information about ByOutlineTypeAndLevel...",
+		"folderPath": "Revit/Elements/Floor/Create"
+	},
+	{
+		"Name": "ByOutlineTypeAndLevel (outlineCurves, floorType, level)",
+		"imageFile": [
+			"ByOutlineTypeAndLevel (outlineCurves, floorType, level)"
+		],
+		"dynFile": [
+			"ByOutlineTypeAndLevel (outlineCurves, floorType, level)"
+		],
+		"inDepth": "Add in-depth information about ByOutlineTypeAndLevel...",
+		"folderPath": "Revit/Elements/Floor/Create"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/FloorType/Create"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/FloorType/Query"
+	},
+	{
+		"Name": "ByLoftCrossSections (curves, isSolid)",
+		"imageFile": [
+			"ByLoftCrossSections (curves, isSolid)"
+		],
+		"dynFile": [
+			"ByLoftCrossSections (curves, isSolid)"
+		],
+		"inDepth": "Add in-depth information about ByLoftCrossSections...",
+		"folderPath": "Revit/Elements/Form/Create"
+	},
+	{
+		"Name": "ByLoftCrossSections (curves, isSolid)",
+		"imageFile": [
+			"ByLoftCrossSections (curves, isSolid)"
+		],
+		"dynFile": [
+			"ByLoftCrossSections (curves, isSolid)"
+		],
+		"inDepth": "Add in-depth information about ByLoftCrossSections...",
+		"folderPath": "Revit/Elements/Form/Create"
+	},
+	{
+		"Name": "ByArc",
+		"imageFile": [
+			"ByArc"
+		],
+		"dynFile": [
+			"ByArc"
+		],
+		"inDepth": "Add in-depth information about ByArc...",
+		"folderPath": "Revit/Elements/Grid/Create"
+	},
+	{
+		"Name": "ByLine",
+		"imageFile": [
+			"ByLine"
+		],
+		"dynFile": [
+			"ByLine"
+		],
+		"inDepth": "Add in-depth information about ByLine...",
+		"folderPath": "Revit/Elements/Grid/Create"
+	},
+	{
+		"Name": "ByStartPointEndPoint",
+		"imageFile": [
+			"ByStartPointEndPoint"
+		],
+		"dynFile": [
+			"ByStartPointEndPoint"
+		],
+		"inDepth": "Add in-depth information about ByStartPointEndPoint...",
+		"folderPath": "Revit/Elements/Grid/Create"
+	},
+	{
+		"Name": "Curve",
+		"imageFile": [
+			"Curve"
+		],
+		"dynFile": [
+			"Curve"
+		],
+		"inDepth": "Add in-depth information about Curve...",
+		"folderPath": "Revit/Elements/Grid/Query"
+	},
+	{
+		"Name": "ElementCurveReference",
+		"imageFile": [
+			"ElementCurveReference"
+		],
+		"dynFile": [
+			"ElementCurveReference"
+		],
+		"inDepth": "Add in-depth information about ElementCurveReference...",
+		"folderPath": "Revit/Elements/Grid/Query"
+	},
+	{
+		"Name": "ByGeometries",
+		"imageFile": [
+			"ByGeometries"
+		],
+		"dynFile": [
+			"ByGeometries"
+		],
+		"inDepth": "Add in-depth information about ByGeometries...",
+		"folderPath": "Revit/Elements/ImportInstance/Create"
+	},
+	{
+		"Name": "ByGeometry",
+		"imageFile": [
+			"ByGeometry"
+		],
+		"dynFile": [
+			"ByGeometry"
+		],
+		"inDepth": "Add in-depth information about ByGeometry...",
+		"folderPath": "Revit/Elements/ImportInstance/Create"
+	},
+	{
+		"Name": "BySATFile",
+		"imageFile": [
+			"BySATFile"
+		],
+		"dynFile": [
+			"BySATFile"
+		],
+		"inDepth": "Add in-depth information about BySATFile...",
+		"folderPath": "Revit/Elements/ImportInstance/Create"
+	},
+	{
+		"Name": "Path",
+		"imageFile": [
+			"Path"
+		],
+		"dynFile": [
+			"Path"
+		],
+		"inDepth": "Add in-depth information about Path...",
+		"folderPath": "Revit/Elements/ImportInstance/Query"
+	},
+	{
+		"Name": "ByElevation",
+		"imageFile": [
+			"ByElevation"
+		],
+		"dynFile": [
+			"ByElevation"
+		],
+		"inDepth": "Add in-depth information about ByElevation...",
+		"folderPath": "Revit/Elements/Level/Create"
+	},
+	{
+		"Name": "ByElevationAndName",
+		"imageFile": [
+			"ByElevationAndName"
+		],
+		"dynFile": [
+			"ByElevationAndName"
+		],
+		"inDepth": "Add in-depth information about ByElevationAndName...",
+		"folderPath": "Revit/Elements/Level/Create"
+	},
+	{
+		"Name": "ByLevelAndOffset",
+		"imageFile": [
+			"ByLevelAndOffset"
+		],
+		"dynFile": [
+			"ByLevelAndOffset"
+		],
+		"inDepth": "Add in-depth information about ByLevelAndOffset...",
+		"folderPath": "Revit/Elements/Level/Create"
+	},
+	{
+		"Name": "ByLevelOffsetAndName",
+		"imageFile": [
+			"ByLevelOffsetAndName"
+		],
+		"dynFile": [
+			"ByLevelOffsetAndName"
+		],
+		"inDepth": "Add in-depth information about ByLevelOffsetAndName...",
+		"folderPath": "Revit/Elements/Level/Create"
+	},
+	{
+		"Name": "Elevation",
+		"imageFile": [
+			"Elevation"
+		],
+		"dynFile": [
+			"Elevation"
+		],
+		"inDepth": "Add in-depth information about Elevation...",
+		"folderPath": "Revit/Elements/Level/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/Level/Query"
+	},
+	{
+		"Name": "ProjectElevation",
+		"imageFile": [
+			"ProjectElevation"
+		],
+		"dynFile": [
+			"ProjectElevation"
+		],
+		"inDepth": "Add in-depth information about ProjectElevation...",
+		"folderPath": "Revit/Elements/Level/Query"
+	},
+	{
+		"Name": "GetByName",
+		"imageFile": [
+			"GetByName"
+		],
+		"dynFile": [
+			"GetByName"
+		],
+		"inDepth": "Add in-depth information about GetByName...",
+		"folderPath": "Revit/Elements/LinePatternElement/Create"
+	},
+	{
+		"Name": "Line Patterns (())",
+		"imageFile": [
+			"Line Patterns (())"
+		],
+		"dynFile": [
+			"Line Patterns (())"
+		],
+		"inDepth": "Add in-depth information about Line Patterns...",
+		"folderPath": "Revit/Elements/LinePatternElement/Action"
+	},
+	{
+		"Name": "Line Patterns (name)",
+		"imageFile": [
+			"Line Patterns (name)"
+		],
+		"dynFile": [
+			"Line Patterns (name)"
+		],
+		"inDepth": "Add in-depth information about Line Patterns...",
+		"folderPath": "Revit/Elements/LinePatternElement/Action"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/Material/Create"
+	},
+	{
+		"Name": "AppearanceParameters",
+		"imageFile": [
+			"AppearanceParameters"
+		],
+		"dynFile": [
+			"AppearanceParameters"
+		],
+		"inDepth": "Add in-depth information about AppearanceParameters...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "Color",
+		"imageFile": [
+			"Color"
+		],
+		"dynFile": [
+			"Color"
+		],
+		"inDepth": "Add in-depth information about Color...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "CutPatternColor",
+		"imageFile": [
+			"CutPatternColor"
+		],
+		"dynFile": [
+			"CutPatternColor"
+		],
+		"inDepth": "Add in-depth information about CutPatternColor...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "CutPatternId",
+		"imageFile": [
+			"CutPatternId"
+		],
+		"dynFile": [
+			"CutPatternId"
+		],
+		"inDepth": "Add in-depth information about CutPatternId...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "MaterialCategory",
+		"imageFile": [
+			"MaterialCategory"
+		],
+		"dynFile": [
+			"MaterialCategory"
+		],
+		"inDepth": "Add in-depth information about MaterialCategory...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "MaterialClass",
+		"imageFile": [
+			"MaterialClass"
+		],
+		"dynFile": [
+			"MaterialClass"
+		],
+		"inDepth": "Add in-depth information about MaterialClass...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "Shininess",
+		"imageFile": [
+			"Shininess"
+		],
+		"dynFile": [
+			"Shininess"
+		],
+		"inDepth": "Add in-depth information about Shininess...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "Smoothness",
+		"imageFile": [
+			"Smoothness"
+		],
+		"dynFile": [
+			"Smoothness"
+		],
+		"inDepth": "Add in-depth information about Smoothness...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "StructuralParameters",
+		"imageFile": [
+			"StructuralParameters"
+		],
+		"dynFile": [
+			"StructuralParameters"
+		],
+		"inDepth": "Add in-depth information about StructuralParameters...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "SurfacePatternColor",
+		"imageFile": [
+			"SurfacePatternColor"
+		],
+		"dynFile": [
+			"SurfacePatternColor"
+		],
+		"inDepth": "Add in-depth information about SurfacePatternColor...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "ThermalParameters",
+		"imageFile": [
+			"ThermalParameters"
+		],
+		"dynFile": [
+			"ThermalParameters"
+		],
+		"inDepth": "Add in-depth information about ThermalParameters...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "Transparency",
+		"imageFile": [
+			"Transparency"
+		],
+		"dynFile": [
+			"Transparency"
+		],
+		"inDepth": "Add in-depth information about Transparency...",
+		"folderPath": "Revit/Elements/Material/Query"
+	},
+	{
+		"Name": "ByCurve",
+		"imageFile": [
+			"ByCurve"
+		],
+		"dynFile": [
+			"ByCurve"
+		],
+		"inDepth": "Add in-depth information about ByCurve...",
+		"folderPath": "Revit/Elements/ModelCurve/Create"
+	},
+	{
+		"Name": "ReferenceCurveByCurve",
+		"imageFile": [
+			"ReferenceCurveByCurve"
+		],
+		"dynFile": [
+			"ReferenceCurveByCurve"
+		],
+		"inDepth": "Add in-depth information about ReferenceCurveByCurve...",
+		"folderPath": "Revit/Elements/ModelCurve/Create"
+	},
+	{
+		"Name": "ByTextSketchPlaneAndPosition",
+		"imageFile": [
+			"ByTextSketchPlaneAndPosition"
+		],
+		"dynFile": [
+			"ByTextSketchPlaneAndPosition"
+		],
+		"inDepth": "Add in-depth information about ByTextSketchPlaneAndPosition...",
+		"folderPath": "Revit/Elements/ModelText/Create"
+	},
+	{
+		"Name": "Depth",
+		"imageFile": [
+			"Depth"
+		],
+		"dynFile": [
+			"Depth"
+		],
+		"inDepth": "Add in-depth information about Depth...",
+		"folderPath": "Revit/Elements/ModelText/Query"
+	},
+	{
+		"Name": "Position",
+		"imageFile": [
+			"Position"
+		],
+		"dynFile": [
+			"Position"
+		],
+		"inDepth": "Add in-depth information about Position...",
+		"folderPath": "Revit/Elements/ModelText/Query"
+	},
+	{
+		"Name": "Text",
+		"imageFile": [
+			"Text"
+		],
+		"dynFile": [
+			"Text"
+		],
+		"inDepth": "Add in-depth information about Text...",
+		"folderPath": "Revit/Elements/ModelText/Query"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/ModelTextType/Create"
+	},
+	{
+		"Name": "AsFamilyInstance",
+		"imageFile": [
+			"AsFamilyInstance"
+		],
+		"dynFile": [
+			"AsFamilyInstance"
+		],
+		"inDepth": "Add in-depth information about AsFamilyInstance...",
+		"folderPath": "Revit/Elements/Mullion/Action"
+	},
+	{
+		"Name": "ByElement",
+		"imageFile": [
+			"ByElement"
+		],
+		"dynFile": [
+			"ByElement"
+		],
+		"inDepth": "Add in-depth information about ByElement...",
+		"folderPath": "Revit/Elements/Mullion/Action"
+	},
+	{
+		"Name": "SupportedPanels",
+		"imageFile": [
+			"SupportedPanels"
+		],
+		"dynFile": [
+			"SupportedPanels"
+		],
+		"inDepth": "Add in-depth information about SupportedPanels...",
+		"folderPath": "Revit/Elements/Mullion/Action"
+	},
+	{
+		"Name": "LocationCurve",
+		"imageFile": [
+			"LocationCurve"
+		],
+		"dynFile": [
+			"LocationCurve"
+		],
+		"inDepth": "Add in-depth information about LocationCurve...",
+		"folderPath": "Revit/Elements/Mullion/Query"
+	},
+	{
+		"Name": "ParameterByName",
+		"imageFile": [
+			"ParameterByName"
+		],
+		"dynFile": [
+			"ParameterByName"
+		],
+		"inDepth": "Add in-depth information about ParameterByName...",
+		"folderPath": "Revit/Elements/Parameter/Create"
+	},
+	{
+		"Name": "CreateProjectParameter",
+		"imageFile": [
+			"CreateProjectParameter"
+		],
+		"dynFile": [
+			"CreateProjectParameter"
+		],
+		"inDepth": "Add in-depth information about CreateProjectParameter...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "CreateProjectParameterForAllCategories",
+		"imageFile": [
+			"CreateProjectParameterForAllCategories"
+		],
+		"dynFile": [
+			"CreateProjectParameterForAllCategories"
+		],
+		"inDepth": "Add in-depth information about CreateProjectParameterForAllCategories...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "CreateSharedParameter",
+		"imageFile": [
+			"CreateSharedParameter"
+		],
+		"dynFile": [
+			"CreateSharedParameter"
+		],
+		"inDepth": "Add in-depth information about CreateSharedParameter...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "CreateSharedParameterForAllCategories",
+		"imageFile": [
+			"CreateSharedParameterForAllCategories"
+		],
+		"dynFile": [
+			"CreateSharedParameterForAllCategories"
+		],
+		"inDepth": "Add in-depth information about CreateSharedParameterForAllCategories...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "Select BuiltIn Parameter Group",
+		"imageFile": [
+			"Select BuiltIn Parameter Group"
+		],
+		"dynFile": [
+			"Select BuiltIn Parameter Group"
+		],
+		"inDepth": "Add in-depth information about Select BuiltIn Parameter Group...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "Select Parameter Type (parameter)",
+		"imageFile": [
+			"Select Parameter Type (parameter)"
+		],
+		"dynFile": [
+			"Select Parameter Type (parameter)"
+		],
+		"inDepth": "Add in-depth information about Select Parameter Type...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "Select Parameter Type (())",
+		"imageFile": [
+			"Select Parameter Type (())"
+		],
+		"dynFile": [
+			"Select Parameter Type (())"
+		],
+		"inDepth": "Add in-depth information about Select Parameter Type...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "SetValue",
+		"imageFile": [
+			"SetValue"
+		],
+		"dynFile": [
+			"SetValue"
+		],
+		"inDepth": "Add in-depth information about SetValue...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "SharedParameterFile",
+		"imageFile": [
+			"SharedParameterFile"
+		],
+		"dynFile": [
+			"SharedParameterFile"
+		],
+		"inDepth": "Add in-depth information about SharedParameterFile...",
+		"folderPath": "Revit/Elements/Parameter/Action"
+	},
+	{
+		"Name": "Group",
+		"imageFile": [
+			"Group"
+		],
+		"dynFile": [
+			"Group"
+		],
+		"inDepth": "Add in-depth information about Group...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "HasValue",
+		"imageFile": [
+			"HasValue"
+		],
+		"dynFile": [
+			"HasValue"
+		],
+		"inDepth": "Add in-depth information about HasValue...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "Id",
+		"imageFile": [
+			"Id"
+		],
+		"dynFile": [
+			"Id"
+		],
+		"inDepth": "Add in-depth information about Id...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "IsReadOnly",
+		"imageFile": [
+			"IsReadOnly"
+		],
+		"dynFile": [
+			"IsReadOnly"
+		],
+		"inDepth": "Add in-depth information about IsReadOnly...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "IsShared",
+		"imageFile": [
+			"IsShared"
+		],
+		"dynFile": [
+			"IsShared"
+		],
+		"inDepth": "Add in-depth information about IsShared...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "ParameterType",
+		"imageFile": [
+			"ParameterType"
+		],
+		"dynFile": [
+			"ParameterType"
+		],
+		"inDepth": "Add in-depth information about ParameterType...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "StorageType",
+		"imageFile": [
+			"StorageType"
+		],
+		"dynFile": [
+			"StorageType"
+		],
+		"inDepth": "Add in-depth information about StorageType...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "UnitType",
+		"imageFile": [
+			"UnitType"
+		],
+		"dynFile": [
+			"UnitType"
+		],
+		"inDepth": "Add in-depth information about UnitType...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "Value",
+		"imageFile": [
+			"Value"
+		],
+		"dynFile": [
+			"Value"
+		],
+		"inDepth": "Add in-depth information about Value...",
+		"folderPath": "Revit/Elements/Parameter/Query"
+	},
+	{
+		"Name": "Select Phase (())",
+		"imageFile": [
+			"Select Phase (())"
+		],
+		"dynFile": [
+			"Select Phase (())"
+		],
+		"inDepth": "Add in-depth information about Select Phase...",
+		"folderPath": "Revit/Elements/Phase/Action"
+	},
+	{
+		"Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
+		"imageFile": [
+			"Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+		],
+		"dynFile": [
+			"Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+		],
+		"inDepth": "Add in-depth information about Select Phase...",
+		"folderPath": "Revit/Elements/Phase/Action"
+	},
+	{
+		"Name": "ByLine",
+		"imageFile": [
+			"ByLine"
+		],
+		"dynFile": [
+			"ByLine"
+		],
+		"inDepth": "Add in-depth information about ByLine...",
+		"folderPath": "Revit/Elements/ReferencePlane/Create"
+	},
+	{
+		"Name": "ByStartPointEndPoint",
+		"imageFile": [
+			"ByStartPointEndPoint"
+		],
+		"dynFile": [
+			"ByStartPointEndPoint"
+		],
+		"inDepth": "Add in-depth information about ByStartPointEndPoint...",
+		"folderPath": "Revit/Elements/ReferencePlane/Create"
+	},
+	{
+		"Name": "ElementPlaneReference",
+		"imageFile": [
+			"ElementPlaneReference"
+		],
+		"dynFile": [
+			"ElementPlaneReference"
+		],
+		"inDepth": "Add in-depth information about ElementPlaneReference...",
+		"folderPath": "Revit/Elements/ReferencePlane/Query"
+	},
+	{
+		"Name": "Plane",
+		"imageFile": [
+			"Plane"
+		],
+		"dynFile": [
+			"Plane"
+		],
+		"inDepth": "Add in-depth information about Plane...",
+		"folderPath": "Revit/Elements/ReferencePlane/Query"
+	},
+	{
+		"Name": "ByCoordinates",
+		"imageFile": [
+			"ByCoordinates"
+		],
+		"dynFile": [
+			"ByCoordinates"
+		],
+		"inDepth": "Add in-depth information about ByCoordinates...",
+		"folderPath": "Revit/Elements/ReferencePoint/Create"
+	},
+	{
+		"Name": "ByLengthOnCurveReference",
+		"imageFile": [
+			"ByLengthOnCurveReference"
+		],
+		"dynFile": [
+			"ByLengthOnCurveReference"
+		],
+		"inDepth": "Add in-depth information about ByLengthOnCurveReference...",
+		"folderPath": "Revit/Elements/ReferencePoint/Create"
+	},
+	{
+		"Name": "ByParameterOnCurveReference",
+		"imageFile": [
+			"ByParameterOnCurveReference"
+		],
+		"dynFile": [
+			"ByParameterOnCurveReference"
+		],
+		"inDepth": "Add in-depth information about ByParameterOnCurveReference...",
+		"folderPath": "Revit/Elements/ReferencePoint/Create"
+	},
+	{
+		"Name": "ByParametersOnFaceReference",
+		"imageFile": [
+			"ByParametersOnFaceReference"
+		],
+		"dynFile": [
+			"ByParametersOnFaceReference"
+		],
+		"inDepth": "Add in-depth information about ByParametersOnFaceReference...",
+		"folderPath": "Revit/Elements/ReferencePoint/Create"
+	},
+	{
+		"Name": "ByPoint",
+		"imageFile": [
+			"ByPoint"
+		],
+		"dynFile": [
+			"ByPoint"
+		],
+		"inDepth": "Add in-depth information about ByPoint...",
+		"folderPath": "Revit/Elements/ReferencePoint/Create"
+	},
+	{
+		"Name": "ByPointVectorDistance",
+		"imageFile": [
+			"ByPointVectorDistance"
+		],
+		"dynFile": [
+			"ByPointVectorDistance"
+		],
+		"inDepth": "Add in-depth information about ByPointVectorDistance...",
+		"folderPath": "Revit/Elements/ReferencePoint/Create"
+	},
+	{
+		"Name": "Point",
+		"imageFile": [
+			"Point"
+		],
+		"dynFile": [
+			"Point"
+		],
+		"inDepth": "Add in-depth information about Point...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "X",
+		"imageFile": [
+			"X"
+		],
+		"dynFile": [
+			"X"
+		],
+		"inDepth": "Add in-depth information about X...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "XYPlane",
+		"imageFile": [
+			"XYPlane"
+		],
+		"dynFile": [
+			"XYPlane"
+		],
+		"inDepth": "Add in-depth information about XYPlane...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "XZPlane",
+		"imageFile": [
+			"XZPlane"
+		],
+		"dynFile": [
+			"XZPlane"
+		],
+		"inDepth": "Add in-depth information about XZPlane...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "Y",
+		"imageFile": [
+			"Y"
+		],
+		"dynFile": [
+			"Y"
+		],
+		"inDepth": "Add in-depth information about Y...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "YZPlane",
+		"imageFile": [
+			"YZPlane"
+		],
+		"dynFile": [
+			"YZPlane"
+		],
+		"inDepth": "Add in-depth information about YZPlane...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "Z",
+		"imageFile": [
+			"Z"
+		],
+		"dynFile": [
+			"Z"
+		],
+		"inDepth": "Add in-depth information about Z...",
+		"folderPath": "Revit/Elements/ReferencePoint/Query"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/Revision/Create"
+	},
+	{
+		"Name": "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
+		"imageFile": [
+			"Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+		],
+		"dynFile": [
+			"Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+		],
+		"inDepth": "Add in-depth information about Select Revision...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "Select Revision (())",
+		"imageFile": [
+			"Select Revision (())"
+		],
+		"dynFile": [
+			"Select Revision (())"
+		],
+		"inDepth": "Add in-depth information about Select Revision...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "Select Revision Number Type",
+		"imageFile": [
+			"Select Revision Number Type"
+		],
+		"dynFile": [
+			"Select Revision Number Type"
+		],
+		"inDepth": "Add in-depth information about Select Revision Number Type...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "Select Revision Numbering",
+		"imageFile": [
+			"Select Revision Numbering"
+		],
+		"dynFile": [
+			"Select Revision Numbering"
+		],
+		"inDepth": "Add in-depth information about Select Revision Numbering...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "Select Revision Visibility",
+		"imageFile": [
+			"Select Revision Visibility"
+		],
+		"dynFile": [
+			"Select Revision Visibility"
+		],
+		"inDepth": "Add in-depth information about Select Revision Visibility...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "SetIssued",
+		"imageFile": [
+			"SetIssued"
+		],
+		"dynFile": [
+			"SetIssued"
+		],
+		"inDepth": "Add in-depth information about SetIssued...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "SetIssuedBy",
+		"imageFile": [
+			"SetIssuedBy"
+		],
+		"dynFile": [
+			"SetIssuedBy"
+		],
+		"inDepth": "Add in-depth information about SetIssuedBy...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "SetIssuedTo",
+		"imageFile": [
+			"SetIssuedTo"
+		],
+		"dynFile": [
+			"SetIssuedTo"
+		],
+		"inDepth": "Add in-depth information about SetIssuedTo...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "SetRevisionDate",
+		"imageFile": [
+			"SetRevisionDate"
+		],
+		"dynFile": [
+			"SetRevisionDate"
+		],
+		"inDepth": "Add in-depth information about SetRevisionDate...",
+		"folderPath": "Revit/Elements/Revision/Action"
+	},
+	{
+		"Name": "Issued",
+		"imageFile": [
+			"Issued"
+		],
+		"dynFile": [
+			"Issued"
+		],
+		"inDepth": "Add in-depth information about Issued...",
+		"folderPath": "Revit/Elements/Revision/Query"
+	},
+	{
+		"Name": "IssuedBy",
+		"imageFile": [
+			"IssuedBy"
+		],
+		"dynFile": [
+			"IssuedBy"
+		],
+		"inDepth": "Add in-depth information about IssuedBy...",
+		"folderPath": "Revit/Elements/Revision/Query"
+	},
+	{
+		"Name": "IssuedTo",
+		"imageFile": [
+			"IssuedTo"
+		],
+		"dynFile": [
+			"IssuedTo"
+		],
+		"inDepth": "Add in-depth information about IssuedTo...",
+		"folderPath": "Revit/Elements/Revision/Query"
+	},
+	{
+		"Name": "RevisionDate",
+		"imageFile": [
+			"RevisionDate"
+		],
+		"dynFile": [
+			"RevisionDate"
+		],
+		"inDepth": "Add in-depth information about RevisionDate...",
+		"folderPath": "Revit/Elements/Revision/Query"
+	},
+	{
+		"Name": "ByCurve",
+		"imageFile": [
+			"ByCurve"
+		],
+		"dynFile": [
+			"ByCurve"
+		],
+		"inDepth": "Add in-depth information about ByCurve...",
+		"folderPath": "Revit/Elements/RevisionCloud/Create"
+	},
+	{
+		"Name": "Curves",
+		"imageFile": [
+			"Curves"
+		],
+		"dynFile": [
+			"Curves"
+		],
+		"inDepth": "Add in-depth information about Curves...",
+		"folderPath": "Revit/Elements/RevisionCloud/Query"
+	},
+	{
+		"Name": "Revision",
+		"imageFile": [
+			"Revision"
+		],
+		"dynFile": [
+			"Revision"
+		],
+		"inDepth": "Add in-depth information about Revision...",
+		"folderPath": "Revit/Elements/RevisionCloud/Query"
+	},
+	{
+		"Name": "ByLocation",
+		"imageFile": [
+			"ByLocation"
+		],
+		"dynFile": [
+			"ByLocation"
+		],
+		"inDepth": "Add in-depth information about ByLocation...",
+		"folderPath": "Revit/Elements/Room/Create"
+	},
+	{
+		"Name": "IsInsideRoom",
+		"imageFile": [
+			"IsInsideRoom"
+		],
+		"dynFile": [
+			"IsInsideRoom"
+		],
+		"inDepth": "Add in-depth information about IsInsideRoom...",
+		"folderPath": "Revit/Elements/Room/Action"
+	},
+	{
+		"Name": "SetName",
+		"imageFile": [
+			"SetName"
+		],
+		"dynFile": [
+			"SetName"
+		],
+		"inDepth": "Add in-depth information about SetName...",
+		"folderPath": "Revit/Elements/Room/Action"
+	},
+	{
+		"Name": "SetNumber",
+		"imageFile": [
+			"SetNumber"
+		],
+		"dynFile": [
+			"SetNumber"
+		],
+		"inDepth": "Add in-depth information about SetNumber...",
+		"folderPath": "Revit/Elements/Room/Action"
+	},
+	{
+		"Name": "Area",
+		"imageFile": [
+			"Area"
+		],
+		"dynFile": [
+			"Area"
+		],
+		"inDepth": "Add in-depth information about Area...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "CenterBoundary",
+		"imageFile": [
+			"CenterBoundary"
+		],
+		"dynFile": [
+			"CenterBoundary"
+		],
+		"inDepth": "Add in-depth information about CenterBoundary...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "CoreBoundary",
+		"imageFile": [
+			"CoreBoundary"
+		],
+		"dynFile": [
+			"CoreBoundary"
+		],
+		"inDepth": "Add in-depth information about CoreBoundary...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "CoreCenterBoundary",
+		"imageFile": [
+			"CoreCenterBoundary"
+		],
+		"dynFile": [
+			"CoreCenterBoundary"
+		],
+		"inDepth": "Add in-depth information about CoreCenterBoundary...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "FinishBoundary",
+		"imageFile": [
+			"FinishBoundary"
+		],
+		"dynFile": [
+			"FinishBoundary"
+		],
+		"inDepth": "Add in-depth information about FinishBoundary...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "Height",
+		"imageFile": [
+			"Height"
+		],
+		"dynFile": [
+			"Height"
+		],
+		"inDepth": "Add in-depth information about Height...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "Location",
+		"imageFile": [
+			"Location"
+		],
+		"dynFile": [
+			"Location"
+		],
+		"inDepth": "Add in-depth information about Location...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "Number",
+		"imageFile": [
+			"Number"
+		],
+		"dynFile": [
+			"Number"
+		],
+		"inDepth": "Add in-depth information about Number...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "Volume",
+		"imageFile": [
+			"Volume"
+		],
+		"dynFile": [
+			"Volume"
+		],
+		"inDepth": "Add in-depth information about Volume...",
+		"folderPath": "Revit/Elements/Room/Query"
+	},
+	{
+		"Name": "ByPlane",
+		"imageFile": [
+			"ByPlane"
+		],
+		"dynFile": [
+			"ByPlane"
+		],
+		"inDepth": "Add in-depth information about ByPlane...",
+		"folderPath": "Revit/Elements/SketchPlane/Create"
+	},
+	{
+		"Name": "ElementPlaneReference",
+		"imageFile": [
+			"ElementPlaneReference"
+		],
+		"dynFile": [
+			"ElementPlaneReference"
+		],
+		"inDepth": "Add in-depth information about ElementPlaneReference...",
+		"folderPath": "Revit/Elements/SketchPlane/Query"
+	},
+	{
+		"Name": "Plane",
+		"imageFile": [
+			"Plane"
+		],
+		"dynFile": [
+			"Plane"
+		],
+		"inDepth": "Add in-depth information about Plane...",
+		"folderPath": "Revit/Elements/SketchPlane/Query"
+	},
+	{
+		"Name": "BeamByCurve",
+		"imageFile": [
+			"BeamByCurve"
+		],
+		"dynFile": [
+			"BeamByCurve"
+		],
+		"inDepth": "Add in-depth information about BeamByCurve...",
+		"folderPath": "Revit/Elements/StructuralFraming/Create"
+	},
+	{
+		"Name": "BraceByCurve",
+		"imageFile": [
+			"BraceByCurve"
+		],
+		"dynFile": [
+			"BraceByCurve"
+		],
+		"inDepth": "Add in-depth information about BraceByCurve...",
+		"folderPath": "Revit/Elements/StructuralFraming/Create"
+	},
+	{
+		"Name": "ColumnByCurve",
+		"imageFile": [
+			"ColumnByCurve"
+		],
+		"dynFile": [
+			"ColumnByCurve"
+		],
+		"inDepth": "Add in-depth information about ColumnByCurve...",
+		"folderPath": "Revit/Elements/StructuralFraming/Create"
+	},
+	{
+		"Name": "Location",
+		"imageFile": [
+			"Location"
+		],
+		"dynFile": [
+			"Location"
+		],
+		"inDepth": "Add in-depth information about Location...",
+		"folderPath": "Revit/Elements/StructuralFraming/Query"
+	},
+	{
+		"Name": "Type",
+		"imageFile": [
+			"Type"
+		],
+		"dynFile": [
+			"Type"
+		],
+		"inDepth": "Add in-depth information about Type...",
+		"folderPath": "Revit/Elements/StructuralFraming/Query"
+	},
+	{
+		"Name": "Beam",
+		"imageFile": [
+			"Beam"
+		],
+		"dynFile": [
+			"Beam"
+		],
+		"inDepth": "Add in-depth information about Beam...",
+		"folderPath": "Revit/Elements/StructuralType/Query"
+	},
+	{
+		"Name": "Brace",
+		"imageFile": [
+			"Brace"
+		],
+		"dynFile": [
+			"Brace"
+		],
+		"inDepth": "Add in-depth information about Brace...",
+		"folderPath": "Revit/Elements/StructuralType/Query"
+	},
+	{
+		"Name": "Column",
+		"imageFile": [
+			"Column"
+		],
+		"dynFile": [
+			"Column"
+		],
+		"inDepth": "Add in-depth information about Column...",
+		"folderPath": "Revit/Elements/StructuralType/Query"
+	},
+	{
+		"Name": "Footing",
+		"imageFile": [
+			"Footing"
+		],
+		"dynFile": [
+			"Footing"
+		],
+		"inDepth": "Add in-depth information about Footing...",
+		"folderPath": "Revit/Elements/StructuralType/Query"
+	},
+	{
+		"Name": "NonStructural",
+		"imageFile": [
+			"NonStructural"
+		],
+		"dynFile": [
+			"NonStructural"
+		],
+		"inDepth": "Add in-depth information about NonStructural...",
+		"folderPath": "Revit/Elements/StructuralType/Query"
+	},
+	{
+		"Name": "Altitude",
+		"imageFile": [
+			"Altitude"
+		],
+		"dynFile": [
+			"Altitude"
+		],
+		"inDepth": "Add in-depth information about Altitude...",
+		"folderPath": "Revit/Elements/SunSettings/Query"
+	},
+	{
+		"Name": "Azimuth",
+		"imageFile": [
+			"Azimuth"
+		],
+		"dynFile": [
+			"Azimuth"
+		],
+		"inDepth": "Add in-depth information about Azimuth...",
+		"folderPath": "Revit/Elements/SunSettings/Query"
+	},
+	{
+		"Name": "CurrentDateTime",
+		"imageFile": [
+			"CurrentDateTime"
+		],
+		"dynFile": [
+			"CurrentDateTime"
+		],
+		"inDepth": "Add in-depth information about CurrentDateTime...",
+		"folderPath": "Revit/Elements/SunSettings/Query"
+	},
+	{
+		"Name": "EndDateTime",
+		"imageFile": [
+			"EndDateTime"
+		],
+		"dynFile": [
+			"EndDateTime"
+		],
+		"inDepth": "Add in-depth information about EndDateTime...",
+		"folderPath": "Revit/Elements/SunSettings/Query"
+	},
+	{
+		"Name": "StartDateTime",
+		"imageFile": [
+			"StartDateTime"
+		],
+		"dynFile": [
+			"StartDateTime"
+		],
+		"inDepth": "Add in-depth information about StartDateTime...",
+		"folderPath": "Revit/Elements/SunSettings/Query"
+	},
+	{
+		"Name": "SunDirection",
+		"imageFile": [
+			"SunDirection"
+		],
+		"dynFile": [
+			"SunDirection"
+		],
+		"inDepth": "Add in-depth information about SunDirection...",
+		"folderPath": "Revit/Elements/SunSettings/Query"
+	},
+	{
+		"Name": "ByElement",
+		"imageFile": [
+			"ByElement"
+		],
+		"dynFile": [
+			"ByElement"
+		],
+		"inDepth": "Add in-depth information about ByElement...",
+		"folderPath": "Revit/Elements/Tag/Create"
+	},
+	{
+		"Name": "TagText",
+		"imageFile": [
+			"TagText"
+		],
+		"dynFile": [
+			"TagText"
+		],
+		"inDepth": "Add in-depth information about TagText...",
+		"folderPath": "Revit/Elements/Tag/Query"
+	},
+	{
+		"Name": "TaggedElement",
+		"imageFile": [
+			"TaggedElement"
+		],
+		"dynFile": [
+			"TaggedElement"
+		],
+		"inDepth": "Add in-depth information about TaggedElement...",
+		"folderPath": "Revit/Elements/Tag/Query"
+	},
+	{
+		"Name": "Select Horizontal Text Alignment",
+		"imageFile": [
+			"Select Horizontal Text Alignment"
+		],
+		"dynFile": [
+			"Select Horizontal Text Alignment"
+		],
+		"inDepth": "Add in-depth information about Select Horizontal Text Alignment...",
+		"folderPath": "Revit/Elements/Text/Action"
+	},
+	{
+		"Name": "Select Vertical Text Alignment",
+		"imageFile": [
+			"Select Vertical Text Alignment"
+		],
+		"dynFile": [
+			"Select Vertical Text Alignment"
+		],
+		"inDepth": "Add in-depth information about Select Vertical Text Alignment...",
+		"folderPath": "Revit/Elements/Text/Action"
+	},
+	{
+		"Name": "ByLocation",
+		"imageFile": [
+			"ByLocation"
+		],
+		"dynFile": [
+			"ByLocation"
+		],
+		"inDepth": "Add in-depth information about ByLocation...",
+		"folderPath": "Revit/Elements/TextNote/Create"
+	},
+	{
+		"Name": "SetHorizontalAlignment",
+		"imageFile": [
+			"SetHorizontalAlignment"
+		],
+		"dynFile": [
+			"SetHorizontalAlignment"
+		],
+		"inDepth": "Add in-depth information about SetHorizontalAlignment...",
+		"folderPath": "Revit/Elements/TextNote/Action"
+	},
+	{
+		"Name": "SetKeepRotatedTextReadable",
+		"imageFile": [
+			"SetKeepRotatedTextReadable"
+		],
+		"dynFile": [
+			"SetKeepRotatedTextReadable"
+		],
+		"inDepth": "Add in-depth information about SetKeepRotatedTextReadable...",
+		"folderPath": "Revit/Elements/TextNote/Action"
+	},
+	{
+		"Name": "SetText",
+		"imageFile": [
+			"SetText"
+		],
+		"dynFile": [
+			"SetText"
+		],
+		"inDepth": "Add in-depth information about SetText...",
+		"folderPath": "Revit/Elements/TextNote/Action"
+	},
+	{
+		"Name": "Height",
+		"imageFile": [
+			"Height"
+		],
+		"dynFile": [
+			"Height"
+		],
+		"inDepth": "Add in-depth information about Height...",
+		"folderPath": "Revit/Elements/TextNote/Query"
+	},
+	{
+		"Name": "HorizontalAlignment",
+		"imageFile": [
+			"HorizontalAlignment"
+		],
+		"dynFile": [
+			"HorizontalAlignment"
+		],
+		"inDepth": "Add in-depth information about HorizontalAlignment...",
+		"folderPath": "Revit/Elements/TextNote/Query"
+	},
+	{
+		"Name": "Text",
+		"imageFile": [
+			"Text"
+		],
+		"dynFile": [
+			"Text"
+		],
+		"inDepth": "Add in-depth information about Text...",
+		"folderPath": "Revit/Elements/TextNote/Query"
+	},
+	{
+		"Name": "Typename",
+		"imageFile": [
+			"Typename"
+		],
+		"dynFile": [
+			"Typename"
+		],
+		"inDepth": "Add in-depth information about Typename...",
+		"folderPath": "Revit/Elements/TextNote/Query"
+	},
+	{
+		"Name": "VerticalAlignment",
+		"imageFile": [
+			"VerticalAlignment"
+		],
+		"dynFile": [
+			"VerticalAlignment"
+		],
+		"inDepth": "Add in-depth information about VerticalAlignment...",
+		"folderPath": "Revit/Elements/TextNote/Query"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/TextNoteType/Create"
+	},
+	{
+		"Name": "Default",
+		"imageFile": [
+			"Default"
+		],
+		"dynFile": [
+			"Default"
+		],
+		"inDepth": "Add in-depth information about Default...",
+		"folderPath": "Revit/Elements/TextNoteType/Create"
+	},
+	{
+		"Name": "ByPoints",
+		"imageFile": [
+			"ByPoints"
+		],
+		"dynFile": [
+			"ByPoints"
+		],
+		"inDepth": "Add in-depth information about ByPoints...",
+		"folderPath": "Revit/Elements/Topography/Create"
+	},
+	{
+		"Name": "Mesh",
+		"imageFile": [
+			"Mesh"
+		],
+		"dynFile": [
+			"Mesh"
+		],
+		"inDepth": "Add in-depth information about Mesh...",
+		"folderPath": "Revit/Elements/Topography/Query"
+	},
+	{
+		"Name": "Points",
+		"imageFile": [
+			"Points"
+		],
+		"dynFile": [
+			"Points"
+		],
+		"inDepth": "Add in-depth information about Points...",
+		"folderPath": "Revit/Elements/Topography/Query"
+	},
+	{
+		"Name": "ByCurveAndHeight",
+		"imageFile": [
+			"ByCurveAndHeight"
+		],
+		"dynFile": [
+			"ByCurveAndHeight"
+		],
+		"inDepth": "Add in-depth information about ByCurveAndHeight...",
+		"folderPath": "Revit/Elements/Wall/Create"
+	},
+	{
+		"Name": "ByCurveAndLevels",
+		"imageFile": [
+			"ByCurveAndLevels"
+		],
+		"dynFile": [
+			"ByCurveAndLevels"
+		],
+		"inDepth": "Add in-depth information about ByCurveAndLevels...",
+		"folderPath": "Revit/Elements/Wall/Create"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Elements/WallType/Create"
+	},
+	{
+		"Name": "Name",
+		"imageFile": [
+			"Name"
+		],
+		"dynFile": [
+			"Name"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Elements/WallType/Query"
+	},
+	{
+		"Name": "ByRuleType",
+		"imageFile": [
+			"ByRuleType"
+		],
+		"dynFile": [
+			"ByRuleType"
+		],
+		"inDepth": "Add in-depth information about ByRuleType...",
+		"folderPath": "Revit/Filter/FilterRule/Create"
+	},
+	{
+		"Name": "ByProperties",
+		"imageFile": [
+			"ByProperties"
+		],
+		"dynFile": [
+			"ByProperties"
+		],
+		"inDepth": "Add in-depth information about ByProperties...",
+		"folderPath": "Revit/Filter/OverrideGraphicSettings/Create"
+	},
+	{
+		"Name": "Detail Level (())",
+		"imageFile": [
+			"Detail Level (())"
+		],
+		"dynFile": [
+			"Detail Level (())"
+		],
+		"inDepth": "Add in-depth information about Detail Level...",
+		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
+	},
+	{
+		"Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
+		"imageFile": [
+			"Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+		],
+		"dynFile": [
+			"Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+		],
+		"inDepth": "Add in-depth information about Detail Level...",
+		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
+	},
+	{
+		"Name": "ByRules",
+		"imageFile": [
+			"ByRules"
+		],
+		"dynFile": [
+			"ByRules"
+		],
+		"inDepth": "Add in-depth information about ByRules...",
+		"folderPath": "Revit/Filter/ParameterFilterElement/Create"
+	},
+	{
+		"Name": "Select Rule Type (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
+		"imageFile": [
+			"Select Rule Type (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+		],
+		"dynFile": [
+			"Select Rule Type (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+		],
+		"inDepth": "Add in-depth information about Select Rule Type...",
+		"folderPath": "Revit/Filter/RuleType/Action"
+	},
+	{
+		"Name": "Select Rule Type (())",
+		"imageFile": [
+			"Select Rule Type (())"
+		],
+		"dynFile": [
+			"Select Rule Type (())"
+		],
+		"inDepth": "Add in-depth information about Select Rule Type...",
+		"folderPath": "Revit/Filter/RuleType/Action"
+	},
+	{
+		"Name": "ByOriginDirection",
+		"imageFile": [
+			"ByOriginDirection"
+		],
+		"dynFile": [
+			"ByOriginDirection"
+		],
+		"inDepth": "Add in-depth information about ByOriginDirection...",
+		"folderPath": "Revit/References/RayBounce/Action"
+	},
+	{
+		"Name": "All Elements at Level",
+		"imageFile": [
+			"All Elements at Level"
+		],
+		"dynFile": [
+			"All Elements at Level"
+		],
+		"inDepth": "Add in-depth information about All Elements at Level...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "All Elements of Category",
+		"imageFile": [
+			"All Elements of Category"
+		],
+		"dynFile": [
+			"All Elements of Category"
+		],
+		"inDepth": "Add in-depth information about All Elements of Category...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "All Elements of Family Type",
+		"imageFile": [
+			"All Elements of Family Type"
+		],
+		"dynFile": [
+			"All Elements of Family Type"
+		],
+		"inDepth": "Add in-depth information about All Elements of Family Type...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "All Elements of Type",
+		"imageFile": [
+			"All Elements of Type"
+		],
+		"dynFile": [
+			"All Elements of Type"
+		],
+		"inDepth": "Add in-depth information about All Elements of Type...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Categories",
+		"imageFile": [
+			"Categories"
+		],
+		"dynFile": [
+			"Categories"
+		],
+		"inDepth": "Add in-depth information about Categories...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Element Types",
+		"imageFile": [
+			"Element Types"
+		],
+		"dynFile": [
+			"Element Types"
+		],
+		"inDepth": "Add in-depth information about Element Types...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Family Types",
+		"imageFile": [
+			"Family Types"
+		],
+		"dynFile": [
+			"Family Types"
+		],
+		"inDepth": "Add in-depth information about Family Types...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Floor Types",
+		"imageFile": [
+			"Floor Types"
+		],
+		"dynFile": [
+			"Floor Types"
+		],
+		"inDepth": "Add in-depth information about Floor Types...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Get Family Parameter",
+		"imageFile": [
+			"Get Family Parameter"
+		],
+		"dynFile": [
+			"Get Family Parameter"
+		],
+		"inDepth": "Add in-depth information about Get Family Parameter...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Levels",
+		"imageFile": [
+			"Levels"
+		],
+		"dynFile": [
+			"Levels"
+		],
+		"inDepth": "Add in-depth information about Levels...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Divided Surface Families",
+		"imageFile": [
+			"Select Divided Surface Families"
+		],
+		"dynFile": [
+			"Select Divided Surface Families"
+		],
+		"inDepth": "Add in-depth information about Select Divided Surface Families...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Edge",
+		"imageFile": [
+			"Select Edge"
+		],
+		"dynFile": [
+			"Select Edge"
+		],
+		"inDepth": "Add in-depth information about Select Edge...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Edges",
+		"imageFile": [
+			"Select Edges"
+		],
+		"dynFile": [
+			"Select Edges"
+		],
+		"inDepth": "Add in-depth information about Select Edges...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Face",
+		"imageFile": [
+			"Select Face"
+		],
+		"dynFile": [
+			"Select Face"
+		],
+		"inDepth": "Add in-depth information about Select Face...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Faces",
+		"imageFile": [
+			"Select Faces"
+		],
+		"dynFile": [
+			"Select Faces"
+		],
+		"inDepth": "Add in-depth information about Select Faces...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Model Element (Family Type)",
+		"imageFile": [
+			"Select Model Element (Family Type)"
+		],
+		"dynFile": [
+			"Select Model Element (Family Type)"
+		],
+		"inDepth": "Add in-depth information about Select Model Element...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Model Element (())",
+		"imageFile": [
+			"Select Model Element (())"
+		],
+		"dynFile": [
+			"Select Model Element (())"
+		],
+		"inDepth": "Add in-depth information about Select Model Element...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Model Elements",
+		"imageFile": [
+			"Select Model Elements"
+		],
+		"dynFile": [
+			"Select Model Elements"
+		],
+		"inDepth": "Add in-depth information about Select Model Elements...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select Point on Face",
+		"imageFile": [
+			"Select Point on Face"
+		],
+		"dynFile": [
+			"Select Point on Face"
+		],
+		"inDepth": "Add in-depth information about Select Point on Face...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Select UV on Face",
+		"imageFile": [
+			"Select UV on Face"
+		],
+		"dynFile": [
+			"Select UV on Face"
+		],
+		"inDepth": "Add in-depth information about Select UV on Face...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Structural Column Types",
+		"imageFile": [
+			"Structural Column Types"
+		],
+		"dynFile": [
+			"Structural Column Types"
+		],
+		"inDepth": "Add in-depth information about Structural Column Types...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Structural Framing Types",
+		"imageFile": [
+			"Structural Framing Types"
+		],
+		"dynFile": [
+			"Structural Framing Types"
+		],
+		"inDepth": "Add in-depth information about Structural Framing Types...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Views",
+		"imageFile": [
+			"Views"
+		],
+		"dynFile": [
+			"Views"
+		],
+		"inDepth": "Add in-depth information about Views...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "Wall Types",
+		"imageFile": [
+			"Wall Types"
+		],
+		"dynFile": [
+			"Wall Types"
+		],
+		"inDepth": "Add in-depth information about Wall Types...",
+		"folderPath": "Revit/Selection/Action"
+	},
+	{
+		"Name": "End",
+		"imageFile": [
+			"End"
+		],
+		"dynFile": [
+			"End"
+		],
+		"inDepth": "Add in-depth information about End...",
+		"folderPath": "Revit/Transaction/Transaction/Action"
+	},
+	{
+		"Name": "Start",
+		"imageFile": [
+			"Start"
+		],
+		"dynFile": [
+			"Start"
+		],
+		"inDepth": "Add in-depth information about Start...",
+		"folderPath": "Revit/Transaction/Transaction/Action"
+	},
+	{
+		"Name": "All Elements In Active View",
+		"imageFile": [
+			"All Elements In Active View"
+		],
+		"dynFile": [
+			"All Elements In Active View"
+		],
+		"inDepth": "Add in-depth information about All Elements In Active View...",
+		"folderPath": "Revit/View/Action"
+	},
+	{
+		"Name": "SunSettings.Current",
+		"imageFile": [
+			"SunSettings.Current"
+		],
+		"dynFile": [
+			"SunSettings.Current"
+		],
+		"inDepth": "Add in-depth information about SunSettings.Current...",
+		"folderPath": "Revit/View/Action"
+	},
+	{
+		"Name": "ByEyePointAndTarget",
+		"imageFile": [
+			"ByEyePointAndTarget"
+		],
+		"dynFile": [
+			"ByEyePointAndTarget"
+		],
+		"inDepth": "Add in-depth information about ByEyePointAndTarget...",
+		"folderPath": "Revit/Views/AxonometricView/Create"
+	},
+	{
+		"Name": "ByEyePointTargetAndBoundingBox",
+		"imageFile": [
+			"ByEyePointTargetAndBoundingBox"
+		],
+		"dynFile": [
+			"ByEyePointTargetAndBoundingBox"
+		],
+		"inDepth": "Add in-depth information about ByEyePointTargetAndBoundingBox...",
+		"folderPath": "Revit/Views/AxonometricView/Create"
+	},
+	{
+		"Name": "ByEyePointTargetAndElement",
+		"imageFile": [
+			"ByEyePointTargetAndElement"
+		],
+		"dynFile": [
+			"ByEyePointTargetAndElement"
+		],
+		"inDepth": "Add in-depth information about ByEyePointTargetAndElement...",
+		"folderPath": "Revit/Views/AxonometricView/Create"
+	},
+	{
+		"Name": "ByLevel",
+		"imageFile": [
+			"ByLevel"
+		],
+		"dynFile": [
+			"ByLevel"
+		],
+		"inDepth": "Add in-depth information about ByLevel...",
+		"folderPath": "Revit/Views/CeilingPlanView/Create"
+	},
+	{
+		"Name": "ByName",
+		"imageFile": [
+			"ByName"
+		],
+		"dynFile": [
+			"ByName"
+		],
+		"inDepth": "Add in-depth information about ByName...",
+		"folderPath": "Revit/Views/DraftingView/Create"
+	},
+	{
+		"Name": "ByLevel",
+		"imageFile": [
+			"ByLevel"
+		],
+		"dynFile": [
+			"ByLevel"
+		],
+		"inDepth": "Add in-depth information about ByLevel...",
+		"folderPath": "Revit/Views/FloorPlanView/Create"
+	},
+	{
+		"Name": "ByEyePointAndTarget",
+		"imageFile": [
+			"ByEyePointAndTarget"
+		],
+		"dynFile": [
+			"ByEyePointAndTarget"
+		],
+		"inDepth": "Add in-depth information about ByEyePointAndTarget...",
+		"folderPath": "Revit/Views/PerspectiveView/Create"
+	},
+	{
+		"Name": "ByEyePointTargetAndBoundingBox",
+		"imageFile": [
+			"ByEyePointTargetAndBoundingBox"
+		],
+		"dynFile": [
+			"ByEyePointTargetAndBoundingBox"
+		],
+		"inDepth": "Add in-depth information about ByEyePointTargetAndBoundingBox...",
+		"folderPath": "Revit/Views/PerspectiveView/Create"
+	},
+	{
+		"Name": "ByEyePointTargetAndElement",
+		"imageFile": [
+			"ByEyePointTargetAndElement"
+		],
+		"dynFile": [
+			"ByEyePointTargetAndElement"
+		],
+		"inDepth": "Add in-depth information about ByEyePointTargetAndElement...",
+		"folderPath": "Revit/Views/PerspectiveView/Create"
+	},
+	{
+		"Name": "AddFields",
+		"imageFile": [
+			"AddFields"
+		],
+		"dynFile": [
+			"AddFields"
+		],
+		"inDepth": "Add in-depth information about AddFields...",
+		"folderPath": "Revit/Views/ScheduleView/Action"
+	},
+	{
+		"Name": "Export",
+		"imageFile": [
+			"Export"
+		],
+		"dynFile": [
+			"Export"
+		],
+		"inDepth": "Add in-depth information about Export...",
+		"folderPath": "Revit/Views/ScheduleView/Action"
+	},
+	{
+		"Name": "Export Column Headers",
+		"imageFile": [
+			"Export Column Headers"
+		],
+		"dynFile": [
+			"Export Column Headers"
+		],
+		"inDepth": "Add in-depth information about Export Column Headers...",
+		"folderPath": "Revit/Views/ScheduleView/Action"
+	},
+	{
+		"Name": "Export Text Qualifier",
+		"imageFile": [
+			"Export Text Qualifier"
+		],
+		"dynFile": [
+			"Export Text Qualifier"
+		],
+		"inDepth": "Add in-depth information about Export Text Qualifier...",
+		"folderPath": "Revit/Views/ScheduleView/Action"
+	},
+	{
+		"Name": "RemoveFields",
+		"imageFile": [
+			"RemoveFields"
+		],
+		"dynFile": [
+			"RemoveFields"
+		],
+		"inDepth": "Add in-depth information about RemoveFields...",
+		"folderPath": "Revit/Views/ScheduleView/Action"
+	},
+	{
+		"Name": "Schedule Type",
+		"imageFile": [
+			"Schedule Type"
+		],
+		"dynFile": [
+			"Schedule Type"
+		],
+		"inDepth": "Add in-depth information about Schedule Type...",
+		"folderPath": "Revit/Views/ScheduleView/Action"
+	},
+	{
+		"Name": "ByProperties",
+		"imageFile": [
+			"ByProperties"
+		],
+		"dynFile": [
+			"ByProperties"
+		],
+		"inDepth": "Add in-depth information about ByProperties...",
+		"folderPath": "Revit/Views/ScheduleView/ScheduleExportOptions/Create"
+	},
+	{
+		"Name": "CreateSchedule",
+		"imageFile": [
+			"CreateSchedule"
+		],
+		"dynFile": [
+			"CreateSchedule"
+		],
+		"inDepth": "Add in-depth information about CreateSchedule...",
+		"folderPath": "Revit/Views/ScheduleView/Create"
+	},
+	{
+		"Name": "Fields",
+		"imageFile": [
+			"Fields"
+		],
+		"dynFile": [
+			"Fields"
+		],
+		"inDepth": "Add in-depth information about Fields...",
+		"folderPath": "Revit/Views/ScheduleView/Query"
+	},
+	{
+		"Name": "SchedulableFields",
+		"imageFile": [
+			"SchedulableFields"
+		],
+		"dynFile": [
+			"SchedulableFields"
+		],
+		"inDepth": "Add in-depth information about SchedulableFields...",
+		"folderPath": "Revit/Views/ScheduleView/Query"
+	},
+	{
+		"Name": "Name (schedulableField)",
+		"imageFile": [
+			"Name (schedulableField)"
+		],
+		"dynFile": [
+			"Name (schedulableField)"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Views/ScheduleView/SchedulableField/Query"
+	},
+	{
+		"Name": "Name (scheduleField)",
+		"imageFile": [
+			"Name (scheduleField)"
+		],
+		"dynFile": [
+			"Name (scheduleField)"
+		],
+		"inDepth": "Add in-depth information about Name...",
+		"folderPath": "Revit/Views/ScheduleView/ScheduleField/Query"
+	},
+	{
+		"Name": "ByBoundingBox",
+		"imageFile": [
+			"ByBoundingBox"
+		],
+		"dynFile": [
+			"ByBoundingBox"
+		],
+		"inDepth": "Add in-depth information about ByBoundingBox...",
+		"folderPath": "Revit/Views/SectionView/Create"
+	},
+	{
+		"Name": "ByCoordinateSystemMinPointMaxPoint",
+		"imageFile": [
+			"ByCoordinateSystemMinPointMaxPoint"
+		],
+		"dynFile": [
+			"ByCoordinateSystemMinPointMaxPoint"
+		],
+		"inDepth": "Add in-depth information about ByCoordinateSystemMinPointMaxPoint...",
+		"folderPath": "Revit/Views/SectionView/Create"
+	},
+	{
+		"Name": "ByNameNumberTitleBlockAndView",
+		"imageFile": [
+			"ByNameNumberTitleBlockAndView"
+		],
+		"dynFile": [
+			"ByNameNumberTitleBlockAndView"
+		],
+		"inDepth": "Add in-depth information about ByNameNumberTitleBlockAndView...",
+		"folderPath": "Revit/Views/Sheet/Create"
+	},
+	{
+		"Name": "ByNameNumberTitleBlockAndViews",
+		"imageFile": [
+			"ByNameNumberTitleBlockAndViews"
+		],
+		"dynFile": [
+			"ByNameNumberTitleBlockAndViews"
+		],
+		"inDepth": "Add in-depth information about ByNameNumberTitleBlockAndViews...",
+		"folderPath": "Revit/Views/Sheet/Create"
+	},
+	{
+		"Name": "SheetName",
+		"imageFile": [
+			"SheetName"
+		],
+		"dynFile": [
+			"SheetName"
+		],
+		"inDepth": "Add in-depth information about SheetName...",
+		"folderPath": "Revit/Views/Sheet/Query"
+	},
+	{
+		"Name": "SheetNumber",
+		"imageFile": [
+			"SheetNumber"
+		],
+		"dynFile": [
+			"SheetNumber"
+		],
+		"inDepth": "Add in-depth information about SheetNumber...",
+		"folderPath": "Revit/Views/Sheet/Query"
+	},
+	{
+		"Name": "Views",
+		"imageFile": [
+			"Views"
+		],
+		"dynFile": [
+			"Views"
+		],
+		"inDepth": "Add in-depth information about Views...",
+		"folderPath": "Revit/Views/Sheet/Query"
+	},
+	{
+		"Name": "ByLevel",
+		"imageFile": [
+			"ByLevel"
+		],
+		"dynFile": [
+			"ByLevel"
+		],
+		"inDepth": "Add in-depth information about ByLevel...",
+		"folderPath": "Revit/Views/StructuralPlanView/Create"
+	},
+	{
+		"Name": "AddFilter",
+		"imageFile": [
+			"AddFilter"
+		],
+		"dynFile": [
+			"AddFilter"
+		],
+		"inDepth": "Add in-depth information about AddFilter...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "ExportAsImage",
+		"imageFile": [
+			"ExportAsImage"
+		],
+		"dynFile": [
+			"ExportAsImage"
+		],
+		"inDepth": "Add in-depth information about ExportAsImage...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "FilterOverrides",
+		"imageFile": [
+			"FilterOverrides"
+		],
+		"dynFile": [
+			"FilterOverrides"
+		],
+		"inDepth": "Add in-depth information about FilterOverrides...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "IsViewTemplate",
+		"imageFile": [
+			"IsViewTemplate"
+		],
+		"dynFile": [
+			"IsViewTemplate"
+		],
+		"inDepth": "Add in-depth information about IsViewTemplate...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "SetCategoryOverrides",
+		"imageFile": [
+			"SetCategoryOverrides"
+		],
+		"dynFile": [
+			"SetCategoryOverrides"
+		],
+		"inDepth": "Add in-depth information about SetCategoryOverrides...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "SetFilterOverrides",
+		"imageFile": [
+			"SetFilterOverrides"
+		],
+		"dynFile": [
+			"SetFilterOverrides"
+		],
+		"inDepth": "Add in-depth information about SetFilterOverrides...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "SetScale",
+		"imageFile": [
+			"SetScale"
+		],
+		"dynFile": [
+			"SetScale"
+		],
+		"inDepth": "Add in-depth information about SetScale...",
+		"folderPath": "Revit/Views/View/Action"
+	},
+	{
+		"Name": "Filters",
+		"imageFile": [
+			"Filters"
+		],
+		"dynFile": [
+			"Filters"
+		],
+		"inDepth": "Add in-depth information about Filters...",
+		"folderPath": "Revit/Views/View/Query"
+	},
+	{
+		"Name": "CreateUniqueViewName",
+		"imageFile": [
+			"CreateUniqueViewName"
+		],
+		"dynFile": [
+			"CreateUniqueViewName"
+		],
+		"inDepth": "Add in-depth information about CreateUniqueViewName...",
+		"folderPath": "Revit/Views/View3D/Action"
+	}
+]
