@@ -131,25 +131,6 @@ resort.objectifyChildren = function (dm) {
             }
             if (e.Arr) {
                 recursiveParents(e, 3, i);
-
-
-
-                // e.Arr.forEach(function (f, g) {
-                //     f.Parent = e;
-                //     f.iterationId = g;
-                //     if (f.Name !== "Create" && f.Name !== "Action" && f.Name !== "Query") {
-                //         f.Arr = resort.objectify(f.Arr, 3, i)
-                //     }
-                //     if (f.Arr) {
-                //         f.Arr.forEach(function (h, k) {
-                //             h.Parent = f;
-                //             h.iterationId = k;
-                //             if (h.Name !== "Create" && h.Name !== "Action" && h.Name !== "Query") {
-                //                 h.Arr = resort.objectify(h.Arr, 4, i)
-                //             }
-                //         })
-                //     }
-                // })
             }
         })
     })
