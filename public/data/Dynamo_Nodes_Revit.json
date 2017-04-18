@@ -68,23 +68,12 @@
 	{
 		"Name": "ActiveView (document)",
 		"imageFile": [
-			"ActiveView (document)"
+			"ActiveView"
 		],
 		"dynFile": [
-			"ActiveView (document)"
+			"ActiveView"
 		],
-		"inDepth": "Add in-depth information about ActiveView...",
-		"folderPath": "Revit/Application/Document/Query"
-	},
-	{
-		"Name": "ActiveView (document)",
-		"imageFile": [
-			"ActiveView (document)"
-		],
-		"dynFile": [
-			"ActiveView (document)"
-		],
-		"inDepth": "Add in-depth information about ActiveView...",
+		"inDepth": "ActiveView brings a view element into Dynamo for the active view in the current Revit document. Switching to another open view will change the active view.",
 		"folderPath": "Revit/Application/Document/Query"
 	},
 	{
@@ -95,7 +84,7 @@
 		"dynFile": [
 			"Current"
 		],
-		"inDepth": "Add in-depth information about Current...",
+		"inDepth": "Current returns the Revit document that you are currently working inside of. Switching to another open Revit file or family will change the current document.",
 		"folderPath": "Revit/Application/Document/Query"
 	},
 	{
@@ -106,7 +95,7 @@
 		"dynFile": [
 			"FilePath"
 		],
-		"inDepth": "Add in-depth information about FilePath...",
+		"inDepth": "FilePath returns the Revit document's location on your hard drive as a string.",
 		"folderPath": "Revit/Application/Document/Query"
 	},
 	{
@@ -117,7 +106,7 @@
 		"dynFile": [
 			"IsFamilyDocument"
 		],
-		"inDepth": "Add in-depth information about IsFamilyDocument...",
+		"inDepth": "IsFamilyDocument returns a boolean value based on whether the input document is a family or project file.",
 		"folderPath": "Revit/Application/Document/Query"
 	},
 	{
@@ -128,7 +117,7 @@
 		"dynFile": [
 			"Location"
 		],
-		"inDepth": "Add in-depth information about Location...",
+		"inDepth": "Location returns the Revit document's real world location in latitude and longitude.",
 		"folderPath": "Revit/Application/Document/Query"
 	},
 	{
@@ -194,7 +183,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName brings Revit categories into Dynamo by entering their names as strings.",
 		"folderPath": "Revit/Elements/Category/Create"
 	},
 	{
@@ -205,7 +194,7 @@
 		"dynFile": [
 			"Id"
 		],
-		"inDepth": "Add in-depth information about Id...",
+		"inDepth": "Id turns an input category's id number as an integer.",
 		"folderPath": "Revit/Elements/Category/Query"
 	},
 	{
@@ -216,7 +205,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name turns an input category's name into a string.",
 		"folderPath": "Revit/Elements/Category/Query"
 	},
 	{
@@ -227,7 +216,7 @@
 		"dynFile": [
 			"BasePoint"
 		],
-		"inDepth": "Add in-depth information about BasePoint...",
+		"inDepth": "BasePoint creates a point geometry in Dynamo that represents the Revit project's base point.",
 		"folderPath": "Revit/Elements/Coordinates/Action"
 	},
 	{
@@ -238,7 +227,7 @@
 		"dynFile": [
 			"ProjectRotation"
 		],
-		"inDepth": "Add in-depth information about ProjectRotation...",
+		"inDepth": "ProjectRotation returns the Revit project's relative rotation in degrees between true north and project north.",
 		"folderPath": "Revit/Elements/Coordinates/Action"
 	},
 	{
@@ -249,7 +238,7 @@
 		"dynFile": [
 			"SurveyPoint"
 		],
-		"inDepth": "Add in-depth information about SurveyPoint...",
+		"inDepth": "SurveyPoint creates a point geometry in Dynamo that represents the Revit project's survey point.",
 		"folderPath": "Revit/Elements/Coordinates/Action"
 	},
 	{
@@ -260,7 +249,7 @@
 		"dynFile": [
 			"AsFamilyInstance"
 		],
-		"inDepth": "Add in-depth information about AsFamilyInstance...",
+		"inDepth": "AsFamilyInstance returns the family instance of a curtain panel element. This is useful for querying and modifying instance parameters.",
 		"folderPath": "Revit/Elements/CurtainPanel/Action"
 	},
 	{
@@ -271,7 +260,7 @@
 		"dynFile": [
 			"ByElement"
 		],
-		"inDepth": "Add in-depth information about ByElement...",
+		"inDepth": "ByElement returns all curtain panel elements created on a host element.",
 		"folderPath": "Revit/Elements/CurtainPanel/Action"
 	},
 	{
@@ -282,7 +271,7 @@
 		"dynFile": [
 			"SupportingMullions"
 		],
-		"inDepth": "Add in-depth information about SupportingMullions...",
+		"inDepth": "SupportingMullions returns all mullion elements that host the input curtain panels. Using this in conjunction with CurtainPanel.ByElement enables selection of all elements in a curtain wall system.",
 		"folderPath": "Revit/Elements/CurtainPanel/Action"
 	},
 	{
@@ -293,7 +282,7 @@
 		"dynFile": [
 			"Boundaries"
 		],
-		"inDepth": "Add in-depth information about Boundaries...",
+		"inDepth": "Boundaries returns a polycurve in Dynamo for the boundary of each input curtain panel.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -304,7 +293,7 @@
 		"dynFile": [
 			"HasPlane"
 		],
-		"inDepth": "Add in-depth information about HasPlane...",
+		"inDepth": "HasPlane returns a boolean value based on whether an input curtain panel is planar, or completely flat.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -315,7 +304,7 @@
 		"dynFile": [
 			"Height"
 		],
-		"inDepth": "Add in-depth information about Height...",
+		"inDepth": "Height returns the vertical dimension of a rectangular curtain panel as a double.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -326,7 +315,7 @@
 		"dynFile": [
 			"IsRectangular"
 		],
-		"inDepth": "Add in-depth information about IsRectangular...",
+		"inDepth": "IsRectangular returns a boolean value based on whether a curtain panel is rectangular or not. Certain CurtainPanel query nodes, such as Height and Width, require that a curtain panel is rectangular.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -337,7 +326,7 @@
 		"dynFile": [
 			"Length"
 		],
-		"inDepth": "Add in-depth information about Length...",
+		"inDepth": "Length returns the length of a curtain panel's boundary as a double. This can be used even if the curtain panel is not rectangular.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -348,7 +337,7 @@
 		"dynFile": [
 			"PanelPlane"
 		],
-		"inDepth": "Add in-depth information about PanelPlane...",
+		"inDepth": "PanelPlane returns a plane in Dynamo at the centroid of a curtain panel.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -359,7 +348,7 @@
 		"dynFile": [
 			"Width"
 		],
-		"inDepth": "Add in-depth information about Width...",
+		"inDepth": "Width returns the horizontal dimension of a rectangular curtain panel as a double.",
 		"folderPath": "Revit/Elements/CurtainPanel/Query"
 	},
 	{
@@ -370,7 +359,7 @@
 		"dynFile": [
 			"ByReferencePoints"
 		],
-		"inDepth": "Add in-depth information about ByReferencePoints...",
+		"inDepth": "ByReferencePoints creates a CurveElement (Model Curve) in Revit from ReferencePoints. ReferencePoints are created in Revit's conceptual design environment.",
 		"folderPath": "Revit/Elements/CurveByPoints/Create"
 	},
 	{
@@ -381,7 +370,7 @@
 		"dynFile": [
 			"Curve"
 		],
-		"inDepth": "Add in-depth information about Curve...",
+		"inDepth": "Curve creates a curve in Dynamo from a Model Curve (CurveElement) in Revit.",
 		"folderPath": "Revit/Elements/CurveElement/Query"
 	},
 	{
@@ -392,7 +381,7 @@
 		"dynFile": [
 			"ElementCurveReference"
 		],
-		"inDepth": "Add in-depth information about ElementCurveReference...",
+		"inDepth": "ElementCurveReference creates an ElementCurveReference from a Model Curve (CurveElement) in Revit.",
 		"folderPath": "Revit/Elements/CurveElement/Query"
 	},
 	{
@@ -403,7 +392,7 @@
 		"dynFile": [
 			"ByCurve"
 		],
-		"inDepth": "Add in-depth information about ByCurve...",
+		"inDepth": "ByCurve creates a detail curve in Revit from a curve in dynamo. The curve input will not take polycurves, only individual curve segments.",
 		"folderPath": "Revit/Elements/DetailCurve/Create"
 	},
 	{
@@ -414,7 +403,7 @@
 		"dynFile": [
 			"SetCurve"
 		],
-		"inDepth": "Add in-depth information about SetCurve...",
+		"inDepth": "SetCurve modifies an existing detail curve in Revit by setting it to a new curve in Dynamo. The existing detail curve will be transformed to match the input curve.",
 		"folderPath": "Revit/Elements/DetailCurve/Action"
 	},
 	{
@@ -425,7 +414,7 @@
 		"dynFile": [
 			"Curve"
 		],
-		"inDepth": "Add in-depth information about Curve...",
+		"inDepth": "Curve extracts the underlying curve geometry from a Revit detail curve.",
 		"folderPath": "Revit/Elements/DetailCurve/Query"
 	},
 	{
@@ -436,7 +425,7 @@
 		"dynFile": [
 			"ByElements"
 		],
-		"inDepth": "Add in-depth information about ByElements...",
+		"inDepth": "ByElements creates a Revit dimension defined by its reference elements and inputs for other dimension parameters.",
 		"folderPath": "Revit/Elements/Dimension/Create"
 	},
 	{
@@ -447,7 +436,7 @@
 		"dynFile": [
 			"SetPrefix"
 		],
-		"inDepth": "Add in-depth information about SetPrefix...",
+		"inDepth": "SetPrefix will add a prefix to all dimensions in the dimension element.",
 		"folderPath": "Revit/Elements/Dimension/Action"
 	},
 	{
@@ -458,7 +447,7 @@
 		"dynFile": [
 			"SetSuffix"
 		],
-		"inDepth": "Add in-depth information about SetSuffix...",
+		"inDepth": "SetSuffix will add a suffix to all dimensions in the dimension element.",
 		"folderPath": "Revit/Elements/Dimension/Action"
 	},
 	{
@@ -469,7 +458,7 @@
 		"dynFile": [
 			"SetValueOverride"
 		],
-		"inDepth": "Add in-depth information about SetValueOverride...",
+		"inDepth": "SetValueOverride will override the dimension values of a dimension element with a provided string.",
 		"folderPath": "Revit/Elements/Dimension/Action"
 	},
 	{
@@ -480,7 +469,7 @@
 		"dynFile": [
 			"Prefix"
 		],
-		"inDepth": "Add in-depth information about Prefix...",
+		"inDepth": "Prefix will return each dimension's prefix as a string for an entire dimension element.",
 		"folderPath": "Revit/Elements/Dimension/Query"
 	},
 	{
@@ -491,7 +480,7 @@
 		"dynFile": [
 			"Suffix"
 		],
-		"inDepth": "Add in-depth information about Suffix...",
+		"inDepth": "Suffix will return each dimension's suffix as a string for an entire dimension element.",
 		"folderPath": "Revit/Elements/Dimension/Query"
 	},
 	{
@@ -502,7 +491,7 @@
 		"dynFile": [
 			"Value"
 		],
-		"inDepth": "Add in-depth information about Value...",
+		"inDepth": "Value will return a double for each dimension in a dimension element.",
 		"folderPath": "Revit/Elements/Dimension/Query"
 	},
 	{
@@ -513,7 +502,7 @@
 		"dynFile": [
 			"ValueOverride"
 		],
-		"inDepth": "Add in-depth information about ValueOverride...",
+		"inDepth": "ValueOverride will return each dimension's value override as a string for an entire dimension element.",
 		"folderPath": "Revit/Elements/Dimension/Query"
 	},
 	{
@@ -678,7 +667,7 @@
 		"dynFile": [
 			"Geometry"
 		],
-		"inDepth": "Add in-depth information about Geometry...",
+		"inDepth": "Geometry brings the underlying geometry of a Revit element into Dynamo. For example, this node will extract a solid from a column. Revit elements can have multiple base geometries and types.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -689,7 +678,7 @@
 		"dynFile": [
 			"GetLocation"
 		],
-		"inDepth": "Add in-depth information about GetLocation...",
+		"inDepth": "GetLocation will return a point in Dynamo that represents the location of each input Revit element. The location of an element is generally determined by its insertion point. For example, the point location of a cylindrical foundation pile is at the top center.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -700,7 +689,7 @@
 		"dynFile": [
 			"GetMaterials"
 		],
-		"inDepth": "Add in-depth information about GetMaterials...",
+		"inDepth": "GetMaterials will return all materials (and their ids) that exist in a Revit element. Elements with multiple materials will return a list for each element.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -711,7 +700,7 @@
 		"dynFile": [
 			"GetParameterValueByName"
 		],
-		"inDepth": "Add in-depth information about GetParameterValueByName...",
+		"inDepth": "GetParameterValueByName will return the value of an element's parameter given the parameter name as a string. This can be useful for querying a list of element parameters.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -733,7 +722,7 @@
 		"dynFile": [
 			"OverrideColorInView"
 		],
-		"inDepth": "Add in-depth information about OverrideColorInView...",
+		"inDepth": "OverrideColorInView will change the element's color in the active view regardless of the current model display style. For example, an element with an overridden color will display the same in Wireframe, Hidden Line, and Shaded views styles.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -755,7 +744,7 @@
 		"dynFile": [
 			"SetLocation"
 		],
-		"inDepth": "Add in-depth information about SetLocation...",
+		"inDepth": "SetLocation will move a Revit element to a new location defined by a point in Dynamo.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -766,7 +755,7 @@
 		"dynFile": [
 			"SetParameterByName"
 		],
-		"inDepth": "Add in-depth information about SetParameterByName...",
+		"inDepth": "SetParameterByName will modify a Revit element's parameter given its name and a value. This can be updated live from Dynamo.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -788,7 +777,7 @@
 		"dynFile": [
 			"BoundingBox"
 		],
-		"inDepth": "Add in-depth information about BoundingBox...",
+		"inDepth": "BoundingBox will create a bounding box in Dynamo around a Revit element.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -799,7 +788,7 @@
 		"dynFile": [
 			"Curves"
 		],
-		"inDepth": "Add in-depth information about Curves...",
+		"inDepth": "Curves finds all CurveElements in a Revit element and brings them into Dynamo as curves. The node can query a list of elements for curves even if some elements do not contain any. Those elements are simply returned as empty lists.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -810,7 +799,8 @@
 		"dynFile": [
 			"ElementCurveReferences"
 		],
-		"inDepth": "Add in-depth information about ElementCurveReferences...",
+		"inDepth": "Curves finds all CurveElements in a Revit element and brings them into Dynamo as curves. The node can query a list of elements for curves even if some elements do not contain any. Those elements are simply returned as empty lists.",
+		"inDepth": "ElementCurveReferences finds a CurveReferences in a Revit element. ",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -821,7 +811,7 @@
 		"dynFile": [
 			"ElementFaceReferences"
 		],
-		"inDepth": "Add in-depth information about ElementFaceReferences...",
+		"inDepth": "ElementFaceReferences finds all FaceReferences in a Revit element. The node can query a list of elements for faces even if some elements do not contain any. Those elements are simply returned as empty lists.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -832,7 +822,7 @@
 		"dynFile": [
 			"ElementType"
 		],
-		"inDepth": "Add in-depth information about ElementType...",
+		"inDepth": "ElementType returns the FamilyType and its id for each input element. This node is useful for querying all FamilyTypes being used, for example, within a category or on a certain level.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -843,7 +833,7 @@
 		"dynFile": [
 			"Faces"
 		],
-		"inDepth": "Add in-depth information about Faces...",
+		"inDepth": "Faces will return all the faces of a Revit element as surfaces in Dynamo.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -854,7 +844,7 @@
 		"dynFile": [
 			"GetCategory"
 		],
-		"inDepth": "Add in-depth information about GetCategory...",
+		"inDepth": "GetCategory will return the category of an element or list of elements. This node is useful for querying large collections of elements for certain categories.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -865,7 +855,7 @@
 		"dynFile": [
 			"Id"
 		],
-		"inDepth": "Add in-depth information about Id...",
+		"inDepth": "Id will return the revit element's Id, a unique integer identifier. The Id will appear as a green box in the Watch node or node preview and is a clickable shortcut to viewing the element in the best possible view.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -876,7 +866,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns an element's name as a string. Converting an element's name to a string simplifies the data type, making it more flexible for data manipulation (for example, in a boolean mask).",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -887,7 +877,7 @@
 		"dynFile": [
 			"Parameters"
 		],
-		"inDepth": "Add in-depth information about Parameters...",
+		"inDepth": "Parameters returns all parameters in an element. This is useful for checking what is being defined by element versus by family or family type. The output can be passed into Parameter.IsReadOnly to show a parameter's writability.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -898,7 +888,7 @@
 		"dynFile": [
 			"Solids"
 		],
-		"inDepth": "Add in-depth information about Solids...",
+		"inDepth": "Solids brings the underlying solids of a Revit element into Dynamo. Revit elements can contain multiple solids.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -909,7 +899,7 @@
 		"dynFile": [
 			"UniqueId"
 		],
-		"inDepth": "Add in-depth information about UniqueId...",
+		"inDepth": "UniqueId returns the unique string identifier of an element. A unique Id remains unique across multiple local files in a work-sharing environment. It is different from an element Id, which is only unique in a single file.",
 		"folderPath": "Revit/Elements/Element/Query"
 	},
 	{
@@ -948,12 +938,12 @@
 	{
 		"Name": "ByCoordinates",
 		"imageFile": [
-			"ByCoordinates"
+			"ByCoordinates.gif"
 		],
 		"dynFile": [
 			"ByCoordinates"
 		],
-		"inDepth": "Add in-depth information about ByCoordinates...",
+		"inDepth": "ByCoordinates uses X, Y, and Z coordinate values to place a Revit FamilyInstance. This is useful for placing large collections of families. The coordinate values and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo.",
 		"folderPath": "Revit/Elements/FamilyInstance/Create"
 	},
 	{
@@ -981,23 +971,23 @@
 	{
 		"Name": "ByPoint",
 		"imageFile": [
-			"ByPoint"
+			"ByPoint.gif"
 		],
 		"dynFile": [
 			"ByPoint"
 		],
-		"inDepth": "Add in-depth information about ByPoint...",
+		"inDepth": "ByPoint uses a point defined in Dynamo to place a Revit FamilyInstance. This is useful for placing large collections of families. The point location and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo.",
 		"folderPath": "Revit/Elements/FamilyInstance/Create"
 	},
 	{
 		"Name": "ByPointAndLevel",
 		"imageFile": [
-			"ByPointAndLevel"
+			"ByPointAndLevel.gif"
 		],
 		"dynFile": [
 			"ByPointAndLevel"
 		],
-		"inDepth": "Add in-depth information about ByPointAndLevel...",
+		"inDepth": "ByPointAndLevel uses a point in Dynamo and Revit level to place a FamilyInstance. This is useful for placing large collections of families across multiple levels. The point location and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo.",
 		"folderPath": "Revit/Elements/FamilyInstance/Create"
 	},
 	{
@@ -1008,18 +998,18 @@
 		"dynFile": [
 			"ByFamilyType"
 		],
-		"inDepth": "Add in-depth information about ByFamilyType...",
+		"inDepth": "ByFamilyType returns all FamilyInstances occurring in Revit of a specified Family. FamilyInstance is the bottom level in the Family, Type, and Instance heirarchy and is an element in the Revit file that can be queried for its location, count, and other instance specific qualities.",
 		"folderPath": "Revit/Elements/FamilyInstance/Action"
 	},
 	{
 		"Name": "SetRotation",
 		"imageFile": [
-			"SetRotation"
+			"SetRotation.gif"
 		],
 		"dynFile": [
 			"SetRotation"
 		],
-		"inDepth": "Add in-depth information about SetRotation...",
+		"inDepth": "SetRotation allows the rotation of a FamilyInstance from within Dynamo. Since FamilyInstances are individual elements in a Revit file, each can be rotated to a different angle. This can be particularly useful for placing a FamilyInstance in an arc pattern, as each instance has a unique rotation.",
 		"folderPath": "Revit/Elements/FamilyInstance/Action"
 	},
 	{
@@ -1030,7 +1020,7 @@
 		"dynFile": [
 			"FacingOrientation"
 		],
-		"inDepth": "Add in-depth information about FacingOrientation...",
+		"inDepth": "FacingOrientation returns a vector describing the orientation of a FamilyInstance. This can be used to determine how much an instance has been rotated.",
 		"folderPath": "Revit/Elements/FamilyInstance/Query"
 	},
 	{
@@ -1041,7 +1031,7 @@
 		"dynFile": [
 			"GetFamily"
 		],
-		"inDepth": "Add in-depth information about GetFamily...",
+		"inDepth": "GetFamily returns the Family of a FamilyInstance. Family is the top level in the Family, Type, and Instance heirarchy where global, functional parameters are defined.",
 		"folderPath": "Revit/Elements/FamilyInstance/Query"
 	},
 	{
@@ -1052,7 +1042,7 @@
 		"dynFile": [
 			"GetHost"
 		],
-		"inDepth": "Add in-depth information about GetHost...",
+		"inDepth": "GetHost returns the element(s) that hosts a specific FamilyType. Common hosted elements in Revit are doors, windows, and elements of curtain systems.",
 		"folderPath": "Revit/Elements/FamilyInstance/Query"
 	},
 	{
@@ -1063,7 +1053,7 @@
 		"dynFile": [
 			"GetType"
 		],
-		"inDepth": "Add in-depth information about GetType...",
+		"inDepth": "GetType returns a FamilyInstance's Type. FamilyType is the second level in the Family, Type, and Instance heirarchy where, for example, dimensional and material parameters are defined.",
 		"folderPath": "Revit/Elements/FamilyInstance/Query"
 	},
 	{
@@ -1074,7 +1064,7 @@
 		"dynFile": [
 			"Location"
 		],
-		"inDepth": "Add in-depth information about Location...",
+		"inDepth": "Location returns a point in Dynamo that represents the location of a FamilyInstance in Revit.",
 		"folderPath": "Revit/Elements/FamilyInstance/Query"
 	},
 	{
@@ -1085,7 +1075,7 @@
 		"dynFile": [
 			"Type"
 		],
-		"inDepth": "Add in-depth information about Type...",
+		"inDepth": "Type returns a FamilyInstance's Type. FamilyType is the second level in the Family, Type, and Instance heirarchy where, for example, dimensional and material parameters are defined.",
 		"folderPath": "Revit/Elements/FamilyInstance/Query"
 	},
 	{
