@@ -902,7 +902,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a Family in Dynamo from its name as a string.",
 		"folderPath": "Revit/Elements/Family/Create"
 	},
 	{
@@ -913,7 +913,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a Family as a string.",
 		"folderPath": "Revit/Elements/Family/Query"
 	},
 	{
@@ -924,7 +924,7 @@
 		"dynFile": [
 			"Types"
 		],
-		"inDepth": "Add in-depth information about Types...",
+		"inDepth": "Types returns all FamilyTypes that exist in a Family.",
 		"folderPath": "Revit/Elements/Family/Query"
 	},
 	{
@@ -1078,7 +1078,7 @@
 		"dynFile": [
 			"ByFamilyAndName"
 		],
-		"inDepth": "Add in-depth information about ByFamilyAndName...",
+		"inDepth": "ByFamilyAndName returns FamilyTypes given input Families and FamilyType names as strings. This can be used to get multiple Types within a Family, or all Types of the same name across multiple Families.",
 		"folderPath": "Revit/Elements/FamilyType/Create"
 	},
 	{
@@ -1089,7 +1089,7 @@
 		"dynFile": [
 			"ByFamilyNameAndTypeName"
 		],
-		"inDepth": "Add in-depth information about ByFamilyNameAndTypeName...",
+		"inDepth": "ByFamilyNameAndTypeName returns FamilyTypes given input string names for Families and FamilyTypes. This can be used to get multiple Types within a Family, or all Types of the same name across multiple Families.",
 		"folderPath": "Revit/Elements/FamilyType/Create"
 	},
 	{
@@ -1100,7 +1100,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns FamilyTypes for their names input as strings. The string input allows other data sources, such as Excel, to be used for querying the Revit file for FamilyTypes.",
 		"folderPath": "Revit/Elements/FamilyType/Create"
 	},
 	{
@@ -1111,7 +1111,7 @@
 		"dynFile": [
 			"Family"
 		],
-		"inDepth": "Add in-depth information about Family...",
+		"inDepth": "Family returns a parent Family for each FamilyType input, even if the Parent is the same across all types.",
 		"folderPath": "Revit/Elements/FamilyType/Query"
 	},
 	{
@@ -1122,7 +1122,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a FamilyType as a string. Names as strings are useful for data manipulation and creating boolean masks.",
 		"folderPath": "Revit/Elements/FamilyType/Query"
 	},
 	{
@@ -1133,7 +1133,7 @@
 		"dynFile": [
 			"GetByName"
 		],
-		"inDepth": "Add in-depth information about GetByName...",
+		"inDepth": "GetByName returns a FillPatternElement from a name and Target as strings. Possible FillPatternTargets can be viewed in the drop-down menu of the Fill Pattern Targets node.",
 		"folderPath": "Revit/Elements/FillPatternElement/Create"
 	},
 	{
@@ -1144,18 +1144,18 @@
 		"dynFile": [
 			"Fill Pattern Targets"
 		],
-		"inDepth": "Add in-depth information about Fill Pattern Targets...",
+		"inDepth": "Fill Pattern Targets allows the user to view all possible FillPatternTargets from a drop-down menu and select one.",
 		"folderPath": "Revit/Elements/FillPatternElement/Action"
 	},
 	{
 		"Name": "Fill Patterns (name, fillPatternTarget)",
 		"imageFile": [
-			"Fill Patterns (name, fillPatternTarget)"
+			"Fill Patterns"
 		],
 		"dynFile": [
-			"Fill Patterns (name, fillPatternTarget)"
+			"Fill Patterns"
 		],
-		"inDepth": "Add in-depth information about Fill Patterns...",
+		"inDepth": "Fill Patterns allows the user to view all possible FillPatterns in the active document from a drop-down menu and select one.",
 		"folderPath": "Revit/Elements/FillPatternElement/Action"
 	},
 	{
@@ -1177,7 +1177,7 @@
 		"dynFile": [
 			"ByCurves"
 		],
-		"inDepth": "Add in-depth information about ByCurves...",
+		"inDepth": "ByCurves creates a filled region from a list of curves. Filled regions can be easily generated from Rooms to create drawing graphics. Polycurves must be exploded into lists of curves to create filled regions.",
 		"folderPath": "Revit/Elements/FilledRegion/Create"
 	},
 	{
@@ -1188,18 +1188,18 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a FillRegionType from a string input. String inputs are useful for querying a Revit file from another data source, such as Excel.",
 		"folderPath": "Revit/Elements/FilledRegionType/Create"
 	},
 	{
 		"Name": "Select Filled Region Type (())",
 		"imageFile": [
-			"Select Filled Region Type (())"
+			"Select Filled Region Type"
 		],
 		"dynFile": [
-			"Select Filled Region Type (())"
+			"Select Filled Region Type"
 		],
-		"inDepth": "Add in-depth information about Select Filled Region Type...",
+		"inDepth": "Select Filled Region Type brings a Filled Region Type element into Dynamo. The node's dropdown menu contains every Filled Region Type in the active document and is useful determining the type of multiple Filled Regions from Dynamo.",
 		"folderPath": "Revit/Elements/FilledRegionType/Action"
 	},
 	{
@@ -1221,7 +1221,7 @@
 		"dynFile": [
 			"Color"
 		],
-		"inDepth": "Add in-depth information about Color...",
+		"inDepth": "Color returns a FilledRegionType's color. The output is readable by the Core color nodes and can be queried specifically for its R, G, B, and Alpha values.",
 		"folderPath": "Revit/Elements/FilledRegionType/Query"
 	},
 	{
@@ -1232,7 +1232,7 @@
 		"dynFile": [
 			"FillPatternId"
 		],
-		"inDepth": "Add in-depth information about FillPatternId...",
+		"inDepth": "FillPatternId returns an integer representing an input Fill Pattern's Id.",
 		"folderPath": "Revit/Elements/FilledRegionType/Query"
 	},
 	{
@@ -1243,29 +1243,29 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a FillRegionType as a string. String outputs are useful for data filtering and creating boolean masks.",
 		"folderPath": "Revit/Elements/FilledRegionType/Query"
 	},
 	{
 		"Name": "ByOutlineTypeAndLevel (outline, floorType, level)",
 		"imageFile": [
-			"ByOutlineTypeAndLevel (outline, floorType, level)"
+			"ByOutlineTypeAndLevel (outline, floorType, level).gif"
 		],
 		"dynFile": [
 			"ByOutlineTypeAndLevel (outline, floorType, level)"
 		],
-		"inDepth": "Add in-depth information about ByOutlineTypeAndLevel...",
+		"inDepth": "ByOutlineTypeAndLevel creates floors from Polycurves. Floors will be dynamically added and removed from the Revit document by adjusting inputs in Dynamo.",
 		"folderPath": "Revit/Elements/Floor/Create"
 	},
 	{
 		"Name": "ByOutlineTypeAndLevel (outlineCurves, floorType, level)",
 		"imageFile": [
-			"ByOutlineTypeAndLevel (outlineCurves, floorType, level)"
+			"ByOutlineTypeAndLevel (outlineCurves, floorType, level).gif"
 		],
 		"dynFile": [
 			"ByOutlineTypeAndLevel (outlineCurves, floorType, level)"
 		],
-		"inDepth": "Add in-depth information about ByOutlineTypeAndLevel...",
+		"inDepth": "ByOutlineTypeAndLevel creates floors from lists of curves that define outlines. Floors will be dynamically added and removed from the Revit document by adjusting inputs in Dynamo.",
 		"folderPath": "Revit/Elements/Floor/Create"
 	},
 	{
@@ -1276,7 +1276,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a FloorType element. This is useful for defining type when creating floors from Dynamo.",
 		"folderPath": "Revit/Elements/FloorType/Create"
 	},
 	{
@@ -1287,7 +1287,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a FloorType element as a string. String outputs are useful for data filtering and creating boolean masks.",
 		"folderPath": "Revit/Elements/FloorType/Query"
 	},
 	{
@@ -1320,7 +1320,7 @@
 		"dynFile": [
 			"ByArc"
 		],
-		"inDepth": "Add in-depth information about ByArc...",
+		"inDepth": "ByArc creates an arc Grid element defined by a center, radius, start angle, end angle, and a vector to rotate around. This node is useful for defining large collections of grid elements from static inputs. Dynamically adjusting the Grid element's parameters will create new elements.",
 		"folderPath": "Revit/Elements/Grid/Create"
 	},
 	{
@@ -1331,7 +1331,7 @@
 		"dynFile": [
 			"ByLine"
 		],
-		"inDepth": "Add in-depth information about ByLine...",
+		"inDepth": "ByLine creates a Grid element from a line in Dynamo. This node is useful for defining large collections of grid elements from static inputs. Dynamically adjusting the Grid element's line parameters will create new elements.",
 		"folderPath": "Revit/Elements/Grid/Create"
 	},
 	{
@@ -1342,7 +1342,7 @@
 		"dynFile": [
 			"ByStartPointEndPoint"
 		],
-		"inDepth": "Add in-depth information about ByStartPointEndPoint...",
+		"inDepth": "ByStartPointEndPoint creates a Grid element from two points in Dynamo. This node is useful for defining large collections of grid elements from static inputs. Dynamically adjusting the Grid element's point positions will create new elements.",
 		"folderPath": "Revit/Elements/Grid/Create"
 	},
 	{
@@ -1353,7 +1353,7 @@
 		"dynFile": [
 			"Curve"
 		],
-		"inDepth": "Add in-depth information about Curve...",
+		"inDepth": "The underlying curves are returned as geometry in Dynamo. Rectilinear Grid elements return underlying geometry consisting of lines.",
 		"folderPath": "Revit/Elements/Grid/Query"
 	},
 	{
@@ -1364,7 +1364,7 @@
 		"dynFile": [
 			"ElementCurveReference"
 		],
-		"inDepth": "Add in-depth information about ElementCurveReference...",
+		"inDepth": "ElementCurveReference returns the underlying Reference for a Grid element. References are not geometry in model space. They are used in the creation of other elements such as Revit dimensions.",
 		"folderPath": "Revit/Elements/Grid/Query"
 	},
 	{
@@ -1373,9 +1373,9 @@
 			"ByGeometries"
 		],
 		"dynFile": [
-			"ByGeometries"
+			"ByGeometries.zip"
 		],
-		"inDepth": "Add in-depth information about ByGeometries...",
+		"inDepth": "ByGeometries brings all input geometry into Revit as a single Import Instance element. An Import Instance is identified as an Import Symbol in Revit.",
 		"folderPath": "Revit/Elements/ImportInstance/Create"
 	},
 	{
@@ -1384,9 +1384,9 @@
 			"ByGeometry"
 		],
 		"dynFile": [
-			"ByGeometry"
+			"ByGeometry.zip"
 		],
-		"inDepth": "Add in-depth information about ByGeometry...",
+		"inDepth": "ByGeometry brings each input geometry into Revit as an individual Import Instance element. An Import Instance is identified as an Import Symbol in Revit.",
 		"folderPath": "Revit/Elements/ImportInstance/Create"
 	},
 	{
@@ -1397,7 +1397,7 @@
 		"dynFile": [
 			"BySATFile"
 		],
-		"inDepth": "Add in-depth information about BySATFile...",
+		"inDepth": "BySATFile brings geometry from a SAT file into Revit as a single Import Instance, similar to ImportInstance.ByGeometries. This is useful for directly importing geometry into Revit. An Import Instance is identified as an Import Symbol in Revit. Using BySATFile will bring an Import Instance into Revit at a different scale factor than ByGeometry or ByGeometries.",
 		"folderPath": "Revit/Elements/ImportInstance/Create"
 	},
 	{
@@ -1408,13 +1408,13 @@
 		"dynFile": [
 			"Path"
 		],
-		"inDepth": "Add in-depth information about Path...",
+		"inDepth": "Path returns the full file path of an Import Instance as a string.",
 		"folderPath": "Revit/Elements/ImportInstance/Query"
 	},
 	{
 		"Name": "ByElevation",
 		"imageFile": [
-			"ByElevation"
+			"ByElevation.gif"
 		],
 		"dynFile": [
 			"ByElevation"
@@ -2019,21 +2019,10 @@
 	{
 		"Name": "Select Phase (())",
 		"imageFile": [
-			"Select Phase (())"
+			"Select Phase"
 		],
 		"dynFile": [
-			"Select Phase (())"
-		],
-		"inDepth": "Add in-depth information about Select Phase...",
-		"folderPath": "Revit/Elements/Phase/Action"
-	},
-	{
-		"Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-		"imageFile": [
-			"Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"dynFile": [
-			"Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+			"Select Phase"
 		],
 		"inDepth": "Add in-depth information about Select Phase...",
 		"folderPath": "Revit/Elements/Phase/Action"
@@ -2140,7 +2129,7 @@
 	{
 		"Name": "ByPointVectorDistance",
 		"imageFile": [
-			"ByPointVectorDistance"
+			"ByPointVectorDistance.gif"
 		],
 		"dynFile": [
 			"ByPointVectorDistance"
@@ -2237,23 +2226,12 @@
 		"folderPath": "Revit/Elements/Revision/Create"
 	},
 	{
-		"Name": "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-		"imageFile": [
-			"Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"dynFile": [
-			"Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"inDepth": "Add in-depth information about Select Revision...",
-		"folderPath": "Revit/Elements/Revision/Action"
-	},
-	{
 		"Name": "Select Revision (())",
 		"imageFile": [
-			"Select Revision (())"
+			"Select Revision"
 		],
 		"dynFile": [
-			"Select Revision (())"
+			"Select Revision"
 		],
 		"inDepth": "Add in-depth information about Select Revision...",
 		"folderPath": "Revit/Elements/Revision/Action"
@@ -2602,7 +2580,7 @@
 	{
 		"Name": "BeamByCurve",
 		"imageFile": [
-			"BeamByCurve"
+			"BeamByCurve.gif"
 		],
 		"dynFile": [
 			"BeamByCurve"
@@ -2613,7 +2591,7 @@
 	{
 		"Name": "BraceByCurve",
 		"imageFile": [
-			"BraceByCurve"
+			"BraceByCurve.gif"
 		],
 		"dynFile": [
 			"BraceByCurve"
@@ -2624,7 +2602,7 @@
 	{
 		"Name": "ColumnByCurve",
 		"imageFile": [
-			"ColumnByCurve"
+			"ColumnByCurve.gif"
 		],
 		"dynFile": [
 			"ColumnByCurve"
@@ -3282,23 +3260,12 @@
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
-		"Name": "Select Model Element (Family Type)",
-		"imageFile": [
-			"Select Model Element (Family Type)"
-		],
-		"dynFile": [
-			"Select Model Element (Family Type)"
-		],
-		"inDepth": "Add in-depth information about Select Model Element...",
-		"folderPath": "Revit/Selection/Action"
-	},
-	{
 		"Name": "Select Model Element (())",
 		"imageFile": [
-			"Select Model Element (())"
+			"Select Model Element"
 		],
 		"dynFile": [
-			"Select Model Element (())"
+			"Select Model Element"
 		],
 		"inDepth": "Add in-depth information about Select Model Element...",
 		"folderPath": "Revit/Selection/Action"
@@ -3427,7 +3394,7 @@
 	{
 		"Name": "ByEyePointAndTarget",
 		"imageFile": [
-			"ByEyePointAndTarget"
+			"ByEyePointAndTarget.gif"
 		],
 		"dynFile": [
 			"ByEyePointAndTarget"
@@ -3449,7 +3416,7 @@
 	{
 		"Name": "ByEyePointTargetAndElement",
 		"imageFile": [
-			"ByEyePointTargetAndElement"
+			"ByEyePointTargetAndElement.gif"
 		],
 		"dynFile": [
 			"ByEyePointTargetAndElement"

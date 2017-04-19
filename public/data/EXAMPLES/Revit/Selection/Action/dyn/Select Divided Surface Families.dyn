@@ -1,0 +1,29 @@
+<Workspace Version="1.2.1.3083" X="7" Y="-32" zoom="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.FamilyTypes guid="783de69b-95ba-4d81-8487-3af489192979" type="DSRevitNodesUI.FamilyTypes" nickname="Family Types" x="108.2" y="421.6" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="35:M_Pile Cap-600 Pile:600 x 600 x 900mm" />
+    <DSRevitNodesUI.FamilyInstanceParameters guid="9f0b84e7-9800-4c7f-b70e-168f8bad5f35" type="DSRevitNodesUI.FamilyInstanceParameters" nickname="Get Family Parameter" x="484.2" y="421.6" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" index="10:Length(Type)(double)">
+      <PortInfo index="0" default="False" />
+      <familyid value="512173" />
+      <index value="10" />
+    </DSRevitNodesUI.FamilyInstanceParameters>
+    <Dynamo.Nodes.DSDividedSurfaceFamiliesSelection guid="d0c3aafc-be4a-400d-a1cf-bf226cc4c40d" type="Dynamo.Nodes.DSDividedSurfaceFamiliesSelection" nickname="Select Divided Surface Families" x="73.7999999999999" y="660.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="783de69b-95ba-4d81-8487-3af489192979" start_index="0" end="9f0b84e7-9800-4c7f-b70e-168f8bad5f35" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="fbaa394c-7960-4feb-9cac-68873497dba3" text="This Dynamo example file has been created with the basic sample project in the Revit installation directory, typically found in: &#xD;&#xA;&#xD;&#xA;C:\Program Files\Autodesk\Revit 2017\Samples" x="17.5" y="112" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a887f384-6399-4c78-9d2c-bca2ad041c73" annotationText="Revit sample file: rac_basic_sample_project.rvt" left="7.5" top="44.4" width="316" height="169.6" fontSize="24" InitialTop="112" InitialHeight="140" TextblockHeight="57.6" backgrouund="#FF48B9FF">
+      <Models ModelGuid="fbaa394c-7960-4feb-9cac-68873497dba3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>
