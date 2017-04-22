@@ -513,7 +513,7 @@
 		"dynFile": [
 			"ByGeometry"
 		],
-		"inDepth": "Add in-depth information about ByGeometry...",
+		"inDepth": "A direct shape allows you to create Revit roofs, walls, floors, etc from imported geometry. Many parameters can be assigned to direct shapes just as they would be to native Revit elements.",
 		"folderPath": "Revit/Elements/DirectShape/Create"
 	},
 	{
@@ -572,23 +572,12 @@
 		"folderPath": "Revit/Elements/DividedPath/Create"
 	},
 	{
-		"Name": "Spacing Rule Layout (dividedPath)",
-		"imageFile": [
-			"Spacing Rule Layout (dividedPath)"
-		],
-		"dynFile": [
-			"Spacing Rule Layout (dividedPath)"
-		],
-		"inDepth": "Add in-depth information about Spacing Rule Layout...",
-		"folderPath": "Revit/Elements/DividedPath/Action"
-	},
-	{
 		"Name": "Spacing Rule Layout (())",
 		"imageFile": [
-			"Spacing Rule Layout (())"
+			"Spacing Rule Layout"
 		],
 		"dynFile": [
-			"Spacing Rule Layout (())"
+			"Spacing Rule Layout"
 		],
 		"inDepth": "Add in-depth information about Spacing Rule Layout...",
 		"folderPath": "Revit/Elements/DividedPath/Action"
@@ -1293,10 +1282,10 @@
 	{
 		"Name": "ByLoftCrossSections (curves, isSolid)",
 		"imageFile": [
-			"ByLoftCrossSections (curves, isSolid)"
+			"ByLoftCrossSections"
 		],
 		"dynFile": [
-			"ByLoftCrossSections (curves, isSolid)"
+			"ByLoftCrossSections"
 		],
 		"inDepth": "Add in-depth information about ByLoftCrossSections...",
 		"folderPath": "Revit/Elements/Form/Create"
@@ -1419,7 +1408,7 @@
 		"dynFile": [
 			"ByElevation"
 		],
-		"inDepth": "Add in-depth information about ByElevation...",
+		"inDepth": "Revit levels created from Dynamo will be automatically named in Revit based on existing levels.",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1430,7 +1419,7 @@
 		"dynFile": [
 			"ByElevationAndName"
 		],
-		"inDepth": "Add in-depth information about ByElevationAndName...",
+		"inDepth": "If the new level's name matches the name of an existing level, it will automatically be renamed with a number. For example, an input name of Level 1 becomes Level 1(1).",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1441,7 +1430,7 @@
 		"dynFile": [
 			"ByLevelAndOffset"
 		],
-		"inDepth": "Add in-depth information about ByLevelAndOffset...",
+		"inDepth": "ByLevelAndOffset is useful for creating levels relative to existing ones by offsetting from them.",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1452,7 +1441,7 @@
 		"dynFile": [
 			"ByLevelOffsetAndName"
 		],
-		"inDepth": "Add in-depth information about ByLevelOffsetAndName...",
+		"inDepth": "If the new level's name matches the name of an existing level, it will automatically be renamed with a number. For example, an input name of Level 1 becomes Level 1(1). Offsetting is useful for creating new levels relative to existing ones.",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1463,7 +1452,7 @@
 		"dynFile": [
 			"Elevation"
 		],
-		"inDepth": "Add in-depth information about Elevation...",
+		"inDepth": "Ground level is generally elevation 0 in project elevations. This is a baseline for measuring all level elevations from. Elevation returns this distance as a double.",
 		"folderPath": "Revit/Elements/Level/Query"
 	},
 	{
@@ -1474,7 +1463,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Names are returned as strings, which are useful for data manipulation and boolean masks.",
 		"folderPath": "Revit/Elements/Level/Query"
 	},
 	{
@@ -1485,7 +1474,7 @@
 		"dynFile": [
 			"ProjectElevation"
 		],
-		"inDepth": "Add in-depth information about ProjectElevation...",
+		"inDepth": "The project origin is the (0,0,0) coordinate location within the Revit project. All coordinates in the Revit project are relative to this point.",
 		"folderPath": "Revit/Elements/Level/Query"
 	},
 	{
@@ -1496,7 +1485,7 @@
 		"dynFile": [
 			"GetByName"
 		],
-		"inDepth": "Add in-depth information about GetByName...",
+		"inDepth": "GetByName returns a line pattern element from it's name as a string. Selecting line pattern elements by string allows for data manipulation and searching, even from external data sources (Excel).",
 		"folderPath": "Revit/Elements/LinePatternElement/Create"
 	},
 	{
@@ -1507,18 +1496,7 @@
 		"dynFile": [
 			"Line Patterns"
 		],
-		"inDepth": "Add in-depth information about Line Patterns...",
-		"folderPath": "Revit/Elements/LinePatternElement/Action"
-	},
-	{
-		"Name": "Line Patterns (name)",
-		"imageFile": [
-			"Line Patterns (name)"
-		],
-		"dynFile": [
-			"Line Patterns (name)"
-		],
-		"inDepth": "Add in-depth information about Line Patterns...",
+		"inDepth": "Line Patterns contains a drop-down menu that allows you to select all line pattern elements in a Revit project.",
 		"folderPath": "Revit/Elements/LinePatternElement/Action"
 	},
 	{
@@ -1529,7 +1507,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a material element from its name as a string. Selecting material elements by string allows for data manipulation and searching, even from external data sources (Excel).",
 		"folderPath": "Revit/Elements/Material/Create"
 	},
 	{
@@ -1540,7 +1518,7 @@
 		"dynFile": [
 			"AppearanceParameters"
 		],
-		"inDepth": "Add in-depth information about AppearanceParameters...",
+		"inDepth": "Material appearance parameters are returned as Revit parameters.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1551,7 +1529,7 @@
 		"dynFile": [
 			"Color"
 		],
-		"inDepth": "Add in-depth information about Color...",
+		"inDepth": "Material color is returned as a Dynamo color with A,R,G,B values.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1562,7 +1540,7 @@
 		"dynFile": [
 			"CutPatternColor"
 		],
-		"inDepth": "Add in-depth information about CutPatternColor...",
+		"inDepth": "Material cut pattern color is returned as a Dynamo color with A,R,G,B values.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1573,7 +1551,7 @@
 		"dynFile": [
 			"CutPatternId"
 		],
-		"inDepth": "Add in-depth information about CutPatternId...",
+		"inDepth": "Material cut pattern id is returned as an integer. An integer of -1 represents the default option in Revit.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1584,7 +1562,7 @@
 		"dynFile": [
 			"MaterialCategory"
 		],
-		"inDepth": "Add in-depth information about MaterialCategory...",
+		"inDepth": "Material category is returned as a string. This is useful for data manipulation and boolean masks.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1595,7 +1573,7 @@
 		"dynFile": [
 			"MaterialClass"
 		],
-		"inDepth": "Add in-depth information about MaterialClass...",
+		"inDepth": "Material class is returned as a string. This is useful for data manipulation and boolean masks.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1606,7 +1584,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Material name is returned as a string. This is useful in conjunction with the Element.GetMaterials node for querying materials from elements.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1617,7 +1595,7 @@
 		"dynFile": [
 			"Shininess"
 		],
-		"inDepth": "Add in-depth information about Shininess...",
+		"inDepth": "Material shininess is returned as an integer.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1628,7 +1606,7 @@
 		"dynFile": [
 			"Smoothness"
 		],
-		"inDepth": "Add in-depth information about Smoothness...",
+		"inDepth": "Material smoothness is returned as an integer.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1639,7 +1617,7 @@
 		"dynFile": [
 			"StructuralParameters"
 		],
-		"inDepth": "Add in-depth information about StructuralParameters...",
+		"inDepth": "Material structural parameters are returned as Revit parameters.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1650,7 +1628,7 @@
 		"dynFile": [
 			"SurfacePatternColor"
 		],
-		"inDepth": "Add in-depth information about SurfacePatternColor...",
+		"inDepth": "Material surface pattern color is returned as a Dynamo color with A,R,G,B values.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1661,7 +1639,7 @@
 		"dynFile": [
 			"ThermalParameters"
 		],
-		"inDepth": "Add in-depth information about ThermalParameters...",
+		"inDepth": "Material thermal parameters are returned as Revit parameters.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1672,7 +1650,7 @@
 		"dynFile": [
 			"Transparency"
 		],
-		"inDepth": "Add in-depth information about Transparency...",
+		"inDepth": "Material transparency is returned as an integer.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -3031,21 +3009,10 @@
 	{
 		"Name": "Detail Level (())",
 		"imageFile": [
-			"Detail Level (())"
+			"Detail Level"
 		],
 		"dynFile": [
-			"Detail Level (())"
-		],
-		"inDepth": "Add in-depth information about Detail Level...",
-		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
-	},
-	{
-		"Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
-		"imageFile": [
-			"Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
-		],
-		"dynFile": [
-			"Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+			"Detail Level"
 		],
 		"inDepth": "Add in-depth information about Detail Level...",
 		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
