@@ -150,7 +150,7 @@
 		"dynFile": [
 			"ByPoints"
 		],
-		"inDepth": "Add in-depth information about ByPoints...",
+		"inDepth": "Adaptive components are families that must be loaded in the current Revit document to use with Dynamo. Adaptive components can be used in many Revit file types such as pattern panel families, adaptive component families, conceptual massing environment, and projects. ByPoints requires that its input points are structured to match the adaptive points, both in their data and geometrically.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Action"
 	},
 	{
@@ -161,7 +161,7 @@
 		"dynFile": [
 			"Locations"
 		],
-		"inDepth": "Add in-depth information about Locations...",
+		"inDepth": "Locations returns the point location of each adaptive point.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
 	},
 	{
@@ -172,7 +172,7 @@
 		"dynFile": [
 			"Type"
 		],
-		"inDepth": "Add in-depth information about Type...",
+		"inDepth": "Type returns the Revit family type of each adaptive component.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
 	},
 	{
@@ -2762,7 +2762,7 @@
 		"dynFile": [
 			"Select Horizontal Text Alignment"
 		],
-		"inDepth": "Add in-depth information about Select Horizontal Text Alignment...",
+		"inDepth": "Select Horizontal Text Alignment shows all available horizontal alignment styles (center, left, right) in a drop-down menu.",
 		"folderPath": "Revit/Elements/Text/Action"
 	},
 	{
@@ -2773,7 +2773,7 @@
 		"dynFile": [
 			"Select Vertical Text Alignment"
 		],
-		"inDepth": "Add in-depth information about Select Vertical Text Alignment...",
+		"inDepth": "Select Vertical Text Alignment shows all available vertical alignment styles (bottom, middle, top) in a drop-down menu.",
 		"folderPath": "Revit/Elements/Text/Action"
 	},
 	{
@@ -2784,7 +2784,7 @@
 		"dynFile": [
 			"ByLocation"
 		],
-		"inDepth": "Add in-depth information about ByLocation...",
+		"inDepth": "ByLocation creates a text note from a point. This is useful for labeling many similar elements in a Revit document as the elements can be queried for their locations.",
 		"folderPath": "Revit/Elements/TextNote/Create"
 	},
 	{
@@ -2795,7 +2795,7 @@
 		"dynFile": [
 			"SetHorizontalAlignment"
 		],
-		"inDepth": "Add in-depth information about SetHorizontalAlignment...",
+		"inDepth": "The horizontal alignment value is determined by a string for the possible styles (left, right, center).",
 		"folderPath": "Revit/Elements/TextNote/Action"
 	},
 	{
@@ -2806,7 +2806,7 @@
 		"dynFile": [
 			"SetKeepRotatedTextReadable"
 		],
-		"inDepth": "Add in-depth information about SetKeepRotatedTextReadable...",
+		"inDepth": "Rotating text past a certain degree would make it upside-down. SetKeepRotatedTextReadable will automatically flip the text so it always faces up at any rotation value.",
 		"folderPath": "Revit/Elements/TextNote/Action"
 	},
 	{
@@ -2817,7 +2817,7 @@
 		"dynFile": [
 			"SetText"
 		],
-		"inDepth": "Add in-depth information about SetText...",
+		"inDepth": "SetText overrides all input text notes with a supplied string.",
 		"folderPath": "Revit/Elements/TextNote/Action"
 	},
 	{
@@ -2828,7 +2828,7 @@
 		"dynFile": [
 			"Height"
 		],
-		"inDepth": "Add in-depth information about Height...",
+		"inDepth": "Text note height is returned as a double. The height value is relative to the view scale.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2839,7 +2839,7 @@
 		"dynFile": [
 			"HorizontalAlignment"
 		],
-		"inDepth": "Add in-depth information about HorizontalAlignment...",
+		"inDepth": "A text note's horizontal alignment is returned as a string.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2850,7 +2850,7 @@
 		"dynFile": [
 			"Text"
 		],
-		"inDepth": "Add in-depth information about Text...",
+		"inDepth": "Text returns the contents of a text note as a string.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2861,7 +2861,7 @@
 		"dynFile": [
 			"Typename"
 		],
-		"inDepth": "Add in-depth information about Typename...",
+		"inDepth": "Typename returns a string for a text note's font size and font (3.5mm Arial, for example).",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2872,7 +2872,7 @@
 		"dynFile": [
 			"VerticalAlignment"
 		],
-		"inDepth": "Add in-depth information about VerticalAlignment...",
+		"inDepth": "A text note's vertical alignment is returned as a string.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2883,7 +2883,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "Returns a text note type from a name as a string.",
 		"folderPath": "Revit/Elements/TextNoteType/Create"
 	},
 	{
@@ -2894,7 +2894,7 @@
 		"dynFile": [
 			"Default"
 		],
-		"inDepth": "Add in-depth information about Default...",
+		"inDepth": "Revit projects contain a default text note type that is automatically assigned to text notes.",
 		"folderPath": "Revit/Elements/TextNoteType/Create"
 	},
 	{
@@ -2905,7 +2905,7 @@
 		"dynFile": [
 			"ByPoints"
 		],
-		"inDepth": "Add in-depth information about ByPoints...",
+		"inDepth": "Revit will generate and contour a mesh from a list of supplied points. The points cannot be collinear.",
 		"folderPath": "Revit/Elements/Topography/Create"
 	},
 	{
@@ -2916,7 +2916,7 @@
 		"dynFile": [
 			"Mesh"
 		],
-		"inDepth": "Add in-depth information about Mesh...",
+		"inDepth": "Mesh returns a Revit topography as a mesh in Dynamo.",
 		"folderPath": "Revit/Elements/Topography/Query"
 	},
 	{
@@ -2927,7 +2927,7 @@
 		"dynFile": [
 			"Points"
 		],
-		"inDepth": "Add in-depth information about Points...",
+		"inDepth": "The points of an underlying mesh are useful for querying elevation or location data. Point sets can be manipulated in Dynamo and fed back into Dynamo as a new topography.",
 		"folderPath": "Revit/Elements/Topography/Query"
 	},
 	{
@@ -2938,7 +2938,7 @@
 		"dynFile": [
 			"ByCurveAndHeight"
 		],
-		"inDepth": "Add in-depth information about ByCurveAndHeight...",
+		"inDepth": "Walls created from Dynamo can be updated dynamically and will remain in the Revit document after Dynamo is closed.",
 		"folderPath": "Revit/Elements/Wall/Create"
 	},
 	{
@@ -2949,7 +2949,7 @@
 		"dynFile": [
 			"ByCurveAndLevels"
 		],
-		"inDepth": "Add in-depth information about ByCurveAndLevels...",
+		"inDepth": "Walls created from Dynamo can be updated dynamically and will remain in the Revit document after Dynamo is closed.",
 		"folderPath": "Revit/Elements/Wall/Create"
 	},
 	{
@@ -2960,7 +2960,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a wall type from its name as a string.",
 		"folderPath": "Revit/Elements/WallType/Create"
 	},
 	{
@@ -2971,7 +2971,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns a selected wall type as a string.",
 		"folderPath": "Revit/Elements/WallType/Query"
 	},
 	{
@@ -2993,7 +2993,7 @@
 		"dynFile": [
 			"ByProperties"
 		],
-		"inDepth": "Add in-depth information about ByProperties...",
+		"inDepth": "ByProperties gives access to the visibility/graphic override parameters that exist in Revit. This is especially useful for creating highly specific view overrides that would otherwise require significant manual customization in Revit.",
 		"folderPath": "Revit/Filter/OverrideGraphicSettings/Create"
 	},
 	{
@@ -3004,7 +3004,7 @@
 		"dynFile": [
 			"Detail Level"
 		],
-		"inDepth": "Add in-depth information about Detail Level...",
+		"inDepth": "Detail Level contains the four Revit detail level settings (Coarse, Fine, Medium, and Undefined). The OverrideGraphicSettings.ByProperties node takes the Detail Level node as an input.",
 		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
 	},
 	{
@@ -3048,7 +3048,7 @@
 		"dynFile": [
 			"ByOriginDirection"
 		],
-		"inDepth": "Add in-depth information about ByOriginDirection...",
+		"inDepth": "Ray bounces are a useful for creating studies and analysis in Revit. For example, ray bounces can be used to determine obstructions in line of sight.",
 		"folderPath": "Revit/References/RayBounce/Action"
 	},
 	{
