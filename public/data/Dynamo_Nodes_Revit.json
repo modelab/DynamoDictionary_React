@@ -3059,7 +3059,7 @@
 		"dynFile": [
 			"All Elements at Level"
 		],
-		"inDepth": "Add in-depth information about All Elements at Level...",
+		"inDepth": "Use with the Selection.Levels node to get elements associated with any level in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3070,7 +3070,7 @@
 		"dynFile": [
 			"All Elements of Category"
 		],
-		"inDepth": "Add in-depth information about All Elements of Category...",
+		"inDepth": "Use with the Selection.Categories node to get all elements in any category in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3081,7 +3081,7 @@
 		"dynFile": [
 			"All Elements of Family Type"
 		],
-		"inDepth": "Add in-depth information about All Elements of Family Type...",
+		"inDepth": "Use with the Selection.Family Types node to get all elements of any family type in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3092,7 +3092,7 @@
 		"dynFile": [
 			"All Elements of Type"
 		],
-		"inDepth": "Add in-depth information about All Elements of Type...",
+		"inDepth": "Use with the Selection.Element Types node to get all elements of any type in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3103,7 +3103,7 @@
 		"dynFile": [
 			"Categories"
 		],
-		"inDepth": "Add in-depth information about Categories...",
+		"inDepth": "Categories contains a drop-down menu with every category available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3114,7 +3114,7 @@
 		"dynFile": [
 			"Element Types"
 		],
-		"inDepth": "Add in-depth information about Element Types...",
+		"inDepth": "Element Types contains a drop-down menu with every element type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3125,7 +3125,7 @@
 		"dynFile": [
 			"Family Types"
 		],
-		"inDepth": "Add in-depth information about Family Types...",
+		"inDepth": "Family Types contains a drop-down menu with every family type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3136,7 +3136,7 @@
 		"dynFile": [
 			"Floor Types"
 		],
-		"inDepth": "Add in-depth information about Floor Types...",
+		"inDepth": "Floor Types contains a drop-down menu with every floor type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3147,7 +3147,7 @@
 		"dynFile": [
 			"Get Family Parameter"
 		],
-		"inDepth": "Add in-depth information about Get Family Parameter...",
+		"inDepth": "Get Family Parameter contains a drop-down menu with all parameters of an input family.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3158,7 +3158,7 @@
 		"dynFile": [
 			"Levels"
 		],
-		"inDepth": "Add in-depth information about Levels...",
+		"inDepth": "Levels contains a drop-down menu with every level available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3180,7 +3180,7 @@
 		"dynFile": [
 			"Select Edge"
 		],
-		"inDepth": "Add in-depth information about Select Edge...",
+		"inDepth": "Select Edge brings up a cursor in Revit that allows you to select a single edge.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3191,7 +3191,7 @@
 		"dynFile": [
 			"Select Edges"
 		],
-		"inDepth": "Add in-depth information about Select Edges...",
+		"inDepth": "Select Edges brings up a cursor in Revit that allows you to select multiple edges.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3202,7 +3202,7 @@
 		"dynFile": [
 			"Select Face"
 		],
-		"inDepth": "Add in-depth information about Select Face...",
+		"inDepth": "Select Face brings up a cursor in Revit that allows you to select a single face.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3213,7 +3213,7 @@
 		"dynFile": [
 			"Select Faces"
 		],
-		"inDepth": "Add in-depth information about Select Faces...",
+		"inDepth": "Select Faces brings up a cursor in Revit that allows you to select multiple faces.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3224,7 +3224,7 @@
 		"dynFile": [
 			"Select Model Element"
 		],
-		"inDepth": "Add in-depth information about Select Model Element...",
+		"inDepth": "Select Model Element brings up a cursor in Revit that allows you to select a single element.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3235,7 +3235,7 @@
 		"dynFile": [
 			"Select Model Elements"
 		],
-		"inDepth": "Add in-depth information about Select Model Elements...",
+		"inDepth": "Select Model Elements brings up a cursor in Revit that allows you to select multiple elements. Multiple elements must be selected by dragging a selection box around them, they cannot be individually selected.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3246,7 +3246,7 @@
 		"dynFile": [
 			"Select Point on Face"
 		],
-		"inDepth": "Add in-depth information about Select Point on Face...",
+		"inDepth": "Select Point on Face brings up a cursor in Revit that allows you to select a point on a face. The face will appear highlighted prior to placing the point.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3257,7 +3257,7 @@
 		"dynFile": [
 			"Select UV on Face"
 		],
-		"inDepth": "Add in-depth information about Select UV on Face...",
+		"inDepth": "Select UV on Face brings up a cursor in Revit that allows you to select a UV location on a face. The face will appear highlighted prior to choosing the UV location.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3268,7 +3268,7 @@
 		"dynFile": [
 			"Structural Column Types"
 		],
-		"inDepth": "Add in-depth information about Structural Column Types...",
+		"inDepth": "Structural Column Types contains a drop-down menu with every structural column type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3279,7 +3279,7 @@
 		"dynFile": [
 			"Structural Framing Types"
 		],
-		"inDepth": "Add in-depth information about Structural Framing Types...",
+		"inDepth": "Structural Framing Types contains a drop-down menu with every structural framing type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3290,7 +3290,7 @@
 		"dynFile": [
 			"Views"
 		],
-		"inDepth": "Add in-depth information about Views...",
+		"inDepth": "Views contains a drop-down menu with every view available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3301,7 +3301,7 @@
 		"dynFile": [
 			"Wall Types"
 		],
-		"inDepth": "Add in-depth information about Wall Types...",
+		"inDepth": "Wall Types contains a drop-down menu with every wall type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3334,7 +3334,7 @@
 		"dynFile": [
 			"All Elements In Active View"
 		],
-		"inDepth": "Add in-depth information about All Elements In Active View...",
+		"inDepth": "Views can contain vast quantities of elements, so downstream management of this node's data is very important. For example, this node could be used to override wall graphics in an active floor plan view without having to query the entire project for every wall.",
 		"folderPath": "Revit/View/Action"
 	},
 	{
@@ -3345,7 +3345,7 @@
 		"dynFile": [
 			"SunSettings.Current"
 		],
-		"inDepth": "Add in-depth information about SunSettings.Current...",
+		"inDepth": "SunSettings allows you to query parameters such as altitude, azimuth, and a DateTime in Dynamo.",
 		"folderPath": "Revit/View/Action"
 	},
 	{
@@ -3356,7 +3356,7 @@
 		"dynFile": [
 			"ByEyePointAndTarget"
 		],
-		"inDepth": "Add in-depth information about ByEyePointAndTarget...",
+		"inDepth": "ByEyePointAndTarget creates a view in Revit that can be dynamically updated. In the example below, the eye point is evaluated at different paramters of a circle to rotate the camera around the model.",
 		"folderPath": "Revit/Views/AxonometricView/Create"
 	},
 	{
@@ -3378,7 +3378,7 @@
 		"dynFile": [
 			"ByEyePointTargetAndElement"
 		],
-		"inDepth": "Add in-depth information about ByEyePointTargetAndElement...",
+		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry.",
 		"folderPath": "Revit/Views/AxonometricView/Create"
 	},
 	{
@@ -3389,7 +3389,7 @@
 		"dynFile": [
 			"ByLevel"
 		],
-		"inDepth": "Add in-depth information about ByLevel...",
+		"inDepth": "ByLevel creates a ceiling plan named after its input level.",
 		"folderPath": "Revit/Views/CeilingPlanView/Create"
 	},
 	{
@@ -3400,7 +3400,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "If the name of the drafting view matches an existing one in Dynamo, it will have its unique id added to its name.",
 		"folderPath": "Revit/Views/DraftingView/Create"
 	},
 	{
@@ -3411,7 +3411,7 @@
 		"dynFile": [
 			"ByLevel"
 		],
-		"inDepth": "Add in-depth information about ByLevel...",
+		"inDepth": "ByLevel creates a floor plan named after its input level.",
 		"folderPath": "Revit/Views/FloorPlanView/Create"
 	},
 	{
@@ -3422,7 +3422,7 @@
 		"dynFile": [
 			"ByEyePointAndTarget"
 		],
-		"inDepth": "Add in-depth information about ByEyePointAndTarget...",
+		"inDepth": "Perspective views created from Dynamo will update only by switching to another view and back again. In the example below, the eye point is evaluated at different parameters of a circle to rotate the camera around the model.",
 		"folderPath": "Revit/Views/PerspectiveView/Create"
 	},
 	{
@@ -3444,7 +3444,7 @@
 		"dynFile": [
 			"ByEyePointTargetAndElement"
 		],
-		"inDepth": "Add in-depth information about ByEyePointTargetAndElement...",
+		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry. Perspective views created from Dynamo will update only by switching to another view and back again.",
 		"folderPath": "Revit/Views/PerspectiveView/Create"
 	},
 	{
@@ -3455,7 +3455,7 @@
 		"dynFile": [
 			"AddFields"
 		],
-		"inDepth": "Add in-depth information about AddFields...",
+		"inDepth": "AddFields adds schedulable fields to a Revit schedule. Schedulable fields are determined by the a schedule's category. For the windows category, this could be Count, Family, Phase Created, Visual Light Transmittance, Level, etc. In the example below, a schedule is created based on the window category, then queried for all schedulable fields it could have. Then certain fields are chosen for the schedule.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3466,7 +3466,7 @@
 		"dynFile": [
 			"Export"
 		],
-		"inDepth": "Add in-depth information about Export...",
+		"inDepth": "Revit schedules export with the same structure as they have in Revit, unless it is overridden with the ScheduleExportOptions.ByProperties node.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3477,7 +3477,7 @@
 		"dynFile": [
 			"Export Column Headers"
 		],
-		"inDepth": "Add in-depth information about Export Column Headers...",
+		"inDepth": "Export Column Headers contains a drop-down menu with options to export none, one row, multiple rows of schedule headers. This is in input for the ScheduleExportOptions.ByProperties node.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3488,7 +3488,7 @@
 		"dynFile": [
 			"Export Text Qualifier"
 		],
-		"inDepth": "Add in-depth information about Export Text Qualifier...",
+		"inDepth": "Export Text Qualifier contains a drop-down menu with options for double quotes, quotes and no quotes.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3499,7 +3499,7 @@
 		"dynFile": [
 			"RemoveFields"
 		],
-		"inDepth": "Add in-depth information about RemoveFields...",
+		"inDepth": "Schedules can be queried for all their fields using ScheduleView.Fields, giving you a list of fields that can be removed.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3510,7 +3510,7 @@
 		"dynFile": [
 			"Schedule Type"
 		],
-		"inDepth": "Add in-depth information about Schedule Type...",
+		"inDepth": "Schedule Type contains a drop-down menu to choose a schedule type (key schedule, material takeoff, and regular schedule).",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3521,7 +3521,7 @@
 		"dynFile": [
 			"ByProperties"
 		],
-		"inDepth": "Add in-depth information about ByProperties...",
+		"inDepth": "View schedule export options determine the exported file's data format. For example, schedules can be exported without the column headers. All inputs have default values.",
 		"folderPath": "Revit/Views/ScheduleView/ScheduleExportOptions/Create"
 	},
 	{
@@ -3532,7 +3532,7 @@
 		"dynFile": [
 			"CreateSchedule"
 		],
-		"inDepth": "Add in-depth information about CreateSchedule...",
+		"inDepth": "Revit schedules are based on a category and schedule type. Different fields are available depending on what category the schedule is created for.",
 		"folderPath": "Revit/Views/ScheduleView/Create"
 	},
 	{
@@ -3543,7 +3543,7 @@
 		"dynFile": [
 			"Fields"
 		],
-		"inDepth": "Add in-depth information about Fields...",
+		"inDepth": "Fields returns all fields in a schedule.",
 		"folderPath": "Revit/Views/ScheduleView/Query"
 	},
 	{
@@ -3554,7 +3554,7 @@
 		"dynFile": [
 			"SchedulableFields"
 		],
-		"inDepth": "Add in-depth information about SchedulableFields...",
+		"inDepth": "SchedulableFields returns all fields that can be added to a schedule. This is useful for choosing what fields to add to a schedule.",
 		"folderPath": "Revit/Views/ScheduleView/Query"
 	},
 	{
@@ -3565,7 +3565,7 @@
 		"dynFile": [
 			"Name (schedulableField)"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name converts the name of a schedulable field to a string.",
 		"folderPath": "Revit/Views/ScheduleView/SchedulableField/Query"
 	},
 	{
@@ -3576,7 +3576,7 @@
 		"dynFile": [
 			"Name (scheduleField)"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name converts the name of a schedule field to a string.",
 		"folderPath": "Revit/Views/ScheduleView/ScheduleField/Query"
 	},
 	{
@@ -3587,7 +3587,7 @@
 		"dynFile": [
 			"ByBoundingBox"
 		],
-		"inDepth": "Add in-depth information about ByBoundingBox...",
+		"inDepth": "ByBoundingBox uses a bounding box to create a section. The bounding box acts like a section box, cutting through elements and hiding everything beyond.",
 		"folderPath": "Revit/Views/SectionView/Create"
 	},
 	{
@@ -3598,7 +3598,7 @@
 		"dynFile": [
 			"ByCoordinateSystemMinPointMaxPoint"
 		],
-		"inDepth": "Add in-depth information about ByCoordinateSystemMinPointMaxPoint...",
+		"inDepth": "ByCoordinateSystemMinPointMaxPoint creates a view section from the geometry drivers of a bounding box (min/max point and a coordinate system).",
 		"folderPath": "Revit/Views/SectionView/Create"
 	},
 	{
@@ -3609,7 +3609,7 @@
 		"dynFile": [
 			"ByNameNumberTitleBlockAndView"
 		],
-		"inDepth": "Add in-depth information about ByNameNumberTitleBlockAndView...",
+		"inDepth": "ByNameNumberTitleBlockAndView can create multiple sheets each with a single view. The lists of sheet names, numbers and views need to match in length.",
 		"folderPath": "Revit/Views/Sheet/Create"
 	},
 	{
@@ -3620,7 +3620,7 @@
 		"dynFile": [
 			"ByNameNumberTitleBlockAndViews"
 		],
-		"inDepth": "Add in-depth information about ByNameNumberTitleBlockAndViews...",
+		"inDepth": "ByNameNumberTitleBlockAndViews will pack a list of views onto a single sheet.",
 		"folderPath": "Revit/Views/Sheet/Create"
 	},
 	{
@@ -3631,7 +3631,7 @@
 		"dynFile": [
 			"SheetName"
 		],
-		"inDepth": "Add in-depth information about SheetName...",
+		"inDepth": "SheetName returns the names of sheets as strings. This is useful for data manipulation and searching.",
 		"folderPath": "Revit/Views/Sheet/Query"
 	},
 	{
@@ -3642,7 +3642,7 @@
 		"dynFile": [
 			"SheetNumber"
 		],
-		"inDepth": "Add in-depth information about SheetNumber...",
+		"inDepth": "SheetNumber returns numbers as strings (A102).",
 		"folderPath": "Revit/Views/Sheet/Query"
 	},
 	{
@@ -3653,7 +3653,7 @@
 		"dynFile": [
 			"Views"
 		],
-		"inDepth": "Add in-depth information about Views...",
+		"inDepth": "Views returns all view elements on a sheet in a list.",
 		"folderPath": "Revit/Views/Sheet/Query"
 	},
 	{
@@ -3664,7 +3664,7 @@
 		"dynFile": [
 			"ByLevel"
 		],
-		"inDepth": "Add in-depth information about ByLevel...",
+		"inDepth": "ByLevel creates a structural floor plan named after its input level.",
 		"folderPath": "Revit/Views/StructuralPlanView/Create"
 	},
 	{
@@ -3675,7 +3675,7 @@
 		"dynFile": [
 			"AddFilter"
 		],
-		"inDepth": "Add in-depth information about AddFilter...",
+		"inDepth": "Filters can be queried from Revit documents as an element type. This allows for an existing filter to be applied to a different view, or a new one can be created.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3686,7 +3686,7 @@
 		"dynFile": [
 			"ExportAsImage"
 		],
-		"inDepth": "Add in-depth information about ExportAsImage...",
+		"inDepth": "A full file path including the file name and extension must be provided to override the default png extension.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3697,7 +3697,7 @@
 		"dynFile": [
 			"FilterOverrides"
 		],
-		"inDepth": "Add in-depth information about FilterOverrides...",
+		"inDepth": "FilterOverrides returns a graphics override element from a Filter. This is useful for applying a filter's graphics settings only to certain elements in a view or across an entire project. A graphics override element can also be created with the OverrideGraphicSettings.ByProperties node.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3708,7 +3708,7 @@
 		"dynFile": [
 			"IsViewTemplate"
 		],
-		"inDepth": "Add in-depth information about IsViewTemplate...",
+		"inDepth": "IsViewTemplate returns a boolean value based on whether or not a view is a template.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3719,7 +3719,7 @@
 		"dynFile": [
 			"SetCategoryOverrides"
 		],
-		"inDepth": "Add in-depth information about SetCategoryOverrides...",
+		"inDepth": "SetCategoryOverrides allows a graphic overrides element to be applied to an input category across all input views. This is useful for quickly highlighting walls, floors, curtain walls, etc across many views without creating a view filter or manually changing each view.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3730,7 +3730,7 @@
 		"dynFile": [
 			"SetFilterOverrides"
 		],
-		"inDepth": "Add in-depth information about SetFilterOverrides...",
+		"inDepth": "SetFilterOverrides allows a view filter to be applied to multiple views and toggled on/off. This is useful for quickly changing the graphics of many views.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3741,7 +3741,7 @@
 		"dynFile": [
 			"SetScale"
 		],
-		"inDepth": "Add in-depth information about SetScale...",
+		"inDepth": "A view's scale will update dynamically and remain after Dynamo is closed.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3752,7 +3752,7 @@
 		"dynFile": [
 			"Filters"
 		],
-		"inDepth": "Add in-depth information about Filters...",
+		"inDepth": "Filters returns any filters applied to a view.",
 		"folderPath": "Revit/Views/View/Query"
 	},
 	{
@@ -3763,7 +3763,7 @@
 		"dynFile": [
 			"CreateUniqueViewName"
 		],
-		"inDepth": "Add in-depth information about CreateUniqueViewName...",
+		"inDepth": "Unique view names are created by appending a unique id to the name if it already exists.",
 		"folderPath": "Revit/Views/View3D/Action"
 	}
 ]
