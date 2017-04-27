@@ -148,7 +148,7 @@
 			"ByPoints"
 		],
 		"dynFile": [
-			"ByPoints"
+			"ByPoints.zip"
 		],
 		"inDepth": "Adaptive components are families that must be loaded in the current Revit document to use with Dynamo. Adaptive components can be used in many Revit file types such as pattern panel families, adaptive component families, conceptual massing environment, and projects. ByPoints requires that its input points are structured to match the adaptive points, both in their data and geometrically.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Action"
