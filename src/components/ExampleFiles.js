@@ -130,7 +130,8 @@ class ExampleFiles extends React.Component {
 
     function _dyn(subnode, i) {
       const file_name = typeof (subnode.dynFile[i]) === 'object' ? subnode.dynFile[i].original : subnode.dynFile[i];
-      let dynPath = subnode.dynFile[i].og || `./${path.join('data', 'EXAMPLES', subnode.Categories.join('/'), subnode.Group, 'dyn', `${file_name}.dyn`)}`
+      const file_name_path = file_name.split(".").length === 1 ? file_name.split('.')[0] + ".dyn" : file_name; //if extension keep extension, else add jpeg
+      let dynPath = subnode.dynFile[i].og || `./${path.join('data', 'EXAMPLES', subnode.Categories.join('/'), subnode.Group, 'dyn', `${file_name_path}`)}`
       return dynPath.toString();
     }
   }
