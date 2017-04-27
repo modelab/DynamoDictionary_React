@@ -1126,7 +1126,7 @@
 		"folderPath": "Revit/Elements/FillPatternElement/Action"
 	},
 	{
-		"Name": "Fill Patterns (name, fillPatternTarget)",
+		"Name": "Fill Patterns (())",
 		"imageFile": [
 			"Fill Patterns"
 		],
@@ -1134,17 +1134,6 @@
 			"Fill Patterns"
 		],
 		"inDepth": "Fill Patterns allows the user to view all possible FillPatterns in the active document from a drop-down menu and select one.",
-		"folderPath": "Revit/Elements/FillPatternElement/Action"
-	},
-	{
-		"Name": "Fill Patterns (())",
-		"imageFile": [
-			"Fill Patterns (())"
-		],
-		"dynFile": [
-			"Fill Patterns (())"
-		],
-		"inDepth": "Add in-depth information about Fill Patterns...",
 		"folderPath": "Revit/Elements/FillPatternElement/Action"
 	},
 	{
@@ -1178,17 +1167,6 @@
 			"Select Filled Region Type"
 		],
 		"inDepth": "Select Filled Region Type brings a Filled Region Type element into Dynamo. The node's dropdown menu contains every Filled Region Type in the active document and is useful determining the type of multiple Filled Regions from Dynamo.",
-		"folderPath": "Revit/Elements/FilledRegionType/Action"
-	},
-	{
-		"Name": "Select Filled Region Type (name)",
-		"imageFile": [
-			"Select Filled Region Type (name)"
-		],
-		"dynFile": [
-			"Select Filled Region Type (name)"
-		],
-		"inDepth": "Add in-depth information about Select Filled Region Type...",
 		"folderPath": "Revit/Elements/FilledRegionType/Action"
 	},
 	{
@@ -3417,7 +3395,7 @@
 	{
 		"Name": "ByEyePointAndTarget",
 		"imageFile": [
-			"ByEyePointAndTarget"
+			"ByEyePointAndTarget.gif"
 		],
 		"dynFile": [
 			"ByEyePointAndTarget"
@@ -3439,7 +3417,7 @@
 	{
 		"Name": "ByEyePointTargetAndElement",
 		"imageFile": [
-			"ByEyePointTargetAndElement"
+			"ByEyePointTargetAndElement.gif"
 		],
 		"dynFile": [
 			"ByEyePointTargetAndElement"
