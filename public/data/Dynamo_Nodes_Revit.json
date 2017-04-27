@@ -148,9 +148,9 @@
 			"ByPoints"
 		],
 		"dynFile": [
-			"ByPoints"
+			"ByPoints.zip"
 		],
-		"inDepth": "Add in-depth information about ByPoints...",
+		"inDepth": "Adaptive components are families that must be loaded in the current Revit document to use with Dynamo. Adaptive components can be used in many Revit file types such as pattern panel families, adaptive component families, conceptual massing environment, and projects. ByPoints requires that its input points are structured to match the adaptive points, both in their data and geometrically.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Action"
 	},
 	{
@@ -161,7 +161,7 @@
 		"dynFile": [
 			"Locations"
 		],
-		"inDepth": "Add in-depth information about Locations...",
+		"inDepth": "Locations returns the point location of each adaptive point.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
 	},
 	{
@@ -172,7 +172,7 @@
 		"dynFile": [
 			"Type"
 		],
-		"inDepth": "Add in-depth information about Type...",
+		"inDepth": "Type returns the Revit family type of each adaptive component.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
 	},
 	{
@@ -511,9 +511,9 @@
 			"ByGeometry"
 		],
 		"dynFile": [
-			"ByGeometry"
+			"ByGeometry.zip"
 		],
-		"inDepth": "Add in-depth information about ByGeometry...",
+		"inDepth": "A direct shape allows you to create Revit roofs, walls, floors, etc from imported geometry. Giving imported geometry a category allows you to apply certain Revit parameters, filters, or display options just as you would to native Revit elements.",
 		"folderPath": "Revit/Elements/DirectShape/Create"
 	},
 	{
@@ -524,27 +524,16 @@
 		"dynFile": [
 			"ByMesh"
 		],
-		"inDepth": "Add in-depth information about ByMesh...",
+		"inDepth": "A direct shape allows you to create Revit roofs, walls, floors, etc from imported meshes. Giving an imported mesh a category allows you to apply certain Revit parameters, filters, or display options just as you would to native Revit elements.",
 		"folderPath": "Revit/Elements/DirectShape/Create"
-	},
-	{
-		"Name": "Select Direct Shape Room Bounding Option (geometry, category, material, name)",
-		"imageFile": [
-			"Select Direct Shape Room Bounding Option (geometry, category, material, name)"
-		],
-		"dynFile": [
-			"Select Direct Shape Room Bounding Option (geometry, category, material, name)"
-		],
-		"inDepth": "Add in-depth information about Select Direct Shape Room Bounding Option...",
-		"folderPath": "Revit/Elements/DirectShape/Action"
 	},
 	{
 		"Name": "Select Direct Shape Room Bounding Option (())",
 		"imageFile": [
-			"Select Direct Shape Room Bounding Option (())"
+			"Select Direct Shape Room Bounding Option"
 		],
 		"dynFile": [
-			"Select Direct Shape Room Bounding Option (())"
+			"Select Direct Shape Room Bounding Option"
 		],
 		"inDepth": "Add in-depth information about Select Direct Shape Room Bounding Option...",
 		"folderPath": "Revit/Elements/DirectShape/Action"
@@ -557,7 +546,7 @@
 		"dynFile": [
 			"ByCurveAndDivisions"
 		],
-		"inDepth": "Add in-depth information about ByCurveAndDivisions...",
+		"inDepth": "ByCurveAndDivisions creates a divided path from a single curve. Divided paths must be created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/DividedPath/Create"
 	},
 	{
@@ -568,29 +557,18 @@
 		"dynFile": [
 			"ByCurvesAndDivisions"
 		],
-		"inDepth": "Add in-depth information about ByCurvesAndDivisions...",
+		"inDepth": "ByCurvesAndDivisions creates a divided path from multiple curves. Divided paths must be created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/DividedPath/Create"
-	},
-	{
-		"Name": "Spacing Rule Layout (dividedPath)",
-		"imageFile": [
-			"Spacing Rule Layout (dividedPath)"
-		],
-		"dynFile": [
-			"Spacing Rule Layout (dividedPath)"
-		],
-		"inDepth": "Add in-depth information about Spacing Rule Layout...",
-		"folderPath": "Revit/Elements/DividedPath/Action"
 	},
 	{
 		"Name": "Spacing Rule Layout (())",
 		"imageFile": [
-			"Spacing Rule Layout (())"
+			"Spacing Rule Layout"
 		],
 		"dynFile": [
-			"Spacing Rule Layout (())"
+			"Spacing Rule Layout"
 		],
-		"inDepth": "Add in-depth information about Spacing Rule Layout...",
+		"inDepth": "Spacing Rule Layout reflects several options in Revit for dividing a path in a conceptual design environment. This node has a drop-down menu with all these options.",
 		"folderPath": "Revit/Elements/DividedPath/Action"
 	},
 	{
@@ -601,7 +579,7 @@
 		"dynFile": [
 			"Points"
 		],
-		"inDepth": "Add in-depth information about Points...",
+		"inDepth": "Points returns all points along a divided path in Dynamo. For example, a path with seven divisions will return seven points.",
 		"folderPath": "Revit/Elements/DividedPath/Query"
 	},
 	{
@@ -612,7 +590,7 @@
 		"dynFile": [
 			"ByFaceAndUVDivisions"
 		],
-		"inDepth": "Add in-depth information about ByFaceAndUVDivisions...",
+		"inDepth": "Revit divided surfaces must be created in the conceptual design environment.",
 		"folderPath": "Revit/Elements/DividedSurface/Create"
 	},
 	{
@@ -623,7 +601,7 @@
 		"dynFile": [
 			"ByFaceUVDivisionsAndRotation"
 		],
-		"inDepth": "Add in-depth information about ByFaceUVDivisionsAndRotation...",
+		"inDepth": "Revit divided surfaces must be created in the conceptual design environment.",
 		"folderPath": "Revit/Elements/DividedSurface/Create"
 	},
 	{
@@ -634,7 +612,7 @@
 		"dynFile": [
 			"Rotation"
 		],
-		"inDepth": "Add in-depth information about Rotation...",
+		"inDepth": "The rotation of the grid lines is returned as a double.",
 		"folderPath": "Revit/Elements/DividedSurface/Query"
 	},
 	{
@@ -645,7 +623,7 @@
 		"dynFile": [
 			"UDivisions"
 		],
-		"inDepth": "Add in-depth information about UDivisions...",
+		"inDepth": "The number of U divisions is returned as an integer.",
 		"folderPath": "Revit/Elements/DividedSurface/Query"
 	},
 	{
@@ -656,7 +634,7 @@
 		"dynFile": [
 			"VDivisions"
 		],
-		"inDepth": "Add in-depth information about VDivisions...",
+		"inDepth": "The number of V divisions is returned as an integer.",
 		"folderPath": "Revit/Elements/DividedSurface/Query"
 	},
 	{
@@ -724,12 +702,12 @@
 	{
 		"Name": "OverrideInView",
 		"imageFile": [
-			"OverrideInView"
+			"OverrideInView.gif"
 		],
 		"dynFile": [
 			"OverrideInView"
 		],
-		"inDepth": "Add in-depth information about OverrideInView...",
+		"inDepth": "OverrideInView will alter the graphics settings of input elements. The override created in Dynamo will dynamically change in Revit.",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -902,7 +880,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a Family in Dynamo from its name as a string.",
 		"folderPath": "Revit/Elements/Family/Create"
 	},
 	{
@@ -913,7 +891,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a Family as a string.",
 		"folderPath": "Revit/Elements/Family/Query"
 	},
 	{
@@ -924,7 +902,7 @@
 		"dynFile": [
 			"Types"
 		],
-		"inDepth": "Add in-depth information about Types...",
+		"inDepth": "Types returns all FamilyTypes that exist in a Family.",
 		"folderPath": "Revit/Elements/Family/Query"
 	},
 	{
@@ -1078,7 +1056,7 @@
 		"dynFile": [
 			"ByFamilyAndName"
 		],
-		"inDepth": "Add in-depth information about ByFamilyAndName...",
+		"inDepth": "ByFamilyAndName returns FamilyTypes given input Families and FamilyType names as strings. This can be used to get multiple Types within a Family, or all Types of the same name across multiple Families.",
 		"folderPath": "Revit/Elements/FamilyType/Create"
 	},
 	{
@@ -1089,7 +1067,7 @@
 		"dynFile": [
 			"ByFamilyNameAndTypeName"
 		],
-		"inDepth": "Add in-depth information about ByFamilyNameAndTypeName...",
+		"inDepth": "ByFamilyNameAndTypeName returns FamilyTypes given input string names for Families and FamilyTypes. This can be used to get multiple Types within a Family, or all Types of the same name across multiple Families.",
 		"folderPath": "Revit/Elements/FamilyType/Create"
 	},
 	{
@@ -1100,7 +1078,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns FamilyTypes for their names input as strings. The string input allows other data sources, such as Excel, to be used for querying the Revit file for FamilyTypes.",
 		"folderPath": "Revit/Elements/FamilyType/Create"
 	},
 	{
@@ -1111,7 +1089,7 @@
 		"dynFile": [
 			"Family"
 		],
-		"inDepth": "Add in-depth information about Family...",
+		"inDepth": "Family returns a parent Family for each FamilyType input, even if the Parent is the same across all types.",
 		"folderPath": "Revit/Elements/FamilyType/Query"
 	},
 	{
@@ -1122,7 +1100,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a FamilyType as a string. Names as strings are useful for data manipulation and creating boolean masks.",
 		"folderPath": "Revit/Elements/FamilyType/Query"
 	},
 	{
@@ -1133,7 +1111,7 @@
 		"dynFile": [
 			"GetByName"
 		],
-		"inDepth": "Add in-depth information about GetByName...",
+		"inDepth": "GetByName returns a FillPatternElement from a name and Target as strings. Possible FillPatternTargets can be viewed in the drop-down menu of the Fill Pattern Targets node.",
 		"folderPath": "Revit/Elements/FillPatternElement/Create"
 	},
 	{
@@ -1144,29 +1122,18 @@
 		"dynFile": [
 			"Fill Pattern Targets"
 		],
-		"inDepth": "Add in-depth information about Fill Pattern Targets...",
-		"folderPath": "Revit/Elements/FillPatternElement/Action"
-	},
-	{
-		"Name": "Fill Patterns (name, fillPatternTarget)",
-		"imageFile": [
-			"Fill Patterns (name, fillPatternTarget)"
-		],
-		"dynFile": [
-			"Fill Patterns (name, fillPatternTarget)"
-		],
-		"inDepth": "Add in-depth information about Fill Patterns...",
+		"inDepth": "Fill Pattern Targets allows the user to view all possible FillPatternTargets from a drop-down menu and select one.",
 		"folderPath": "Revit/Elements/FillPatternElement/Action"
 	},
 	{
 		"Name": "Fill Patterns (())",
 		"imageFile": [
-			"Fill Patterns (())"
+			"Fill Patterns"
 		],
 		"dynFile": [
-			"Fill Patterns (())"
+			"Fill Patterns"
 		],
-		"inDepth": "Add in-depth information about Fill Patterns...",
+		"inDepth": "Fill Patterns allows the user to view all possible FillPatterns in the active document from a drop-down menu and select one.",
 		"folderPath": "Revit/Elements/FillPatternElement/Action"
 	},
 	{
@@ -1177,7 +1144,7 @@
 		"dynFile": [
 			"ByCurves"
 		],
-		"inDepth": "Add in-depth information about ByCurves...",
+		"inDepth": "ByCurves creates a filled region from a list of curves. Filled regions can be easily generated from Rooms to create drawing graphics. Polycurves must be exploded into lists of curves to create filled regions.",
 		"folderPath": "Revit/Elements/FilledRegion/Create"
 	},
 	{
@@ -1188,29 +1155,18 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a FillRegionType from a string input. String inputs are useful for querying a Revit file from another data source, such as Excel.",
 		"folderPath": "Revit/Elements/FilledRegionType/Create"
 	},
 	{
 		"Name": "Select Filled Region Type (())",
 		"imageFile": [
-			"Select Filled Region Type (())"
+			"Select Filled Region Type"
 		],
 		"dynFile": [
-			"Select Filled Region Type (())"
+			"Select Filled Region Type"
 		],
-		"inDepth": "Add in-depth information about Select Filled Region Type...",
-		"folderPath": "Revit/Elements/FilledRegionType/Action"
-	},
-	{
-		"Name": "Select Filled Region Type (name)",
-		"imageFile": [
-			"Select Filled Region Type (name)"
-		],
-		"dynFile": [
-			"Select Filled Region Type (name)"
-		],
-		"inDepth": "Add in-depth information about Select Filled Region Type...",
+		"inDepth": "Select Filled Region Type brings a Filled Region Type element into Dynamo. The node's dropdown menu contains every Filled Region Type in the active document and is useful determining the type of multiple Filled Regions from Dynamo.",
 		"folderPath": "Revit/Elements/FilledRegionType/Action"
 	},
 	{
@@ -1221,7 +1177,7 @@
 		"dynFile": [
 			"Color"
 		],
-		"inDepth": "Add in-depth information about Color...",
+		"inDepth": "Color returns a FilledRegionType's color. The output is readable by the Core color nodes and can be queried specifically for its R, G, B, and Alpha values.",
 		"folderPath": "Revit/Elements/FilledRegionType/Query"
 	},
 	{
@@ -1232,7 +1188,7 @@
 		"dynFile": [
 			"FillPatternId"
 		],
-		"inDepth": "Add in-depth information about FillPatternId...",
+		"inDepth": "FillPatternId returns an integer representing an input Fill Pattern's Id.",
 		"folderPath": "Revit/Elements/FilledRegionType/Query"
 	},
 	{
@@ -1243,29 +1199,29 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a FillRegionType as a string. String outputs are useful for data filtering and creating boolean masks.",
 		"folderPath": "Revit/Elements/FilledRegionType/Query"
 	},
 	{
 		"Name": "ByOutlineTypeAndLevel (outline, floorType, level)",
 		"imageFile": [
-			"ByOutlineTypeAndLevel (outline, floorType, level)"
+			"ByOutlineTypeAndLevel (outline, floorType, level).gif"
 		],
 		"dynFile": [
 			"ByOutlineTypeAndLevel (outline, floorType, level)"
 		],
-		"inDepth": "Add in-depth information about ByOutlineTypeAndLevel...",
+		"inDepth": "ByOutlineTypeAndLevel creates floors from Polycurves. Floors will be dynamically added and removed from the Revit document by adjusting inputs in Dynamo.",
 		"folderPath": "Revit/Elements/Floor/Create"
 	},
 	{
 		"Name": "ByOutlineTypeAndLevel (outlineCurves, floorType, level)",
 		"imageFile": [
-			"ByOutlineTypeAndLevel (outlineCurves, floorType, level)"
+			"ByOutlineTypeAndLevel (outlineCurves, floorType, level).gif"
 		],
 		"dynFile": [
 			"ByOutlineTypeAndLevel (outlineCurves, floorType, level)"
 		],
-		"inDepth": "Add in-depth information about ByOutlineTypeAndLevel...",
+		"inDepth": "ByOutlineTypeAndLevel creates floors from lists of curves that define outlines. Floors will be dynamically added and removed from the Revit document by adjusting inputs in Dynamo.",
 		"folderPath": "Revit/Elements/Floor/Create"
 	},
 	{
@@ -1276,7 +1232,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a FloorType element. This is useful for defining type when creating floors from Dynamo.",
 		"folderPath": "Revit/Elements/FloorType/Create"
 	},
 	{
@@ -1287,18 +1243,18 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns the name of a FloorType element as a string. String outputs are useful for data filtering and creating boolean masks.",
 		"folderPath": "Revit/Elements/FloorType/Query"
 	},
 	{
 		"Name": "ByLoftCrossSections (curves, isSolid)",
 		"imageFile": [
-			"ByLoftCrossSections (curves, isSolid)"
+			"ByLoftCrossSections"
 		],
 		"dynFile": [
-			"ByLoftCrossSections (curves, isSolid)"
+			"ByLoftCrossSections"
 		],
-		"inDepth": "Add in-depth information about ByLoftCrossSections...",
+		"inDepth": "Revit forms are generally used to explore building concepts. They must be created in the conceptual design environment.",
 		"folderPath": "Revit/Elements/Form/Create"
 	},
 	{
@@ -1309,7 +1265,7 @@
 		"dynFile": [
 			"ByLoftCrossSections (curves, isSolid)"
 		],
-		"inDepth": "Add in-depth information about ByLoftCrossSections...",
+		"inDepth": "Revit forms are generally used to explore building concepts. They must be created in the conceptual design environment.",
 		"folderPath": "Revit/Elements/Form/Create"
 	},
 	{
@@ -1320,7 +1276,7 @@
 		"dynFile": [
 			"ByArc"
 		],
-		"inDepth": "Add in-depth information about ByArc...",
+		"inDepth": "ByArc creates an arc Grid element defined by a center, radius, start angle, end angle, and a vector to rotate around. This node is useful for defining large collections of grid elements from static inputs. Dynamically adjusting the Grid element's parameters will create new elements.",
 		"folderPath": "Revit/Elements/Grid/Create"
 	},
 	{
@@ -1331,7 +1287,7 @@
 		"dynFile": [
 			"ByLine"
 		],
-		"inDepth": "Add in-depth information about ByLine...",
+		"inDepth": "ByLine creates a Grid element from a line in Dynamo. This node is useful for defining large collections of grid elements from static inputs. Dynamically adjusting the Grid element's line parameters will create new elements.",
 		"folderPath": "Revit/Elements/Grid/Create"
 	},
 	{
@@ -1342,7 +1298,7 @@
 		"dynFile": [
 			"ByStartPointEndPoint"
 		],
-		"inDepth": "Add in-depth information about ByStartPointEndPoint...",
+		"inDepth": "ByStartPointEndPoint creates a Grid element from two points in Dynamo. This node is useful for defining large collections of grid elements from static inputs. Dynamically adjusting the Grid element's point positions will create new elements.",
 		"folderPath": "Revit/Elements/Grid/Create"
 	},
 	{
@@ -1353,7 +1309,7 @@
 		"dynFile": [
 			"Curve"
 		],
-		"inDepth": "Add in-depth information about Curve...",
+		"inDepth": "The underlying curves are returned as geometry in Dynamo. Rectilinear Grid elements return underlying geometry consisting of lines.",
 		"folderPath": "Revit/Elements/Grid/Query"
 	},
 	{
@@ -1364,7 +1320,7 @@
 		"dynFile": [
 			"ElementCurveReference"
 		],
-		"inDepth": "Add in-depth information about ElementCurveReference...",
+		"inDepth": "ElementCurveReference returns the underlying Reference for a Grid element. References are not geometry in model space. They are used in the creation of other elements such as Revit dimensions.",
 		"folderPath": "Revit/Elements/Grid/Query"
 	},
 	{
@@ -1373,9 +1329,9 @@
 			"ByGeometries"
 		],
 		"dynFile": [
-			"ByGeometries"
+			"ByGeometries.zip"
 		],
-		"inDepth": "Add in-depth information about ByGeometries...",
+		"inDepth": "ByGeometries brings all input geometry into Revit as a single Import Instance element. An Import Instance is identified as an Import Symbol in Revit.",
 		"folderPath": "Revit/Elements/ImportInstance/Create"
 	},
 	{
@@ -1384,9 +1340,9 @@
 			"ByGeometry"
 		],
 		"dynFile": [
-			"ByGeometry"
+			"ByGeometry.zip"
 		],
-		"inDepth": "Add in-depth information about ByGeometry...",
+		"inDepth": "ByGeometry brings each input geometry into Revit as an individual Import Instance element. An Import Instance is identified as an Import Symbol in Revit.",
 		"folderPath": "Revit/Elements/ImportInstance/Create"
 	},
 	{
@@ -1397,7 +1353,7 @@
 		"dynFile": [
 			"BySATFile"
 		],
-		"inDepth": "Add in-depth information about BySATFile...",
+		"inDepth": "BySATFile brings geometry from a SAT file into Revit as a single Import Instance, similar to ImportInstance.ByGeometries. This is useful for directly importing geometry into Revit. An Import Instance is identified as an Import Symbol in Revit. Using BySATFile will bring an Import Instance into Revit at a different scale factor than ByGeometry or ByGeometries.",
 		"folderPath": "Revit/Elements/ImportInstance/Create"
 	},
 	{
@@ -1408,18 +1364,18 @@
 		"dynFile": [
 			"Path"
 		],
-		"inDepth": "Add in-depth information about Path...",
+		"inDepth": "Path returns the full file path of an Import Instance as a string.",
 		"folderPath": "Revit/Elements/ImportInstance/Query"
 	},
 	{
 		"Name": "ByElevation",
 		"imageFile": [
-			"ByElevation"
+			"ByElevation.gif"
 		],
 		"dynFile": [
 			"ByElevation"
 		],
-		"inDepth": "Add in-depth information about ByElevation...",
+		"inDepth": "Revit levels created from Dynamo will be automatically named in Revit based on existing levels.",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1430,7 +1386,7 @@
 		"dynFile": [
 			"ByElevationAndName"
 		],
-		"inDepth": "Add in-depth information about ByElevationAndName...",
+		"inDepth": "If the new level's name matches the name of an existing level, it will automatically be renamed with a number. For example, an input name of Level 1 becomes Level 1(1).",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1441,7 +1397,7 @@
 		"dynFile": [
 			"ByLevelAndOffset"
 		],
-		"inDepth": "Add in-depth information about ByLevelAndOffset...",
+		"inDepth": "ByLevelAndOffset is useful for creating levels relative to existing ones by offsetting from them.",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1452,7 +1408,7 @@
 		"dynFile": [
 			"ByLevelOffsetAndName"
 		],
-		"inDepth": "Add in-depth information about ByLevelOffsetAndName...",
+		"inDepth": "If the new level's name matches the name of an existing level, it will automatically be renamed with a number. For example, an input name of Level 1 becomes Level 1(1). Offsetting is useful for creating new levels relative to existing ones.",
 		"folderPath": "Revit/Elements/Level/Create"
 	},
 	{
@@ -1463,7 +1419,7 @@
 		"dynFile": [
 			"Elevation"
 		],
-		"inDepth": "Add in-depth information about Elevation...",
+		"inDepth": "Ground level is generally elevation 0 in project elevations. This is a baseline for measuring all level elevations from. Elevation returns this distance as a double.",
 		"folderPath": "Revit/Elements/Level/Query"
 	},
 	{
@@ -1474,7 +1430,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Names are returned as strings, which are useful for data manipulation and boolean masks.",
 		"folderPath": "Revit/Elements/Level/Query"
 	},
 	{
@@ -1485,7 +1441,7 @@
 		"dynFile": [
 			"ProjectElevation"
 		],
-		"inDepth": "Add in-depth information about ProjectElevation...",
+		"inDepth": "The project origin is the (0,0,0) coordinate location within the Revit project. All coordinates in the Revit project are relative to this point.",
 		"folderPath": "Revit/Elements/Level/Query"
 	},
 	{
@@ -1496,29 +1452,18 @@
 		"dynFile": [
 			"GetByName"
 		],
-		"inDepth": "Add in-depth information about GetByName...",
+		"inDepth": "GetByName returns a line pattern element from it's name as a string. Selecting line pattern elements by string allows for data manipulation and searching, even from external data sources (Excel).",
 		"folderPath": "Revit/Elements/LinePatternElement/Create"
 	},
 	{
 		"Name": "Line Patterns (())",
 		"imageFile": [
-			"Line Patterns (())"
+			"Line Patterns"
 		],
 		"dynFile": [
-			"Line Patterns (())"
+			"Line Patterns"
 		],
-		"inDepth": "Add in-depth information about Line Patterns...",
-		"folderPath": "Revit/Elements/LinePatternElement/Action"
-	},
-	{
-		"Name": "Line Patterns (name)",
-		"imageFile": [
-			"Line Patterns (name)"
-		],
-		"dynFile": [
-			"Line Patterns (name)"
-		],
-		"inDepth": "Add in-depth information about Line Patterns...",
+		"inDepth": "Line Patterns contains a drop-down menu that allows you to select all line pattern elements in a Revit project.",
 		"folderPath": "Revit/Elements/LinePatternElement/Action"
 	},
 	{
@@ -1529,7 +1474,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a material element from its name as a string. Selecting material elements by string allows for data manipulation and searching, even from external data sources (Excel).",
 		"folderPath": "Revit/Elements/Material/Create"
 	},
 	{
@@ -1540,7 +1485,7 @@
 		"dynFile": [
 			"AppearanceParameters"
 		],
-		"inDepth": "Add in-depth information about AppearanceParameters...",
+		"inDepth": "Material appearance parameters are returned as Revit parameters.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1551,7 +1496,7 @@
 		"dynFile": [
 			"Color"
 		],
-		"inDepth": "Add in-depth information about Color...",
+		"inDepth": "Material color is returned as a Dynamo color with A,R,G,B values.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1562,7 +1507,7 @@
 		"dynFile": [
 			"CutPatternColor"
 		],
-		"inDepth": "Add in-depth information about CutPatternColor...",
+		"inDepth": "Material cut pattern color is returned as a Dynamo color with A,R,G,B values.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1573,7 +1518,7 @@
 		"dynFile": [
 			"CutPatternId"
 		],
-		"inDepth": "Add in-depth information about CutPatternId...",
+		"inDepth": "Material cut pattern id is returned as an integer. An integer of -1 represents the default option in Revit.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1584,7 +1529,7 @@
 		"dynFile": [
 			"MaterialCategory"
 		],
-		"inDepth": "Add in-depth information about MaterialCategory...",
+		"inDepth": "Material category is returned as a string. This is useful for data manipulation and boolean masks.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1595,7 +1540,7 @@
 		"dynFile": [
 			"MaterialClass"
 		],
-		"inDepth": "Add in-depth information about MaterialClass...",
+		"inDepth": "Material class is returned as a string. This is useful for data manipulation and boolean masks.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1606,7 +1551,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Material name is returned as a string. This is useful in conjunction with the Element.GetMaterials node for querying materials from elements.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1617,7 +1562,7 @@
 		"dynFile": [
 			"Shininess"
 		],
-		"inDepth": "Add in-depth information about Shininess...",
+		"inDepth": "Material shininess is returned as an integer.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1628,7 +1573,7 @@
 		"dynFile": [
 			"Smoothness"
 		],
-		"inDepth": "Add in-depth information about Smoothness...",
+		"inDepth": "Material smoothness is returned as an integer.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1639,7 +1584,7 @@
 		"dynFile": [
 			"StructuralParameters"
 		],
-		"inDepth": "Add in-depth information about StructuralParameters...",
+		"inDepth": "Material structural parameters are returned as Revit parameters.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1650,7 +1595,7 @@
 		"dynFile": [
 			"SurfacePatternColor"
 		],
-		"inDepth": "Add in-depth information about SurfacePatternColor...",
+		"inDepth": "Material surface pattern color is returned as a Dynamo color with A,R,G,B values.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1661,7 +1606,7 @@
 		"dynFile": [
 			"ThermalParameters"
 		],
-		"inDepth": "Add in-depth information about ThermalParameters...",
+		"inDepth": "Material thermal parameters are returned as Revit parameters.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1672,7 +1617,7 @@
 		"dynFile": [
 			"Transparency"
 		],
-		"inDepth": "Add in-depth information about Transparency...",
+		"inDepth": "Material transparency is returned as an integer.",
 		"folderPath": "Revit/Elements/Material/Query"
 	},
 	{
@@ -1683,7 +1628,7 @@
 		"dynFile": [
 			"ByCurve"
 		],
-		"inDepth": "Add in-depth information about ByCurve...",
+		"inDepth": "Model curves (also known as CurveElements) can be created in Revit project environments in two or three dimensions. Model curves created from Dynamo cannot be adjusted within Revit while Dynamo is open.",
 		"folderPath": "Revit/Elements/ModelCurve/Create"
 	},
 	{
@@ -1694,7 +1639,7 @@
 		"dynFile": [
 			"ReferenceCurveByCurve"
 		],
-		"inDepth": "Add in-depth information about ReferenceCurveByCurve...",
+		"inDepth": "Reference curves are used by Revit to build other elements such as dimensions. They must be created in a family document. Reference curves created from Dynamo cannot be adjusted within Revit while Dynamo is open.",
 		"folderPath": "Revit/Elements/ModelCurve/Create"
 	},
 	{
@@ -1705,7 +1650,7 @@
 		"dynFile": [
 			"ByTextSketchPlaneAndPosition"
 		],
-		"inDepth": "Add in-depth information about ByTextSketchPlaneAndPosition...",
+		"inDepth": "Model text is a three dimensional text geometry element in Revit and can only be created in a family document.",
 		"folderPath": "Revit/Elements/ModelText/Create"
 	},
 	{
@@ -1716,7 +1661,7 @@
 		"dynFile": [
 			"Depth"
 		],
-		"inDepth": "Add in-depth information about Depth...",
+		"inDepth": "The depth of a model text element is returned as a double.",
 		"folderPath": "Revit/Elements/ModelText/Query"
 	},
 	{
@@ -1727,7 +1672,7 @@
 		"dynFile": [
 			"Position"
 		],
-		"inDepth": "Add in-depth information about Position...",
+		"inDepth": "The position of a model text element is returned as a Dynamo point.",
 		"folderPath": "Revit/Elements/ModelText/Query"
 	},
 	{
@@ -1738,7 +1683,7 @@
 		"dynFile": [
 			"Text"
 		],
-		"inDepth": "Add in-depth information about Text...",
+		"inDepth": "The text of a model text element is returned as a string.",
 		"folderPath": "Revit/Elements/ModelText/Query"
 	},
 	{
@@ -1749,7 +1694,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "Model text type determines the properties of a Revit text element such as font, size, and other aspects for an entire family of model text. The available model text types are shown in a drop-down menu in the node.",
 		"folderPath": "Revit/Elements/ModelTextType/Create"
 	},
 	{
@@ -1760,7 +1705,7 @@
 		"dynFile": [
 			"AsFamilyInstance"
 		],
-		"inDepth": "Add in-depth information about AsFamilyInstance...",
+		"inDepth": "Family instances can be returned for mullions if they are one. In Revit, a family instance provides more detailed properties so that the family instance type and appearance can be changed.",
 		"folderPath": "Revit/Elements/Mullion/Action"
 	},
 	{
@@ -1771,7 +1716,7 @@
 		"dynFile": [
 			"ByElement"
 		],
-		"inDepth": "Add in-depth information about ByElement...",
+		"inDepth": "Though ByElement returns mullion objects, they can be treated as elements and queried for their parameters with Element.Parameters.",
 		"folderPath": "Revit/Elements/Mullion/Action"
 	},
 	{
@@ -1782,7 +1727,7 @@
 		"dynFile": [
 			"SupportedPanels"
 		],
-		"inDepth": "Add in-depth information about SupportedPanels...",
+		"inDepth": "SupportedPanels returns a list of curtain panels for each supporting mullion. A mullion can support multiple curtain panels, so the same curtain panel element may be returned more than once.",
 		"folderPath": "Revit/Elements/Mullion/Action"
 	},
 	{
@@ -1793,7 +1738,7 @@
 		"dynFile": [
 			"LocationCurve"
 		],
-		"inDepth": "Add in-depth information about LocationCurve...",
+		"inDepth": "A mullion's location curve is returned as geometry in Dynamo. These location curves reflect the curtain wall's grid in Revit. Mullions are placed flush to the perimeter grid and centered on the inside grid.",
 		"folderPath": "Revit/Elements/Mullion/Query"
 	},
 	{
@@ -1804,7 +1749,7 @@
 		"dynFile": [
 			"ParameterByName"
 		],
-		"inDepth": "Add in-depth information about ParameterByName...",
+		"inDepth": "ParameterByName returns both the name and value of an element's parameter.",
 		"folderPath": "Revit/Elements/Parameter/Create"
 	},
 	{
@@ -1892,7 +1837,7 @@
 		"dynFile": [
 			"SetValue"
 		],
-		"inDepth": "Add in-depth information about SetValue...",
+		"inDepth": "Setting an element's parameter from Dynamo will override its value in Revit if it is not read-only (writable). This can be checked with the Parameter.IsReadOnly node.",
 		"folderPath": "Revit/Elements/Parameter/Action"
 	},
 	{
@@ -1925,7 +1870,7 @@
 		"dynFile": [
 			"HasValue"
 		],
-		"inDepth": "Add in-depth information about HasValue...",
+		"inDepth": "HasValue returns a list of boolean values based on whether or not a parameter has a value. This can be useful for filtering data with a boolean mask.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
@@ -1936,7 +1881,7 @@
 		"dynFile": [
 			"Id"
 		],
-		"inDepth": "Add in-depth information about Id...",
+		"inDepth": "Id returns a parameter's id as an integer.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
@@ -1947,7 +1892,7 @@
 		"dynFile": [
 			"IsReadOnly"
 		],
-		"inDepth": "Add in-depth information about IsReadOnly...",
+		"inDepth": "IsReadOnly returns a list of boolean values based on whether a parameter is read only. A read only parameter cannot be changed.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
@@ -1969,7 +1914,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns parameter names as strings. This is useful for data searching and filtering.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
@@ -1980,18 +1925,19 @@
 		"dynFile": [
 			"ParameterType"
 		],
-		"inDepth": "Add in-depth information about ParameterType...",
+		"inDepth": "ParameterType returns a parameter's type as a string. Examples of parameter types are Text, Material, Image, and URL. These can be chosen when creating family types in Revit. This is also useful for data searching and filtering in Dynamo.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
 		"Name": "StorageType",
 		"imageFile": [
 			"StorageType"
+
 		],
 		"dynFile": [
 			"StorageType"
 		],
-		"inDepth": "Add in-depth information about StorageType...",
+		"inDepth": "StorageType returns a parameter's storage type as a string. Storage types can be strings, doubles, and ElementIds. This is useful for determining what to supply a parameter with from Dynamo.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
@@ -2002,7 +1948,7 @@
 		"dynFile": [
 			"UnitType"
 		],
-		"inDepth": "Add in-depth information about UnitType...",
+		"inDepth": "Unit types are similar to storage types, but refer to types in Revit. Examples of unit types are UT_Number and UT_Length. They are returned as strings.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
@@ -2013,29 +1959,18 @@
 		"dynFile": [
 			"Value"
 		],
-		"inDepth": "Add in-depth information about Value...",
+		"inDepth": "Value returns the value of each parameter in its respective storage type.",
 		"folderPath": "Revit/Elements/Parameter/Query"
 	},
 	{
 		"Name": "Select Phase (())",
 		"imageFile": [
-			"Select Phase (())"
+			"Select Phase"
 		],
 		"dynFile": [
-			"Select Phase (())"
+			"Select Phase"
 		],
-		"inDepth": "Add in-depth information about Select Phase...",
-		"folderPath": "Revit/Elements/Phase/Action"
-	},
-	{
-		"Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-		"imageFile": [
-			"Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"dynFile": [
-			"Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"inDepth": "Add in-depth information about Select Phase...",
+		"inDepth": "The Select Phase node contains a drop-down menu that shows all phases in the Revit document.",
 		"folderPath": "Revit/Elements/Phase/Action"
 	},
 	{
@@ -2046,7 +1981,7 @@
 		"dynFile": [
 			"ByLine"
 		],
-		"inDepth": "Add in-depth information about ByLine...",
+		"inDepth": "Reference planes can be created in both Revit projects and families. The reference plane in Revit does not dynamically change with its Dynamo inputs.",
 		"folderPath": "Revit/Elements/ReferencePlane/Create"
 	},
 	{
@@ -2057,7 +1992,7 @@
 		"dynFile": [
 			"ByStartPointEndPoint"
 		],
-		"inDepth": "Add in-depth information about ByStartPointEndPoint...",
+		"inDepth": "Reference planes can be created in both Revit projects and families. The reference plane in Revit does not dynamically change with its Dynamo inputs.",
 		"folderPath": "Revit/Elements/ReferencePlane/Create"
 	},
 	{
@@ -2079,7 +2014,7 @@
 		"dynFile": [
 			"Plane"
 		],
-		"inDepth": "Add in-depth information about Plane...",
+		"inDepth": "Plane returns a Revit reference plane as a plane in Dynamo.",
 		"folderPath": "Revit/Elements/ReferencePlane/Query"
 	},
 	{
@@ -2090,7 +2025,7 @@
 		"dynFile": [
 			"ByCoordinates"
 		],
-		"inDepth": "Add in-depth information about ByCoordinates...",
+		"inDepth": "Reference points are created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Create"
 	},
 	{
@@ -2101,7 +2036,7 @@
 		"dynFile": [
 			"ByLengthOnCurveReference"
 		],
-		"inDepth": "Add in-depth information about ByLengthOnCurveReference...",
+		"inDepth": "ByLengthOnCurveReference requires an element curve reference from Revit as its input. Reference points are created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Create"
 	},
 	{
@@ -2112,7 +2047,7 @@
 		"dynFile": [
 			"ByParameterOnCurveReference"
 		],
-		"inDepth": "Add in-depth information about ByParameterOnCurveReference...",
+		"inDepth": "ByParameterOnCurveReference requires an element curve reference from Revit as its input. Reference points are created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Create"
 	},
 	{
@@ -2123,7 +2058,7 @@
 		"dynFile": [
 			"ByParametersOnFaceReference"
 		],
-		"inDepth": "Add in-depth information about ByParametersOnFaceReference...",
+		"inDepth": "ByParametersOnFaceReference requires an element face reference from Revit as its input. Reference points are created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Create"
 	},
 	{
@@ -2134,18 +2069,18 @@
 		"dynFile": [
 			"ByPoint"
 		],
-		"inDepth": "Add in-depth information about ByPoint...",
+		"inDepth": "Reference points are created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Create"
 	},
 	{
 		"Name": "ByPointVectorDistance",
 		"imageFile": [
-			"ByPointVectorDistance"
+			"ByPointVectorDistance.gif"
 		],
 		"dynFile": [
 			"ByPointVectorDistance"
 		],
-		"inDepth": "Add in-depth information about ByPointVectorDistance...",
+		"inDepth": "Reference points are created in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Create"
 	},
 	{
@@ -2156,7 +2091,7 @@
 		"dynFile": [
 			"Point"
 		],
-		"inDepth": "Add in-depth information about Point...",
+		"inDepth": "Point returns a point in Dynamo from the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2167,7 +2102,7 @@
 		"dynFile": [
 			"X"
 		],
-		"inDepth": "Add in-depth information about X...",
+		"inDepth": "X returns a double representing a reference point's X coordinate value in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2178,7 +2113,7 @@
 		"dynFile": [
 			"XYPlane"
 		],
-		"inDepth": "Add in-depth information about XYPlane...",
+		"inDepth": "XYPlane returns a plane in Dynamo from a reference point in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2189,7 +2124,7 @@
 		"dynFile": [
 			"XZPlane"
 		],
-		"inDepth": "Add in-depth information about XZPlane...",
+		"inDepth": "XZPlane returns a plane in Dynamo from a reference point in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2200,7 +2135,7 @@
 		"dynFile": [
 			"Y"
 		],
-		"inDepth": "Add in-depth information about Y...",
+		"inDepth": "Y returns a double representing a reference point's Y coordinate value in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2211,7 +2146,7 @@
 		"dynFile": [
 			"YZPlane"
 		],
-		"inDepth": "Add in-depth information about YZPlane...",
+		"inDepth": "YZPlane returns a plane in Dynamo from a reference point in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2222,7 +2157,7 @@
 		"dynFile": [
 			"Z"
 		],
-		"inDepth": "Add in-depth information about Z...",
+		"inDepth": "Z returns a double representing a reference point's Z coordinate value in the Revit conceptual design environment.",
 		"folderPath": "Revit/Elements/ReferencePoint/Query"
 	},
 	{
@@ -2233,29 +2168,18 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "Revisions created from Dynamo will remain in Revit after Dynamo is closed. Opening the same Dynamo file again will create another, identical revision. Altering the inputs in Dynamo will dynamically update a revision in Revit.",
 		"folderPath": "Revit/Elements/Revision/Create"
-	},
-	{
-		"Name": "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-		"imageFile": [
-			"Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"dynFile": [
-			"Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
-		],
-		"inDepth": "Add in-depth information about Select Revision...",
-		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
 		"Name": "Select Revision (())",
 		"imageFile": [
-			"Select Revision (())"
+			"Select Revision"
 		],
 		"dynFile": [
-			"Select Revision (())"
+			"Select Revision"
 		],
-		"inDepth": "Add in-depth information about Select Revision...",
+		"inDepth": "Select Revision contains a drop-down menu that displays every revision in a Revit project.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2266,7 +2190,7 @@
 		"dynFile": [
 			"Select Revision Number Type"
 		],
-		"inDepth": "Add in-depth information about Select Revision Number Type...",
+		"inDepth": "Select Revision Number Type allows you to choose one of Revit's revision numbering types (alphanumeric, numeric, or not numbered) from a drop-down menu.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2277,7 +2201,7 @@
 		"dynFile": [
 			"Select Revision Numbering"
 		],
-		"inDepth": "Add in-depth information about Select Revision Numbering...",
+		"inDepth": "Select Revision Numbering allows you to choose one of Revit's numbering options (by project or by sheet) from a drop-down menu.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2288,7 +2212,7 @@
 		"dynFile": [
 			"Select Revision Visibility"
 		],
-		"inDepth": "Add in-depth information about Select Revision Visibility...",
+		"inDepth": "Select Revision Visibility allows you to choose one of Revit's revision visibility types (cloud and tag, tag, or hidden) from a drop-down menu.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2299,7 +2223,7 @@
 		"dynFile": [
 			"SetIssued"
 		],
-		"inDepth": "Add in-depth information about SetIssued...",
+		"inDepth": "SetIssued inteprets boolean values to set whether or not a revision is issued.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2310,7 +2234,7 @@
 		"dynFile": [
 			"SetIssuedBy"
 		],
-		"inDepth": "Add in-depth information about SetIssuedBy...",
+		"inDepth": "SetIssuedBy writes a string to the Issued By field. Changes to revisions will remain after closing Dynamo.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2321,7 +2245,7 @@
 		"dynFile": [
 			"SetIssuedTo"
 		],
-		"inDepth": "Add in-depth information about SetIssuedTo...",
+		"inDepth": "SetIssuedTo writes a string to the Issued To field. Changes to revisions will remain after closing Dynamo.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2332,7 +2256,7 @@
 		"dynFile": [
 			"SetRevisionDate"
 		],
-		"inDepth": "Add in-depth information about SetRevisionDate...",
+		"inDepth": "SetRevisionDate writes a string to the Date field. Changes to revisions will remain after closing Dynamo.",
 		"folderPath": "Revit/Elements/Revision/Action"
 	},
 	{
@@ -2343,7 +2267,7 @@
 		"dynFile": [
 			"Issued"
 		],
-		"inDepth": "Add in-depth information about Issued...",
+		"inDepth": "Issued returns a boolean value for whether or not a revision has been issued.",
 		"folderPath": "Revit/Elements/Revision/Query"
 	},
 	{
@@ -2354,7 +2278,7 @@
 		"dynFile": [
 			"IssuedBy"
 		],
-		"inDepth": "Add in-depth information about IssuedBy...",
+		"inDepth": "IssuedBy returns a string from a revision's Issued By field.",
 		"folderPath": "Revit/Elements/Revision/Query"
 	},
 	{
@@ -2365,7 +2289,7 @@
 		"dynFile": [
 			"IssuedTo"
 		],
-		"inDepth": "Add in-depth information about IssuedTo...",
+		"inDepth": "IssuedTo returns a string from a revision's Issued To field.",
 		"folderPath": "Revit/Elements/Revision/Query"
 	},
 	{
@@ -2376,7 +2300,7 @@
 		"dynFile": [
 			"RevisionDate"
 		],
-		"inDepth": "Add in-depth information about RevisionDate...",
+		"inDepth": "RevisionDate returns a string from a revision's Date field.",
 		"folderPath": "Revit/Elements/Revision/Query"
 	},
 	{
@@ -2387,7 +2311,7 @@
 		"dynFile": [
 			"ByCurve"
 		],
-		"inDepth": "Add in-depth information about ByCurve...",
+		"inDepth": "Revision clouds created in Dynamo depend on the input curves' directions. If the cloud graphic is facing in, reverse the curve direction.",
 		"folderPath": "Revit/Elements/RevisionCloud/Create"
 	},
 	{
@@ -2398,7 +2322,7 @@
 		"dynFile": [
 			"Curves"
 		],
-		"inDepth": "Add in-depth information about Curves...",
+		"inDepth": "A revision cloud's curves are returned as geometry in Dynamo.",
 		"folderPath": "Revit/Elements/RevisionCloud/Query"
 	},
 	{
@@ -2409,7 +2333,7 @@
 		"dynFile": [
 			"Revision"
 		],
-		"inDepth": "Add in-depth information about Revision...",
+		"inDepth": "Revision returns a Revit revision element and its id in Dynamo.",
 		"folderPath": "Revit/Elements/RevisionCloud/Query"
 	},
 	{
@@ -2420,7 +2344,7 @@
 		"dynFile": [
 			"ByLocation"
 		],
-		"inDepth": "Add in-depth information about ByLocation...",
+		"inDepth": "ByLocation will create a Revit room as long as the point lies inside of room-bounding elements (i.e. walls). In the example below, the new room 'Exterior Mechanical Area' was automatically added to the room legend and assigned a color.",
 		"folderPath": "Revit/Elements/Room/Create"
 	},
 	{
@@ -2431,7 +2355,7 @@
 		"dynFile": [
 			"IsInsideRoom"
 		],
-		"inDepth": "Add in-depth information about IsInsideRoom...",
+		"inDepth": "IsInsideRoom returns a boolean value based on whether or not a point is inside a room.",
 		"folderPath": "Revit/Elements/Room/Action"
 	},
 	{
@@ -2442,7 +2366,7 @@
 		"dynFile": [
 			"SetName"
 		],
-		"inDepth": "Add in-depth information about SetName...",
+		"inDepth": "SetName overrides the name of a room with the supplied string. The room number '105' in the example below persists because it is not part of the name.",
 		"folderPath": "Revit/Elements/Room/Action"
 	},
 	{
@@ -2453,7 +2377,7 @@
 		"dynFile": [
 			"SetNumber"
 		],
-		"inDepth": "Add in-depth information about SetNumber...",
+		"inDepth": "SetNumber overrides a room's number with the supplied string.",
 		"folderPath": "Revit/Elements/Room/Action"
 	},
 	{
@@ -2464,7 +2388,7 @@
 		"dynFile": [
 			"Area"
 		],
-		"inDepth": "Add in-depth information about Area...",
+		"inDepth": "Room area is returned as a double.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2475,7 +2399,7 @@
 		"dynFile": [
 			"CenterBoundary"
 		],
-		"inDepth": "Add in-depth information about CenterBoundary...",
+		"inDepth": "CenterBoundary returns room bounding curves that extend to the wall centerline. The boundary curves of different rooms will touch if they share a wall.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2486,7 +2410,7 @@
 		"dynFile": [
 			"CoreBoundary"
 		],
-		"inDepth": "Add in-depth information about CoreBoundary...",
+		"inDepth": "CoreBoundary returns room bounding curves that extend to the wall core boundary. If rooms are separated by walls, their boundary curves will not touch.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2497,7 +2421,7 @@
 		"dynFile": [
 			"CoreCenterBoundary"
 		],
-		"inDepth": "Add in-depth information about CoreCenterBoundary...",
+		"inDepth": "CoreCenterBoundary returns room bounding curves that extend to the wall core centerline. The boundary curves of different rooms will touch if they share a wall.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2508,7 +2432,7 @@
 		"dynFile": [
 			"FinishBoundary"
 		],
-		"inDepth": "Add in-depth information about FinishBoundary...",
+		"inDepth": "FinishBoundary returns room bounding curves that extend to the wall finish boundary. If rooms are separated by walls, their boundary curves will not touch.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2519,7 +2443,7 @@
 		"dynFile": [
 			"Height"
 		],
-		"inDepth": "Add in-depth information about Height...",
+		"inDepth": "Room height is returned as a double. The height value is subject to constraints set in a room's properties (Upper Limit, Limit Offset and Base Offset).",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2530,7 +2454,7 @@
 		"dynFile": [
 			"Location"
 		],
-		"inDepth": "Add in-depth information about Location...",
+		"inDepth": "Room location is returned as a point. The point represents the room's placement point, shown as intersecting lines in Revit. Room tags are placed relative to this point.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2541,7 +2465,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Room names are returned as strings containing the name and number of a room.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2552,7 +2476,7 @@
 		"dynFile": [
 			"Number"
 		],
-		"inDepth": "Add in-depth information about Number...",
+		"inDepth": "Room numbers are returned as strings.",
 		"folderPath": "Revit/Elements/Room/Query"
 	},
 	{
@@ -2574,7 +2498,7 @@
 		"dynFile": [
 			"ByPlane"
 		],
-		"inDepth": "Add in-depth information about ByPlane...",
+		"inDepth": "Sketch planes are used in the creation of 2D and 3D geometry in Revit.",
 		"folderPath": "Revit/Elements/SketchPlane/Create"
 	},
 	{
@@ -2596,40 +2520,40 @@
 		"dynFile": [
 			"Plane"
 		],
-		"inDepth": "Add in-depth information about Plane...",
+		"inDepth": "Sketch planes are used in the creation of 2D and 3D geometry in Revit.",
 		"folderPath": "Revit/Elements/SketchPlane/Query"
 	},
 	{
 		"Name": "BeamByCurve",
 		"imageFile": [
-			"BeamByCurve"
+			"BeamByCurve.gif"
 		],
 		"dynFile": [
 			"BeamByCurve"
 		],
-		"inDepth": "Add in-depth information about BeamByCurve...",
+		"inDepth": "BeamByCurve creates a beam from curves, associated levels, and a structural framing type. Beams can be updated dynamically and will remain in the Revit file after Dynamo is closed. This node is especially useful for generating extensive and/or non-standard structural models from analytical lines.",
 		"folderPath": "Revit/Elements/StructuralFraming/Create"
 	},
 	{
 		"Name": "BraceByCurve",
 		"imageFile": [
-			"BraceByCurve"
+			"BraceByCurve.gif"
 		],
 		"dynFile": [
 			"BraceByCurve"
 		],
-		"inDepth": "Add in-depth information about BraceByCurve...",
+		"inDepth": "BraceByCurve creates a beam from curves, associated levels, and a structural framing type. Braces can be updated dynamically and will remain in the Revit file after Dynamo is closed. This node is especially useful for generating extensive and/or non-standard structural models from analytical lines.",
 		"folderPath": "Revit/Elements/StructuralFraming/Create"
 	},
 	{
 		"Name": "ColumnByCurve",
 		"imageFile": [
-			"ColumnByCurve"
+			"ColumnByCurve.gif"
 		],
 		"dynFile": [
 			"ColumnByCurve"
 		],
-		"inDepth": "Add in-depth information about ColumnByCurve...",
+		"inDepth": "ColumnByCurve creates a column from curves, associated levels, and a structural framing type. Columns can be updated dynamically and will remain in the Revit file after Dynamo is closed. This node is especially useful for generating extensive and/or non-standard structural models from analytical lines.",
 		"folderPath": "Revit/Elements/StructuralFraming/Create"
 	},
 	{
@@ -2640,7 +2564,7 @@
 		"dynFile": [
 			"Location"
 		],
-		"inDepth": "Add in-depth information about Location...",
+		"inDepth": "Structural elements have an underlying location line that can be displayed in Revit. This is useful for identifying points of complex framing joins and visualizing offsets.",
 		"folderPath": "Revit/Elements/StructuralFraming/Query"
 	},
 	{
@@ -2651,7 +2575,7 @@
 		"dynFile": [
 			"Type"
 		],
-		"inDepth": "Add in-depth information about Type...",
+		"inDepth": "Type returns a structural element's family type as well as its parent family.",
 		"folderPath": "Revit/Elements/StructuralFraming/Query"
 	},
 	{
@@ -2717,7 +2641,7 @@
 		"dynFile": [
 			"Altitude"
 		],
-		"inDepth": "Add in-depth information about Altitude...",
+		"inDepth": "The sun's altitude is returned as double. This will update dynamically from Revit.",
 		"folderPath": "Revit/Elements/SunSettings/Query"
 	},
 	{
@@ -2728,7 +2652,7 @@
 		"dynFile": [
 			"Azimuth"
 		],
-		"inDepth": "Add in-depth information about Azimuth...",
+		"inDepth": "The sun's azimuth is returned as a double. This will update dynamically from Revit.",
 		"folderPath": "Revit/Elements/SunSettings/Query"
 	},
 	{
@@ -2739,7 +2663,7 @@
 		"dynFile": [
 			"CurrentDateTime"
 		],
-		"inDepth": "Add in-depth information about CurrentDateTime...",
+		"inDepth": "CurrentDateTime returns a DateTime that represents the sun's current position in Revit. This can be queried for the year, month, day, hour, etc using Dynamo's core DateTime nodes.",
 		"folderPath": "Revit/Elements/SunSettings/Query"
 	},
 	{
@@ -2750,7 +2674,7 @@
 		"dynFile": [
 			"EndDateTime"
 		],
-		"inDepth": "Add in-depth information about EndDateTime...",
+		"inDepth": "EndDateTime returns a DateTime that represents the end of a solar study in the Revit sun settings. This can be queried for the year, month, day, hour, etc using Dynamo's core DateTime nodes.",
 		"folderPath": "Revit/Elements/SunSettings/Query"
 	},
 	{
@@ -2761,7 +2685,7 @@
 		"dynFile": [
 			"StartDateTime"
 		],
-		"inDepth": "Add in-depth information about StartDateTime...",
+		"inDepth": "EndDateTime returns a DateTime that represents the start of a solar study in the Revit sun settings. This can be queried for the year, month, day, hour, etc using Dynamo's core DateTime nodes.",
 		"folderPath": "Revit/Elements/SunSettings/Query"
 	},
 	{
@@ -2772,7 +2696,7 @@
 		"dynFile": [
 			"SunDirection"
 		],
-		"inDepth": "Add in-depth information about SunDirection...",
+		"inDepth": "SunDirection returns a vector calculated from the sun's position (azimuth and altitude) relative to the sun path's origin.",
 		"folderPath": "Revit/Elements/SunSettings/Query"
 	},
 	{
@@ -2783,7 +2707,7 @@
 		"dynFile": [
 			"ByElement"
 		],
-		"inDepth": "Add in-depth information about ByElement...",
+		"inDepth": "ByElement tags elements relative to their location points. The offset input can be used to reposition the tags with a vector.",
 		"folderPath": "Revit/Elements/Tag/Create"
 	},
 	{
@@ -2794,7 +2718,7 @@
 		"dynFile": [
 			"TagText"
 		],
-		"inDepth": "Add in-depth information about TagText...",
+		"inDepth": "TagText will return a string for each tag.",
 		"folderPath": "Revit/Elements/Tag/Query"
 	},
 	{
@@ -2805,7 +2729,7 @@
 		"dynFile": [
 			"TaggedElement"
 		],
-		"inDepth": "Add in-depth information about TaggedElement...",
+		"inDepth": "TaggedElement returns the tagged element for each input tag.",
 		"folderPath": "Revit/Elements/Tag/Query"
 	},
 	{
@@ -2816,7 +2740,7 @@
 		"dynFile": [
 			"Select Horizontal Text Alignment"
 		],
-		"inDepth": "Add in-depth information about Select Horizontal Text Alignment...",
+		"inDepth": "Select Horizontal Text Alignment shows all available horizontal alignment styles (center, left, right) in a drop-down menu.",
 		"folderPath": "Revit/Elements/Text/Action"
 	},
 	{
@@ -2827,7 +2751,7 @@
 		"dynFile": [
 			"Select Vertical Text Alignment"
 		],
-		"inDepth": "Add in-depth information about Select Vertical Text Alignment...",
+		"inDepth": "Select Vertical Text Alignment shows all available vertical alignment styles (bottom, middle, top) in a drop-down menu.",
 		"folderPath": "Revit/Elements/Text/Action"
 	},
 	{
@@ -2838,7 +2762,7 @@
 		"dynFile": [
 			"ByLocation"
 		],
-		"inDepth": "Add in-depth information about ByLocation...",
+		"inDepth": "ByLocation creates a text note from a point. This is useful for labeling many similar elements in a Revit document as the elements can be queried for their locations.",
 		"folderPath": "Revit/Elements/TextNote/Create"
 	},
 	{
@@ -2849,7 +2773,7 @@
 		"dynFile": [
 			"SetHorizontalAlignment"
 		],
-		"inDepth": "Add in-depth information about SetHorizontalAlignment...",
+		"inDepth": "The horizontal alignment value is determined by a string for the possible styles (left, right, center).",
 		"folderPath": "Revit/Elements/TextNote/Action"
 	},
 	{
@@ -2860,7 +2784,7 @@
 		"dynFile": [
 			"SetKeepRotatedTextReadable"
 		],
-		"inDepth": "Add in-depth information about SetKeepRotatedTextReadable...",
+		"inDepth": "Rotating text past a certain degree would make it upside-down. SetKeepRotatedTextReadable will automatically flip the text so it always faces up at any rotation value.",
 		"folderPath": "Revit/Elements/TextNote/Action"
 	},
 	{
@@ -2871,7 +2795,7 @@
 		"dynFile": [
 			"SetText"
 		],
-		"inDepth": "Add in-depth information about SetText...",
+		"inDepth": "SetText overrides all input text notes with a supplied string.",
 		"folderPath": "Revit/Elements/TextNote/Action"
 	},
 	{
@@ -2882,7 +2806,7 @@
 		"dynFile": [
 			"Height"
 		],
-		"inDepth": "Add in-depth information about Height...",
+		"inDepth": "Text note height is returned as a double. The height value is relative to the view scale.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2893,7 +2817,7 @@
 		"dynFile": [
 			"HorizontalAlignment"
 		],
-		"inDepth": "Add in-depth information about HorizontalAlignment...",
+		"inDepth": "A text note's horizontal alignment is returned as a string.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2904,7 +2828,7 @@
 		"dynFile": [
 			"Text"
 		],
-		"inDepth": "Add in-depth information about Text...",
+		"inDepth": "Text returns the contents of a text note as a string.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2915,7 +2839,7 @@
 		"dynFile": [
 			"Typename"
 		],
-		"inDepth": "Add in-depth information about Typename...",
+		"inDepth": "Typename returns a string for a text note's font size and font (3.5mm Arial, for example).",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2926,7 +2850,7 @@
 		"dynFile": [
 			"VerticalAlignment"
 		],
-		"inDepth": "Add in-depth information about VerticalAlignment...",
+		"inDepth": "A text note's vertical alignment is returned as a string.",
 		"folderPath": "Revit/Elements/TextNote/Query"
 	},
 	{
@@ -2937,7 +2861,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "Returns a text note type from a name as a string.",
 		"folderPath": "Revit/Elements/TextNoteType/Create"
 	},
 	{
@@ -2948,7 +2872,7 @@
 		"dynFile": [
 			"Default"
 		],
-		"inDepth": "Add in-depth information about Default...",
+		"inDepth": "Revit projects contain a default text note type that is automatically assigned to text notes.",
 		"folderPath": "Revit/Elements/TextNoteType/Create"
 	},
 	{
@@ -2959,7 +2883,7 @@
 		"dynFile": [
 			"ByPoints"
 		],
-		"inDepth": "Add in-depth information about ByPoints...",
+		"inDepth": "Revit will generate and contour a mesh from a list of supplied points. The points cannot be collinear.",
 		"folderPath": "Revit/Elements/Topography/Create"
 	},
 	{
@@ -2970,7 +2894,7 @@
 		"dynFile": [
 			"Mesh"
 		],
-		"inDepth": "Add in-depth information about Mesh...",
+		"inDepth": "Mesh returns a Revit topography as a mesh in Dynamo.",
 		"folderPath": "Revit/Elements/Topography/Query"
 	},
 	{
@@ -2981,7 +2905,7 @@
 		"dynFile": [
 			"Points"
 		],
-		"inDepth": "Add in-depth information about Points...",
+		"inDepth": "The points of an underlying mesh are useful for querying elevation or location data. Point sets can be manipulated in Dynamo and fed back into Dynamo as a new topography.",
 		"folderPath": "Revit/Elements/Topography/Query"
 	},
 	{
@@ -2992,7 +2916,7 @@
 		"dynFile": [
 			"ByCurveAndHeight"
 		],
-		"inDepth": "Add in-depth information about ByCurveAndHeight...",
+		"inDepth": "Walls created from Dynamo can be updated dynamically and will remain in the Revit document after Dynamo is closed.",
 		"folderPath": "Revit/Elements/Wall/Create"
 	},
 	{
@@ -3003,7 +2927,7 @@
 		"dynFile": [
 			"ByCurveAndLevels"
 		],
-		"inDepth": "Add in-depth information about ByCurveAndLevels...",
+		"inDepth": "Walls created from Dynamo can be updated dynamically and will remain in the Revit document after Dynamo is closed.",
 		"folderPath": "Revit/Elements/Wall/Create"
 	},
 	{
@@ -3014,7 +2938,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "ByName returns a wall type from its name as a string.",
 		"folderPath": "Revit/Elements/WallType/Create"
 	},
 	{
@@ -3025,7 +2949,7 @@
 		"dynFile": [
 			"Name"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name returns a selected wall type as a string.",
 		"folderPath": "Revit/Elements/WallType/Query"
 	},
 	{
@@ -3047,29 +2971,18 @@
 		"dynFile": [
 			"ByProperties"
 		],
-		"inDepth": "Add in-depth information about ByProperties...",
+		"inDepth": "ByProperties gives access to the visibility/graphic override parameters that exist in Revit. This is especially useful for creating highly specific view overrides that would otherwise require significant manual customization in Revit.",
 		"folderPath": "Revit/Filter/OverrideGraphicSettings/Create"
 	},
 	{
 		"Name": "Detail Level (())",
 		"imageFile": [
-			"Detail Level (())"
+			"Detail Level"
 		],
 		"dynFile": [
-			"Detail Level (())"
+			"Detail Level"
 		],
-		"inDepth": "Add in-depth information about Detail Level...",
-		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
-	},
-	{
-		"Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
-		"imageFile": [
-			"Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
-		],
-		"dynFile": [
-			"Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
-		],
-		"inDepth": "Add in-depth information about Detail Level...",
+		"inDepth": "Detail Level contains the four Revit detail level settings (Coarse, Fine, Medium, and Undefined). The OverrideGraphicSettings.ByProperties node takes the Detail Level node as an input.",
 		"folderPath": "Revit/Filter/OverrideGraphicSettings/Action"
 	},
 	{
@@ -3113,7 +3026,7 @@
 		"dynFile": [
 			"ByOriginDirection"
 		],
-		"inDepth": "Add in-depth information about ByOriginDirection...",
+		"inDepth": "Ray bounces are a useful for creating studies and analysis in Revit. For example, ray bounces can be used to determine obstructions in line of sight.",
 		"folderPath": "Revit/References/RayBounce/Action"
 	},
 	{
@@ -3124,7 +3037,7 @@
 		"dynFile": [
 			"All Elements at Level"
 		],
-		"inDepth": "Add in-depth information about All Elements at Level...",
+		"inDepth": "Use with the Selection.Levels node to get elements associated with any level in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3135,7 +3048,7 @@
 		"dynFile": [
 			"All Elements of Category"
 		],
-		"inDepth": "Add in-depth information about All Elements of Category...",
+		"inDepth": "Use with the Selection.Categories node to get all elements in any category in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3146,7 +3059,7 @@
 		"dynFile": [
 			"All Elements of Family Type"
 		],
-		"inDepth": "Add in-depth information about All Elements of Family Type...",
+		"inDepth": "Use with the Selection.Family Types node to get all elements of any family type in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3157,7 +3070,7 @@
 		"dynFile": [
 			"All Elements of Type"
 		],
-		"inDepth": "Add in-depth information about All Elements of Type...",
+		"inDepth": "Use with the Selection.Element Types node to get all elements of any type in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3168,7 +3081,7 @@
 		"dynFile": [
 			"Categories"
 		],
-		"inDepth": "Add in-depth information about Categories...",
+		"inDepth": "Categories contains a drop-down menu with every category available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3179,7 +3092,7 @@
 		"dynFile": [
 			"Element Types"
 		],
-		"inDepth": "Add in-depth information about Element Types...",
+		"inDepth": "Element Types contains a drop-down menu with every element type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3190,7 +3103,7 @@
 		"dynFile": [
 			"Family Types"
 		],
-		"inDepth": "Add in-depth information about Family Types...",
+		"inDepth": "Family Types contains a drop-down menu with every family type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3201,7 +3114,7 @@
 		"dynFile": [
 			"Floor Types"
 		],
-		"inDepth": "Add in-depth information about Floor Types...",
+		"inDepth": "Floor Types contains a drop-down menu with every floor type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3212,7 +3125,7 @@
 		"dynFile": [
 			"Get Family Parameter"
 		],
-		"inDepth": "Add in-depth information about Get Family Parameter...",
+		"inDepth": "Get Family Parameter contains a drop-down menu with all parameters of an input family.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3223,7 +3136,7 @@
 		"dynFile": [
 			"Levels"
 		],
-		"inDepth": "Add in-depth information about Levels...",
+		"inDepth": "Levels contains a drop-down menu with every level available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3245,7 +3158,7 @@
 		"dynFile": [
 			"Select Edge"
 		],
-		"inDepth": "Add in-depth information about Select Edge...",
+		"inDepth": "Select Edge brings up a cursor in Revit that allows you to select a single edge.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3256,7 +3169,7 @@
 		"dynFile": [
 			"Select Edges"
 		],
-		"inDepth": "Add in-depth information about Select Edges...",
+		"inDepth": "Select Edges brings up a cursor in Revit that allows you to select multiple edges.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3267,7 +3180,7 @@
 		"dynFile": [
 			"Select Face"
 		],
-		"inDepth": "Add in-depth information about Select Face...",
+		"inDepth": "Select Face brings up a cursor in Revit that allows you to select a single face.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3278,29 +3191,18 @@
 		"dynFile": [
 			"Select Faces"
 		],
-		"inDepth": "Add in-depth information about Select Faces...",
-		"folderPath": "Revit/Selection/Action"
-	},
-	{
-		"Name": "Select Model Element (Family Type)",
-		"imageFile": [
-			"Select Model Element (Family Type)"
-		],
-		"dynFile": [
-			"Select Model Element (Family Type)"
-		],
-		"inDepth": "Add in-depth information about Select Model Element...",
+		"inDepth": "Select Faces brings up a cursor in Revit that allows you to select multiple faces.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
 		"Name": "Select Model Element (())",
 		"imageFile": [
-			"Select Model Element (())"
+			"Select Model Element"
 		],
 		"dynFile": [
-			"Select Model Element (())"
+			"Select Model Element"
 		],
-		"inDepth": "Add in-depth information about Select Model Element...",
+		"inDepth": "Select Model Element brings up a cursor in Revit that allows you to select a single element.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3311,7 +3213,7 @@
 		"dynFile": [
 			"Select Model Elements"
 		],
-		"inDepth": "Add in-depth information about Select Model Elements...",
+		"inDepth": "Select Model Elements brings up a cursor in Revit that allows you to select multiple elements. Multiple elements must be selected by dragging a selection box around them, they cannot be individually selected.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3322,7 +3224,7 @@
 		"dynFile": [
 			"Select Point on Face"
 		],
-		"inDepth": "Add in-depth information about Select Point on Face...",
+		"inDepth": "Select Point on Face brings up a cursor in Revit that allows you to select a point on a face. The face will appear highlighted prior to placing the point.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3333,7 +3235,7 @@
 		"dynFile": [
 			"Select UV on Face"
 		],
-		"inDepth": "Add in-depth information about Select UV on Face...",
+		"inDepth": "Select UV on Face brings up a cursor in Revit that allows you to select a UV location on a face. The face will appear highlighted prior to choosing the UV location.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3344,7 +3246,7 @@
 		"dynFile": [
 			"Structural Column Types"
 		],
-		"inDepth": "Add in-depth information about Structural Column Types...",
+		"inDepth": "Structural Column Types contains a drop-down menu with every structural column type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3355,7 +3257,7 @@
 		"dynFile": [
 			"Structural Framing Types"
 		],
-		"inDepth": "Add in-depth information about Structural Framing Types...",
+		"inDepth": "Structural Framing Types contains a drop-down menu with every structural framing type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3366,7 +3268,7 @@
 		"dynFile": [
 			"Views"
 		],
-		"inDepth": "Add in-depth information about Views...",
+		"inDepth": "Views contains a drop-down menu with every view available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3377,7 +3279,7 @@
 		"dynFile": [
 			"Wall Types"
 		],
-		"inDepth": "Add in-depth information about Wall Types...",
+		"inDepth": "Wall Types contains a drop-down menu with every wall type available in a document.",
 		"folderPath": "Revit/Selection/Action"
 	},
 	{
@@ -3410,7 +3312,7 @@
 		"dynFile": [
 			"All Elements In Active View"
 		],
-		"inDepth": "Add in-depth information about All Elements In Active View...",
+		"inDepth": "Views can contain vast quantities of elements, so downstream management of this node's data is very important. For example, this node could be used to override wall graphics in an active floor plan view without having to query the entire project for every wall.",
 		"folderPath": "Revit/View/Action"
 	},
 	{
@@ -3421,18 +3323,18 @@
 		"dynFile": [
 			"SunSettings.Current"
 		],
-		"inDepth": "Add in-depth information about SunSettings.Current...",
+		"inDepth": "SunSettings allows you to query parameters such as altitude, azimuth, and a DateTime in Dynamo.",
 		"folderPath": "Revit/View/Action"
 	},
 	{
 		"Name": "ByEyePointAndTarget",
 		"imageFile": [
-			"ByEyePointAndTarget"
+			"ByEyePointAndTarget.gif"
 		],
 		"dynFile": [
 			"ByEyePointAndTarget"
 		],
-		"inDepth": "Add in-depth information about ByEyePointAndTarget...",
+		"inDepth": "ByEyePointAndTarget creates a view in Revit that can be dynamically updated. In the example below, the eye point is evaluated at different paramters of a circle to rotate the camera around the model.",
 		"folderPath": "Revit/Views/AxonometricView/Create"
 	},
 	{
@@ -3449,12 +3351,12 @@
 	{
 		"Name": "ByEyePointTargetAndElement",
 		"imageFile": [
-			"ByEyePointTargetAndElement"
+			"ByEyePointTargetAndElement.gif"
 		],
 		"dynFile": [
 			"ByEyePointTargetAndElement"
 		],
-		"inDepth": "Add in-depth information about ByEyePointTargetAndElement...",
+		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry.",
 		"folderPath": "Revit/Views/AxonometricView/Create"
 	},
 	{
@@ -3465,7 +3367,7 @@
 		"dynFile": [
 			"ByLevel"
 		],
-		"inDepth": "Add in-depth information about ByLevel...",
+		"inDepth": "ByLevel creates a ceiling plan named after its input level.",
 		"folderPath": "Revit/Views/CeilingPlanView/Create"
 	},
 	{
@@ -3476,7 +3378,7 @@
 		"dynFile": [
 			"ByName"
 		],
-		"inDepth": "Add in-depth information about ByName...",
+		"inDepth": "If the name of the drafting view matches an existing one in Dynamo, it will have its unique id added to its name.",
 		"folderPath": "Revit/Views/DraftingView/Create"
 	},
 	{
@@ -3487,18 +3389,18 @@
 		"dynFile": [
 			"ByLevel"
 		],
-		"inDepth": "Add in-depth information about ByLevel...",
+		"inDepth": "ByLevel creates a floor plan named after its input level.",
 		"folderPath": "Revit/Views/FloorPlanView/Create"
 	},
 	{
 		"Name": "ByEyePointAndTarget",
 		"imageFile": [
-			"ByEyePointAndTarget"
+			"ByEyePointAndTarget.gif"
 		],
 		"dynFile": [
 			"ByEyePointAndTarget"
 		],
-		"inDepth": "Add in-depth information about ByEyePointAndTarget...",
+		"inDepth": "Perspective views created from Dynamo will update only by switching to another view and back again. In the example below, the eye point is evaluated at different parameters of a circle to rotate the camera around the model.",
 		"folderPath": "Revit/Views/PerspectiveView/Create"
 	},
 	{
@@ -3515,12 +3417,12 @@
 	{
 		"Name": "ByEyePointTargetAndElement",
 		"imageFile": [
-			"ByEyePointTargetAndElement"
+			"ByEyePointTargetAndElement.gif"
 		],
 		"dynFile": [
 			"ByEyePointTargetAndElement"
 		],
-		"inDepth": "Add in-depth information about ByEyePointTargetAndElement...",
+		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry. Perspective views created from Dynamo will update only by switching to another view and back again.",
 		"folderPath": "Revit/Views/PerspectiveView/Create"
 	},
 	{
@@ -3531,7 +3433,7 @@
 		"dynFile": [
 			"AddFields"
 		],
-		"inDepth": "Add in-depth information about AddFields...",
+		"inDepth": "AddFields adds schedulable fields to a Revit schedule. Schedulable fields are determined by the a schedule's category. For the windows category, this could be Count, Family, Phase Created, Visual Light Transmittance, Level, etc. In the example below, a schedule is created based on the window category, then queried for all schedulable fields it could have. Then certain fields are chosen for the schedule.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3542,7 +3444,7 @@
 		"dynFile": [
 			"Export"
 		],
-		"inDepth": "Add in-depth information about Export...",
+		"inDepth": "Revit schedules export with the same structure as they have in Revit, unless it is overridden with the ScheduleExportOptions.ByProperties node.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3553,7 +3455,7 @@
 		"dynFile": [
 			"Export Column Headers"
 		],
-		"inDepth": "Add in-depth information about Export Column Headers...",
+		"inDepth": "Export Column Headers contains a drop-down menu with options to export none, one row, multiple rows of schedule headers. This is in input for the ScheduleExportOptions.ByProperties node.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3564,7 +3466,7 @@
 		"dynFile": [
 			"Export Text Qualifier"
 		],
-		"inDepth": "Add in-depth information about Export Text Qualifier...",
+		"inDepth": "Export Text Qualifier contains a drop-down menu with options for double quotes, quotes and no quotes.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3575,7 +3477,7 @@
 		"dynFile": [
 			"RemoveFields"
 		],
-		"inDepth": "Add in-depth information about RemoveFields...",
+		"inDepth": "Schedules can be queried for all their fields using ScheduleView.Fields, giving you a list of fields that can be removed.",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3586,7 +3488,7 @@
 		"dynFile": [
 			"Schedule Type"
 		],
-		"inDepth": "Add in-depth information about Schedule Type...",
+		"inDepth": "Schedule Type contains a drop-down menu to choose a schedule type (key schedule, material takeoff, and regular schedule).",
 		"folderPath": "Revit/Views/ScheduleView/Action"
 	},
 	{
@@ -3597,7 +3499,7 @@
 		"dynFile": [
 			"ByProperties"
 		],
-		"inDepth": "Add in-depth information about ByProperties...",
+		"inDepth": "View schedule export options determine the exported file's data format. For example, schedules can be exported without the column headers. All inputs have default values.",
 		"folderPath": "Revit/Views/ScheduleView/ScheduleExportOptions/Create"
 	},
 	{
@@ -3608,7 +3510,7 @@
 		"dynFile": [
 			"CreateSchedule"
 		],
-		"inDepth": "Add in-depth information about CreateSchedule...",
+		"inDepth": "Revit schedules are based on a category and schedule type. Different fields are available depending on what category the schedule is created for.",
 		"folderPath": "Revit/Views/ScheduleView/Create"
 	},
 	{
@@ -3619,7 +3521,7 @@
 		"dynFile": [
 			"Fields"
 		],
-		"inDepth": "Add in-depth information about Fields...",
+		"inDepth": "Fields returns all fields in a schedule.",
 		"folderPath": "Revit/Views/ScheduleView/Query"
 	},
 	{
@@ -3630,7 +3532,7 @@
 		"dynFile": [
 			"SchedulableFields"
 		],
-		"inDepth": "Add in-depth information about SchedulableFields...",
+		"inDepth": "SchedulableFields returns all fields that can be added to a schedule. This is useful for choosing what fields to add to a schedule.",
 		"folderPath": "Revit/Views/ScheduleView/Query"
 	},
 	{
@@ -3641,7 +3543,7 @@
 		"dynFile": [
 			"Name (schedulableField)"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name converts the name of a schedulable field to a string.",
 		"folderPath": "Revit/Views/ScheduleView/SchedulableField/Query"
 	},
 	{
@@ -3652,7 +3554,7 @@
 		"dynFile": [
 			"Name (scheduleField)"
 		],
-		"inDepth": "Add in-depth information about Name...",
+		"inDepth": "Name converts the name of a schedule field to a string.",
 		"folderPath": "Revit/Views/ScheduleView/ScheduleField/Query"
 	},
 	{
@@ -3663,7 +3565,7 @@
 		"dynFile": [
 			"ByBoundingBox"
 		],
-		"inDepth": "Add in-depth information about ByBoundingBox...",
+		"inDepth": "ByBoundingBox uses a bounding box to create a section. The bounding box acts like a section box, cutting through elements and hiding everything beyond.",
 		"folderPath": "Revit/Views/SectionView/Create"
 	},
 	{
@@ -3674,7 +3576,7 @@
 		"dynFile": [
 			"ByCoordinateSystemMinPointMaxPoint"
 		],
-		"inDepth": "Add in-depth information about ByCoordinateSystemMinPointMaxPoint...",
+		"inDepth": "ByCoordinateSystemMinPointMaxPoint creates a view section from the geometry drivers of a bounding box (min/max point and a coordinate system).",
 		"folderPath": "Revit/Views/SectionView/Create"
 	},
 	{
@@ -3685,7 +3587,7 @@
 		"dynFile": [
 			"ByNameNumberTitleBlockAndView"
 		],
-		"inDepth": "Add in-depth information about ByNameNumberTitleBlockAndView...",
+		"inDepth": "ByNameNumberTitleBlockAndView can create multiple sheets each with a single view. The lists of sheet names, numbers and views need to match in length.",
 		"folderPath": "Revit/Views/Sheet/Create"
 	},
 	{
@@ -3696,7 +3598,7 @@
 		"dynFile": [
 			"ByNameNumberTitleBlockAndViews"
 		],
-		"inDepth": "Add in-depth information about ByNameNumberTitleBlockAndViews...",
+		"inDepth": "ByNameNumberTitleBlockAndViews will pack a list of views onto a single sheet.",
 		"folderPath": "Revit/Views/Sheet/Create"
 	},
 	{
@@ -3707,7 +3609,7 @@
 		"dynFile": [
 			"SheetName"
 		],
-		"inDepth": "Add in-depth information about SheetName...",
+		"inDepth": "SheetName returns the names of sheets as strings. This is useful for data manipulation and searching.",
 		"folderPath": "Revit/Views/Sheet/Query"
 	},
 	{
@@ -3718,7 +3620,7 @@
 		"dynFile": [
 			"SheetNumber"
 		],
-		"inDepth": "Add in-depth information about SheetNumber...",
+		"inDepth": "SheetNumber returns numbers as strings (A102).",
 		"folderPath": "Revit/Views/Sheet/Query"
 	},
 	{
@@ -3729,7 +3631,7 @@
 		"dynFile": [
 			"Views"
 		],
-		"inDepth": "Add in-depth information about Views...",
+		"inDepth": "Views returns all view elements on a sheet in a list.",
 		"folderPath": "Revit/Views/Sheet/Query"
 	},
 	{
@@ -3740,7 +3642,7 @@
 		"dynFile": [
 			"ByLevel"
 		],
-		"inDepth": "Add in-depth information about ByLevel...",
+		"inDepth": "ByLevel creates a structural floor plan named after its input level.",
 		"folderPath": "Revit/Views/StructuralPlanView/Create"
 	},
 	{
@@ -3751,7 +3653,7 @@
 		"dynFile": [
 			"AddFilter"
 		],
-		"inDepth": "Add in-depth information about AddFilter...",
+		"inDepth": "Filters can be queried from Revit documents as an element type. This allows for an existing filter to be applied to a different view, or a new one can be created.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3762,7 +3664,7 @@
 		"dynFile": [
 			"ExportAsImage"
 		],
-		"inDepth": "Add in-depth information about ExportAsImage...",
+		"inDepth": "A full file path including the file name and extension must be provided to override the default png extension.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3773,7 +3675,7 @@
 		"dynFile": [
 			"FilterOverrides"
 		],
-		"inDepth": "Add in-depth information about FilterOverrides...",
+		"inDepth": "FilterOverrides returns a graphics override element from a Filter. This is useful for applying a filter's graphics settings only to certain elements in a view or across an entire project. A graphics override element can also be created with the OverrideGraphicSettings.ByProperties node.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3784,7 +3686,7 @@
 		"dynFile": [
 			"IsViewTemplate"
 		],
-		"inDepth": "Add in-depth information about IsViewTemplate...",
+		"inDepth": "IsViewTemplate returns a boolean value based on whether or not a view is a template.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3795,7 +3697,7 @@
 		"dynFile": [
 			"SetCategoryOverrides"
 		],
-		"inDepth": "Add in-depth information about SetCategoryOverrides...",
+		"inDepth": "SetCategoryOverrides allows a graphic overrides element to be applied to an input category across all input views. This is useful for quickly highlighting walls, floors, curtain walls, etc across many views without creating a view filter or manually changing each view.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3806,7 +3708,7 @@
 		"dynFile": [
 			"SetFilterOverrides"
 		],
-		"inDepth": "Add in-depth information about SetFilterOverrides...",
+		"inDepth": "SetFilterOverrides allows a view filter to be applied to multiple views and toggled on/off. This is useful for quickly changing the graphics of many views.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3817,7 +3719,7 @@
 		"dynFile": [
 			"SetScale"
 		],
-		"inDepth": "Add in-depth information about SetScale...",
+		"inDepth": "A view's scale will update dynamically and remain after Dynamo is closed.",
 		"folderPath": "Revit/Views/View/Action"
 	},
 	{
@@ -3828,7 +3730,7 @@
 		"dynFile": [
 			"Filters"
 		],
-		"inDepth": "Add in-depth information about Filters...",
+		"inDepth": "Filters returns any filters applied to a view.",
 		"folderPath": "Revit/Views/View/Query"
 	},
 	{
@@ -3839,7 +3741,7 @@
 		"dynFile": [
 			"CreateUniqueViewName"
 		],
-		"inDepth": "Add in-depth information about CreateUniqueViewName...",
+		"inDepth": "Unique view names are created by appending a unique id to the name if it already exists.",
 		"folderPath": "Revit/Views/View3D/Action"
 	}
 ]
