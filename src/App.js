@@ -142,7 +142,6 @@ class App extends Component {
     }
 
     _gitHubSubmit() {
-
         let saveJson = this.state.searchArray.map((d) => {
             let {
                 Name,
@@ -152,10 +151,10 @@ class App extends Component {
                 Group,
                 inDepth
             } = d;
-            imageFile = imageFile.map((im) => {
+            imageFile = imageFile && imageFile.length > 0 && imageFile.map((im) => {
                 return im.original || im;
             })
-            dynFile = dynFile.map((dyn) => {
+            dynFile = dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
                 return dyn.original || dyn;
             })
             return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth }

@@ -67,7 +67,7 @@ class ExampleFiles extends React.Component {
 
       im = { 'name': file.name, 'data': reader.result, 'og': im.og || im, 'type': 'image', 'original': imProp.original || imProp };
       const node = this.props.node;
-      im.og = `./${path.join('data', 'EXAMPLES', node.Categories.join('/'), node.Group, 'img', `${im.original}.jpg`)}`
+      im.og = `./${path.join('data', 'EXAMPLES', node.Categories.join('/'), node.Group, 'img', `${im.original}`)}`
       this.props.node.imageFile[this.state.index] = im;
       this.props.node.overrides = true;
       this.setState({ modeImg: true })
