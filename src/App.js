@@ -216,7 +216,6 @@ class App extends Component {
                 }
                 this.setState({ actives: actives.filter(el => el) })
             } else {
-
                 this.setState({ searching: false })
             }
         }
@@ -292,6 +291,27 @@ class App extends Component {
                     }
                 })
             })
+
+            // let saveJson = searchArray.map((d) => {
+            //     let {
+            //         Name,
+            //         imageFile,
+            //         dynFile,
+            //         Categories,
+            //         Group,
+            //         inDepth
+            // } = d;
+            //     imageFile = (imageFile && imageFile.length > 0 && imageFile.map((im) => {
+            //         return im.original || im;
+            //     })) || [];
+            //     dynFile = (dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
+            //         return dyn.original || dyn;
+            //     })) || [];
+            //     return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth }
+            // })
+            // console.log(saveJson);
+            // document.write(JSON.stringify(saveJson));
+
             this.setState({ mainObjects, searchArray })
         }).catch(console.error.bind(console))
     }
