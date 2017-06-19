@@ -8,22 +8,22 @@ function NodeIcon(props) {
     let element;
     return (<Link to={`/${lineageToRoute(props.node)}`}> <
         img className="im"
-        onError={function(){
-          element.onerror=null;
-          element.src='images/src/icon_offset.png';
+        onError={function () {
+            element.onerror = null;
+            element.src = 'images/src/icon_offset.png';
         }}
-        ref={el => element=el}
+        ref={el => element = el}
         height={props.width}
         style={
             {
                 "backgroundColor": "rgb(34,34,34)",
-                "marginRight":"10px"
+                "marginRight": "10px"
             }
         }
         src={
             path.join('images', props.node.SmallIcon)
         }
-        /></Link>
+    /></Link>
     )
 }
 
