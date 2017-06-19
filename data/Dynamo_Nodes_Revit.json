@@ -682,13 +682,6 @@
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
-		"Name": "MoveByVector",
-		"imageFile": [],
-		"dynFile": [],
-		"inDepth": "Add in-depth information about MoveByVector...",
-		"folderPath": "Revit/Elements/Element/Action"
-	},
-	{
 		"Name": "OverrideColorInView",
 		"imageFile": [
 			"OverrideColorInView"
@@ -730,13 +723,6 @@
 			"SetParameterByName"
 		],
 		"inDepth": "SetParameterByName will modify a Revit element's parameter given its name and a value. This can be updated live from Dynamo.",
-		"folderPath": "Revit/Elements/Element/Action"
-	},
-	{
-		"Name": "ToString",
-		"imageFile": [],
-		"dynFile": [],
-		"inDepth": "Add in-depth information about ToString...",
 		"folderPath": "Revit/Elements/Element/Action"
 	},
 	{
@@ -1932,7 +1918,6 @@
 		"Name": "StorageType",
 		"imageFile": [
 			"StorageType"
-
 		],
 		"dynFile": [
 			"StorageType"
