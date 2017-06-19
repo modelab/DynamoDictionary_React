@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import JsSearch from 'js-search';
+import * as JsSearch from 'js-search';
 import { hashHistory } from 'react-router';
 
 import './css/font.css';
@@ -167,6 +167,7 @@ class App extends Component {
 
     _searchBar(val) {
         // browserHistory.push(`/search/${val}`)
+        console.log('line', JsSearch)
         var search = new JsSearch.Search('Name');
         search.addIndex('Name');
         search.addIndex('CategorySearch');
