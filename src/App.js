@@ -310,7 +310,7 @@ class App extends Component {
             //     return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth }
             // })
             // console.log(saveJson);
-            // document.write(JSON.stringify(saveJson));
+            // document.write('{"data":' + JSON.stringify((saveJson)) + '}');
 
             this.setState({ mainObjects, searchArray })
         }).catch(console.error.bind(console))
