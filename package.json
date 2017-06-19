@@ -103,5 +103,5 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "http://dictionary.dynamobim.com/"
+  "homepage": "https://ekatzenstein.github.io/DynamoDictionary_React/"
 }
