@@ -292,28 +292,28 @@ class App extends Component {
                 })
             })
 
-            let saveJson = searchArray.map((d) => {
-                let {
-                    Name,
-                    imageFile,
-                    dynFile,
-                    Categories,
-                    Group,
-                    inDepth
-            } = d;
-                imageFile = (imageFile && imageFile.length > 0 && imageFile.map((im) => {
-                    return im.original || im;
-                })) || [];
-                dynFile = (dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
-                    return dyn.original || dyn;
-                })) || [];
-                if (dynFile.length === 0) { return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth } }
-                else {
-                    return null
-                }
-            }).filter(el => el);
-            console.log(saveJson);
-            document.write('{"data":' + JSON.stringify((saveJson)) + '}');
+            // let saveJson = searchArray.map((d) => {
+            //     let {
+            //         Name,
+            //         imageFile,
+            //         dynFile,
+            //         Categories,
+            //         Group,
+            //         inDepth
+            // } = d;
+            //     imageFile = (imageFile && imageFile.length > 0 && imageFile.map((im) => {
+            //         return im.original || im;
+            //     })) || [];
+            //     dynFile = (dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
+            //         return dyn.original || dyn;
+            //     })) || [];
+            //     if (dynFile.length === 0) { return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth } }
+            //     else {
+            //         return null
+            //     }
+            // }).filter(el => el);
+            // console.log(saveJson);
+            // document.write('{"data":' + JSON.stringify((saveJson)) + '}');
 
             this.setState({ mainObjects, searchArray })
         }).catch(console.error.bind(console))
