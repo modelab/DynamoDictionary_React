@@ -5,7 +5,7 @@ const root = '/Users/ekatzenstein/Documents/adsk/DynamoDictionary_React';
 fs.readFile(root + '/public/data/Dynamo_Nodes_Revit.json', 'utf8', function (err, data) {
     let i = 0
     const arr = [];
-    JSON.parse(data).map(node => {
+    const newarr = JSON.parse(data).map(node => {
         const f = node.dynFile[0] || '';
         if (!f) { node.dynFile.push(node.Name); node.imageFile.push(node.Name) }
         if (
@@ -15,13 +15,14 @@ fs.readFile(root + '/public/data/Dynamo_Nodes_Revit.json', 'utf8', function (err
         ) {
         }
         else {
-            i++;
-            arr.push(node)
+            node.dynFile = [];
+            node.imageFile = [];
         }
+        return node;
     })
     // console.log(arr);
 
-    fs.writeFile(root + '/public/ExampleFileBacklog.json', JSON.stringify(arr), 'utf8', function (err, data) {
+    fs.writeFile(root + '/public/data/Dynamo_Nodes_Revit.json', JSON.stringify(newarr), 'utf8', function (err, data) {
         // console.log(data);
 
 
