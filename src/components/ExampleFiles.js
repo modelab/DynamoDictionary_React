@@ -6,6 +6,11 @@ import ExampleFileLightbox from './ExampleFile_Lightbox';
 import ExampleFile from './ExampleFile';
 import ExampleAdd from './ExampleAdd';
 
+const fileNameChange = (file, node) => {
+  const addOn = node.dynFile.length>0?'-Ex' + +node.dynFile.length:'';
+  return node.Name + addOn + '.' + file.name.split('.')[1];
+}
+
 class ExampleFiles extends React.Component {
   constructor() {
     super();
@@ -60,14 +65,14 @@ class ExampleFiles extends React.Component {
       reader.readAsDataURL(file); //reads the data as a URL
     }
     reader.onloadend = function () {
-
+      const name = fileNameChange(file, this.props.node);
       let im = this.state.imgPaths[this.state.index];
 
       let imProp = this.props.node.imageFile[this.state.index];
 
-      im = { 'name': file.name, 'data': reader.result, 'og': im.og || im, 'type': 'image', 'original': imProp.original || imProp };
+      im = { name, 'data': reader.result, 'og': im.og || im, 'type': 'image', 'original': imProp.original || imProp };
       const node = this.props.node;
-      im.og = `./${path.join('data', 'EXAMPLES', node.Categories.join('/'), node.Group, 'img', `${im.original}`)}`
+      im.og = `./${path.join('data', 'EXAMPLES', node.Categories.join('/'), node.Group, 'img', `${name}`)}`
       this.props.node.imageFile[this.state.index] = im;
       this.props.node.overrides = true;
       this.setState({ modeImg: true })
@@ -84,9 +89,10 @@ class ExampleFiles extends React.Component {
       reader.readAsText(file); //reads the data as a URL
     }
     reader.onloadend = function () {
+      const name = fileNameChange(file, this.props.node);
       let dyn = this.state.dynPaths[this.state.index];
       let dynProp = this.props.node.dynFile[this.state.index];
-      dyn = { 'name': file.name, 'data': reader.result, 'og': dyn.og || dyn, 'type': 'xml', 'original': dynProp.original || dynProp };
+      dyn = { name, 'data': reader.result, 'og': dyn.og || dyn, 'type': 'xml', 'original': dynProp.original || dynProp };
 
       this.props.node.dynFile[this.state.index] = dyn;
       this.props.node.overrides = true;
@@ -97,10 +103,15 @@ class ExampleFiles extends React.Component {
   }
 
   _exAdd(node) {
+
     const first_file_dyn = typeof (node.dynFile[0]) === 'object' ? node.dynFile[0].original : node.dynFile[0] || node.Name;
-    node.dynFile.push({ original: first_file_dyn + ' - Ex ' + (node.dynFile.length + 1) });
+
+    node.dynFile.push({ original: first_file_dyn + '-Ex' + (node.dynFile.length + 1) });
+
+
     const first_file_im = typeof (node.imageFile[0]) === 'object' ? node.imageFile[0].original : node.imageFile[0] || node.Name;
-    node.imageFile.push({ data: './images/examples/example.jpg', original: (first_file_im + ' - Ex ' + (node.imageFile.length + 1)) });
+
+    node.imageFile.push({ data: './images/examples/example.jpg', original: (first_file_im + '-Ex' + (node.imageFile.length + 1)) });
     // node.dynFile.push('');
     // node.imageFile.push({data:'./images/examples/example.jpg'});
     node.overrides = true;
