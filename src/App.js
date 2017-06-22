@@ -154,9 +154,11 @@ class App extends Component {
             imageFile = imageFile && imageFile.length > 0 && imageFile.map((im) => {
                 return im.name || im;
             })
+            if (!imageFile) { imageFile = []; }
             dynFile = dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
                 return dyn.name || dyn;
             })
+            if (!dynFile) { dynFile = []; }
             return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth }
         })
         // console.log(saveJson)
@@ -273,7 +275,7 @@ class App extends Component {
             const combinedArray = [
                 ...res[1],
                 // ...res[3]
-                ];
+            ];
             combinedArray.forEach((d) => {
                 nodeArray.forEach((e) => {
 
