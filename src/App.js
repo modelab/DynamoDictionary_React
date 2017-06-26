@@ -152,11 +152,13 @@ class App extends Component {
                 inDepth
             } = d;
             imageFile = imageFile && imageFile.length > 0 && imageFile.map((im) => {
-                return im.original || im;
+                return im.name || im;
             })
+            if (!imageFile) { imageFile = []; }
             dynFile = dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
-                return dyn.original || dyn;
+                return dyn.name || dyn;
             })
+            if (!dynFile) { dynFile = []; }
             return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth }
         })
         // console.log(saveJson)
@@ -270,7 +272,10 @@ class App extends Component {
                     d.Name = d.TempName
                 }
             })
-            const combinedArray = [...res[1], ...res[3]];
+            const combinedArray = [
+                ...res[1],
+                // ...res[3]
+            ];
             combinedArray.forEach((d) => {
                 nodeArray.forEach((e) => {
 
