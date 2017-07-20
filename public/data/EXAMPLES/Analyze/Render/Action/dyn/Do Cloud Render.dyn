@@ -1,4 +1,4 @@
-<Workspace Version="1.3.1.1736" X="547.116693176874" Y="-227.555709015451" zoom="0.532327330169335" ScaleFactor="100" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.3.1.1736" X="-1247.4915244521" Y="-457.970489566322" zoom="1.0018488014444" ScaleFactor="100" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap>
     <ClassMap partialName="List.map" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
     <ClassMap partialName="Math" resolvedName="DSCore.Math" assemblyName="DSCoreNodes.dll" />
@@ -9,7 +9,7 @@
     <ClassMap partialName="Point.Z" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
   </NamespaceResolutionMap>
   <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="33cdb178-2cde-47b7-8ecc-24ced146e8a4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CloudDaylightingJob.ByViewNameDivisionsGridBoundary" x="1387.11898302985" y="722.214971807917" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="SimpleRaaS.dll" function="Analyze.Daylighting.CloudDaylightingJob.ByViewNameDivisionsGridBoundary@string,int,int,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Analyze.Render.RenderingEnvironment">
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="33cdb178-2cde-47b7-8ecc-24ced146e8a4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CloudDaylightingJob.ByViewNameDivisionsGridBoundary" x="1384.72341196509" y="645.556697735747" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="SimpleRaaS.dll" function="Analyze.Daylighting.CloudDaylightingJob.ByViewNameDivisionsGridBoundary@string,int,int,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Analyze.Render.RenderingEnvironment">
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
       <PortInfo index="2" default="False" />
@@ -104,8 +104,24 @@
       <PortInfo index="2" default="False" />
       <PortInfo index="3" default="False" />
     </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Analyze.Render.CloudRender guid="b1d30fd8-55ab-4de3-8768-ce93e466a459" type="Analyze.Render.CloudRender" nickname="Do Cloud Render" x="1832.70140235266" y="656.429595390258" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="True" />
+    </Analyze.Render.CloudRender>
+    <Analyze.Render.ExportDocumentRenderData guid="7daad33c-2025-48e1-a146-9c8062a489de" type="Analyze.Render.ExportDocumentRenderData" nickname="Export Cloud Render Data" x="1364.97829744772" y="493.756530939288" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </Analyze.Render.ExportDocumentRenderData>
+    <Analyze.Render.UploadRenderData guid="a2acd4a4-538e-411e-9c3b-eef828cb2c23" type="Analyze.Render.UploadRenderData" nickname="Upload Cloud Render Data" x="1573.36611246805" y="493.756530939288" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </Analyze.Render.UploadRenderData>
+    <CoreNodeModels.Input.BoolSelector guid="4bd19b6b-c9a0-4643-a5ef-bf337d53a160" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="1617.46574338672" y="885.076083439648" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>False</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
   </Elements>
   <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="33cdb178-2cde-47b7-8ecc-24ced146e8a4" start_index="0" end="b1d30fd8-55ab-4de3-8768-ce93e466a459" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="65023ad9-e148-44cf-a570-f1f58b01f09b" start_index="0" end="33cdb178-2cde-47b7-8ecc-24ced146e8a4" end_index="6" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="769bb23f-796a-4b14-98b2-0f2a034872ee" start_index="0" end="33cdb178-2cde-47b7-8ecc-24ced146e8a4" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="769bb23f-796a-4b14-98b2-0f2a034872ee" start_index="0" end="33cdb178-2cde-47b7-8ecc-24ced146e8a4" end_index="2" portType="0" />
@@ -114,6 +130,7 @@
     <Dynamo.Graph.Connectors.ConnectorModel start="93efccaa-9db5-47f0-9ca3-47bd31cdcffa" start_index="0" end="65023ad9-e148-44cf-a570-f1f58b01f09b" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="93efccaa-9db5-47f0-9ca3-47bd31cdcffa" start_index="1" end="65023ad9-e148-44cf-a570-f1f58b01f09b" end_index="2" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="7a2444fd-9630-4c41-8646-af542da87b35" start_index="0" end="33cdb178-2cde-47b7-8ecc-24ced146e8a4" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7a2444fd-9630-4c41-8646-af542da87b35" start_index="0" end="7daad33c-2025-48e1-a146-9c8062a489de" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="d47435cf-18de-4565-8b7c-9c09aafc6e0d" start_index="0" end="12536687-25ce-43ed-ad71-8862f4786636" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="d47435cf-18de-4565-8b7c-9c09aafc6e0d" start_index="1" end="12536687-25ce-43ed-ad71-8862f4786636" end_index="2" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="d47435cf-18de-4565-8b7c-9c09aafc6e0d" start_index="2" end="12536687-25ce-43ed-ad71-8862f4786636" end_index="3" portType="0" />
@@ -149,11 +166,14 @@
     <Dynamo.Graph.Connectors.ConnectorModel start="fd3c7fd0-8936-4614-a5d6-707df0aa0c73" start_index="0" end="f11eed41-7cf1-4a1b-adf4-4144592ec88e" end_index="3" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="076989e1-95d6-4dab-bf9c-64d7760d6259" start_index="0" end="33cdb178-2cde-47b7-8ecc-24ced146e8a4" end_index="4" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="f11eed41-7cf1-4a1b-adf4-4144592ec88e" start_index="0" end="33cdb178-2cde-47b7-8ecc-24ced146e8a4" end_index="5" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7daad33c-2025-48e1-a146-9c8062a489de" start_index="0" end="a2acd4a4-538e-411e-9c3b-eef828cb2c23" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a2acd4a4-538e-411e-9c3b-eef828cb2c23" start_index="0" end="b1d30fd8-55ab-4de3-8768-ce93e466a459" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4bd19b6b-c9a0-4643-a5ef-bf337d53a160" start_index="0" end="b1d30fd8-55ab-4de3-8768-ce93e466a459" end_index="2" portType="0" />
   </Connectors>
   <Notes />
   <Annotations />
   <Presets />
   <Cameras>
-    <Camera Name="Background Preview" eyeX="-32795.9662368969" eyeY="23296.7606400797" eyeZ="10569.9104210593" lookX="11646.5044067484" lookY="-18371.3806786751" lookZ="-25102.4407684057" upX="0.152196032565119" upY="0.932323801215499" upZ="-0.328037646251908" />
+    <Camera Name="Background Preview" eyeX="-32795.96484375" eyeY="23296.759765625" eyeZ="10569.91015625" lookX="11646.5048828125" lookY="-18371.380859375" lookZ="-25102.44140625" upX="0.152196034789085" upY="0.932323813438416" upZ="-0.328037649393082" />
   </Cameras>
 </Workspace>
