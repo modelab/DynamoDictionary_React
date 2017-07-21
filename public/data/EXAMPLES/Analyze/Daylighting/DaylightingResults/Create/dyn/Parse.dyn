@@ -1,11 +1,17 @@
-<Workspace Version="1.3.0.875" X="404.380226020866" Y="160.970986088711" zoom="0.894168083312076" ScaleFactor="100" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.3.1.1736" X="456.868138985498" Y="0.177405637737422" zoom="1.38571068305882" ScaleFactor="100" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap />
   <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9e48a56f-7a07-44b1-bb39-5e195104a917" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="DaylightingResults.Parse" x="187.561346623236" y="297.394432555333" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="SimpleRaaS.dll" function="Analyze.Daylighting.DaylightingResults.Parse@string">
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9e48a56f-7a07-44b1-bb39-5e195104a917" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="DaylightingResults.Parse" x="99.1563977947862" y="140.274537027411" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="SimpleRaaS.dll" function="Analyze.Daylighting.DaylightingResults.Parse@string">
       <PortInfo index="0" default="False" />
     </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Filename guid="2f591661-e9e6-4cb1-b900-d34d7f0fb332" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-154.311285088342" y="140.274537027411" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>..\..\..\..\..\..\..\..\..\..\..\Desktop\September 21st 9AM.sdf</System.String>
+      <HintPath>C:\Users\Ronnie Parsons\Desktop\September 21st 9AM.sdf</HintPath>
+    </CoreNodeModels.Input.Filename>
   </Elements>
-  <Connectors />
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="2f591661-e9e6-4cb1-b900-d34d7f0fb332" start_index="0" end="9e48a56f-7a07-44b1-bb39-5e195104a917" end_index="0" portType="0" />
+  </Connectors>
   <Notes />
   <Annotations />
   <Presets />
