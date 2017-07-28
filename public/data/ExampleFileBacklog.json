@@ -8,7 +8,7 @@
             "SiteLocation"
         ],
         "folderPath": "Analyze/Action",
-        "inDepth": "Add in-depth information about SiteLocation..."
+        "inDepth": "Location is returned as a name, latitude, and longitude."
     },
     {
         "Name": "ByViewNameDivisionsGridBoundary",
@@ -19,7 +19,7 @@
             "ByViewNameDivisionsGridBoundary"
         ],
         "folderPath": "Analyze/Daylighting/CloudDaylightingJob/Create",
-        "inDepth": "Add in-depth information about ByViewNameDivisionsGridBoundary..."
+        "inDepth": "To run a cloud daylighting job, the job needs to be uploaded and run using the Upload Cloud Render Data and Do Cloud Render nodes. The respective view needs to be exported as well using the Export Cloud Render Data node."
     },
     {
         "Name": "Parse",
@@ -30,7 +30,7 @@
             "Parse"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Create",
-        "inDepth": "Add in-depth information about Parse..."
+        "inDepth": "An SDF file can be queried for data such as color, resolution, illuminance values, etc using the DaylightingResults Action and Query nodes."
     },
     {
         "Name": "Colors",
@@ -41,7 +41,7 @@
             "Colors"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Add in-depth information about Colors..."
+        "inDepth": "Color data is returned as a set of RGB values."
     },
     {
         "Name": "IlluminanceValues",
@@ -52,7 +52,7 @@
             "IlluminanceValues"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Add in-depth information about IlluminanceValues..."
+        "inDepth": "Illuminance data is returned as RGb lux values."
     },
     {
         "Name": "Normals",
@@ -63,7 +63,7 @@
             "Normals"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Add in-depth information about Normals..."
+        "inDepth": "Normal data is returned as vectors with x, y, z values and length."
     },
     {
         "Name": "Points",
@@ -74,7 +74,7 @@
             "Points"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Add in-depth information about Points..."
+        "inDepth": "Point data is returned as x, y, z values."
     },
     {
         "Name": "ToImage",
@@ -85,7 +85,7 @@
             "ToImage"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Add in-depth information about ToImage..."
+        "inDepth": "The image can be previewed in Dynamo by using the Watch Image node."
     },
     {
         "Name": "Resolution",
@@ -96,7 +96,7 @@
             "Resolution"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
-        "inDepth": "Add in-depth information about Resolution..."
+        "inDepth": "Resolution values are returned for both x and y."
     },
     {
         "Name": "XResolution",
@@ -107,7 +107,7 @@
             "XResolution"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
-        "inDepth": "Add in-depth information about XResolution..."
+        "inDepth": "Resolution is returned as an integer."
     },
     {
         "Name": "YResolution",
@@ -118,7 +118,7 @@
             "YResolution"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
-        "inDepth": "Add in-depth information about YResolution..."
+        "inDepth": "Resolution is returned as an integer."
     },
     {
         "Name": "ByRGB",
@@ -129,7 +129,7 @@
             "ByRGB"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Create",
-        "inDepth": "Add in-depth information about ByRGB..."
+        "inDepth": "The illuminance value is created from r, g, b values."
     },
     {
         "Name": "ToFootCandles",
@@ -140,7 +140,7 @@
             "ToFootCandles"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
-        "inDepth": "Add in-depth information about ToFootCandles..."
+        "inDepth": "The foot candles value is returned as a double."
     },
     {
         "Name": "ToSRGB",
@@ -151,7 +151,7 @@
             "ToSRGB"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
-        "inDepth": "Add in-depth information about ToSRGB..."
+        "inDepth": "sRGB is a single value measured in lux."
     },
     {
         "Name": "B",
@@ -162,7 +162,7 @@
             "B"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
-        "inDepth": "Add in-depth information about B..."
+        "inDepth": "B returns the blue value of a illuminance data point."
     },
     {
         "Name": "G",
@@ -173,7 +173,7 @@
             "G"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
-        "inDepth": "Add in-depth information about G..."
+        "inDepth": "G returns the green value of a illuminance data point."
     },
     {
         "Name": "R",
@@ -184,7 +184,7 @@
             "R"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
-        "inDepth": "Add in-depth information about R..."
+        "inDepth": "R returns the red value of a illuminance data point."
     },
     {
         "Name": "Do Cloud Render",
@@ -195,7 +195,7 @@
             "Do Cloud Render"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Add in-depth information about Do Cloud Render..."
+        "inDepth": "Do Cloud Render will bring up a dialog box to confirm the render job and the required cloud credits. If Dynamo is running automatically, the node will run immediately after all inputs are connected. The renderings can be found online in your A360 account."
     },
     {
         "Name": "Export Cloud Render Data",
@@ -206,7 +206,7 @@
             "Export Cloud Render Data"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Add in-depth information about Export Cloud Render Data..."
+        "inDepth": "Export Cloud Render Data takes 3D view names as strings. This node is used in conjunction with the Upload Cloud Render Data and Do Cloud Render nodes. This node exports a temporary .spd file to the OutputFileName path."
     },
     {
         "Name": "Select RenderQuality",
@@ -217,7 +217,7 @@
             "Select RenderQuality"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Add in-depth information about Select RenderQuality..."
+        "inDepth": "Available qualities levels are Best, High, Standard, and Draft. Dynamo must be in Manual mode prior to adding this node to the canvas."
     },
     {
         "Name": "Select RenderType",
@@ -228,7 +228,7 @@
             "Select RenderType"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Add in-depth information about Select RenderType..."
+        "inDepth": "Available render types are Image, Panorama, SolarStudyPreview, SolarStudy, and Illuminance. Dynamo must be in Manual mode prior to adding this node to the canvas."
     },
     {
         "Name": "Select SkyModelType",
@@ -239,7 +239,8 @@
             "Select SkyModelType"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Add in-depth information about Select SkyModelType..."
+        "inDepth": "Available sky model types are Perez, Igawa, Render, DaylightFactor, CIEClear
+        CIEIntermediate, CIEOvercast, and CIEUniform. Dynamo must be in Manual mode prior to adding this node to the canvas."
     },
     {
         "Name": "Upload Cloud Render Data",
@@ -250,7 +251,7 @@
             "Upload Cloud Render Data"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Add in-depth information about Upload Cloud Render Data..."
+        "inDepth": "Uploaded render view data is sent to Autodesk's A360 rendering service. This node is used in conjunction with the Export Cloud Render Data and Do Cloud Render nodes."
     },
     {
         "Name": "ByViewNameWidthHeight",
