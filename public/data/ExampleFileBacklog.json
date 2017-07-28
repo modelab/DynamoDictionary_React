@@ -239,8 +239,7 @@
             "Select SkyModelType"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Available sky model types are Perez, Igawa, Render, DaylightFactor, CIEClear
-        CIEIntermediate, CIEOvercast, and CIEUniform. Dynamo must be in Manual mode prior to adding this node to the canvas."
+        "inDepth": "Available sky model types are Perez, Igawa, Render, DaylightFactor, CIEClear, CIEIntermediate, CIEOvercast, and CIEUniform. Dynamo must be in Manual mode prior to adding this node to the canvas."
     },
     {
         "Name": "Upload Cloud Render Data",

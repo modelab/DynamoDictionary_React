@@ -274,7 +274,7 @@ class App extends Component {
             })
             const combinedArray = [
                 ...res[1],
-                // ...res[3]
+                ...res[3]
             ];
             combinedArray.forEach((d) => {
                 nodeArray.forEach((e) => {

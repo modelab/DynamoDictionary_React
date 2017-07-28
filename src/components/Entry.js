@@ -5,7 +5,7 @@ import p from './utils/promise';
 const pStatic = p.promisify(d3.xml, "data/Dynamo_Library.xml")
 const pEdit = p.promisify(d3.json, "data/Dynamo_Nodes_Documentation.json")
 const pRevit = p.promisify(d3.xml, "data/Revit_Library.xml")
-const pRevitEdit = p.promisify(d3.json, "data/Dynamo_Nodes_Revit.json")
+const pBacklog = p.promisify(d3.json, "data/ExampleFileBacklog.json");
 
 //resolve promises
-export default Promise.all([pStatic, pEdit, pRevit, pRevitEdit])
+export default Promise.all([pStatic, pEdit, pRevit, pBacklog])
