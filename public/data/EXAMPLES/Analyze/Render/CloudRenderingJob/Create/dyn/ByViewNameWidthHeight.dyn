@@ -1,7 +1,7 @@
-<Workspace Version="1.3.1.1736" X="-280.71366440751" Y="-138.259355186284" zoom="1.51051845643135" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.3.1.1736" X="-338.994147978027" Y="-220.868835302859" zoom="1.83541648937758" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap />
   <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="713d4222-3d09-47b0-bcbd-f4bea905cff7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CloudRenderingJob.ByViewNameWidthHeight" x="509.319459200409" y="243.150280082579" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="SimpleRaaS.dll" function="Analyze.Render.CloudRenderingJob.ByViewNameWidthHeight@string,int,int,Analyze.Render.RenderType,Analyze.Render.RenderQuality">
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="713d4222-3d09-47b0-bcbd-f4bea905cff7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CloudRenderingJob.ByViewNameWidthHeight" x="585.328046129913" y="243.150280082579" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="SimpleRaaS.dll" function="Analyze.Render.CloudRenderingJob.ByViewNameWidthHeight@string,int,int,Analyze.Render.RenderType,Analyze.Render.RenderQuality">
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="False" />
       <PortInfo index="2" default="False" />
@@ -12,33 +12,13 @@
     <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="4e98bc4e-e563-4085-a804-16616df0c11f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="366.8" y="252.666666666667" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="800;&#xA;600;" ShouldFocus="false" />
     <Analyze.Render.RenderTypeDropDown guid="f09e215a-a0dd-4dd1-a9a0-317222ac943a" type="Analyze.Render.RenderTypeDropDown" nickname="Select RenderType" x="261.2" y="351.133333333333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="0:Image" />
     <Analyze.Render.RenderQualityDropDown guid="ba830074-22da-4832-8b99-d95a5daf231f" type="Analyze.Render.RenderQualityDropDown" nickname="Select RenderQuality" x="246.8" y="440" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="2:Standard" />
-    <Analyze.Render.ExportDocumentRenderData guid="cffbe356-3b2e-402d-a385-87fd49e69f34" type="Analyze.Render.ExportDocumentRenderData" nickname="Export Cloud Render Data" x="510.2802539778" y="144.542048748306" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </Analyze.Render.ExportDocumentRenderData>
-    <Analyze.Render.CloudRender guid="f0324ed7-ff22-400a-b0b1-34df543f7dac" type="Analyze.Render.CloudRender" nickname="Do Cloud Render" x="980.582352555492" y="216.040678599645" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="True" />
-    </Analyze.Render.CloudRender>
-    <Analyze.Render.UploadRenderData guid="fd27fff5-de3f-43eb-9f0e-8354f1c5637d" type="Analyze.Render.UploadRenderData" nickname="Upload Cloud Render Data" x="722.128046129913" y="144.542048748306" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </Analyze.Render.UploadRenderData>
-    <CoreNodeModels.Input.BoolSelector guid="427b0aa9-4688-4c4f-ba2b-edfc81f40fd8" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="754.120983796984" y="478.682899972329" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>False</System.Boolean>
-    </CoreNodeModels.Input.BoolSelector>
   </Elements>
   <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="713d4222-3d09-47b0-bcbd-f4bea905cff7" start_index="0" end="f0324ed7-ff22-400a-b0b1-34df543f7dac" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="f5520381-2958-4644-934b-b4bfafae3202" start_index="0" end="713d4222-3d09-47b0-bcbd-f4bea905cff7" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="f5520381-2958-4644-934b-b4bfafae3202" start_index="0" end="cffbe356-3b2e-402d-a385-87fd49e69f34" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="4e98bc4e-e563-4085-a804-16616df0c11f" start_index="0" end="713d4222-3d09-47b0-bcbd-f4bea905cff7" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="4e98bc4e-e563-4085-a804-16616df0c11f" start_index="1" end="713d4222-3d09-47b0-bcbd-f4bea905cff7" end_index="2" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="f09e215a-a0dd-4dd1-a9a0-317222ac943a" start_index="0" end="713d4222-3d09-47b0-bcbd-f4bea905cff7" end_index="3" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="ba830074-22da-4832-8b99-d95a5daf231f" start_index="0" end="713d4222-3d09-47b0-bcbd-f4bea905cff7" end_index="4" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="cffbe356-3b2e-402d-a385-87fd49e69f34" start_index="0" end="fd27fff5-de3f-43eb-9f0e-8354f1c5637d" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="fd27fff5-de3f-43eb-9f0e-8354f1c5637d" start_index="0" end="f0324ed7-ff22-400a-b0b1-34df543f7dac" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="427b0aa9-4688-4c4f-ba2b-edfc81f40fd8" start_index="0" end="f0324ed7-ff22-400a-b0b1-34df543f7dac" end_index="2" portType="0" />
   </Connectors>
   <Notes />
   <Annotations />

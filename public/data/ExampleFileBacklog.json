@@ -261,7 +261,7 @@
             "ByViewNameWidthHeight"
         ],
         "folderPath": "Analyze/Render/CloudRenderingJob/Create",
-        "inDepth": "Add in-depth information about ByViewNameWidthHeight..."
+        "inDepth": "Use this node in conjunction with the Export/Upload Cloud Render Data and Do Cloud Render nodes to create a rendering."
     },
     {
         "Name": "ByDateInformation",
@@ -272,7 +272,7 @@
             "ByDateInformation"
         ],
         "folderPath": "Analyze/Render/DateTime/Create",
-        "inDepth": "Add in-depth information about ByDateInformation..."
+        "inDepth": "Multiple DateTimes can be created by providing an input with a list of values. This is especially useful for creating multiple cloud renderings for several times of day."
     },
     {
         "Name": "BySkyModelLocationDate",
@@ -283,7 +283,7 @@
             "BySkyModelLocationDate"
         ],
         "folderPath": "Analyze/Render/RenderingEnvironment/Create",
-        "inDepth": "Add in-depth information about BySkyModelLocationDate..."
+        "inDepth": "Rendering environments are used by the Cloud Daylighting Job node."
     },
     {
         "Name": "ByTypeConstants",
@@ -294,7 +294,7 @@
             "ByTypeConstants"
         ],
         "folderPath": "Analyze/Render/SkyModel/Create",
-        "inDepth": "Add in-depth information about ByTypeConstants..."
+        "inDepth": "Sky models are used to create rendering environments."
     },
     {
         "Name": "Contains",
@@ -305,7 +305,7 @@
             "Contains"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Add in-depth information about Contains..."
+        "inDepth": "Contains can take integers, strings, doubles, etc as inputs. This node can be useful for creating boolean masks."
     },
     {
         "Name": "NewtonRootFind1DNoDeriv",
@@ -338,7 +338,7 @@
             "Rank"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Counts how many levels are in a list"
+        "inDepth": "Counts how many levels are in a list."
     },
     {
         "Name": "Format",
@@ -349,7 +349,7 @@
             "Format"
         ],
         "folderPath": "Core/DateTime/Action",
-        "inDepth": "Add in-depth information about Format..."
+        "inDepth": "Date time strings are written in a standard format. Refer to this web page for custom date and time format strings: https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings. Refer to this web page for standard formats: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings."
     },
     {
         "Name": "MinValue (dateTime, format)",
@@ -382,7 +382,7 @@
             "AllIndicesOf"
         ],
         "folderPath": "Core/String/Action",
-        "inDepth": "Add in-depth information about AllIndicesOf..."
+        "inDepth": "AllIndicesOf returns the index of where a string begins in another string."
     },
     {
         "Name": "String from Array",
@@ -393,7 +393,7 @@
             "String from Array"
         ],
         "folderPath": "Core/String/Action",
-        "inDepth": "Add in-depth information about String from Array..."
+        "inDepth": "While a list of integers contains only integers, the string will contain commas that separate the numbers as well as curly brackets that contain the array."
     },
     {
         "Name": "ByGeometry",
@@ -404,7 +404,7 @@
             "ByGeometry"
         ],
         "folderPath": "Geometry/BoundingBox/Create",
-        "inDepth": "Add in-depth information about ByGeometry..."
+        "inDepth": "The bounding box geometry is returned as a cuboid."
     },
     {
         "Name": "ByMatrix",
@@ -437,7 +437,7 @@
             "Scale (coordinateSystem, plane, xamount, yamount, zamount)"
         ],
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)..."
+        "inDepth": "Skewed coordinate systems can be created by scaling non-uniformly from a rotated plane."
     },
     {
         "Name": "Join",
@@ -448,7 +448,7 @@
             "Join"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Add in-depth information about Join..."
+        "inDepth": "Some nodes that take curves as inputs may not accept polycurves."
     },
     {
         "Name": "ByPointsTangentsKnotsDerivatives",
@@ -470,7 +470,7 @@
             "Join"
         ],
         "folderPath": "Geometry/Surface/Action",
-        "inDepth": "Add in-depth information about Join..."
+        "inDepth": "Some nodes that take surfaces as inputs may not accept polysurfaces."
     },
     {
         "Name": "Rotate (vector, plane, degrees)",
@@ -481,7 +481,7 @@
             "Rotate (vector, plane, degrees)"
         ],
         "folderPath": "Geometry/Vector/Action",
-        "inDepth": "Add in-depth information about Rotate..."
+        "inDepth": "Planes can easily be derived from geometry for rotating a vector (i.e. at many points on a surface or curve)."
     },
     {
         "Name": "ByFace",
@@ -492,7 +492,7 @@
             "ByFace"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Create",
-        "inDepth": "Add in-depth information about ByFace..."
+        "inDepth": "A curtain system is a component that comprises panels, curtain grids, and mullions. It usually does not have a rectangular shape. In this example, a curtain system is added to the face of a cylinder mass."
     },
     {
         "Name": "AddCurtainGrid",
@@ -503,7 +503,7 @@
             "AddCurtainGrid"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Action",
-        "inDepth": "Add in-depth information about AddCurtainGrid..."
+        "inDepth": "Curtain grids and mullions can be added to or removed from curtain systems after they are created. In this example, the faces of a Revit mass are used to place a curtain system and add a grid."
     },
     {
         "Name": "RemoveCurtainGrid",
@@ -514,7 +514,7 @@
             "RemoveCurtainGrid"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Action",
-        "inDepth": "Add in-depth information about RemoveCurtainGrid..."
+        "inDepth": "Curtain grids and mullions can be added to or removed from curtain systems after they are created. In this example, a curtain grid is removed from an existing curtain system on a Revit mass."
     },
     {
         "Name": "CurtainSystemType",
@@ -525,7 +525,7 @@
             "CurtainSystemType"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Query",
-        "inDepth": "Add in-depth information about CurtainSystemType..."
+        "inDepth": "Add in-depth information about Name..."
     },
     {
         "Name": "ByName",
@@ -536,7 +536,7 @@
             "ByName"
         ],
         "folderPath": "Revit/Elements/CurtainSystemType/Create",
-        "inDepth": "Add in-depth information about ByName..."
+        "inDepth": "CurtainSystemType brings an existing Revit curtain system type into Dynamo for use with the CurtainSystem.ByFace node as well as Add and RemoveCurtainGrid."
     },
     {
         "Name": "Name",
@@ -547,7 +547,7 @@
             "Name"
         ],
         "folderPath": "Revit/Elements/CurtainSystemType/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "Name returns the name of a curtain system type as a string."
     },
     {
         "Name": "FromExisting",
@@ -558,7 +558,7 @@
             "FromExisting"
         ],
         "folderPath": "Revit/Elements/DimensionType/Create",
-        "inDepth": "Add in-depth information about FromExisting..."
+        "inDepth": "Dimension types created from Dynamo will persist in the Revit document after Dynamo is closed."
     },
     {
         "Name": "StyleType",
@@ -569,7 +569,7 @@
             "StyleType"
         ],
         "folderPath": "Revit/Elements/DimensionType/Query",
-        "inDepth": "Add in-depth information about StyleType..."
+        "inDepth": "StyleType returns a dimension's style. Several Revit dimension styles are Aligned, Linear, Angular, Radial, etc."
     },
     {
         "Name": "Select Direct Shape Room Bounding Option (geometry, category, material, name)",
@@ -602,7 +602,7 @@
             "MoveByVector"
         ],
         "folderPath": "Revit/Elements/Element/Action",
-        "inDepth": "Add in-depth information about MoveByVector..."
+        "inDepth": "The distance an element is moved is determined by the input vector's magnitude."
     },
     {
         "Name": "ToString",
@@ -624,7 +624,7 @@
             "Description"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Add in-depth information about Description..."
+        "inDepth": "Failure message descriptions contain information about the failure as well as suggestions or tips on how to address the issue."
     },
     {
         "Name": "FailingElements",
@@ -635,7 +635,7 @@
             "FailingElements"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Add in-depth information about FailingElements..."
+        "inDepth": "Returned elements come with their element ids which can be clicked in Dynamo to see the failing element in a Revit view."
     },
     {
         "Name": "Severity",
@@ -646,7 +646,7 @@
             "Severity"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Add in-depth information about Severity..."
+        "inDepth": "Failure severity levels are Warning, Error, and DocumentCorruption. The severity determines what actions are allowed in the Revit document."
     },
     {
         "Name": "ByGeometry",
@@ -657,7 +657,7 @@
             "ByGeometry"
         ],
         "folderPath": "Revit/Elements/FamilyType/Create",
-        "inDepth": "Add in-depth information about ByGeometry..."
+        "inDepth": "Families created with ByGeometry are actively linked to Revit as long as their name and templatePath inputs do not change."
     },
     {
         "Name": "VoidByGeometry",
