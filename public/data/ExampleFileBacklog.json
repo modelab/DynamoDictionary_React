@@ -668,7 +668,7 @@
             "VoidByGeometry"
         ],
         "folderPath": "Revit/Elements/FamilyType/Create",
-        "inDepth": "Add in-depth information about VoidByGeometry..."
+        "inDepth": "Families created with VoidByGeometry are actively linked to Revit as long as their name and templatePath inputs do not change."
     },
     {
         "Name": "Fill Patterns (name, fillPatternTarget)",
@@ -701,7 +701,7 @@
             "AddPoint"
         ],
         "folderPath": "Revit/Elements/Floor/Action",
-        "inDepth": "Add in-depth information about AddPoint..."
+        "inDepth": "Points added to Revit floors are actively linked to Dynamo. Changing the point's position in Dynamo will update the point in Revit."
     },
     {
         "Name": "MovePoint",
@@ -712,7 +712,7 @@
             "MovePoint"
         ],
         "folderPath": "Revit/Elements/Floor/Action",
-        "inDepth": "Add in-depth information about MovePoint..."
+        "inDepth": "Points added to Revit floors are actively linked to Dynamo. A point's position can be continuously updated."
     },
     {
         "Name": "Points",
@@ -723,7 +723,7 @@
             "Points"
         ],
         "folderPath": "Revit/Elements/Floor/Query",
-        "inDepth": "Add in-depth information about Points..."
+        "inDepth": "A Slab Shape in Revit will have points at its corners by default."
     },
     {
         "Name": "ByName",
@@ -734,7 +734,7 @@
             "ByName"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Create",
-        "inDepth": "Add in-depth information about ByName..."
+        "inDepth": "Global parameters are not assigned to categories like project parameters. They can be simple values (such as integers) used to define element spacing, etc."
     },
     {
         "Name": "FindByName",
@@ -745,7 +745,7 @@
             "FindByName"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Create",
-        "inDepth": "Add in-depth information about FindByName..."
+        "inDepth": "FindByName will return a GlobalParameter element that can be queried for its value, type, parameterGroup, etc."
     },
     {
         "Name": "SetValue",
@@ -756,7 +756,7 @@
             "SetValue"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Action",
-        "inDepth": "Add in-depth information about SetValue..."
+        "inDepth": "A GlobalParameter's value in Revit is actively linked to Dynamo."
     },
     {
         "Name": "SetValueToElementId",
@@ -778,7 +778,7 @@
             "Name"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "A global parameter's name as a string is useful for exporting to Excel sheets, querying for containing certain characters or words, creating boolean masks, etc."
     },
     {
         "Name": "ParameterGroup",
@@ -789,7 +789,7 @@
             "ParameterGroup"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Query",
-        "inDepth": "Add in-depth information about ParameterGroup..."
+        "inDepth": "Global parameters from Dynamo are created by default in the Other group."
     },
     {
         "Name": "ParameterType",
@@ -800,7 +800,7 @@
             "ParameterType"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Query",
-        "inDepth": "Add in-depth information about ParameterType..."
+        "inDepth": "All available ParameterTypes can be viewed in the Revit Global Parameters dialog box. Some available types are Text, Integer, Length, Area, and Volume."
     },
     {
         "Name": "Value",
@@ -811,7 +811,7 @@
             "Value"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Query",
-        "inDepth": "Add in-depth information about Value..."
+        "inDepth": "Value's output var[]..[] means that it can output different data types that depend on the input parameter's type. Data types could be integer, string, or double for example."
     },
     {
         "Name": "Visible",
@@ -844,7 +844,7 @@
             "ById"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Create",
-        "inDepth": "Add in-depth information about ById..."
+        "inDepth": "Performance advisor rules have associated guids that can be used to select a specific rule. The Performance Advisor Rules node contains a drop-down menu containing all rules."
     },
     {
         "Name": "Execute",
@@ -855,7 +855,7 @@
             "Execute"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
-        "inDepth": "Add in-depth information about Execute..."
+        "inDepth": "Executing a performance advisor rule returns failure messages for any occurances of that issue in the Revit document."
     },
     {
         "Name": "Performance Adviser Rules (())",
@@ -877,7 +877,7 @@
             "Performance Adviser Rules (performanceAdviserRule)"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
-        "inDepth": "Add in-depth information about Performance Adviser Rules..."
+        "inDepth": "Perfomance Advisor Rules contains a drop-down menu that lists all rules. Use this node with Execute to run a rule in a current Revit document."
     },
     {
         "Name": "Description",
@@ -888,7 +888,7 @@
             "Description"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
-        "inDepth": "Add in-depth information about Description..."
+        "inDepth": "Descriptions give more information about their rule as well as how the failure can affect Revit performance."
     },
     {
         "Name": "Enabled",
@@ -899,7 +899,7 @@
             "Enabled"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
-        "inDepth": "Add in-depth information about Enabled..."
+        "inDepth": "Performance Advisor Rules can be disabled in Revit. Checking this is important to ensure that an executed rule will run if there is a failure."
     },
     {
         "Name": "Name",
@@ -910,7 +910,7 @@
             "Name"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "Names as strings can be exported to Excel or CSV files as well as queried for what they contain."
     },
     {
         "Name": "RuleId",
@@ -921,7 +921,7 @@
             "RuleId"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
-        "inDepth": "Add in-depth information about RuleId..."
+        "inDepth": "RuleId returns a guid."
     },
     {
         "Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
@@ -965,7 +965,7 @@
             "ByOutlineTypeAndLevel"
         ],
         "folderPath": "Revit/Elements/Roof/Create",
-        "inDepth": "Add in-depth information about ByOutlineTypeAndLevel..."
+        "inDepth": "The roof's thickness is determined by its family type."
     },
     {
         "Name": "AddPoint",
@@ -976,7 +976,7 @@
             "AddPoint"
         ],
         "folderPath": "Revit/Elements/Roof/Action",
-        "inDepth": "Add in-depth information about AddPoint..."
+        "inDepth": "Points can be added to a roof element at or offset from its level."
     },
     {
         "Name": "MovePoint",
@@ -987,7 +987,7 @@
             "MovePoint"
         ],
         "folderPath": "Revit/Elements/Roof/Action",
-        "inDepth": "Add in-depth information about MovePoint..."
+        "inDepth": "MovePoint's offset input is relative to the roof element's level."
     },
     {
         "Name": "Points",
@@ -998,7 +998,7 @@
             "Points"
         ],
         "folderPath": "Revit/Elements/Roof/Query",
-        "inDepth": "Add in-depth information about Points..."
+        "inDepth": "A flat roof will have points that define its corners. Any points added to the roof are included in this list."
     },
     {
         "Name": "ByName",
@@ -1009,7 +1009,7 @@
             "ByName"
         ],
         "folderPath": "Revit/Elements/RoofType/Create",
-        "inDepth": "Add in-depth information about ByName..."
+        "inDepth": "ByName allows for the selection of a roof type with a string input."
     },
     {
         "Name": "Name",
@@ -1020,7 +1020,7 @@
             "Name"
         ],
         "folderPath": "Revit/Elements/RoofType/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "Name returns a roof type's name as a string."
     },
     {
         "Name": "ByElementAndLocation",
@@ -1031,7 +1031,7 @@
             "ByElementAndLocation"
         ],
         "folderPath": "Revit/Elements/Tag/Create",
-        "inDepth": "Add in-depth information about ByElementAndLocation..."
+        "inDepth": "ByElementAndLocation tags elements based on a location point."
     },
     {
         "Name": "ByElementAndOffset",
@@ -1042,7 +1042,7 @@
             "ByElementAndOffset"
         ],
         "folderPath": "Revit/Elements/Tag/Create",
-        "inDepth": "Add in-depth information about ByElementAndOffset..."
+        "inDepth": "ByElementAndOffset's offset input is optional and requires a vector to determine the distance."
     },
     {
         "Name": "ByFace",
@@ -1050,10 +1050,10 @@
             "ByFace"
         ],
         "dynFile": [
-            "ByFace"
+            "ByFace.zip"
         ],
         "folderPath": "Revit/Elements/Wall/Action",
-        "inDepth": "Add in-depth information about ByFace..."
+        "inDepth": "In the example, a wall is created from the face of a mass."
     },
     {
         "Name": "Wall Location (())",
@@ -1075,7 +1075,7 @@
             "Wall Location (curve, height, level, wallType)"
         ],
         "folderPath": "Revit/Elements/Wall/Action",
-        "inDepth": "Add in-depth information about Wall Location..."
+        "inDepth": "Wall Location has a drop-down menu containing location options such as CoreCenterLine, CoreExterior, WallCenterLine, etc."
     },
     {
         "Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
@@ -1097,7 +1097,7 @@
             "Name"
         ],
         "folderPath": "Revit/Schedules/SchedulableField/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "Name returns the names of SchedulableFields as strings. This can be useful for exporting to Excel/CSV formats or querying for containing certain characters or words."
     },
     {
         "Name": "ByProperties",
@@ -1108,7 +1108,7 @@
             "ByProperties"
         ],
         "folderPath": "Revit/Schedules/ScheduleExportOptions/Create",
-        "inDepth": "Add in-depth information about ByProperties..."
+        "inDepth": "ByProperties determines the formatting of schedules when they are exported to external file formats. For example, column headers can be exported in multiple rows, one row, or not at all."
     },
     {
         "Name": "Name",
@@ -1119,7 +1119,7 @@
             "Name"
         ],
         "folderPath": "Revit/Schedules/ScheduleField/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "Name returns the names of ScheduleFields as strings. This can be useful for exporting to Excel/CSV formats or querying for containing certain characters or words."
     },
     {
         "Name": "ByFieldTypeAndValue",
@@ -1130,7 +1130,7 @@
             "ByFieldTypeAndValue"
         ],
         "folderPath": "Revit/Schedules/ScheduleFilter/Create",
-        "inDepth": "Add in-depth information about ByFieldTypeAndValue..."
+        "inDepth": "In this example, a schedule filter is created to show only the Basic learning content of the Revit sample file. The filter is created by determining if field 1 contains the string Basic."
     },
     {
         "Name": "FiledId",
@@ -1152,7 +1152,7 @@
             "FilterType"
         ],
         "folderPath": "Revit/Schedules/ScheduleFilter/Query",
-        "inDepth": "Add in-depth information about FilterType..."
+        "inDepth": "FilterType returns a filter's type as a string. This can be reused to create another Schedule filter with the same type."
     },
     {
         "Name": "Value",
@@ -1163,7 +1163,7 @@
             "Value"
         ],
         "folderPath": "Revit/Schedules/ScheduleFilter/Query",
-        "inDepth": "Add in-depth information about Value..."
+        "inDepth": "Value returns the value assigned to a ScheduleFilter as a string. This can be reused to create another Schedule filter with the same value."
     },
     {
         "Name": "Select Model Element (Family Type)",
@@ -1185,7 +1185,7 @@
             "ClearAllFilters"
         ],
         "folderPath": "Revit/Views/ScheduleView/Action",
-        "inDepth": "Add in-depth information about ClearAllFilters..."
+        "inDepth": "ClearAllFilters returns a new ScheduleView without filters. Any filters applied from Revit will also be removed."
     },
     {
         "Name": "Schedule Filter Type",
@@ -1196,7 +1196,7 @@
             "Schedule Filter Type"
         ],
         "folderPath": "Revit/Views/ScheduleView/Action",
-        "inDepth": "Add in-depth information about Schedule Filter Type..."
+        "inDepth": "Schedule Filter Type has a drop-down menu with all filter types. This node is used with ScheduleFilter.ByFieldTypeAndValue to create schedule filters."
     },
     {
         "Name": "Schedule Type (())",
@@ -1218,7 +1218,7 @@
             "Schedule Type (category, name, scheduleType)"
         ],
         "folderPath": "Revit/Views/ScheduleView/Action",
-        "inDepth": "Add in-depth information about Schedule Type..."
+        "inDepth": "Schedule Type contains a drop-down menu with all ScheduleType options. This includes KeySchedule, MaterialTakeoff, and RegularSchedule."
     },
     {
         "Name": "ScheduleFilters",
