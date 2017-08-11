@@ -129,7 +129,7 @@
             "ByRGB"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Create",
-        "inDepth": "The illuminance value is created from r, g, b values."
+        "inDepth": "ByRGB creates an illuminance data point from RGB values."
     },
     {
         "Name": "ToFootCandles",
@@ -151,7 +151,7 @@
             "ToSRGB"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
-        "inDepth": "sRGB is a single value measured in lux."
+        "inDepth": "sRGB is returned as a single value measured in lux."
     },
     {
         "Name": "B",
@@ -217,7 +217,7 @@
             "Select RenderQuality"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Available qualities levels are Best, High, Standard, and Draft. Dynamo must be in Manual mode prior to adding this node to the canvas."
+        "inDepth": "Available quality levels are Best, High, Standard, and Draft. Dynamo must be in Manual mode prior to adding this node to the canvas."
     },
     {
         "Name": "Select RenderType",
@@ -305,7 +305,7 @@
             "Contains"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Contains can take integers, strings, doubles, etc as inputs. This node can be useful for creating boolean masks."
+        "inDepth": "Contains can take integers, strings, doubles, etc for either of its inputs."
     },
     {
         "Name": "NewtonRootFind1DNoDeriv",
@@ -338,7 +338,7 @@
             "Rank"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Counts how many levels are in a list."
+        "inDepth": "The deepest depth of a list is also the number of lists it contains."
     },
     {
         "Name": "Format",
@@ -349,7 +349,7 @@
             "Format"
         ],
         "folderPath": "Core/DateTime/Action",
-        "inDepth": "Date time strings are written in a standard format. Refer to this web page for custom date and time format strings: https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings. Refer to this web page for standard formats: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings."
+        "inDepth": "Date time strings are written in a standard format. Refer to Microsoft's <a href=https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>custom date and time format strings</a> as well as their <a href=https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>standard format strings</a>."
     },
     {
         "Name": "MinValue (dateTime, format)",
@@ -393,7 +393,7 @@
             "String from Array"
         ],
         "folderPath": "Core/String/Action",
-        "inDepth": "While a list of integers contains only integers, the string will contain commas that separate the numbers as well as curly brackets that contain the array."
+        "inDepth": "While a list of integers contains only integers, the output string will contain commas that separate the numbers as well as curly brackets that contain the array."
     },
     {
         "Name": "ByGeometry",
@@ -536,7 +536,7 @@
             "ByName"
         ],
         "folderPath": "Revit/Elements/CurtainSystemType/Create",
-        "inDepth": "CurtainSystemType brings an existing Revit curtain system type into Dynamo for use with the CurtainSystem.ByFace node as well as Add and RemoveCurtainGrid."
+        "inDepth": "CurtainSystemType brings an existing Revit curtain system type into Dynamo for use with the CurtainSystem nodes."
     },
     {
         "Name": "Name",
@@ -602,7 +602,7 @@
             "MoveByVector"
         ],
         "folderPath": "Revit/Elements/Element/Action",
-        "inDepth": "The distance an element is moved is determined by the input vector's magnitude."
+        "inDepth": "Move distance is determined by the input vector's magnitude."
     },
     {
         "Name": "ToString",
@@ -635,7 +635,7 @@
             "FailingElements"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Returned elements come with their element ids which can be clicked in Dynamo to see the failing element in a Revit view."
+        "inDepth": "Click a failing element's id in Dynamo to see it in a Revit view."
     },
     {
         "Name": "Severity",
@@ -723,7 +723,7 @@
             "Points"
         ],
         "folderPath": "Revit/Elements/Floor/Query",
-        "inDepth": "A Slab Shape in Revit will have points at its corners by default."
+        "inDepth": "A Slab Shape in Revit will have points at its corners by default in addition to any added points."
     },
     {
         "Name": "ByName",
@@ -789,7 +789,7 @@
             "ParameterGroup"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Query",
-        "inDepth": "Global parameters from Dynamo are created by default in the Other group."
+        "inDepth": "Global parameters from Dynamo are created by default in the Other group. This shows as INVALID in Dynamo."
     },
     {
         "Name": "ParameterType",
@@ -811,7 +811,7 @@
             "Value"
         ],
         "folderPath": "Revit/Elements/GlobalParameter/Query",
-        "inDepth": "Value's output var[]..[] means that it can output different data types that depend on the input parameter's type. Data types could be integer, string, or double for example."
+        "inDepth": "The Value node's output var[]..[] can return different data types depending on the input type. Data types could be integer, string, or double for example."
     },
     {
         "Name": "Visible",
@@ -844,7 +844,7 @@
             "ById"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Create",
-        "inDepth": "Performance advisor rules have associated guids that can be used to select a specific rule. The Performance Advisor Rules node contains a drop-down menu containing all rules."
+        "inDepth": "Performance advisor rules have associated guids that can be used to select a specific rule."
     },
     {
         "Name": "Execute",
@@ -855,7 +855,7 @@
             "Execute"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
-        "inDepth": "Executing a performance advisor rule returns failure messages for any occurances of that issue in the Revit document."
+        "inDepth": "Executing a performance advisor rule returns failure messages for any instances of that issue in the Revit document."
     },
     {
         "Name": "Performance Adviser Rules (())",
@@ -888,7 +888,7 @@
             "Description"
         ],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
-        "inDepth": "Descriptions give more information about their rule as well as how the failure can affect Revit performance."
+        "inDepth": "Descriptions give more information about a rule as well as how the failure can affect Revit performance."
     },
     {
         "Name": "Enabled",
@@ -987,7 +987,7 @@
             "MovePoint"
         ],
         "folderPath": "Revit/Elements/Roof/Action",
-        "inDepth": "MovePoint's offset input is relative to the roof element's level."
+        "inDepth": "MovePoint's offset input is relative to the point's initial location."
     },
     {
         "Name": "Points",
@@ -998,7 +998,7 @@
             "Points"
         ],
         "folderPath": "Revit/Elements/Roof/Query",
-        "inDepth": "A flat roof will have points that define its corners. Any points added to the roof are included in this list."
+        "inDepth": "A flat roof will by default have points that define its corners. Any points added to the roof are included in this list."
     },
     {
         "Name": "ByName",
@@ -1031,7 +1031,7 @@
             "ByElementAndLocation"
         ],
         "folderPath": "Revit/Elements/Tag/Create",
-        "inDepth": "ByElementAndLocation tags elements based on a location point."
+        "inDepth": "ByElementAndLocation tags elements based on a point location."
     },
     {
         "Name": "ByElementAndOffset",
@@ -1163,7 +1163,7 @@
             "Value"
         ],
         "folderPath": "Revit/Schedules/ScheduleFilter/Query",
-        "inDepth": "Value returns the value assigned to a ScheduleFilter as a string. This can be reused to create another Schedule filter with the same value."
+        "inDepth": "Value returns the value assigned to a ScheduleFilter as a string. In this example, the ScheduleFilter's value is the string Basic."
     },
     {
         "Name": "Select Model Element (Family Type)",
@@ -1185,7 +1185,7 @@
             "ClearAllFilters"
         ],
         "folderPath": "Revit/Views/ScheduleView/Action",
-        "inDepth": "ClearAllFilters returns a new ScheduleView without filters. Any filters applied from Revit will also be removed."
+        "inDepth": "A schedule will remain cleared of all filters after Dynamo is closed."
     },
     {
         "Name": "Schedule Filter Type",
@@ -1229,6 +1229,6 @@
             "ScheduleFilters"
         ],
         "folderPath": "Revit/Views/ScheduleView/Query",
-        "inDepth": "Add in-depth information about ScheduleFilters..."
+        "inDepth": "ScheduleFilters returns all filters applied to a schedule."
     }
 ]
