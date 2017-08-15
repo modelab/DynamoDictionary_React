@@ -27,7 +27,7 @@
             "Parse"
         ],
         "dynFile": [
-            "Parse"
+            "Parse.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Create",
         "inDepth": "An SDF file can be queried for data such as color, resolution, illuminance values, etc using the DaylightingResults Action and Query nodes."
@@ -38,7 +38,7 @@
             "Colors"
         ],
         "dynFile": [
-            "Colors"
+            "Colors.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Color data is returned as a set of RGB values."
@@ -49,7 +49,7 @@
             "IlluminanceValues"
         ],
         "dynFile": [
-            "IlluminanceValues"
+            "IlluminanceValues.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Illuminance data is returned as RGb lux values."
@@ -60,7 +60,7 @@
             "Normals"
         ],
         "dynFile": [
-            "Normals"
+            "Normals.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Normal data is returned as vectors with x, y, z values and length."
@@ -71,7 +71,7 @@
             "Points"
         ],
         "dynFile": [
-            "Points"
+            "Points.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Point data is returned as x, y, z values."
@@ -82,7 +82,7 @@
             "ToImage"
         ],
         "dynFile": [
-            "ToImage"
+            "ToImage.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "The image can be previewed in Dynamo by using the Watch Image node."
@@ -93,7 +93,7 @@
             "Resolution"
         ],
         "dynFile": [
-            "Resolution"
+            "Resolution.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
         "inDepth": "Resolution values are returned for both x and y."
@@ -104,7 +104,7 @@
             "XResolution"
         ],
         "dynFile": [
-            "XResolution"
+            "XResolution.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
         "inDepth": "Resolution is returned as an integer."
@@ -115,7 +115,7 @@
             "YResolution"
         ],
         "dynFile": [
-            "YResolution"
+            "YResolution.zip"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
         "inDepth": "Resolution is returned as an integer."
