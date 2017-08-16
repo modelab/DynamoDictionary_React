@@ -19,7 +19,7 @@ export const loadHierarchy = () => {
   return dispatch => {
     baseData
       .then((res, rej) => {
-        let dynLib = interop.xmlToJson(res[2]);
+        let dynLib = interop.xmlToJson(res[0]);
         let hierarchy = interop.createObject(dynLib);
         let searchArray = flatten(hierarchy.map(d => flattenHierarchy(d)));
         searchArray.forEach((d, i) => {
@@ -38,7 +38,7 @@ export const loadHierarchy = () => {
             d.Name = d.TempName;
           }
         });
-        const combinedArray = [...res[1], ...res[3]];
+        const combinedArray = [...res[1], ...res[2]];
         combinedArray.forEach(d => {
           searchArray.forEach(e => {
             if (e.Name === d.Name) {
@@ -51,28 +51,6 @@ export const loadHierarchy = () => {
             }
           });
         });
-        // let saveJson = searchArray.map((d) => {
-        //     let {
-        //         Name,
-        //         imageFile,
-        //         dynFile,
-        //         Categories,
-        //         Group,
-        //         inDepth
-        // } = d;
-        //     imageFile = (imageFile && imageFile.length > 0 && imageFile.map((im) => {
-        //         return im.original || im;
-        //     })) || [];
-        //     dynFile = (dynFile && dynFile.length > 0 && dynFile.map((dyn) => {
-        //         return dyn.original || dyn;
-        //     })) || [];
-        //     if (dynFile.length === 0) { return { Name, imageFile, dynFile, folderPath: Categories.concat(Group).join('/'), inDepth } }
-        //     else {
-        //         return null
-        //     }
-        // }).filter(el => el);
-        // console.log(saveJson);
-        // document.write('{"data":' + JSON.stringify((saveJson)) + '}');
         dispatch(updateHierarchy({ hierarchy, searchArray }));
       })
       .catch(console.error.bind(console));
