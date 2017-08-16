@@ -1,4 +1,4 @@
-import * as actions from "../actions";
+import * as hierarchyActions from "../actions/hierarchyActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import App from "../App";
@@ -12,7 +12,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(hierarchyActions, dispatch)
   };
 }
 

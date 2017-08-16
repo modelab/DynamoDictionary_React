@@ -1,4 +1,4 @@
-import { HIERARCHY_TEST, UPDATE_HIERARCHY } from "../actions";
+import { HIERARCHY_TEST, UPDATE_HIERARCHY } from "../actions/hierarchyActions";
 
 const initialState = {
   hierarchy: [],
