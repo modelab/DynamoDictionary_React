@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import * as JsSearch from "js-search";
 import { hashHistory } from "react-router";
 
 import "./css/font.css";
@@ -19,57 +18,35 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 import injectTapEventPlugin from "react-tap-event-plugin";
 injectTapEventPlugin();
 
-function _hierarchyIterator(ob) {
-  if (ob && ob.Parent !== "Home") {
-    return [ob.Parent].concat(_hierarchyIterator(ob.Parent)).filter(el => el);
-  } else {
-    return [];
-  }
-}
 class App extends Component {
   constructor() {
     super();
     this.state = {
       searchArray: [],
-      actives: [],
       editInDepth: false,
-      searching: false,
-      searchResults: [],
-      searchVal: "",
       route: "",
       updatedFiles: [],
-      prModalOpen: false,
       prState: "init",
       branchName: "user-" + Date.now().toString(),
       mainEdit: false,
       prLink: "https://github.com/DynamoDS/DynamoDictionary",
       commitMessage: "no commit message",
-      treeOpen: true,
       minWidth: 600
     };
-    this._sideBarClick = this._sideBarClick.bind(this);
     this._editInDepth = this._editInDepth.bind(this);
-    this._searchBar = this._searchBar.bind(this);
-    this._hashCheck = this._hashCheck.bind(this);
-    this._resetActives = this._resetActives.bind(this);
     this._gitHubSubmit = this._gitHubSubmit.bind(this);
     this._updateExample = this._updateExample.bind(this);
-    this._showPrModal = this._showPrModal.bind(this);
-    this._hidePrModal = this._hidePrModal.bind(this);
     this._writeBranchName = this._writeBranchName.bind(this);
     this._writeCommitMessage = this._writeCommitMessage.bind(this);
     this._submitPR = this._submitPR.bind(this);
     this._retrieve = this._retrieve.bind(this);
     this._toCommitting = this._toCommitting.bind(this);
     this._routePush = this._routePush.bind(this);
-    this._toggleTree = this._toggleTree.bind(this);
   }
   getChildContext() {
     return { muiTheme: getMuiTheme(baseTheme) };
   }
-  _toggleTree() {
-    this.setState({ treeOpen: !this.state.treeOpen });
-  }
+
   _retrieve(url) {
     if (url) {
       this.setState({ prState: "created", prLink: url, updatedFiles: [] });
@@ -80,13 +57,7 @@ class App extends Component {
   }
   _toCommitting() {
     this.setState({ prState: "committing" });
-    this._hidePrModal();
-  }
-  _showPrModal() {
-    this.setState({ prModalOpen: true });
-  }
-  _hidePrModal() {
-    this.setState({ prModalOpen: false });
+    this.props.actions.hidePRModal();
   }
   _writeBranchName(event) {
     event.preventDefault();
@@ -173,26 +144,6 @@ class App extends Component {
     );
   }
 
-  _searchBar(val) {
-    var search = new JsSearch.Search("Name");
-    search.addIndex("Name");
-    search.addIndex("CategorySearch");
-    search.addIndex("inDepth");
-    search.addIndex("Description");
-    search.addIndex("FullCategoryName");
-    search.addIndex("RouteName");
-    search.addDocuments(this.props.searchArray);
-    let arr = search.search(val);
-    this.setState({ searching: true, searchResults: arr, searchVal: val });
-  }
-
-  _sideBarClick(ob) {
-    let actives = _hierarchyIterator(ob).filter(el => el).reverse().concat(ob);
-    this.setState({ actives, searching: false });
-  }
-  _resetActives() {
-    this.setState({ actives: [] });
-  }
   componentDidUpdate() {
     const routePath = this.props.location.pathname;
     if (routePath !== this.state.route) {
@@ -223,27 +174,12 @@ class App extends Component {
             })
             .filter(el => el)[0];
         }
-        this.setState({ actives: actives.filter(el => el) });
+        this.props.actions.setActives(actives.filter(el => el));
       } else {
-        this.setState({ searching: false });
+        this.props.actions.searchOff();
       }
     }
   }
-  _conductSearch(val) {
-    var search = new JsSearch.Search("Name");
-    search.addIndex("Name");
-    search.addIndex("CategorySearch");
-    search.addIndex("inDepth");
-    search.addIndex("Description");
-    search.addIndex("FullCategoryName");
-    search.addIndex("RouteName");
-
-    search.addDocuments(this.props.searchArray);
-
-    let arr = search.search(val);
-    this.props.searching(arr, val);
-  }
-  _hashCheck() {}
 
   componentWillUnmount() {
     window.removeEventListener("resize");
@@ -259,16 +195,16 @@ class App extends Component {
 
   render() {
     const isLarge = window.innerWidth > this.state.minWidth;
-    const ratio = this.state.treeOpen && isLarge ? 0.3 : 0;
+    const ratio = this.props.sidebarOpen && isLarge ? 0.3 : 0;
 
     return this.state.route !== ""
       ? <div className="App">
           {" "}<Header
-            toggleTree={this._toggleTree}
-            treeOpen={this.state.treeOpen}
+            toggleTree={this.props.actions.toggleTree}
+            treeOpen={this.props.sidebarOpen}
             isLarge={isLarge}
-            openModal={this._showPrModal}
-            searching={this._searchBar}
+            openModal={this.props.actions.showPRModal}
+            searching={this.props.actions.searchDynamo}
             searchArray={this.state.searchArray}
             gitHubSubmit={this._gitHubSubmit}
             phase={this.state.prState}
@@ -281,7 +217,7 @@ class App extends Component {
                     id="sidebar-wrapper"
                     docked={true}
                     width={window.innerWidth * ratio}
-                    open={this.state.treeOpen}
+                    open={this.props.sidebarOpen}
                     containerStyle={{
                       backgroundColor: "rgb(34,34,34)",
                       marginTop: "60px"
@@ -299,8 +235,8 @@ class App extends Component {
                     >
                       <SearchBar
                         searchArray={this.state.searchArray}
-                        searching={this._searchBar}
-                        resetActives={this._resetActives}
+                        searching={this.props.actions.searchDynamo}
+                        resetActives={this.props.actions.resetActives}
                       />
                     </div>
                     <div
@@ -311,8 +247,8 @@ class App extends Component {
                       <ul style={{ paddingLeft: "0px" }}>
                         <Sidebar
                           dictionary={this.props.hierarchy}
-                          actives={this.state.actives}
-                          handleClick={this._sideBarClick}
+                          actives={this.props.actives}
+                          handleClick={this.props.actions.sidebarClick}
                           iteration={0}
                           routePush={this._routePush}
                         />
@@ -321,7 +257,7 @@ class App extends Component {
                       <br />
                     </div>
                   </Drawer>
-                  {!this.state.treeOpen
+                  {!this.props.sidebarOpen
                     ? <div
                         className="col-md-12 col-sm-12 col-xs-12"
                         style={{
@@ -334,8 +270,8 @@ class App extends Component {
                       >
                         <SearchBar
                           searchArray={this.props.searchArray}
-                          searching={this._searchBar}
-                          resetActives={this._resetActives}
+                          searching={this.props.actions.searchDynamo}
+                          resetActives={this.props.actions.resetActives}
                         />
                       </div>
                     : null}
@@ -350,8 +286,8 @@ class App extends Component {
                 >
                   <SearchBar
                     searchArray={this.state.searchArray}
-                    searching={this._searchBar}
-                    resetActives={this._resetActives}
+                    searching={this.props.actions.searchDynamo}
+                    resetActives={this.props.actions.resetActives}
                   />
                 </div>}
             <div
@@ -375,26 +311,26 @@ class App extends Component {
                 <div className="row">
                   <div>
                     <Branch
-                      actives={this.state.actives}
+                      actives={this.props.actives}
                       updateExample={this._updateExample}
-                      handleClick={this._sideBarClick}
+                      handleClick={this.props.actions.sidebarClick}
                       editInDepth={this.state.editInDepth}
                       editInDepthClick={this._editInDepth}
-                      searching={this.state.searching}
-                      searches={this.state.searchResults}
-                      searchVal={this.state.searchVal}
+                      searching={this.props.searching}
+                      searches={this.props.searchResults}
+                      searchVal={this.props.searchVal}
                     />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {this.state.prModalOpen
+          {this.props.prModalOpen
             ? <PullModal
                 fileCount={
                   this.state.updatedFiles.length + (this.state.mainEdit ? 1 : 0)
                 }
-                hideModal={this._hidePrModal}
+                hideModal={this.props.actions.hidePRModal}
                 phase={this.state.prState}
                 branchInput={this._writeBranchName}
                 commitInput={this._writeCommitMessage}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import lineageToRoute from "../util/lineageRouter";
+import { lineageToRoute } from "../util/lineageRouter";
 import classNames from "classnames";
 
 import NodeIcon from "./NodeIcon";

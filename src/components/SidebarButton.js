@@ -1,7 +1,7 @@
 import React from "react";
 
 import NodeIcon from "./NodeIcon";
-import lineageToRoute from "../util/lineageRouter";
+import { lineageToRoute } from "../util/lineageRouter";
 
 function SidebarButton(props) {
   return (
@@ -21,9 +21,3 @@ function SidebarButton(props) {
   );
 }
 export default SidebarButton;
-
-// <Link to={`/${lineageToRoute(props.ob)}`} onClick={props.routePush}><button className={props.classes} style={{
-//     'paddingLeft': '20px',
-//     'paddingRight': '20px',
-//     'whiteSpace': 'nowrap'
-// }}>

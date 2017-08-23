@@ -1,11 +1,15 @@
 import { combineReducers } from "redux";
 import { routerReducer } from "react-router-redux";
 
-import hierarchy from "./hierarchy";
+import hierarchy from "./hierarchyReducer";
+import ui from "./uiReducer";
+import activeNodes from "./activeNodeReducer";
 
 const reducers = combineReducers({
   hierarchy,
-  routing: routerReducer
+  ui,
+  routing: routerReducer,
+  activeNodes
 });
 
 export default reducers;

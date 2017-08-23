@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import path from "path";
 
-import lineageToRoute from "../util/lineageRouter";
+import { lineageToRoute } from "../util/lineageRouter";
 
 function NodeIcon(props) {
   let element;
