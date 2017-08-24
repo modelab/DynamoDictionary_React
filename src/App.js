@@ -22,15 +22,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      searchArray: [],
-      editInDepth: false,
-      route: "",
-      updatedFiles: [],
-      prState: "init",
-      branchName: "user-" + Date.now().toString(),
-      mainEdit: false,
-      prLink: "https://github.com/DynamoDS/DynamoDictionary",
-      commitMessage: "no commit message",
       minWidth: 600
     };
     this._editInDepth = this._editInDepth.bind(this);
@@ -48,57 +39,50 @@ class App extends Component {
   }
 
   _retrieve(url) {
-    if (url) {
-      this.setState({ prState: "created", prLink: url, updatedFiles: [] });
-    } else {
-      this.setState({ prState: "created", updatedFiles: [] });
-    }
+    this.props.actions.retrievePR(url);
     window.setTimeout(this._toCommitting, 3000);
   }
   _toCommitting() {
-    this.setState({ prState: "committing" });
+    this.props.actions.setPRState("committing");
     this.props.actions.hidePRModal();
   }
   _writeBranchName(event) {
     event.preventDefault();
     let bn = event.target.value.replace(/[^a-zA-Z ]/g, "").replace(/\s/g, "-");
     bn = bn === "master" ? "user-" + bn : bn;
-
-    this.setState({ branchName: bn });
+    this.props.actions.setBranchName(bn);
   }
   _writeCommitMessage(event) {
     event.preventDefault();
-    this.setState({
-      commitMessage:
-        event.target.value !== "" ? event.target.value : "no commit message"
-    });
+    this.props.actions.setCommitMessage(
+      event.target.value !== "" ? event.target.value : "no commit message"
+    );
   }
   _submitPR() {
-    this.setState({ prState: "logging" });
+    this.props.actions.setPRState("logging");
     this._gitHubSubmit();
   }
 
   _editInDepth() {
-    let editInDepth = !this.state.editInDepth;
-    this.setState({ editInDepth, mainEdit: true });
+    this.props.actions.editInDepth({ mainEdit: true });
   }
 
   _updateExample(file) {
-    this.setState({
-      updatedFiles: [...this.state.updatedFiles, file]
-    });
+    this.props.actions.updateFiles([...this.props.updatedFiles, file]);
   }
   _routePush(route, iteration) {
-    if (this.state.route === route) {
-      hashHistory.push(`${route.split("/").slice(0, iteration + 1).join("/")}`);
-    } else {
-      hashHistory.push(route);
-    }
+    const new_route =
+      this.props.route === route
+        ? `${route.split("/").slice(0, iteration + 1).join("/")}`
+        : route;
+    hashHistory.push(new_route);
+
+    // this.props.actions.pushRoute(route, iteration, this.props.route);
   }
   shouldComponentUpdate(nextProps, nextState) {
     if (
-      this.state.commitMessage !== nextState.commitMessage ||
-      this.state.branchName !== nextState.branchName
+      this.props.commitMessage !== nextProps.commitMessage ||
+      this.props.branchName !== nextProps.branchName
     ) {
       return false;
     } else {
@@ -136,18 +120,19 @@ class App extends Component {
       };
     });
     window.githubSubmitter(
-      [...this.state.updatedFiles],
+      [...this.props.updatedFiles],
       saveJson,
-      this.state.branchName,
-      this.state.commitMessage,
+      this.props.branchName,
+      this.props.commitMessage,
       this._retrieve
     );
   }
 
   componentDidUpdate() {
     const routePath = this.props.location.pathname;
-    if (routePath !== this.state.route) {
-      this.setState({ route: this.props.location.pathname, searching: false });
+    if (routePath !== this.props.route) {
+      this.props.actions.updateRoute(this.props.location.pathname);
+      this.props.actions.searchOff();
       let rightdiv = document.getElementById("page-content-wrapper");
       if (rightdiv) {
         rightdiv.scrollTop = 0;
@@ -197,7 +182,7 @@ class App extends Component {
     const isLarge = window.innerWidth > this.state.minWidth;
     const ratio = this.props.sidebarOpen && isLarge ? 0.3 : 0;
 
-    return this.state.route !== ""
+    return this.props.route !== ""
       ? <div className="App">
           {" "}<Header
             toggleTree={this.props.actions.toggleTree}
@@ -205,10 +190,10 @@ class App extends Component {
             isLarge={isLarge}
             openModal={this.props.actions.showPRModal}
             searching={this.props.actions.searchDynamo}
-            searchArray={this.state.searchArray}
+            searchArray={this.props.searchArray}
             gitHubSubmit={this._gitHubSubmit}
-            phase={this.state.prState}
-            link={this.state.prLink}
+            phase={this.props.prState}
+            link={this.props.prLink}
           />
           <div id="wrapper" style={{ marginTop: "60px" }}>
             {isLarge
@@ -234,7 +219,7 @@ class App extends Component {
                       }}
                     >
                       <SearchBar
-                        searchArray={this.state.searchArray}
+                        searchArray={this.props.searchArray}
                         searching={this.props.actions.searchDynamo}
                         resetActives={this.props.actions.resetActives}
                       />
@@ -285,7 +270,7 @@ class App extends Component {
                   }}
                 >
                   <SearchBar
-                    searchArray={this.state.searchArray}
+                    searchArray={this.props.searchArray}
                     searching={this.props.actions.searchDynamo}
                     resetActives={this.props.actions.resetActives}
                   />
@@ -314,7 +299,7 @@ class App extends Component {
                       actives={this.props.actives}
                       updateExample={this._updateExample}
                       handleClick={this.props.actions.sidebarClick}
-                      editInDepth={this.state.editInDepth}
+                      editInDepth={this.props.editInDepth}
                       editInDepthClick={this._editInDepth}
                       searching={this.props.searching}
                       searches={this.props.searchResults}
@@ -328,14 +313,14 @@ class App extends Component {
           {this.props.prModalOpen
             ? <PullModal
                 fileCount={
-                  this.state.updatedFiles.length + (this.state.mainEdit ? 1 : 0)
+                  this.props.updatedFiles.length + (this.props.mainEdit ? 1 : 0)
                 }
                 hideModal={this.props.actions.hidePRModal}
-                phase={this.state.prState}
+                phase={this.props.prState}
                 branchInput={this._writeBranchName}
                 commitInput={this._writeCommitMessage}
                 submit={this._submitPR}
-                link={this.state.prLink}
+                link={this.props.prLink}
               />
             : null}
         </div>
