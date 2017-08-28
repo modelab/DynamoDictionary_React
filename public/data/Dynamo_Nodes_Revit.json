@@ -131,15 +131,23 @@
 	},
 	{
 		"Name": "Locations",
-		"imageFile": [],
-		"dynFile": [],
+		"imageFile": [
+			"Locations"
+		],
+		"dynFile": [
+			"Locations"
+		],
 		"inDepth": "Locations returns the point location of each adaptive point.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
 	},
 	{
 		"Name": "Type",
-		"imageFile": [],
-		"dynFile": [],
+		"imageFile": [
+			"Type"
+		],
+		"dynFile": [
+			"Type"
+		],
 		"inDepth": "Type returns the Revit family type of each adaptive component.",
 		"folderPath": "Revit/Elements/AdaptiveComponent/Query"
 	},

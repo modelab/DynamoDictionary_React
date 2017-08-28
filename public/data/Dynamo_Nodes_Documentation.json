@@ -1087,10 +1087,10 @@
     {
         "Name": "Function.Apply",
         "imageFile": [
-            "Function.Apply"
+            "FunctionApply"
         ],
         "dynFile": [
-            "Function.Apply"
+            "FunctionApply"
         ],
         "folderPath": "Core/Evaluate/Action",
         "inDepth": "Function.Apply will return the result of a function with supplied arguments. In the example below, arguments of a point and vector are applied to a translate function returning a translated point."
@@ -1098,10 +1098,10 @@
     {
         "Name": "Function.Compose",
         "imageFile": [
-            "Function.Compose"
+            "FunctionCompose"
         ],
         "dynFile": [
-            "Function.Compose"
+            "FunctionCompose"
         ],
         "folderPath": "Core/Evaluate/Action",
         "inDepth": "Function.Compose will return a single function from multiple functions. In the example below, the modulus and divide functions are composed into a single function to apply to a list."
@@ -3862,8 +3862,12 @@
     },
     {
         "Name": "ByOriginVectors (origin, xAxis, yAxis, zAxis)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "ByOriginVectors (origin, xAxis, yAxis, zAxis)"
+        ],
+        "dynFile": [
+          "ByOriginVectors (origin, xAxis, yAxis, zAxis)"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about ByOriginVectors (origin, xAxis, yAxis, zAxis)..."
     },
@@ -3964,8 +3968,12 @@
     },
     {
         "Name": "Rotate (coordinateSystem, plane, degrees)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "Rotate (coordinateSystem, plane, degrees)"
+        ],
+        "dynFile": [
+          "Rotate (coordinateSystem, plane, degrees)"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Rotate..."
     },
@@ -4000,8 +4008,12 @@
     },
     {
         "Name": "Scale (coordinateSystem, xamount, yamount, zamount)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "Scale (coordinateSystem, xamount, yamount, zamount)"
+        ],
+        "dynFile": [
+          "Scale (coordinateSystem, xamount, yamount, zamount)"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale (coordinateSystem, xamount, yamount, zamount)..."
     },
@@ -4018,15 +4030,23 @@
     },
     {
         "Name": "Scale1D",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "Scale1D"
+        ],
+        "dynFile": [
+          "Scale1D"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Scale1D will return a new Plane "
     },
     {
         "Name": "Scale2D",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "Scale2D"
+        ],
+        "dynFile": [
+          "Scale2D"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale2D..."
     },
@@ -4098,29 +4118,45 @@
     },
     {
         "Name": "Determinant",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "Determinant"
+        ],
+        "dynFile": [
+          "Determinant"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about Determinant..."
     },
     {
         "Name": "IsScaledOrtho",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "IsScaledOrtho"
+        ],
+        "dynFile": [
+          "IsScaledOrtho"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsScaledOrtho..."
     },
     {
         "Name": "IsSingular",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "IsSingular"
+        ],
+        "dynFile": [
+          "IsSingular"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsSingular..."
     },
     {
         "Name": "IsUniscaledOrtho",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "IsUniscaledOrtho"
+        ],
+        "dynFile": [
+          "IsUniscaledOrtho"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsUniscaledOrtho..."
     },
