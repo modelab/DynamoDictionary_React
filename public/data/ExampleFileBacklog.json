@@ -1177,6 +1177,17 @@
         "inDepth": "Add in-depth information about Select Model Element..."
     },
     {
+        "Name": "AddFilters",
+        "imageFile": [
+            "AddFilters"
+        ],
+        "dynFile": [
+            "AddFilters"
+        ],
+        "folderPath": "Revit/Views/ScheduleView/Action",
+        "inDepth": "A schedule will remain cleared of all filters after Dynamo is closed."
+    },
+    {
         "Name": "ClearAllFilters",
         "imageFile": [
             "ClearAllFilters"

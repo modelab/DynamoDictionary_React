@@ -8262,10 +8262,14 @@
     },
     {
         "Name": "ByViewFacePointsAndValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "ByViewFacePointsAndValues"
+        ],
+        "dynFile": [
+          "ByViewFacePointsAndValues"
+        ],
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
-        "inDepth": "Add in-depth information about ByViewFacePointsAndValues..."
+        "inDepth": "The analysis view's legend, color, and other settings are determined by the Default Analysis Display Style in Revit. Create a 'Colored surface' style in Revit to view the analysis."
     },
     {
         "Name": "ByViewAndPointAnalysisData",
@@ -8276,10 +8280,14 @@
     },
     {
         "Name": "ByViewPointsAndValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "ByViewPointsAndValues"
+        ],
+        "dynFile": [
+          "ByViewPointsAndValues"
+        ],
         "folderPath": "Revit/Analysis/PointAnalysisDisplay/Create",
-        "inDepth": "Add in-depth information about ByViewPointsAndValues..."
+        "inDepth": "The analysis view's legend, color, and other settings are determined by the Default Analysis Display Style in Revit. Create a 'Markers with text' style in Revit to view the analysis."
     },
     {
         "Name": "ByViewAndVectorAnalysisData",
@@ -8290,10 +8298,14 @@
     },
     {
         "Name": "ByViewPointsAndVectorValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+          "ByViewPointsAndVectorValues"
+        ],
+        "dynFile": [
+          "ByViewPointsAndVectorValues"
+        ],
         "folderPath": "Revit/Analysis/VectorAnalysisDisplay/Create",
-        "inDepth": "Add in-depth information about ByViewPointsAndVectorValues..."
+        "inDepth": "The analysis view's legend, color, and other settings are determined by the Default Analysis Display Style in Revit. Create a 'Vectors with text' style in Revit to view the analysis."
     },
     {
         "Name": "ActiveView (document)",
