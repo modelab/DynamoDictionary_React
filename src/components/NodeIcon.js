@@ -1,30 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router';
-import path from 'path';
+import React from "react";
+import { Link } from "react-router";
+import path from "path";
 
-import lineageToRoute from './utils/lineageRouter'
+import { lineageToRoute } from "../util/lineageRouter";
 
 function NodeIcon(props) {
-    let element;
-    return (<Link to={`/${lineageToRoute(props.node)}`}> <
-        img className="im"
-        onError={function () {
-            element.onerror = null;
-            element.src = 'images/src/icon_offset.png';
+  let element;
+  return (
+    <Link to={`/${lineageToRoute(props.node)}`}>
+      {" "}<img
+        className="im"
+        onError={function() {
+          element.onerror = null;
+          element.src = "images/src/icon_offset.png";
         }}
-        ref={el => element = el}
+        ref={el => (element = el)}
         height={props.width}
-        style={
-            {
-                "backgroundColor": "rgb(34,34,34)",
-                "marginRight": "10px"
-            }
-        }
-        src={
-            path.join('images', props.node.SmallIcon)
-        }
-    /></Link>
-    )
+        style={{
+          backgroundColor: "rgb(34,34,34)",
+          marginRight: "10px"
+        }}
+        src={path.join("images", props.node.SmallIcon)}
+      />
+    </Link>
+  );
 }
 
 export default NodeIcon;

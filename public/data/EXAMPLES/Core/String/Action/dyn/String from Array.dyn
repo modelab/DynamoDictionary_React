@@ -1,0 +1,26 @@
+<Workspace Version="1.3.0.875" X="1210.09539087401" Y="-28155.225901652" zoom="1.89975035725527" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.FromArray guid="c6c6cdc8-c09e-4855-b45b-a28a4a3e0d52" type="CoreNodeModels.FromArray" nickname="String from Array" x="-327.349804863446" y="14875.5536620183" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.FromArray>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="0c1b28d2-63f1-4721-b74b-c764ceaa74f1" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-480.105539806703" y="14932.7899716521" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..10;" ShouldFocus="false" />
+    <CoreNodeModels.Watch guid="badd5f23-8be9-4d0c-a998-27eadee6f217" type="CoreNodeModels.Watch" nickname="Watch" x="-184.284945407155" y="14875.6523685995" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <CoreNodeModels.Watch guid="eb39ac20-a2ed-48d8-8b95-3e85308f9458" type="CoreNodeModels.Watch" nickname="Watch" x="-184.284945407155" y="14979.6660350506" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="c6c6cdc8-c09e-4855-b45b-a28a4a3e0d52" start_index="0" end="badd5f23-8be9-4d0c-a998-27eadee6f217" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c1b28d2-63f1-4721-b74b-c764ceaa74f1" start_index="0" end="c6c6cdc8-c09e-4855-b45b-a28a4a3e0d52" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c1b28d2-63f1-4721-b74b-c764ceaa74f1" start_index="0" end="eb39ac20-a2ed-48d8-8b95-3e85308f9458" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-3.22879552841187" eyeY="28.4078884124756" eyeZ="13.7016458511353" lookX="-0.252387136220932" lookY="-22.9038600921631" lookZ="-20.3480834960938" upX="-0.00729002384468913" upY="0.80901700258255" upZ="-0.587740063667297" />
+  </Cameras>
+</Workspace>

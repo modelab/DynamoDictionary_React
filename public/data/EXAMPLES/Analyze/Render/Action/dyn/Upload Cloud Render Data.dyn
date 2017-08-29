@@ -1,0 +1,22 @@
+<Workspace Version="1.3.1.1736" X="-1845.20047666265" Y="-798.130422887002" zoom="1.6997329501804" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Analyze.Render.ExportDocumentRenderData guid="2eda40b0-1e4f-4bc1-b045-3e8ab9813ccc" type="Analyze.Render.ExportDocumentRenderData" nickname="Export Cloud Render Data" x="1289.13474316629" y="588.141319976537" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </Analyze.Render.ExportDocumentRenderData>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2c60043b-c1d5-4b50-9d24-33882d96b3dc" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1177.2" y="588.141319976537" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;{3D}&quot;;" ShouldFocus="false" />
+    <Analyze.Render.UploadRenderData guid="801d16b6-5f1c-45f1-b3e6-f7b18fb91a80" type="Analyze.Render.UploadRenderData" nickname="Upload Cloud Render Data" x="1500.89526897817" y="588.141319976537" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+    </Analyze.Render.UploadRenderData>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="2eda40b0-1e4f-4bc1-b045-3e8ab9813ccc" start_index="0" end="801d16b6-5f1c-45f1-b3e6-f7b18fb91a80" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2c60043b-c1d5-4b50-9d24-33882d96b3dc" start_index="0" end="2eda40b0-1e4f-4bc1-b045-3e8ab9813ccc" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
