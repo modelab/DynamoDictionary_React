@@ -1,1 +1,1 @@
-export const IMAGE_FALSE_AVP_TRUE = true;
+export const IMAGE_FALSE_AVP_TRUE = false;
