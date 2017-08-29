@@ -4,8 +4,6 @@ import nodeEquality from "../util/array";
 import SidebarButton from "./SidebarButton.js";
 
 function Sidebar(props) {
-  // console.log(props);
-
   function getClasses(ob) {
     if (nodeEquality(ob, props.actives[props.iteration])) {
       return classNames(
@@ -19,10 +17,7 @@ function Sidebar(props) {
   }
 
   return (
-    <div
-      className=""
-      style={{ paddingBottom: props.iteration === 0 ? "300px" : null }}
-    >
+    <div style={{ paddingBottom: props.iteration === 0 ? "300px" : null }}>
       {props.dictionary.map((ob, i) =>
         <div key={i}>
           <SidebarButton

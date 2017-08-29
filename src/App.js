@@ -293,7 +293,7 @@ class App extends Component {
                   transition: isLarge ? "all 450ms" : "all 0ms"
                 }}
               >
-                <div className="row">
+                <div>
                   <div>
                     <Branch
                       actives={this.props.actives}
