@@ -1,0 +1,26 @@
+<Workspace Version="1.3.1.1736" X="-1615.81921961831" Y="-1249.89196480214" zoom="1.87314979578575" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="fc8f55f9-3485-43fe-98c2-61dd55566e93" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Illuminance.ByRGB" x="1105.73133703417" y="846.396739198787" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="SimpleRaaS.dll" function="Analyze.Daylighting.Illuminance.ByRGB@double,double,double">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2c626750-a093-412e-b290-6f1a296b3588" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="998.542245616093" y="859.335644989998" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="56;&#xA;231;&#xA;12;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d3ee9049-ae8c-4ca8-bac9-f9050d251632" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Illuminance.B" x="1338.36692370746" y="846.396739198787" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="SimpleRaaS.dll" function="Analyze.Daylighting.Illuminance.B">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="fc8f55f9-3485-43fe-98c2-61dd55566e93" start_index="0" end="d3ee9049-ae8c-4ca8-bac9-f9050d251632" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2c626750-a093-412e-b290-6f1a296b3588" start_index="0" end="fc8f55f9-3485-43fe-98c2-61dd55566e93" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2c626750-a093-412e-b290-6f1a296b3588" start_index="1" end="fc8f55f9-3485-43fe-98c2-61dd55566e93" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2c626750-a093-412e-b290-6f1a296b3588" start_index="2" end="fc8f55f9-3485-43fe-98c2-61dd55566e93" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

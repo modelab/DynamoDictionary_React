@@ -1,0 +1,21 @@
+<Workspace Version="1.3.0.875" X="882.172616305367" Y="-32780.8351440488" zoom="2.24017637214694" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8b89ccf4-6f0c-43f4-a1d4-801381363a02" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Contains" x="-103.632701913034" y="14759.6566186556" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="BuiltIn" function="Contains@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a131b517-82f3-47b7-aacb-b12c41f46926" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-236.038642416518" y="14732.6281744099" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..10;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="742c368f-9654-400f-a125-3149c94d06e3" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-235.238642416518" y="14825.9354326102" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="1;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="a131b517-82f3-47b7-aacb-b12c41f46926" start_index="0" end="8b89ccf4-6f0c-43f4-a1d4-801381363a02" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="742c368f-9654-400f-a125-3149c94d06e3" start_index="0" end="8b89ccf4-6f0c-43f4-a1d4-801381363a02" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
