@@ -2,7 +2,7 @@
 // before this is done, all dyn files need to be converted to json format from their xml format.
 
 export default function loadAVP() {
-  window.requirejs(["/js/avp/AVP.min.js"], function(AVP) {
+  window.requirejs(["js/avp/AVP.min.js"], function(AVP) {
     var Logger = new AVP.Logger();
     var simpleStorage = new AVP.BaseStorage();
     var runner = new AVP.DynamoRunner(
