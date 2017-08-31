@@ -11,7 +11,10 @@ import rootReducer from "./reducers";
 import App from "./containers/AppContainer";
 import "./index.css";
 
-const middleware = applyMiddleware(thunk, createLogger());
+const middleware = applyMiddleware(
+  thunk
+  // , createLogger()
+);
 export const store = createStore(rootReducer, middleware);
 
 ReactDOM.render(
