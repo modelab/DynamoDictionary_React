@@ -4,6 +4,9 @@ Dynamo Dictionary development repo
 
 Live version here: http://dictionary.dynamobim.com
 
+## Installation
+- In root directory, type ```npm install``` into the command line.
+
 ## Run in Development Mode
 - In root directory, type ```npm run start``` into the command line.
 
