@@ -1,0 +1,209 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "SetValue",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Text Global Parameter\";",
+      "Id": "a41676b830e2498da1d5c3e0ed4bc74b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6be56d174d4343c0bf1148464a10606f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.GlobalParameter.FindByName@string",
+      "Id": "5c48c2c45a754028aa84f8a2e9051c84",
+      "Inputs": [
+        {
+          "Id": "ca212fc4bbac47f48bceef04fa321d2b",
+          "Name": "name",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6301f9a250d34f1ab55911be6328de9e",
+          "Name": "GlobalParameter",
+          "Description": "GlobalParameter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Find Global Parameter by Name\n\nGlobalParameter.FindByName (name: string): GlobalParameter"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.GlobalParameter.SetValue@Revit.Elements.GlobalParameter,var",
+      "Id": "8bccf0e2ec6543d39a7077a32ddf611f",
+      "Inputs": [
+        {
+          "Id": "273187296651410b9dc4257b869fb007",
+          "Name": "parameter",
+          "Description": "GlobalParameter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "262c0c2e78ed4428934d7919b147daf9",
+          "Name": "value",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb95dcb09f124ed7afb48bc106a194f9",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set Global Parameter Value\n\nGlobalParameter.SetValue (parameter: GlobalParameter, value: var): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"A\";",
+      "Id": "fb323f8544d549bca4515ea4027b2a22",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "300c5bfffe1247f9ad97e4c7225eb92c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "6be56d174d4343c0bf1148464a10606f",
+      "End": "ca212fc4bbac47f48bceef04fa321d2b",
+      "Id": "1d57665c180a478491be9ae3e4fb1bf9"
+    },
+    {
+      "Start": "6301f9a250d34f1ab55911be6328de9e",
+      "End": "273187296651410b9dc4257b869fb007",
+      "Id": "17ce3e8dd42a428882d5acaee1782e0a"
+    },
+    {
+      "Start": "300c5bfffe1247f9ad97e4c7225eb92c",
+      "End": "262c0c2e78ed4428934d7919b147daf9",
+      "Id": "07e7c0e2df1e4207b20f0aed238d268e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a41676b830e2498da1d5c3e0ed4bc74b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 490.0,
+        "Y": 219.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "GlobalParameter.FindByName",
+        "Id": "5c48c2c45a754028aa84f8a2e9051c84",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 782.0,
+        "Y": 221.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "GlobalParameter.SetValue",
+        "Id": "8bccf0e2ec6543d39a7077a32ddf611f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1128.0,
+        "Y": 275.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "fb323f8544d549bca4515ea4027b2a22",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 959.0,
+        "Y": 362.0
+      }
+    ],
+    "Annotations": [],
+    "X": -278.47207888163825,
+    "Y": 58.053652059139495,
+    "Zoom": 0.82269535937499993
+  }
+}

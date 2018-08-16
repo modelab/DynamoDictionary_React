@@ -1,0 +1,270 @@
+{
+  "Uuid": "803fb2f9-4884-42de-915d-c7831d5e05fe",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "MoveByVector",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.MoveByVector@Autodesk.DesignScript.Geometry.Vector",
+      "Id": "a19ef168890b4ab7a39fdeb423aa05e9",
+      "Inputs": [
+        {
+          "Id": "1db53086208e4d36a1546b5745cb9736",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5f6e8cb9bfcb49d185151b58a5297de5",
+          "Name": "vector",
+          "Description": "Translation Vector\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7b0d9114854e4f40bb98ae41e9529c1b",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Move Revit Element by Vector\n\nElement.MoveByVector (vector: Vector): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "68b5e6d1-3275-40e2-9043-4b72a1f0aa12-0002c17b"
+      ],
+      "Id": "b38e72468fe64ce5b931a6e3da66bf44",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "faa94a59db04455681b3e5bac0e4386c",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ByTwoPoints@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "88d8bea75a86404d8720967b9b02bb05",
+      "Inputs": [
+        {
+          "Id": "3061c28c421f49c29b6216dfde47194c",
+          "Name": "start",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc76b60e85fc47668c43e89da49ddea1",
+          "Name": "end",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "776955a201224e948d9f025e62e3ab1c",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Vector by two end points. The result is a vector from the start to the end point.\n\nVector.ByTwoPoints (start: Point, end: Point): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetLocation",
+      "Id": "fe6a8e79de084b899c46b7b6b4fb11d4",
+      "Inputs": [
+        {
+          "Id": "3f5f344ddc444db29cfbb9b7e7b95beb",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "10973f55bfb54c1d88fd11f1745df1b0",
+          "Name": "Geometry",
+          "Description": "Location Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get an exsiting element's location\n\nElement.GetLocation ( ): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSPointOnElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "ac4ba23f-5249-4dca-9d08-6f575cf56be1-000221db:-9999:SURFACE"
+      ],
+      "Id": "4855f7256b7a4648932b19d363e07cca",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2be02c4117814b3f9bd4141fd16d9d14",
+          "Name": "Point",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "faa94a59db04455681b3e5bac0e4386c",
+      "End": "3f5f344ddc444db29cfbb9b7e7b95beb",
+      "Id": "f3de2bf90e5b4a32b14b46416e3a02ff"
+    },
+    {
+      "Start": "faa94a59db04455681b3e5bac0e4386c",
+      "End": "1db53086208e4d36a1546b5745cb9736",
+      "Id": "3243736f4edd4af490a5f5f9e23983de"
+    },
+    {
+      "Start": "776955a201224e948d9f025e62e3ab1c",
+      "End": "5f6e8cb9bfcb49d185151b58a5297de5",
+      "Id": "ef6396db6c4842bda4ecb4e577d6d21f"
+    },
+    {
+      "Start": "10973f55bfb54c1d88fd11f1745df1b0",
+      "End": "3061c28c421f49c29b6216dfde47194c",
+      "Id": "278d105752d041c68961d52f98a45a48"
+    },
+    {
+      "Start": "2be02c4117814b3f9bd4141fd16d9d14",
+      "End": "fc76b60e85fc47668c43e89da49ddea1",
+      "Id": "6d90674c2f9049bd860f979a6db60d19"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Element.MoveByVector",
+        "Id": "a19ef168890b4ab7a39fdeb423aa05e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 933.35558654041324,
+        "Y": 19.6765798600386
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "b38e72468fe64ce5b931a6e3da66bf44",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 102.69733579251127,
+        "Y": 18.4015902291801
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.ByTwoPoints",
+        "Id": "88d8bea75a86404d8720967b9b02bb05",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 619.0,
+        "Y": 162.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetLocation",
+        "Id": "fe6a8e79de084b899c46b7b6b4fb11d4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 346.0,
+        "Y": 89.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Point on Face",
+        "Id": "4855f7256b7a4648932b19d363e07cca",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 339.0,
+        "Y": 264.0
+      }
+    ],
+    "Annotations": [],
+    "X": 10.075258994806973,
+    "Y": 152.95900205860534,
+    "Zoom": 0.70823125000000009
+  }
+}
