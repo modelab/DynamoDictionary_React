@@ -4120,5 +4120,221 @@
 		"dynFile": ["Unit Types"],
 		"folderPath": "Math/Units/Action",
 		"inDepth": "Select a unit of measurement."
-	}, 
+	}, {
+		"Name": "If",
+		"imageFile": ["If"],
+		"dynFile": ["If"],
+		"folderPath": "Script/Control Flow/Action",
+		"inDepth": "If acts as a conditional control node. The 'test' input takes a boolean value, while the 'true' and 'false' inputs can accept any data type. If the test value is 'true', the node will return the item from the 'true' input, if test is 'false', the node will return the item from the 'false' input. In the example below, we first generate a list of random numbers between zero and 99. The number of items in the list is controlled by an integer slider. We use a code block with the formula 'x%a==0' to test for divisibility by a second number, determined by a second number slider. This generates a list of boolean values corresponding to whether the items in the random list are divisible by the number determined by the second integer slider. This list of boolean values is used as the 'test' input for an If node. We use a default Sphere as the 'true' input, and a default Cuboid as the 'false' input. The result from the If node is a list of either spheres or cuboids. Finally, we use a Translate node to spread the list of geometries apart.\n\nIF replicates on all nodes AS THOUGH SET TO SHORTEST. You can see the reason for this in the attached examples, especially when looking at what the results are when LONGEST is applied to a formula node and the \"short\" branch of the conditional is passes through. These changes were also made to allow predictable behavior when using single boolean inputs or a list of booleans."
+	}, {
+		"Name": "LoopWhile",
+		"imageFile": ["LoopWhile"],
+		"dynFile": ["LoopWhile"],
+		"folderPath": "Script/Control Flow/Action",
+		"inDepth": "LoopWhile will return the result of a looped function until the constraints are met. In the example below, a simple loop is created to add 10, starting with 1, until the result is larger than 100. loopWhile accepts variables for its init input and functions for the continueWhile and loopBody inputs. continueWhile defines the constraints of the loop, which in this example is a < function and an argument of 100. loopBody defines what the loop does, which in this example is an + function with an argument of 10."
+	}, {
+		"Name": "Pause",
+		"imageFile": ["Pause"],
+		"dynFile": ["Pause"],
+		"folderPath": "Script/Control Flow/Action",
+		"inDepth": "Pause will return the result of a node after pausing the thread for a specified amount of time. In the example below, a circle is extruded into a surface 5 seconds after the thread is run. To use the time delay, the program should be run in Manual."
+	}, {
+		"Name": "ScopeIf",
+		"imageFile": ["ScopeIf"],
+		"dynFile": ["ScopeIf"],
+		"folderPath": "Script/Control Flow/Action",
+		"inDepth": "ScopeIf will return the input of either the True or False input depending on what boolean value is toggled in the test input. In the example file below, a large and small list of numbers is plugged into the true and false inputs. By sending the result of ScopeIfThrough a point creation node, we can toggle between two different sizes of point grids."
+	}, {
+		"Name": "Code Block",
+		"imageFile": ["Code Block"],
+		"dynFile": ["Code Block"],
+		"folderPath": "Script/Editor/Action",
+		"inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values."
+	}, {
+		"Name": "Python Script",
+		"imageFile": ["Python Script"],
+		"dynFile": ["Python Script"],
+		"folderPath": "Script/Editor/Action",
+		"inDepth": "Python Script will return the result of the node's inputs passed through an embedded IronPython script. In the example below, a cube created from Cuboid.ByCorners is arrayed and translated by a Python script that loops through both X and Y. Double clicking the node will bring up an editor for the script."
+	}, {
+		"Name": "Python Script From String",
+		"imageFile": ["Python Script From String"],
+		"dynFile": ["Python Script From String"],
+		"folderPath": "Script/Editor/Action",
+		"inDepth": "Python Script From String will return the result of the node's inputs passed through a string Python script. In the example below, a Python script is retrieved from a text file and converted into a string. A cube created from Cuboid.ByCorners is arrayed and translated by the Python script by looping through both X and Y."
+	}, {
+		"Name": "Function Apply",
+		"imageFile": ["Function Apply"],
+		"dynFile": ["Function Apply"],
+		"folderPath": "Script/Evaluate/Action",
+		"inDepth": "Function.Apply will return the result of a function with supplied arguments. In the example below, arguments of a point and vector are applied to a translate function returning a translated point."
+	}, {
+		"Name": "Function Compose",
+		"imageFile": ["Function Compose"],
+		"dynFile": ["Function Compose"],
+		"folderPath": "Script/Evaluate/Action",
+		"inDepth": "Function.Compose will return a single function from multiple functions. In the example below, the modulus and divide functions are composed into a single function to apply to a list."
+	}, {
+		"Name": "Concat",
+		"imageFile": ["Concat"],
+		"dynFile": ["Concat"],
+		"folderPath": "String/Generate/Action",
+		"inDepth": "Concat will concatenate multiple strings together into a single string. The number of input strings can be changed by using the '+' and '-' buttons on the Concat node. In the example below, we start with two separate strings 'Hello' and 'World'. They are concatenated together to 'HelloWorld' using the Concat node."
+	}, {
+		"Name": "Join",
+		"imageFile": ["Join"],
+		"dynFile": ["Join"],
+		"folderPath": "String/Generate/Action",
+		"inDepth": "Join will concatenate a series of strings together into a single string using a specified separator string between them. In the example below, we use an underscore character as the separator. We create three strings to concatenate together. The number of string inputs this node will accept can be changed by using the '+' and '-' buttons on the node."
+	}, {
+		"Name": "String from Array",
+		"imageFile": ["String from Array"],
+		"dynFile": ["String from Array"],
+		"folderPath": "String/Generate/Action",
+		"inDepth": "Convert an array to a string representation."
+	}, {
+		"Name": "String from Object",
+		"imageFile": ["String from Object"],
+		"dynFile": ["String from Object"],
+		"folderPath": "String/Generate/Action",
+		"inDepth": "String representation of input object."
+	}, {
+		"Name": "AllIndicesOf",
+		"imageFile": ["AllIndicesOf"],
+		"dynFile": ["AllIndicesOf"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Returns all the 0 based indices of the character in the string."
+	}, {
+		"Name": "Contains",
+		"imageFile": ["Contains"],
+		"dynFile": ["Contains"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Bounding Box Contains tests if a specified Point is inside of a Bounding Box. Because the Point in this example is at (5,5,5), and our Origin Sphere’s Radius is larger than 5, the Contains node will return True."
+	}, {
+		"Name": "CountOccurrences",
+		"imageFile": ["CountOccurrences"],
+		"dynFile": ["CountOccurrences"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Count Occurrences will search a given string for a second input string, and will return the number of times that second string is found within the first string. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we using the string 'Hello World' and search for the string 'L'. Because ignoreCase is set to true, the CountOccurrences finds the given string three times within 'Hello World'."
+	}, {
+		"Name": "EndsWith",
+		"imageFile": ["EndsWith"],
+		"dynFile": ["EndsWith"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Ends With will return a boolean value based on whether a given string ends with a second input string. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World' as the original string, and use a second string 'orld' as the string to search for. Because 'Hello World' ends in the string 'orld', the EndsWith node returns true."
+	}, {
+		"Name": "IndexOf",
+		"imageFile": ["IndexOf"],
+		"dynFile": ["IndexOf"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "IndexOf will search a given string for a second input string. If the second string is found, this node will return the index of the first character of the first occurrence of the string.  By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World', and search for the character 'o', This letter occurs twice in the string, but only the index of the first occurrence is returned by the IndexOf node."
+	}, {
+		"Name": "LastIndexOf",
+		"imageFile": ["LastIndexOf"],
+		"dynFile": ["LastIndexOf"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Last Index Of will search a given string for a second input string. If the second string is found, this node will return the index of the last occurrence. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World', and search for the string 'o'. This string is found twice within the base string, and the index of the final occurrence of the string is returned."
+	}, {
+		"Name": "Length",
+		"imageFile": ["Length"],
+		"dynFile": ["Length"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Length returns the length of a curtain panel's boundary as a double. This can be used even if the curtain panel is not rectangular."
+	}, {
+		"Name": "StartsWith",
+		"imageFile": ["StartsWith"],
+		"dynFile": ["StartsWith"],
+		"folderPath": "String/Inspect/Action",
+		"inDepth": "Starts With will return a boolean value based on whether a given string starts with a second input string. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World' as the original string, and use a second string 'h' as the string to search for. Because 'Hello World' starts with the string 'h' and ignoreCase is set to true, the StartsWith node returns true."
+	}, {
+		"Name": "Center",
+		"imageFile": ["Center"],
+		"dynFile": ["Center"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "Polygon Center finds the center of a given polygon by taking the average value of the corners. For concave polygons, it's possible that the center may actually lie outside the polygon. In the example below, we first generate a list of random angles and radii to use as inputs to Point By Cylindrical Coordinates. By sorting the angles first, we ensure that the resulting polygon will be connected in order of increasing angle, and therefore will not be self-intersecting. We can then use Center to take the average of the points and find the polygon center."
+	}, {
+		"Name": "ChangeCase",
+		"imageFile": ["ChangeCase"],
+		"dynFile": ["ChangeCase"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "Change Case takes a string and a boolean value as input. If the boolean input is 'true', it will change the input string to upper case. If the boolean input is false, it will change the input string to lower case. In the example below, we use an example string 'Hello World' as the input string, and a boolean toggle to specify whether to change the string to all upper case or all lower case letters."
+	}, {
+		"Name": "Insert",
+		"imageFile": ["Insert"],
+		"dynFile": ["Insert"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "Insert will insert a given string into a base string at a specified index. In the example below, we start with the base string 'Hello World'. We use a second string 'Hi!' as the string to insert. An integery slider is used to control the index at which the second string will be inserted into the base string."
+	}, {
+		"Name": "PadLeft",
+		"imageFile": ["PadLeft"],
+		"dynFile": ["PadLeft"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "PadLeft will increase the width of an input string according to the newWidth input by adding the padChars input on the left side of the original string. If the original string is longer than the newWidth input, this node will return the original string unchanged. In the example below, we use the string 'Hello World' as the input string. A string with an underscore character is used as the padding character, while an integer slider is used to control the new width of the string."
+	}, {
+		"Name": "PadRight",
+		"imageFile": ["PadRight"],
+		"dynFile": ["PadRight"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "PadRight will increase the width of an input string according to the newWidth input by adding the padChars input on the right side of the original string. If the original string is longer than the newWidth input, this node will return the original string unchanged. In the example below, we use the string 'Hello World' as the input string. A string with an underscore character is used as the padding character, while an integer slider is used to control the new width of the string."
+	}, {
+		"Name": "Remove",
+		"imageFile": ["Remove"],
+		"dynFile": ["Remove"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "Remove takes a string as input, and will remove characters from that string starting at the 'startIndex' input. The number of characters to be removed is specified by the 'count' index. In the example below, we start with the string 'Hello World'. Two integer sliders are used to control the startIndex and count of the characters to be removed by a Remove node."
+	}, {
+		"Name": "Replace",
+		"imageFile": ["Replace"],
+		"dynFile": ["Replace"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "Replace will search a given string for a second input string. If that string is found, it will be replaced by a third input string. This node is case sensitive. In the example below, we start with the string 'Hello World'. The string 'o' is used as the string to search for, and a third string 'Hi!' is input as the string to replace with. Because the letter 'o' occurs twice within the original string, it is replaced in both occurrence with the string 'Hi!'."
+	}, {
+		"Name": "Split",
+		"imageFile": ["Split"],
+		"dynFile": ["Split"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "The Geometry Split Node functions similarly to the Geometry Trim Node. It inputs a Tool – any type of Geometry that you will be trimming another Geometry with – and a Geometry, and returns all of the fragments of Geometry. In this example, a Cone is Split with a similar Cone. Although all fragments are returned by the Geometry Split Node, one is previewed in the example file."
+	}, {
+		"Name": "Substring",
+		"imageFile": ["Substring"],
+		"dynFile": ["Substring"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "Substring takes an input string and returns a sub string based on the start index and length inputs. In the example below, we start with the string 'Hello World'. Two integer sliders are used to control where to start the substring and how many characters to take."
+	}, {
+		"Name": "ToLower",
+		"imageFile": ["ToLower"],
+		"dynFile": ["ToLower"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "To Lower will convert an input string to lower case letters. In the example below we start with the string 'Hello World'. By using a ToLower node, we change this string to 'hello world'."
+	}, {
+		"Name": "ToNumber",
+		"imageFile": ["ToNumber"],
+		"dynFile": ["ToNumber"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "To Number will convert an input string to a number data type. This node requires a string that has the format of a number. In the example below, we can see that the string 'Hello World' cannot be converted to a number, while the string '5.2' can be converted to number 5.2 "
+	}, {
+		"Name": "ToUpper",
+		"imageFile": ["ToUpper"],
+		"dynFile": ["ToUpper"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "To Upper will convert an input string to upper case letters. In the example below we start with the string 'Hello World'. By using a ToUpper node, we change this string to 'HELLO WORLD'."
+	}, {
+		"Name": "TrimLeadingWhitespace",
+		"imageFile": ["TrimLeadingWhitespace"],
+		"dynFile": ["TrimLeadingWhitespace"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "TrimLeadingWhitespace will remove the whitespace at the beginning of an input string. In the example below, we start with the string '     Hello World', which has several leading and trailing spaces. By using TrimLeadingWhitespace, we can remove the spaces at the beginning of the string."
+	}, {
+		"Name": "TrimTrailingWhitespace",
+		"imageFile": ["TrimTrailingWhitespace"],
+		"dynFile": ["TrimTrailingWhitespace"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "TrimTrailingWhitespace will remove the whitespace at the end of an input string. In the example below, we start with the string '     Hello World     ', which has several leading and trailing spaces. By using TrimTrailingWhitespace, we can remove the spaces at the end of the string."
+	}, {
+		"Name": "TrimWhitespace",
+		"imageFile": ["TrimWhitespace"],
+		"dynFile": ["TrimWhitespace"],
+		"folderPath": "String/Modify/Action",
+		"inDepth": "TrimWhitespace will remove all the whitespace of an input string. In the example below, we start with the string '     Hello World     ', which has several leading and trailing spaces. By using TrigWhitespace, we can remove the spaces at the beginning and end of the string, as well as the space between 'Hello' and 'World'."
+	}
 ]
