@@ -3549,7 +3549,7 @@
 		"imageFile": ["Filter"],
 		"dynFile": ["Filter"],
 		"folderPath": "List/Modify/Action",
-		"inDepth": "Filters a sequence by a given condition such that for an arbitrary element "x," condition(x) = True or False."
+		"inDepth": "Filters a sequence by a given condition such that for an arbitrary element x, condition(x) = True or False."
 	}, {
 		"Name": "FilterByBoolMask",
 		"imageFile": ["FilterByBoolMask"],
