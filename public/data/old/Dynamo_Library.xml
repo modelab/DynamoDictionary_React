@@ -11316,10 +11316,10 @@ value : bool = false</Description>
       <LargeIcon>Not found</LargeIcon>
     </Dynamo.Search.SearchElements.ZeroTouchSearchElement>
     <Dynamo.Search.SearchElements.ZeroTouchSearchElement>
-      <FullCategoryName>DICTIONARY</FullCategoryName>
+      <FullCategoryName>BuiltIn</FullCategoryName>
       <Name>RemoveKey</Name>
       <Group>Action</Group>
-      <Description>TEST!! Returns true if the specified key is removed from list, otherwise returns false</Description>
+      <Description>Returns true if the specified key is removed from list, otherwise returns false</Description>
       <SearchTags>remove,key</SearchTags>
       <Inputs>
         <InputParameter Name="list" Type="var[]..[]" Tooltip="list of values&#xA;&#xA;var[]..[]" />
