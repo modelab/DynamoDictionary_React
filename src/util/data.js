@@ -36,11 +36,7 @@ export const createSearchArray = (hierarchy, mainExamples, newExamples) => {
   combinedArray.forEach(d => {
     searchArray.forEach(e => {
       if (e.Name === d.Name) {
-        var folderPathNoGroup = d.folderPath.split("/").slice(0,-1).join("/").trim();
-        console.log("json = " + folderPathNoGroup);
-        console.log("xml = " + e.Categories.join("/"));
-        console.log(e.Categories.join("/").trim().startsWith(folderPathNoGroup));
-        if (e.Categories.join("/").startsWith(folderPathNoGroup)) {
+        if (e.Categories.concat(e.Group).join("/") === d.folderPath) {
           e.imageFile = d.imageFile ? d.imageFile.slice() : [];
           e.dynFile = d.dynFile ? d.dynFile.slice() : [];
 
