@@ -21,8 +21,8 @@ function Header(props){
         <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'
           style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px', left:'-25px'}}>
             <span className="title" style={{'fontSize':'18px', 'marginLeft':'15px'}}>
-            <a href="http://dynamobim.org/" target="_blank" style={{'display':'table-cell', 'width':'35px'}}>
-            <img src="images/src/icon.png" width="80%" id='dynamologo' alt="dynamoIcon" target="_blank" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
+            <a href="http://dynamobim.org/" target="_blank" rel="noopener noreferrer" style={{'display':'table-cell', 'width':'35px'}}>
+            <img src="images/src/icon.png" width="80%" id='dynamologo' alt="dynamoIcon" target="_blank" rel="noopener noreferrer" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
             </a>
             <Link to='/' className='raleway' style={{'color':'white'}}>&nbsp; Dynamo Dictionary</Link>
             <a href='http://dictionary.dynamobim.com/' className='raleway' style={{'color':'orangered'}}>&nbsp; 1.x</a>
@@ -30,7 +30,7 @@ function Header(props){
             </span>
         </div>
         <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
-          {props.phase==='committing' ? <a href={props.link} target="_blank">
+          {props.phase==='committing' ? <a href={props.link} target="_blank" rel="noopener noreferrer">
             <FlatButton label={'github'} labelPosition="after"
               labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
               style={{color:'white'}}

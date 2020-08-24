@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { hashHistory } from "react-router";
+import PropTypes from "prop-types";
 
 import "./css/font.css";
 import "./css/style.css";
@@ -328,6 +329,6 @@ class App extends Component {
   }
 }
 App.childContextTypes = {
-  muiTheme: React.PropTypes.object.isRequired
+  muiTheme: PropTypes.object.isRequired
 };
 export default App;

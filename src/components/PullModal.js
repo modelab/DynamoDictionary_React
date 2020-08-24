@@ -64,7 +64,7 @@ class ModeModal extends Component {
                 : this.props.phase === "created"
                   ? <span className="graytext">
                       Linked to Repo! Click on the{" "}
-                      <a href={this.props.link} target="_blank">
+                      <a href={this.props.link} target="_blank" rel="noopener noreferrer">
                         <img
                           src="images/icons/octocat.png"
                           id="prLogo"
@@ -85,6 +85,7 @@ class ModeModal extends Component {
                     <a
                       href="https://guides.github.com/introduction/flow/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       branch
                     </a>{" "}

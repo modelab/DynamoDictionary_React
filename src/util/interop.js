@@ -1,8 +1,6 @@
 import resort from './resort'
 
-let interop = {};
-
-interop.createObject = function(dynLib){
+export const createObject = function(dynLib){
 
         //there may be duplicates coming from the xml, this removes them
         dynLib = resort.removeDuplicates(dynLib);
@@ -15,7 +13,7 @@ interop.createObject = function(dynLib){
         return dynMaster;
 }
 
-interop.xmlToJson = function(data) {
+export const xmlToJson = function(data) {
 
     let dataArr=[];
     [].map.call(data.querySelectorAll("Category"), function(category) {
@@ -79,4 +77,7 @@ function getParam(cn,val1, val2) {
     }
 }
 
-module.exports = interop;
+export default {
+    createObject: createObject,
+    xmlToJson: xmlToJson
+}
