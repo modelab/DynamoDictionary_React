@@ -29,7 +29,9 @@ function Header(props){
             <a href='http://dictionary.dynamobim.com/2' className='raleway' style={{'color':'orangered'}}>&nbsp; 2.x</a>
             </span>
         </div>
-        <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
+        {
+        //TODO : Hiding the Submit PR button, as the feature is not fuctional with the latest node update. This is a temporary change and will be re-visited/fixed in the future version.
+        /* <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
           {props.phase==='committing' ? <a href={props.link} target="_blank" rel="noopener noreferrer">
             <FlatButton label={'github'} labelPosition="after"
               labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
@@ -48,7 +50,7 @@ function Header(props){
           />
 
 
-    </div>
+    </div> */}
   </div>
 
   )
