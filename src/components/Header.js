@@ -21,14 +21,18 @@ function Header(props){
         <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'
           style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px', left:'-25px'}}>
             <span className="title" style={{'fontSize':'18px', 'marginLeft':'15px'}}>
-            <a href="http://dynamobim.org/" target="_blank" style={{'display':'table-cell', 'width':'35px'}}>
-            <img src="images/src/icon.png" width="80%" id='dynamologo' alt="dynamoIcon" target="_blank" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
+            <a href="http://dynamobim.org/" target="_blank" rel="noopener noreferrer" style={{'display':'table-cell', 'width':'35px'}}>
+            <img src="images/src/icon.png" width="80%" id='dynamologo' alt="dynamoIcon" target="_blank" rel="noopener noreferrer" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
             </a>
             <Link to='/' className='raleway' style={{'color':'white'}}>&nbsp; Dynamo Dictionary</Link>
+            <a href='http://dictionary.dynamobim.com/' className='raleway' style={{'color':'orangered'}}>&nbsp; 1.x</a>
+            <a href='http://dictionary.dynamobim.com/2' className='raleway' style={{'color':'orangered'}}>&nbsp; 2.x</a>
             </span>
         </div>
-        <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
-          {props.phase==='committing' ? <a href={props.link} target="_blank">
+        {
+        //TODO : Hiding the Submit PR button, as the feature is not fuctional with the latest node update. This is a temporary change and will be re-visited/fixed in the future version.
+        /* <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
+          {props.phase==='committing' ? <a href={props.link} target="_blank" rel="noopener noreferrer">
             <FlatButton label={'github'} labelPosition="after"
               labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
               style={{color:'white'}}
@@ -46,7 +50,7 @@ function Header(props){
           />
 
 
-    </div>
+    </div> */}
   </div>
 
   )
